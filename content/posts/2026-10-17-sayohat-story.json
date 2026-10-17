@@ -1,0 +1,31 @@
+{
+  "id": "2026-10-17-sayohat-story",
+  "sana": "2026-10-17",
+  "loyiha": "shaxsiy-portfolio",
+  "sarlavha": "Sayohat: uzun matn o'rniga story ko'rinishidagi rasmlar",
+  "teglar": [
+    "dizayn",
+    "kontent"
+  ],
+  "muammo": "Tog' yurishlari kundalikda uzun matn bo'lib turardi. Uni hech kim o'qimasdi, qancha joyga borilgani ham ko'rinmasdi.",
+  "yechim": "Sayohatlarni alohida bo'limga chiqardik: har safar bitta polaroid rasmlar to'plami, tepada joylar soni. Bosilganda rasmlar Instagram story kabi to'liq ekranda birma-bir ochiladi; matn faqat bitta qator.",
+  "natija": "Kirish uchun rasm, joy nomi va sana yetadi; bo'lim his-tuyg'uni matnsiz ko'rsatadi.",
+  "vizual": {
+    "shablon": "kreativ",
+    "elementlar": [
+      {
+        "nom": "polaroid"
+      },
+      {
+        "nom": "story"
+      },
+      {
+        "nom": "hisob"
+      },
+      {
+        "nom": "izoh"
+      }
+    ]
+  },
+  "tur": "Dizayn"
+}

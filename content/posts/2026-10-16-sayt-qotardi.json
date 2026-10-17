@@ -1,0 +1,37 @@
+{
+  "id": "2026-10-16-sayt-qotardi",
+  "sana": "2026-10-16",
+  "loyiha": "shaxsiy-portfolio",
+  "sarlavha": "Sayt qotardi: bir kadr 57 ms edi, endi 16 ms",
+  "teglar": [
+    "tezlik",
+    "dizayn"
+  ],
+  "muammo": "Papka va qog'oz effektlari chiroyli edi, lekin sahifani aylantirganda sayt sezilarli qotardi. O'lchaganimizda bir kadr o'rtacha 57 ms, eng sekinlari 283 ms chiqdi.",
+  "yechim": "Qotishga uch narsa sabab bo'lgan: brauzer har kadrda qayta chizadigan SVG shovqin teksturasi, har papkadagi uch qatlamli soya filtri va katta ichki soya. Ularni tayyor PNG tekstura, oddiy box-shadow va gradient bilan almashtirdik; ko'rinish deyarli o'zgarmadi.",
+  "natija": "Bir kadr o'rtacha 16,4 ms, eng sekini 16,7 ms: sayt telefonda ham silliq aylanadi.",
+  "vizual": {
+    "shablon": "ozgarish",
+    "korsatkichlar": [
+      {
+        "nom": "kadr vaqti",
+        "yonalish": "past",
+        "qiymat": "57 → 16 ms",
+        "yaxshi": true
+      },
+      {
+        "nom": "qotish",
+        "yonalish": "past",
+        "qiymat": "283 → 17 ms",
+        "yaxshi": true
+      },
+      {
+        "nom": "silliqlik",
+        "yonalish": "yuqori",
+        "qiymat": "60 kadr/s",
+        "yaxshi": true
+      }
+    ]
+  },
+  "tur": "Tezlik"
+}

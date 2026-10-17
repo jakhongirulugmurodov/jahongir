@@ -1,0 +1,37 @@
+{
+  "id": "2026-10-17-brendbukka-moslash",
+  "sana": "2026-10-17",
+  "loyiha": "shaxsiy-portfolio",
+  "sarlavha": "Sayt O'N brendbukiga moslandi: rang, shrift, logotip",
+  "teglar": [
+    "brend",
+    "dizayn"
+  ],
+  "muammo": "Sayt taxminiy teal rang va boshqa shriftlar bilan qurilgan edi, nomi ham brendbukda yo'q \"O'N agy\" deb yozilgan. Qizil va sariq detallar brendning bitta sovuq-yashil oilasidan chiqib ketardi.",
+  "yechim": "Brendbuk bo'yicha tekshirdik: 6 ta brend rangi, Space Grotesk va Hanken Grotesk shriftlari, logotip aniq o'lchamlari bilan. Yorqin teal faqat nuqtalarga berildi: logotip, pin boshlari, son belgilari. Xizmat matnlari \"o'lchanadigan natija\" qoidasiga keltirildi.",
+  "natija": "Sayt brendbukdan chetga chiqmaydi; nom hamma joyda bir xil: Jahongir | O'N.",
+  "vizual": {
+    "shablon": "ozgarish",
+    "korsatkichlar": [
+      {
+        "nom": "begona ranglar",
+        "yonalish": "past",
+        "qiymat": "0",
+        "yaxshi": true
+      },
+      {
+        "nom": "brend shriftlari",
+        "yonalish": "yuqori",
+        "qiymat": "2/2",
+        "yaxshi": true
+      },
+      {
+        "nom": "nom yozilishi",
+        "yonalish": "yuqori",
+        "qiymat": "bir xil",
+        "yaxshi": true
+      }
+    ]
+  },
+  "tur": "Brend"
+}

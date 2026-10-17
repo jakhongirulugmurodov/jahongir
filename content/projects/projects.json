@@ -1,5 +1,20 @@
 [
   {
+    "slug": "shaxsiy-portfolio",
+    "nom": "Shaxsiy portfolio sayt",
+    "soha": "O'N · ichki loyiha",
+    "xizmat": "Arxitektura, dizayn, Telegram Mini App",
+    "holat": "faol",
+    "tavsif": "Har kuni hal qilingan muammolar yozib boriladigan shaxsiy sayt va Telegram Mini App.",
+    "qachondan": "2026-yil oktabrdan",
+    "xizmatlar": [
+      "Arxitektura",
+      "Dizayn",
+      "Telegram Mini App"
+    ],
+    "qisqa": "Portfolio sayt"
+  },
+  {
     "slug": "on-platforma",
     "nom": "O'N platformasi",
     "soha": "SaaS · ijara va xizmat bizneslari",

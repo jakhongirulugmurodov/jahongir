@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-15-ism-va-raqam-tasdigi",
+  "sana": "2026-10-15",
+  "loyiha": "shaxsiy-portfolio",
+  "sarlavha": "Mijoz nomi va raqamlari: avval tasdiq, keyin chop",
+  "teglar": [
+    "maxfiylik",
+    "telegram"
+  ],
+  "muammo": "Har kungi yozuvda mijoz nomi, ariza soni yoki narx tasodifan chiqib ketishi mumkin edi. Ochiq saytda bunday xato mijoz ishonchini birdaniga yo'qotadi.",
+  "yechim": "Qoida qo'ydik: mijoz nomi saytda faqat taxallus bilan (\"IT o'quv markazi\"). Raqam yoki ism uchrasa, bot chop etishdan oldin tugma bilan so'raydi: ko'rsatilsinmi yoki yashirilsinmi. Javob loyiha bo'yicha eslab qolinadi.",
+  "natija": "Tasdiqlanmagan biror ism yoki raqam saytga chiqmaydi; xom yozuvlar ochiq repoga umuman tushmaydi.",
+  "vizual": {
+    "shablon": "muammo-yechim",
+    "oldin": [
+      "Ism matnda qolib ketadi",
+      "Raqam ruxsatsiz chiqadi",
+      "Xom yozuv ochiq joyda"
+    ],
+    "keyin": [
+      "Faqat taxallus",
+      "Har raqam tugma bilan tasdiqlanadi",
+      "Xom yozuv yopiq joyda"
+    ]
+  },
+  "tur": "Maxfiylik"
+}

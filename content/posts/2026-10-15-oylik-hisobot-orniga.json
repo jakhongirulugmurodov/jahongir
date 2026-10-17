@@ -1,0 +1,35 @@
+{
+  "id": "2026-10-15-oylik-hisobot-orniga",
+  "sana": "2026-10-15",
+  "loyiha": "shaxsiy-portfolio",
+  "sarlavha": "Oylik hisobot o'rniga har kungi ovozli xabar: server ham kerak emas",
+  "teglar": [
+    "telegram",
+    "arxitektura"
+  ],
+  "muammo": "Mijozga \"nima qildingiz?\" deganda ko'rsatadigan narsa yo'q edi: ishlar telefondagi skrinshotlar va xotirada qolib ketardi. Oylik hisobot esa oyning oxirida yoziladi va yarmi unutilgan bo'ladi.",
+  "yechim": "Hisobot o'rniga har kuni bitta ovozli xabar: bot uni matnga aylantiradi, post tayyorlaydi va saytga qo'yadi. Sayt statik, GitHub Pages'da bepul turadi; alohida server kerak emas.",
+  "natija": "Har bir hal qilingan muammo o'sha kuni yozib qo'yiladi va loyiha papkasida, taqvimda ko'rinadi.",
+  "vizual": {
+    "shablon": "sxema",
+    "tugunlar": [
+      {
+        "t": "Ovoz",
+        "d": "bir daqiqalik xabar"
+      },
+      {
+        "t": "Bot",
+        "d": "matn va post"
+      },
+      {
+        "t": "GitHub",
+        "d": "saqlanadi"
+      },
+      {
+        "t": "Sayt",
+        "d": "o'zi yangilanadi"
+      }
+    ]
+  },
+  "tur": "Arxitektura"
+}

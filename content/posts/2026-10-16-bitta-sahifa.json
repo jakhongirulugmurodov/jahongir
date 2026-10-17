@@ -1,0 +1,26 @@
+{
+  "id": "2026-10-16-bitta-sahifa",
+  "sana": "2026-10-16",
+  "loyiha": "shaxsiy-portfolio",
+  "sarlavha": "Sahifalar orasida o'tish uzilardi: hammasini bitta sahifaga yig'dik",
+  "teglar": [
+    "dizayn"
+  ],
+  "muammo": "Papkani yoki postni ochganda yangi sahifa yuklanardi va animatsiya uzilib qolardi. Mijoz uchun bu \"oddiy sayt\" hissini berardi.",
+  "yechim": "Papka ichi, post varag'i va xizmatlar ro'yxatini shu sahifaning o'zida ochiladigan qildik. Alohida sahifalar faqat qidiruv tizimlari va havola ulashish uchun qoldi. Ortiqcha qidiruv bo'limi olib tashlandi, xizmat kartochkasi bosilganda o'sha yo'nalishdagi ishlar ochiladi.",
+  "natija": "Saytda yurish uzluksiz: papka ochiladi, varaq yirtiladi, orqaga qaytish bir bosishda.",
+  "vizual": {
+    "shablon": "muammo-yechim",
+    "oldin": [
+      "Har bosishda yangi sahifa",
+      "Animatsiya uziladi",
+      "Qidiruv bo'sh turadi"
+    ],
+    "keyin": [
+      "Hammasi bir sahifada",
+      "Silliq ochilish",
+      "Xizmatdan ishlarga bir bosish"
+    ]
+  },
+  "tur": "Dizayn"
+}

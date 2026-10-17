@@ -1,0 +1,35 @@
+{
+  "id": "2026-10-17-domen-va-mini-app",
+  "sana": "2026-10-17",
+  "loyiha": "shaxsiy-portfolio",
+  "sarlavha": "Bir kunda: repodan domen va Telegram Mini App'gacha",
+  "teglar": [
+    "telegram",
+    "deploy"
+  ],
+  "muammo": "Tayyor sayt faqat sinov havolasida turardi: o'z domeni, xavfsiz ulanish va Telegram ichida ochilishi yo'q edi.",
+  "yechim": "GitHub'da alohida repo ochildi va har yangilanishda sayt o'zi yig'iladigan qilindi. Cloudflare'da jahongir.onagy.app yozuvi qo'shildi, HTTPS yoqildi. @jahongir_on_bot ochilib, \"Portfolio\" tugmasi saytga ulandi; Telegram ichida sayt to'liq ekranga yoyiladi.",
+  "natija": "Sayt https://jahongir.onagy.app da va Telegram'da bir tugma bilan ochiladi.",
+  "vizual": {
+    "shablon": "jarayon",
+    "qadamlar": [
+      {
+        "t": "Repo",
+        "d": "GitHub"
+      },
+      {
+        "t": "Deploy",
+        "d": "Actions"
+      },
+      {
+        "t": "Domen",
+        "d": "Cloudflare"
+      },
+      {
+        "t": "Mini App",
+        "d": "Telegram"
+      }
+    ]
+  },
+  "tur": "Deploy"
+}
