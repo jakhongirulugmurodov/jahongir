@@ -75,7 +75,7 @@ const contactBand = () => `<section class="contact-band gut" id="boglanish"><div
 
 function layout({ title, desc, r, page, active = "", body, data, contact = true }) {
   const full = title ? `${title} — ${site.brend}` : site.brend;
-  const nav = [["index.html#loyihalar", "Loyihalar", "loyihalar"], ["index.html#taqvim", "Taqvim", "taqvim"], ["index.html#kundalik", "Kundalik", "kundalik"], ["index.html#sayohat", "Sayohat", "sayohat"]];
+  const nav = [["index.html#loyihalar", "Loyihalar", "loyihalar"], ["index.html#taqvim", "Taqvim", "taqvim"], ["index.html#kundalik", "Kundalik", "kundalik"], ...(sayohat.length ? [["index.html#sayohat", "Sayohat", "sayohat"]] : [])];
   return `<!doctype html>
 <html lang="uz">
 <head>

@@ -43,6 +43,7 @@
     });
     var lay = function () {
       var cs = getComputedStyle(stack), step = parseFloat(cs.getPropertyValue("--step")), fh = parseFloat(cs.getPropertyValue("--fh"));
+      if (!order.length) { stack.style.height = "auto"; return; }
       stack.style.height = ((order.length - 1) * step + fh + 60) + "px";
       order.forEach(function (idx, pos) {
         var e = els[idx], pp = PAPERS[Math.max(0, PAPERS.length - order.length + pos)];
@@ -86,10 +87,13 @@
       stack.addEventListener("touchcancel", function () { clearTimeout(timer); on = false; stack.classList.remove("scrub"); peek(null); });
     })();
 
+    if (!P.length) { stack.innerHTML = '<p class="stack-empty">Birinchi papka tez orada shu yerda ochiladi.</p>'; var dn = document.querySelector(".desk-note"); if (dn) dn.hidden = true; }
+
     /* ================= HOME: calendar ================= */
     var posts = D.posts || [], byDay = {}, months = [];
     posts.forEach(function (p) { (byDay[p.d] = byDay[p.d] || []).push(p); var m = p.d.slice(0, 7); if (months.indexOf(m) < 0) months.push(m); });
     months.sort();
+    if (!months.length) { var td = new Date(); months.push(td.getFullYear() + "-" + ("0" + (td.getMonth() + 1)).slice(-2)); }
     var mi = months.length - 1;
     var grid = document.getElementById("grid"), tray = document.getElementById("tray"), strip = document.getElementById("strip"), pages = document.getElementById("pages");
     var pad = function (n) { return (n < 10 ? "0" : "") + n; };
@@ -100,7 +104,7 @@
       return a;
     };
     var renderMonth = function () {
-      if (!months.length) { grid.innerHTML = ""; tray.innerHTML = '<p class="hint">hali yozuv yo\'q</p>'; return; }
+      if (!months.length) { grid.innerHTML = ""; tray.innerHTML = '<p class="hint">Birinchi pin shu oyda qadaladi.</p>'; return; }
       var ym = months[mi], y = +ym.slice(0, 4), m = +ym.slice(5), title = OY[m - 1][0].toUpperCase() + OY[m - 1].slice(1) + ", " + y;
       document.getElementById("moT").textContent = title; document.getElementById("moT2").textContent = title;
       [["moP", -1], ["moN", 1], ["moP2", -1], ["moN2", 1]].forEach(function (b) { var el = document.getElementById(b[0]); el.disabled = !months[mi + b[1]]; el.style.opacity = months[mi + b[1]] ? 1 : .35; });
