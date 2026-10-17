@@ -1,0 +1,39 @@
+{
+  "id": "2026-10-13-kreativ-almashgandan-keyin",
+  "sana": "2026-10-13",
+  "loyiha": "til-oquv-markazi",
+  "sarlavha": "Reklama kreativini almashtirgandan keyingi hafta",
+  "teglar": [
+    "meta-ads",
+    "kreativ",
+    "lid"
+  ],
+  "namuna": true,
+  "muammo": "Reklama uzoq vaqt bir xil rasm bilan ishlab, ko'rganlar unga befarq bo'lib qolgan edi. Ariza qimmatlashib borardi.",
+  "yechim": "O'quvchining o'zi gapiradigan qisqa video kreativlar tayyorladik va eski rasmni o'chirdik. Matnni narx emas, natija haqida qildik.",
+  "natija": "Bir hafta ichida ariza narxi pasaydi, reklamani oxirigacha ko'rganlar ko'paydi.",
+  "vizual": {
+    "shablon": "ozgarish",
+    "korsatkichlar": [
+      {
+        "nom": "Ariza narxi",
+        "yonalish": "past",
+        "qiymat": "pasaydi",
+        "yaxshi": true
+      },
+      {
+        "nom": "Videoni oxirigacha ko'rish",
+        "yonalish": "yuqori",
+        "qiymat": "oshdi",
+        "yaxshi": true
+      },
+      {
+        "nom": "Reklama chastotasi",
+        "yonalish": "past",
+        "qiymat": "me'yorga tushdi",
+        "yaxshi": true
+      }
+    ]
+  },
+  "tur": "Reklama"
+}

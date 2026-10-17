@@ -1,0 +1,29 @@
+{
+  "id": "2026-10-10-bemorlar-kameradan-uyalardi",
+  "sana": "2026-10-10",
+  "loyiha": "xususiy-klinika",
+  "sarlavha": "Bemorlar kamera oldida gapirishga uyalishardi",
+  "teglar": [
+    "reels",
+    "kontent",
+    "suratga-olish"
+  ],
+  "namuna": true,
+  "muammo": "Bemor-videolar uchun odamlar rozi bo'lardi, lekin kamera yonganda gapi yo'qolib qolardi. Videolar sun'iy chiqardi.",
+  "yechim": "Savollarni oldindan qo'lga berdik, kamerani ko'z darajasidan pastroqqa qo'ydik va birinchi daqiqani isinish suhbati qilib, uni montajda kesadigan bo'ldik.",
+  "natija": "Bemorlar o'z so'zlari bilan, erkinroq gapira boshladi. Bitta suratga olishdan bir nechta Reels chiqadigan bo'ldi.",
+  "vizual": {
+    "shablon": "muammo-yechim",
+    "oldin": [
+      "Savol kamera oldida beriladi",
+      "Kamera to'g'ri yuzga qaragan",
+      "Birinchi gapdan yozuv boshlanadi"
+    ],
+    "keyin": [
+      "Savollar oldindan qo'lda",
+      "Kamera biroz pastda, yonda",
+      "Isinish suhbati montajda kesiladi"
+    ]
+  },
+  "tur": "Kontent"
+}

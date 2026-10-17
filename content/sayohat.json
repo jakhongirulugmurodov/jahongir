@@ -1,0 +1,94 @@
+[
+ {
+  "id": "s-2026-10-11-chimyon",
+  "sana": "2026-10-11",
+  "joy": "Chimyon",
+  "hudud": "Toshkent viloyati",
+  "davlat": "O'zbekiston",
+  "izoh": "bulutlar pastda qoldi",
+  "rasmlar": [
+   {
+    "src": "media/sayohat/tog-1.jpg",
+    "izoh": "bulutlar pastda qoldi"
+   },
+   {
+    "src": "media/sayohat/tog-2.jpg",
+    "izoh": "tepaga yetdik"
+   }
+  ],
+  "namuna": true
+ },
+ {
+  "id": "s-2026-09-27-zomin",
+  "sana": "2026-09-27",
+  "joy": "Zomin",
+  "hudud": "Jizzax viloyati",
+  "davlat": "O'zbekiston",
+  "izoh": "archazor va sokinlik",
+  "rasmlar": [
+   "media/sayohat/zomin-1.jpg",
+   "media/sayohat/zomin-2.jpg",
+   "media/sayohat/zomin-3.jpg"
+  ],
+  "namuna": true
+ },
+ {
+  "id": "s-2026-08-16-aydarkol",
+  "sana": "2026-08-16",
+  "joy": "Aydarko'l",
+  "hudud": "Navoiy viloyati",
+  "davlat": "O'zbekiston",
+  "izoh": "cho'l o'rtasida dengiz",
+  "rasmlar": [
+   "media/sayohat/aydarkol-1.jpg",
+   {
+    "src": "media/sayohat/aydarkol-2.jpg",
+    "izoh": "quyosh suvga botdi"
+   },
+   "media/sayohat/aydarkol-3.jpg"
+  ],
+  "namuna": true
+ },
+ {
+  "id": "s-2026-07-05-xiva",
+  "sana": "2026-07-05",
+  "joy": "Xiva",
+  "hudud": "Xorazm viloyati",
+  "davlat": "O'zbekiston",
+  "izoh": "devorlar ichidagi shahar",
+  "rasmlar": [
+   "media/sayohat/xiva-1.jpg",
+   "media/sayohat/xiva-2.jpg",
+   "media/sayohat/xiva-3.jpg"
+  ],
+  "namuna": true
+ },
+ {
+  "id": "s-2026-05-01-buxoro",
+  "sana": "2026-05-01",
+  "joy": "Buxoro",
+  "hudud": "Buxoro viloyati",
+  "davlat": "O'zbekiston",
+  "izoh": "Minorai Kalon tagida",
+  "rasmlar": [
+   "media/sayohat/buxoro-1.jpg",
+   "media/sayohat/buxoro-2.jpg",
+   "media/sayohat/buxoro-3.jpg"
+  ],
+  "namuna": true
+ },
+ {
+  "id": "s-2026-03-21-samarqand",
+  "sana": "2026-03-21",
+  "joy": "Samarqand",
+  "hudud": "Samarqand viloyati",
+  "davlat": "O'zbekiston",
+  "izoh": "Navro'z kuni Registon",
+  "rasmlar": [
+   "media/sayohat/samarqand-1.jpg",
+   "media/sayohat/samarqand-2.jpg",
+   "media/sayohat/samarqand-3.jpg"
+  ],
+  "namuna": true
+ }
+]

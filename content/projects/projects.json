@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "on-platforma",
+    "nom": "O'N platformasi",
+    "soha": "SaaS · ijara va xizmat bizneslari",
+    "xizmat": "Mahsulot, arxitektura, Telegram integratsiyasi",
+    "holat": "faol",
+    "tavsif": "Ijara va xizmat bizneslari uchun o'zimiz qurayotgan boshqaruv platformasi.",
+    "qachondan": "2026-yildan",
+    "xizmatlar": [
+      "Mahsulot",
+      "Arxitektura",
+      "Telegram integratsiyasi"
+    ],
+    "qisqa": "O'N platforma"
+  },
+  {
+    "slug": "it-oquv-markazi",
+    "nom": "IT o'quv markazi",
+    "soha": "Ta'lim",
+    "xizmat": "Kontent marketing, Meta Ads",
+    "holat": "faol",
+    "tavsif": "Dasturlash o'quv markazi uchun kontent va reklama orqali o'quvchi oqimini yo'lga qo'yish.",
+    "qachondan": "2026-yil sentabrdan",
+    "xizmatlar": [
+      "Meta Ads",
+      "Kontent marketing",
+      "Sotuv skripti"
+    ],
+    "qisqa": "IT markaz"
+  },
+  {
+    "slug": "til-oquv-markazi",
+    "nom": "Til o'quv markazi",
+    "soha": "Ta'lim",
+    "xizmat": "Meta Ads, Reels ssenariylari",
+    "holat": "faol",
+    "tavsif": "Chet tili o'quv markazi uchun reklama kreativlari va Reels.",
+    "qachondan": "2026-yildan",
+    "xizmatlar": [
+      "Meta Ads",
+      "Reels ssenariylari"
+    ],
+    "qisqa": "Til markazi"
+  },
+  {
+    "slug": "xususiy-klinika",
+    "nom": "Xususiy klinika",
+    "soha": "Tibbiyot",
+    "xizmat": "Instagram organik o'sish, bemor-videolar",
+    "holat": "faol",
+    "tavsif": "Klinika uchun ishonchli, bemor tilida gapiradigan Instagram kontenti.",
+    "qachondan": "2026-yildan",
+    "xizmatlar": [
+      "Instagram",
+      "Bemor-videolar",
+      "Kontent-plan"
+    ],
+    "qisqa": "Klinika"
+  },
+  {
+    "slug": "talim-konsalting",
+    "nom": "Xorijda o'qish konsaltingi",
+    "soha": "Ta'lim konsalting",
+    "xizmat": "Reels muqovalari, vizual uslub",
+    "holat": "faol",
+    "tavsif": "Chet elda o'qishga yordam beruvchi konsalting uchun yagona vizual uslub.",
+    "qachondan": "2026-yildan",
+    "xizmatlar": [
+      "Reels muqovalari",
+      "Vizual uslub"
+    ],
+    "qisqa": "Xorijda o'qish"
+  },
+  {
+    "slug": "oqituvchilar-kursi",
+    "nom": "O'qituvchilar uchun kurs",
+    "soha": "Ta'lim",
+    "xizmat": "Reels storyboard, motion grafika",
+    "holat": "faol",
+    "tavsif": "Ustozlar kursi uchun storyboard'dan animatsiyagacha Reels ishlab chiqish.",
+    "qachondan": "2026-yildan",
+    "xizmatlar": [
+      "Reels storyboard",
+      "Motion grafika"
+    ],
+    "qisqa": "Ustozlar kursi"
+  }
+]

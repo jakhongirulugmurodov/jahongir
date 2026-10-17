@@ -1,0 +1,132 @@
+[
+ {
+  "id": "k-2026-10-15-nima-uchun-yozaman",
+  "sana": "2026-10-15",
+  "toifa": "Hayot",
+  "sarlavha": "Nima uchun har kuni yozib boraman",
+  "matn": [
+   "Yangi mijoz \"nima qilgansiz?\" deb so'raganda, eng yaxshi ishlarim xotiramdan chiqib ketgan bo'lardi. Ko'rsatadigan narsa telefondagi tarqoq skrinshotlar edi.",
+   "Shuning uchun qoida qo'ydim: har kuni hal qilgan bitta muammoni ovozli xabar qilib aytaman, u shu yerda post bo'lib chiqadi. Ishdan tashqari narsalar ham shu yerga yoziladi."
+  ],
+  "xulosa": "Yozilmagan ish mijoz uchun qilinmagan ish bo'lib qoladi.",
+  "namuna": true
+ },
+ {
+  "id": "k-2026-10-14-show-your-work",
+  "sana": "2026-10-14",
+  "toifa": "Kitob",
+  "sarlavha": "Show Your Work! — jarayonni ko'rsatish haqida",
+  "kitob": {
+   "nom": "Show Your Work!",
+   "muallif": "Austin Kleon",
+   "rang": "#0E7C7B",
+   "matn_rang": "#FFFFFF",
+   "holat": "o'qilmoqda"
+  },
+  "matn": [
+   "Kitobning asosiy fikri oddiy: odamlar tayyor natijadan ko'ra, unga qanday kelganingizga ko'proq qiziqadi. Jarayonni ochiq ko'rsatgan odamga ishonish osonroq.",
+   "Bu sayt shu fikrning amaldagi ko'rinishi: har kungi kichik yozuvlar vaqt o'tib katta portfolioga aylanadi."
+  ],
+  "xulosa": "Natijani emas, yo'lni ko'rsat — ishonch shundan keladi.",
+  "namuna": true
+ },
+ {
+  "id": "k-2026-10-10-qongiroq",
+  "sana": "2026-10-10",
+  "toifa": "O'rgandim",
+  "sarlavha": "Arizaga qachon qo'ng'iroq qilish kerak",
+  "teglar": [
+   "sotuv",
+   "lid"
+  ],
+  "matn": [
+   "Ariza qoldirgan odam shu daqiqada qiziqib turgan bo'ladi. Qo'ng'iroq kechikkan sari u boshqa variantlarni topib oladi va suhbat qiyinlashadi.",
+   "Shuning uchun mijozlarimizda ariza tushishi bilan operatorga darhol xabar boradigan tizim qo'yamiz va birinchi qo'ng'iroq uchun qisqa skript yozamiz."
+  ],
+  "xulosa": "Tezlik — eng arzon sotuv vositasi.",
+  "namuna": true
+ },
+ {
+  "id": "k-2026-10-09-ertalabki-soat",
+  "sana": "2026-10-09",
+  "toifa": "Hayot",
+  "sarlavha": "Ertalabki ikki soat telefonsiz",
+  "matn": [
+   "Bir oydan beri kunning birinchi ikki soatida telefon va Telegram yopiq turadi. Shu vaqtga eng og'ir ishni qo'yaman: strategiya, ssenariy yoki arxitektura.",
+   "Birinchi haftada qiyin bo'ldi, keyin odatga aylandi. Kunning qolgan qismi ham tinchroq o'tadigan bo'ldi."
+  ],
+  "xulosa": "Eng muhim ish kunning eng toza vaqtiga.",
+  "namuna": true
+ },
+ {
+  "id": "k-2026-10-07-lid-narxi",
+  "sana": "2026-10-07",
+  "toifa": "O'rgandim",
+  "sarlavha": "Lid nega vaqt o'tib qimmatlashadi",
+  "teglar": [
+   "meta-ads",
+   "lid",
+   "kreativ"
+  ],
+  "matn": [
+   "Reklama o'zgarmagan bo'lsa ham ariza narxi oshib boradi. Ko'pincha sababi kreativning eskirishi: bir xil odamlar bir xil reklamani qayta-qayta ko'radi va befarq bo'lib qoladi.",
+   "Chastota ko'tarila boshlaganda butun kampaniyani emas, faqat kreativni yangilash kifoya qiladi."
+  ],
+  "xulosa": "Kreativ ham mahsulot kabi eskiradi — uni rejali yangilab turish kerak.",
+  "namuna": true
+ },
+ {
+  "id": "k-2026-10-03-hook",
+  "sana": "2026-10-03",
+  "toifa": "O'rgandim",
+  "sarlavha": "Hook nima va nega birinchi 2 soniya hal qiladi",
+  "teglar": [
+   "reels",
+   "kontent"
+  ],
+  "matn": [
+   "Tomoshabin Reels'ning birinchi 1–2 soniyasida qolish yoki o'tib ketishni hal qiladi. Shu vaqtda u nima uchun ko'rishi kerakligini tushunmasa, videoning qolgan qismi ahamiyatsiz bo'lib qoladi.",
+   "Shuning uchun ssenariyda avval hookni yozamiz, keyin qolgan qismini. Bitta video uchun 2–3 ta hook varianti tayyorlanadi."
+  ],
+  "xulosa": "Videoni oxiridan emas, birinchi soniyasidan boshlab yoz.",
+  "namuna": true
+ },
+ {
+  "id": "k-2026-10-01-atomic-habits",
+  "sana": "2026-10-01",
+  "toifa": "Kitob",
+  "sarlavha": "Atomic Habits — kichik odatlar katta natija beradi",
+  "kitob": {
+   "nom": "Atomic Habits",
+   "muallif": "James Clear",
+   "rang": "#E9E4D6",
+   "matn_rang": "#1F2A27",
+   "holat": "o'qildi"
+  },
+  "matn": [
+   "Kitob katta maqsad qo'yish o'rniga kichik, har kuni takrorlanadigan odatlarga e'tibor berishni o'rgatadi. Natija maqsaddan emas, tizimdan keladi.",
+   "Kunlik yozish odati shu g'oyadan chiqdi: har kuni bitta kichik yozuv."
+  ],
+  "xulosa": "Maqsad yo'nalish beradi, tizim esa yetkazib boradi.",
+  "namuna": true
+ },
+ {
+  "id": "k-2026-09-24-100m-offers",
+  "sana": "2026-09-24",
+  "toifa": "Kitob",
+  "sarlavha": "$100M Offers — narxni emas, qiymatni oshirish",
+  "kitob": {
+   "nom": "$100M Offers",
+   "muallif": "Alex Hormozi",
+   "rang": "#D63A34",
+   "matn_rang": "#FFFFFF",
+   "holat": "o'qildi"
+  },
+  "matn": [
+   "Mijoz narxni emas, olayotgan qiymatini solishtiradi. Taklifni kuchaytirish uchun chegirma emas, natijaga yaqinlashtiradigan qo'shimchalar kerak.",
+   "Shu kitobdan keyin xizmat paketlarimizni qayta tuzib chiqdik."
+  ],
+  "xulosa": "Arzon taklif emas, rad etib bo'lmaydigan taklif qur.",
+  "namuna": true
+ }
+]

@@ -1,0 +1,35 @@
+{
+  "ism": "Jahongir",
+  "brend": "Jahongir | O'N",
+  "lavozim": "O'N asoschisi · o'sish strategi",
+  "bio": "Ta'lim va xizmat bizneslari uchun marketing, kontent va dasturiy yechimlar quraman. Bu yerda har kuni hal qilgan muammolarimizni yozib boraman: nima bo'ldi, nima qildik, nima o'zgardi.",
+  "telegram": "sp_business_agency",
+  "sayt": "https://onagy.app",
+  "rasm": "media/jahongir.jpg",
+  "domen": "https://jahongir.onagy.app",
+  "hero": "media/hero.jpg",
+  "hero_m": "media/hero-m.jpg",
+  "og": "media/og.jpg",
+  "xizmatlar": [
+    {
+      "nom": "Meta Ads va arizalar oqimi",
+      "tavsif": "Reklamani ariza olib keladigan qilib sozlaymiz va ariza narxini nazorat qilamiz.",
+      "teg": "meta-ads"
+    },
+    {
+      "nom": "Reels va kontent",
+      "tavsif": "Ssenariy, suratga olish va montaj. Har bir video ko'rilishi va arizasi bilan o'lchanadi.",
+      "teg": "reels"
+    },
+    {
+      "nom": "Sotuv tizimi",
+      "tavsif": "Arizadan sotuvgacha: operator skripti, javob tezligi va sotuvga o'tish foizi.",
+      "teg": "sotuv"
+    },
+    {
+      "nom": "IT va Telegram yechimlar",
+      "tavsif": "Qo'lda qilinayotgan ishni bot va integratsiyaga o'tkazamiz: vaqt ham, xato ham kamayadi.",
+      "teg": "telegram"
+    }
+  ]
+}

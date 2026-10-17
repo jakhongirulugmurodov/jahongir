@@ -1,0 +1,45 @@
+{
+  "id": "2026-10-14-muqovalar-uchun-karkas",
+  "sana": "2026-10-14",
+  "loyiha": "talim-konsalting",
+  "sarlavha": "Reels muqovalari uchun yagona brend karkasi",
+  "teglar": [
+    "reels",
+    "dizayn",
+    "brend"
+  ],
+  "namuna": true,
+  "muammo": "Har bir Reels muqovasi har xil uslubda chiqardi. Profilga kirgan odam sahifani bitta brend deb sezmasdi.",
+  "yechim": "Muqova uchun qat'iy karkas qurdik: sarlavha joyi, rang, odam rasmi qayerda turishi. Rasm generatsiya promptlarini ham shu karkasga moslab yozdik.",
+  "natija": "Profil to'ri bir xil ko'rinishga keldi, yangi muqova tayyorlash tezlashdi.",
+  "vizual": {
+    "shablon": "kreativ",
+    "elementlar": [
+      {
+        "nom": "Universitet",
+        "tur": "muqova"
+      },
+      {
+        "nom": "Viza tartibi",
+        "tur": "muqova"
+      },
+      {
+        "nom": "Grant",
+        "tur": "muqova"
+      },
+      {
+        "nom": "Yotoqxona",
+        "tur": "muqova"
+      },
+      {
+        "nom": "Til imtihoni",
+        "tur": "muqova"
+      },
+      {
+        "nom": "Talaba hayoti",
+        "tur": "muqova"
+      }
+    ]
+  },
+  "tur": "Dizayn"
+}
