@@ -1,0 +1,14 @@
+name: Telegram ulanishini tekshirish
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/tg_connect.py, .github/workflows/tg-connect.yml]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/tg_connect.py
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
