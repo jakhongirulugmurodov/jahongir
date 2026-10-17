@@ -2,35 +2,39 @@
   "id": "2026-10-15-instagram-ham-qoshildi",
   "sana": "2026-10-15",
   "loyiha": "ai-sotuvchi",
-  "sarlavha": "Instagram ham qo'shildi",
+  "sarlavha": "Instagram'da \"narxi qancha?\" deb so'rashdi, siz kech ko'rdingizmi?",
   "teglar": [
     "instagram",
     "ai",
     "sotuv"
   ],
-  "muammo": "Mijozlar faqat Telegram'da emas, Instagram'da ham yozadi. Doimiy mijozlar bilan kelishilgan ishlar va muddatlar esa yodimizdan chiqib qolardi.",
-  "yechim": "Instagram ulandi: endi agent izohlar va Direct'ni ham kuzatadi. AI bepul modellarga o'tkazildi. Doimiy mijozlar uchun bo'lim qurildi: har bir mijozning kartasi bor, muddat yaqinlashsa eslatma keladi.",
-  "natija": "Bitta agent ikki joyni kuzatadi, AI uchun pul to'lamaymiz.",
+  "muammo": "Izohda yoki Direct'da yozgan odam javobni bir necha daqiqa kutadi. Javob kech kelsa, u boshqa sahifaga o'tib ketadi. Doimiy mijozlar bilan esa boshqa muammo: kelishilgan ish va muddatlar yodingizdan chiqadi, mijoz norozi bo'ladi.",
+  "yechim": "AI agentga Instagram'ni ham uladik. Endi u izohlarga darhol javob beradi va qiziqqan odamni Direct'ga olib o'tadi. Doimiy mijozlar uchun alohida bo'lim qurdik: har bir mijozning kartasi bor, muddat yaqinlashsa eslatma keladi. AI bepul modellarda ishlaydi, shuning uchun qo'shimcha xarajat yo'q.",
+  "natija": "Bitta agent Telegram va Instagram'ni birga kuzatadi. Instagram sahifangizni ham shunday ulab beramiz.",
   "vizual": {
     "shablon": "iqtibos",
     "matn": "Instagram ham qo'shildi"
   },
   "storyboard": {
-    "rasm": "media/loyiha/ai-sotuvchi/ai-instagram.jpg",
+    "rasm": "media/loyiha/ai-sotuvchi/ai-v-instagram.jpg",
     "kadrlar": [
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-instagram-1.jpg",
-        "izoh": "Instagram ulandi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-instagram-1.jpg",
+        "izoh": "Savol javobsiz qoldi"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-instagram-2.jpg",
-        "izoh": "Har mijozning kartasi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-instagram-2.jpg",
+        "izoh": "Agent darhol javob beradi"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-instagram-3.jpg",
-        "izoh": "Muddat yaqinlashsa eslatadi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-instagram-3.jpg",
+        "izoh": "Sizga ham ulab beramiz"
       }
     ]
   },
-  "tur": "Instagram"
+  "tur": "Instagram",
+  "taklif": {
+    "tugma": "Instagram'imga ham ulab bering",
+    "xabar": "Salom! Saytingizdagi Instagram agenti haqidagi postni o'qidim. Bizning sahifaga ham ulab bera olasizmi?"
+  }
 }

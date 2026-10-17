@@ -2,47 +2,51 @@
   "id": "2026-09-27-bitta-guruhdan-boshlandi",
   "sana": "2026-09-27",
   "loyiha": "ai-sotuvchi",
-  "sarlavha": "Bitta guruhdan boshlandi: birinchi mijoz 1,5 soatda topildi",
+  "sarlavha": "Guruhda mijoz yozadi, siz esa ko'rmay qolasizmi?",
   "teglar": [
     "telegram",
     "sotuv",
     "ai"
   ],
-  "muammo": "Guruhimizda 2000 ga yaqin odam bor, kuniga 1000–2000 ta xabar tushadi. Kim ish so'rayapti, kim o'z xizmatini sotyapti, kim shunchaki bahslashyapti, bilish uchun kun bo'yi o'qish kerak edi. Bizda esa sotuvchi yo'q.",
-  "yechim": "Soat 15:34 da ish boshlandi. Guruhni o'qib, ish so'rayotganlarni ajratib beradigan agent qurdik.",
-  "natija": "Soat 17:05 da birinchi mijoz tushdi, ya'ni bor-yo'g'i 1,5 soatda. O'sha kuniyoq agent guruhni doimiy kuzata boshladi.",
+  "muammo": "Telegram guruhlarida har kuni kimdir \"SMM kerak\", \"sayt kerak\", \"mobilograf qidiryapman\" deb yozadi. Lekin bu xabarlar minglab boshqa xabarlar orasida ko'milib ketadi. Siz ko'rguningizcha mijoz boshqasini topib bo'ladi. Kuzatish uchun alohida odam yollash esa qimmat. Bizda ham aynan shunday edi: 2000 kishilik guruhimizga kuniga 1000–2000 ta xabar tushardi, sotuvchimiz esa yo'q edi.",
+  "yechim": "Guruhni biz o'rnimizga o'qiydigan AI agent qurdik. U har bir xabarni ko'radi va faqat ish so'rayotganlarni ajratib beradi. O'z xizmatini sotayotganlar, spam va bahslar ro'yxatga tushmaydi. Ish 27-sentabr soat 15:34 da boshlandi.",
+  "natija": "Soat 17:05 da birinchi mijoz topildi, ya'ni 1,5 soatda. 3 hafta ichida agent 300 ga yaqin mijoz topdi, bitta ham sotuvchi yollamasdan. Sizning sohangizdagi guruhlar uchun ham shunday agent qurib beramiz.",
   "vizual": {
     "shablon": "iqtibos",
     "matn": "Bitta guruhdan boshlandi: birinchi mijoz 1,5 soatda topildi"
   },
   "storyboard": {
-    "rasm": "media/loyiha/ai-sotuvchi/ai-sotuvchi.jpg",
+    "rasm": "media/loyiha/ai-sotuvchi/ai-v-guruh.jpg",
     "kadrlar": [
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-1.jpg",
-        "izoh": "Kuniga ming-minglab xabar"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-guruh-1.jpg",
+        "izoh": "Mijoz guruhda yozdi"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-2.jpg",
-        "izoh": "Sotuvchimiz yo'q edi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-guruh-2.jpg",
+        "izoh": "Siz kech ko'rdingiz"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-3.jpg",
-        "izoh": "AI keraklisini ajratadi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-guruh-3.jpg",
+        "izoh": "U boshqasini topib bo'ldi"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-4.jpg",
-        "izoh": "Yangi guruhlarni o'zi topadi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-guruh-4.jpg",
+        "izoh": "AI har xabarni o'qiydi"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-5.jpg",
-        "izoh": "Odamdek yozadi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-guruh-5.jpg",
+        "izoh": "Sotuvchisiz, 3 haftada"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-6.jpg",
-        "izoh": "Issiq mijozni bizga beradi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-guruh-6.jpg",
+        "izoh": "Sizga ham qurib beramiz"
       }
     ]
   },
-  "tur": "Mijoz topish"
+  "tur": "Mijoz topish",
+  "taklif": {
+    "tugma": "Menga ham shunday agent kerak",
+    "xabar": "Salom! Saytingizdagi \"AI sotuvchi\" postini o'qidim. Bizning biznesga ham shunday agent kerak."
+  }
 }

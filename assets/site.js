@@ -154,7 +154,7 @@
     /* ---- post sheet in place ---- */
     var showPost = function (host, p, backLabel, back) {
       var dd = +p.d.slice(8), mm = +p.d.slice(5, 7);
-      host.innerHTML = '<article class="post"><div class="sheet"><button type="button" class="back">← ' + esc(backLabel) + '</button><div class="f-meta"><span>' + dd + "-" + OY[mm - 1] + ", " + p.d.slice(0, 4) + "</span><span>· " + esc(p.pn) + "</span><span>· " + esc(p.g) + "</span>" + (p.demo ? '<span class="demo">namuna</span>' : "") + "</div><h3>" + esc(p.t) + '</h3><div class="sk">' + p.sk + '</div><div class="blocks"><div><b>' + esc((p.labels || [])[0] || "Muammo") + '</b><p>' + esc(p.m) + "</p></div><div><b>" + esc((p.labels || [])[1] || "Yechim") + "</b><p>" + esc(p.y) + "</p></div><div><b>" + esc((p.labels || [])[2] || "Natija") + "</b><p>" + esc(p.n) + '</p></div></div><div class="tags">' + p.tags.map(function (t) { return "<span>#" + esc(t) + "</span>"; }).join("") + (D.single ? "" : '<a href="post/' + p.id + '.html">havola ↗</a>') + "</div></div></article>";
+      host.innerHTML = '<article class="post"><div class="sheet"><button type="button" class="back">← ' + esc(backLabel) + '</button><div class="f-meta"><span>' + dd + "-" + OY[mm - 1] + ", " + p.d.slice(0, 4) + "</span><span>· " + esc(p.pn) + "</span><span>· " + esc(p.g) + "</span>" + (p.demo ? '<span class="demo">namuna</span>' : "") + "</div><h3>" + esc(p.t) + '</h3><div class="sk">' + p.sk + '</div><div class="blocks"><div><b>' + esc((p.labels || [])[0] || "Muammo") + '</b><p>' + esc(p.m) + "</p></div><div><b>" + esc((p.labels || [])[1] || "Yechim") + "</b><p>" + esc(p.y) + "</p></div><div><b>" + esc((p.labels || [])[2] || "Natija") + "</b><p>" + esc(p.n) + '</p></div></div>' + (p.cta ? '<a class="post-cta" href="' + esc(p.cta.h) + '" target="_blank" rel="noopener">' + esc(p.cta.t) + ' →</a>' : '') + '<div class="tags">' + p.tags.map(function (t) { return "<span>#" + esc(t) + "</span>"; }).join("") + (D.single ? "" : '<a href="post/' + p.id + '.html">havola ↗</a>') + "</div></div></article>";
       host.querySelector(".back").onclick = back;
       host.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     };
@@ -403,7 +403,7 @@
       o.innerHTML = '<div class="st-bg"></div><button type="button" class="st-tp" aria-label="Oldingi sayohat">‹</button>' +
         '<div class="st-fr"><div class="st-blur"></div><div class="st-img"></div><div class="st-bars"></div>' +
         '<div class="st-top"><span class="st-tt"><b></b><i></i></span><button type="button" class="st-x" aria-label="Yopish">×</button></div>' +
-        '<p class="st-cap"></p><span class="st-ps" aria-hidden="true"><i></i><i></i></span></div>' +
+        '<a class="st-cta" target="_blank" rel="noopener" hidden></a><p class="st-cap"></p><span class="st-ps" aria-hidden="true"><i></i><i></i></span></div>' +
         '<button type="button" class="st-nt" aria-label="Keyingi sayohat">›</button>';
       var fr = o.querySelector(".st-fr"), bars = o.querySelector(".st-bars"), box = o.querySelector(".st-img"), blur = o.querySelector(".st-blur"), bg = o.querySelector(".st-bg"), cap = o.querySelector(".st-cap");
       var setPause = function (v) { o.classList.toggle("paused", v); };
@@ -426,7 +426,8 @@
         [].forEach.call(box.children, function (old) { old.classList.remove("in"); old.classList.add("out"); setTimeout(function () { old.remove(); }, 450); });
         box.appendChild(img);
         blur.style.backgroundImage = bg.style.backgroundImage = 'url("' + ph.s + '")';
-        var c = ph.i || (pi === 0 ? t.x : ""); cap.textContent = c; cap.hidden = !c; cap.style.animation = "none"; void cap.offsetWidth; cap.style.animation = "";
+        var c = ph.i || (pi === 0 ? t.x : ""); cap.textContent = c; cap.hidden = !c;
+        var ctaEl = o.querySelector(".st-cta"), lastF = t.cta && pi === t.img.length - 1; ctaEl.hidden = !lastF; if (lastF) { ctaEl.href = t.cta.h; ctaEl.textContent = t.cta.t + " →"; } o.classList.toggle("has-cta", !!lastF); cap.style.animation = "none"; void cap.offsetWidth; cap.style.animation = "";
         var nx = t.img[pi + 1] || (T[ti + 1] && T[ti + 1].img[0]); if (nx) new Image().src = nx.s;
       };
       var next = function () { if (pi < T[ti].img.length - 1) show(ti, pi + 1); else if (ti < T.length - 1) show(ti + 1, 0, 1); else close(); };
@@ -448,7 +449,7 @@
       var pop = function () { close(true); };
       var vis = function () { if (document.hidden) setPause(true); };
       fr.addEventListener("pointerdown", function (e) {
-        if (e.target.closest("button")) return;
+        if (e.target.closest("button, a")) return;
         down = true; held = false; sx = e.clientX; sy = e.clientY;
         clearTimeout(holdT); holdT = setTimeout(function () { held = true; setPause(true); }, 220);
       });
@@ -541,5 +542,5 @@
 document.addEventListener("click", function (e) {
   var im = e.target.closest && e.target.closest(".post .sk-img"); if (!im || !window.__story || !window.D) return;
   var p = (window.D.posts || []).filter(function (x) { return x.id === im.dataset.pid; })[0]; if (!p || !p.sb) return;
-  window.__story([{ joy: p.t, hud: p.pn, dav: "", d: p.d, x: "", img: p.sb.f }], 0, im);
+  window.__story([{ joy: p.t, hud: p.pn, dav: "", d: p.d, x: "", img: p.sb.f, cta: p.cta }], 0, im);
 });

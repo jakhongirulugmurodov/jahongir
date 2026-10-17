@@ -2,35 +2,39 @@
   "id": "2026-10-17-121-ta-suhbatdan-organdi",
   "sana": "2026-10-17",
   "loyiha": "ai-sotuvchi",
-  "sarlavha": "121 ta haqiqiy suhbatdan o'rgandi",
+  "sarlavha": "AI noto'g'ri odamga yozsa, obro'yingiz ketadi. Biz buni qanday oldini oldik",
   "teglar": [
     "telegram",
     "ai",
     "sotuv"
   ],
-  "muammo": "Agent ba'zan kerakmas odamlarga ham yozardi: raqobatchilarga, o'z xizmatini sotayotganlarga.",
-  "yechim": "15–17-oktabr kunlari 121 ta mijozni birma-bir ko'rib chiqdik: kimga yozish kerak edi, kimga kerak emas edi. Agentni shu asosda qayta o'qitdik. Yana qo'shildi: har kuni shom vaqtida hisobot, yangi guruhlarni o'zi qidirishi, ish e'lonlari kanallarini kuzatishi, ovozli xabar ostiga matn qo'yishi va mijozlarga eslatmalar.",
-  "natija": "Keraksiz odamlarni agent endi o'zi o'tkazib yuboradi. Shu kungacha 300 ga yaqin mijoz topdi.",
+  "muammo": "AI sotuvchining eng katta xavfi: u raqobatchingizga yoki o'z xizmatini sotayotgan odamga ham \"xizmatimiz kerakmi?\" deb yozib yuborishi. Bunday xabar sizni spamchi qilib ko'rsatadi. Bizning agentimizda ham boshida shunday holatlar bo'lgan.",
+  "yechim": "15–17-oktabr kunlari agent topgan 121 ta mijozni birma-bir ko'rib chiqdik: kimga yozish to'g'ri edi, kimga noto'g'ri. Agentni shu haqiqiy suhbatlar asosida qayta o'qitdik. Shu bilan birga har kuni shom vaqtida hisobot, yangi guruhlarni o'zi qidirish, ish e'lonlari kanallarini kuzatish, ovozli xabarlarga matn va mijozlarga eslatmalar qo'shildi.",
+  "natija": "Agent endi keraksiz odamlarni o'zi o'tkazib yuboradi, siz esa har kech nechta mijoz topilgani va nechtasi bilan gaplashilganini ko'rasiz. Agentni sizning xizmatlaringiz va qoidalaringiz bo'yicha o'qitib beramiz.",
   "vizual": {
     "shablon": "iqtibos",
     "matn": "121 ta haqiqiy suhbatdan o'rgandi"
   },
   "storyboard": {
-    "rasm": "media/loyiha/ai-sotuvchi/ai-121.jpg",
+    "rasm": "media/loyiha/ai-sotuvchi/ai-v-oqitish.jpg",
     "kadrlar": [
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-121-1.jpg",
-        "izoh": "Suhbatlarni saraladik"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-oqitish-1.jpg",
+        "izoh": "Noto'g'ri odamga yozish xavfi"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-121-2.jpg",
-        "izoh": "Agent qayta o'qidi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-oqitish-2.jpg",
+        "izoh": "121 ta suhbatdan o'rgandi"
       },
       {
-        "src": "media/loyiha/ai-sotuvchi/ai-121-3.jpg",
-        "izoh": "Har kech hisobot keladi"
+        "src": "media/loyiha/ai-sotuvchi/ai-v-oqitish-3.jpg",
+        "izoh": "Sizga moslab beramiz"
       }
     ]
   },
-  "tur": "O'qitish"
+  "tur": "O'qitish",
+  "taklif": {
+    "tugma": "Agentni biznesimga moslab bering",
+    "xabar": "Salom! Saytingizdagi AI agentni o'qitish haqidagi postni o'qidim. Bizning biznesga moslab bera olasizmi?"
+  }
 }

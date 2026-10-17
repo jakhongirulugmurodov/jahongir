@@ -143,7 +143,7 @@ const homeData = {
     const L = byProj(p.slug)[0];
     return { slug: p.slug, n: p.nom, q: p.qisqa || p.nom, s: p.soha, x: p.xizmat, t: p.tavsif, since: p.qachondan || "", xs: p.xizmatlar || [], c: byProj(p.slug).length, holat: p.holat, last: L ? { t: L.sarlavha, sk: vis(L) } : null };
   }),
-  posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: vis(p), sb: p.storyboard ? { c: p.storyboard.rasm, f: (p.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!p.namuna })),
+  posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: vis(p), cta: p.taklif ? { t: p.taklif.tugma, h: `https://t.me/${site.telegram}?text=${encodeURIComponent(p.taklif.xabar || "")}` } : null, sb: p.storyboard ? { c: p.storyboard.rasm, f: (p.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!p.namuna })),
   tg: site.telegram,
   sayohat: sayohat.map((t) => ({ id: t.id, d: t.sana, joy: t.joy, hud: t.hudud || "", dav: t.davlat || "", x: t.izoh || "", img: t.rasmlar.map((r) => (typeof r === "string" ? { s: r, i: "" } : { s: r.src, i: r.izoh || "" })), demo: !!t.namuna })),
   kundalik: kundalik.map((k) => ({ id: k.id, d: k.sana, c: k.toifa, t: k.sarlavha, p: Array.isArray(k.matn) ? k.matn : [k.matn || ""], x: k.xulosa || "", img: k.rasmlar || [], h: k.balandlik || 0, joy: k.joy || "", book: k.kitob || null, sb: k.storyboard ? { c: k.storyboard.rasm, f: (k.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!k.namuna })),
@@ -268,6 +268,7 @@ for (const p of posts) {
     <h3>${esc(p.sarlavha)}</h3>
     <div class="sk">${vis(p, "../")}</div>
     <div class="blocks"><div><b>Muammo</b><p>${esc(p.muammo)}</p></div><div><b>Yechim</b><p>${esc(p.yechim)}</p></div><div><b>Natija</b><p>${esc(p.natija)}</p></div></div>
+    ${p.taklif ? `<a class="post-cta" href="https://t.me/${esc(site.telegram)}?text=${esc(encodeURIComponent(p.taklif.xabar || ""))}" target="_blank" rel="noopener">${esc(p.taklif.tugma)} →</a>` : ""}
     <div class="tags">${(p.teglar || []).map((t) => `<span>#${esc(t)}</span>`).join("")}</div>
   </div></article>
   <nav class="pn" aria-label="Shu papkadagi boshqa hujjatlar"><span>${older ? `<a href="${older.id}.html">← ${esc(older.sarlavha)}</a>` : ""}</span><span style="text-align:right">${newer ? `<a href="${newer.id}.html">${esc(newer.sarlavha)} →</a>` : ""}</span></nav>
