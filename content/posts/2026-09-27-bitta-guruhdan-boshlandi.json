@@ -1,0 +1,48 @@
+{
+  "id": "2026-09-27-bitta-guruhdan-boshlandi",
+  "sana": "2026-09-27",
+  "loyiha": "ai-sotuvchi",
+  "sarlavha": "Bitta guruhdan boshlandi: birinchi mijoz 1,5 soatda topildi",
+  "teglar": [
+    "telegram",
+    "sotuv",
+    "ai"
+  ],
+  "muammo": "Guruhimizda 2000 ga yaqin odam bor, kuniga 1000–2000 ta xabar tushadi. Kim ish so'rayapti, kim o'z xizmatini sotyapti, kim shunchaki bahslashyapti, bilish uchun kun bo'yi o'qish kerak edi. Bizda esa sotuvchi yo'q.",
+  "yechim": "Soat 15:34 da ish boshlandi. Guruhni o'qib, ish so'rayotganlarni ajratib beradigan agent qurdik.",
+  "natija": "Soat 17:05 da birinchi mijoz tushdi, ya'ni bor-yo'g'i 1,5 soatda. O'sha kuniyoq agent guruhni doimiy kuzata boshladi.",
+  "vizual": {
+    "shablon": "iqtibos",
+    "matn": "Bitta guruhdan boshlandi: birinchi mijoz 1,5 soatda topildi"
+  },
+  "storyboard": {
+    "rasm": "media/loyiha/ai-sotuvchi/ai-sotuvchi.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-1.jpg",
+        "izoh": "Kuniga ming-minglab xabar"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-2.jpg",
+        "izoh": "Sotuvchimiz yo'q edi"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-3.jpg",
+        "izoh": "AI keraklisini ajratadi"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-4.jpg",
+        "izoh": "Yangi guruhlarni o'zi topadi"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-5.jpg",
+        "izoh": "Odamdek yozadi"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-sotuvchi-6.jpg",
+        "izoh": "Issiq mijozni bizga beradi"
+      }
+    ]
+  },
+  "tur": "Mijoz topish"
+}

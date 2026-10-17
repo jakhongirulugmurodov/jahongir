@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "slug": "ai-sotuvchi",
+    "nom": "AI sotuvchi",
+    "soha": "O'N · o'z mahsulotimiz",
+    "xizmat": "AI agent, Telegram, Instagram",
+    "holat": "faol",
+    "tavsif": "Telegram guruhlari va Instagram'dan mijozni o'zi topib, o'zi gaplashadigan AI agent.",
+    "qachondan": "2026-yil 27-sentabrdan",
+    "xizmatlar": [
+      "AI agent",
+      "Telegram",
+      "Instagram"
+    ],
+    "qisqa": "AI sotuvchi"
+  }
+]

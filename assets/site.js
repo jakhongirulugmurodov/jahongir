@@ -377,7 +377,7 @@
 
   /* ================= SAYOHAT: photo stacks + story viewer ================= */
   var tgrid = document.getElementById("tgrid");
-  if (tgrid) {
+  {
     var T = D.sayohat || [], tmore = document.getElementById("tmore"), tlimit = innerWidth <= 700 ? 6 : 8;
     var TR = ["-3deg", "2deg", "-1.4deg", "3deg", "-2.2deg", "1.4deg"];
     var sdate = function (d, y) { return (+d.slice(8)) + "-" + OY[+d.slice(5, 7) - 1].slice(0, 3) + (y ? ", " + d.slice(0, 4) : ""); };
@@ -393,8 +393,8 @@
       tgrid.innerHTML = T.slice(0, tlimit).map(tcard).join("");
       tmore.hidden = T.length <= tlimit; tmore.textContent = "Yana ko'rsatish (" + (T.length - tlimit) + ")";
     };
-    tmore.addEventListener("click", function () { tlimit += 8; renderT(); });
-    tgrid.addEventListener("click", function (e) { var b = e.target.closest(".tp"); if (b) openStory(+b.dataset.i, b); });
+    if (tgrid) tmore.addEventListener("click", function () { tlimit += 8; renderT(); });
+    if (tgrid) tgrid.addEventListener("click", function (e) { var b = e.target.closest(".tp"); if (b) openStory(+b.dataset.i, b); });
 
     var openStory = function (ti0, from, list) {
       var T = list || D.sayohat || [];
@@ -478,7 +478,7 @@
       o.querySelector(".st-x").focus({ preventScroll: true });
     };
     window.__story = function (list, i, from) { openStory(i || 0, from, list); };
-    renderT();
+    if (tgrid) renderT();
   }
 
   /* ================= header: compact, hides on scroll down (phones) ================= */
@@ -536,3 +536,10 @@
   };
   document.head.appendChild(s);
 })();
+
+/* ===== post varag'idagi storyboard: bosilsa kadrlar story kabi ochiladi ===== */
+document.addEventListener("click", function (e) {
+  var im = e.target.closest && e.target.closest(".post .sk-img"); if (!im || !window.__story || !window.D) return;
+  var p = (window.D.posts || []).filter(function (x) { return x.id === im.dataset.pid; })[0]; if (!p || !p.sb) return;
+  window.__story([{ joy: p.t, hud: p.pn, dav: "", d: p.d, x: "", img: p.sb.f }], 0, im);
+});

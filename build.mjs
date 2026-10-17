@@ -65,6 +65,9 @@ function sketch(v = {}) {
   }
 }
 
+// storyboard bo'lsa mini chizma o'rniga muqova rasmi
+const vis = (p, r = "") => (p.storyboard ? `<img class="sk-img" src="${r}${esc(p.storyboard.rasm)}" alt="${esc(p.sarlavha)} — storyboard" data-pid="${esc(p.id)}" loading="lazy">` : sketch(p.vizual));
+
 const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap">`;
 const SVGDEFS = `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F7F7"/><stop offset=".35" stop-color="#A9B4B4"/><stop offset=".55" stop-color="#E9EEEE"/><stop offset="1" stop-color="#7E8A8A"/></linearGradient><radialGradient id="pinHead" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#9AD2D2"/><stop offset=".35" stop-color="#16A6A9"/><stop offset="1" stop-color="#0A4E50"/></radialGradient><symbol id="clipS" viewBox="0 0 26 78"><path d="M9 70 V16 a7 7 0 0 1 14 0 V58 a5 5 0 0 1 -10 0 V22" fill="none" stroke="url(#metal)" stroke-width="2.6" stroke-linecap="round"/></symbol><symbol id="pinS" viewBox="0 0 26 38"><path d="M13 22 L14.2 37" stroke="#8C9898" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="13" cy="21.5" rx="7.5" ry="2.6" fill="#0A4E50"/><path d="M8 20 C8 14, 9 11, 10 9 L16 9 C17 11, 18 14, 18 20 Z" fill="url(#pinHead)"/><ellipse cx="13" cy="8" rx="8.5" ry="6.5" fill="url(#pinHead)"/><ellipse cx="10.5" cy="6" rx="2.6" ry="1.6" fill="#fff" opacity=".7"/></symbol></defs></svg>`;
 
@@ -117,7 +120,7 @@ ${data ? `<script>window.D=${JSON.stringify(data).replace(/</g, "\\u003c")};</sc
 
 const docCard = (p, r, k) => `<a class="doc" data-id="${p.id}" href="${r}post/${p.id}.html" style="--r:${ROT[k % 6]};--i:${k}" data-q="${esc([p.sarlavha, p.muammo, p.yechim, p.natija, projBy[p.loyiha].nom, ...(p.teglar || [])].join(" ").toLowerCase())}" data-loyiha="${p.loyiha}">
   <svg class="clip" aria-hidden="true"><use href="#clipS"/></svg><span class="stamp">${day(p.sana)} ${OY[mon(p.sana) - 1].slice(0, 3)}</span>
-  <span class="chip">${esc(p.tur || projBy[p.loyiha].nom)}</span><div class="sk">${sketch(p.vizual)}</div>
+  <span class="chip">${esc(p.tur || projBy[p.loyiha].nom)}</span><div class="sk">${vis(p, r)}</div>
   <h4>${esc(p.sarlavha)}${p.namuna ? '<span class="demo">namuna</span>' : ""}</h4><p>${esc(p.muammo)}</p><span class="read">O'qish →</span></a>`;
 
 const kCard = (k, n) => `<a class="doc" data-kid="${k.id}" href="#kundalik" style="--r:${ROT[n % 6]};--i:${n}" data-q="${esc([k.sarlavha, ...(Array.isArray(k.matn) ? k.matn : [k.matn || ""]), k.xulosa, k.toifa, ...(k.teglar || [])].join(" ").toLowerCase())}">
@@ -138,9 +141,9 @@ const homeData = {
   r: "",
   projects: folderOrder.map((p) => {
     const L = byProj(p.slug)[0];
-    return { slug: p.slug, n: p.nom, q: p.qisqa || p.nom, s: p.soha, x: p.xizmat, t: p.tavsif, since: p.qachondan || "", xs: p.xizmatlar || [], c: byProj(p.slug).length, holat: p.holat, last: L ? { t: L.sarlavha, sk: sketch(L.vizual) } : null };
+    return { slug: p.slug, n: p.nom, q: p.qisqa || p.nom, s: p.soha, x: p.xizmat, t: p.tavsif, since: p.qachondan || "", xs: p.xizmatlar || [], c: byProj(p.slug).length, holat: p.holat, last: L ? { t: L.sarlavha, sk: vis(L) } : null };
   }),
-  posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: sketch(p.vizual), demo: !!p.namuna })),
+  posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: vis(p), sb: p.storyboard ? { c: p.storyboard.rasm, f: (p.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!p.namuna })),
   tg: site.telegram,
   sayohat: sayohat.map((t) => ({ id: t.id, d: t.sana, joy: t.joy, hud: t.hudud || "", dav: t.davlat || "", x: t.izoh || "", img: t.rasmlar.map((r) => (typeof r === "string" ? { s: r, i: "" } : { s: r.src, i: r.izoh || "" })), demo: !!t.namuna })),
   kundalik: kundalik.map((k) => ({ id: k.id, d: k.sana, c: k.toifa, t: k.sarlavha, p: Array.isArray(k.matn) ? k.matn : [k.matn || ""], x: k.xulosa || "", img: k.rasmlar || [], h: k.balandlik || 0, joy: k.joy || "", book: k.kitob || null, sb: k.storyboard ? { c: k.storyboard.rasm, f: (k.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!k.namuna })),
@@ -263,7 +266,7 @@ for (const p of posts) {
     <a class="back" href="../loyiha/${pr.slug}.html">← ${esc(pr.nom)} papkasi</a>
     <div class="f-meta"><span>${sana(p.sana)}</span><span>· ${esc(pr.nom)}</span>${p.tur ? `<span>· ${esc(p.tur)}</span>` : ""}${p.namuna ? '<span class="demo">namuna</span>' : ""}</div>
     <h3>${esc(p.sarlavha)}</h3>
-    <div class="sk">${sketch(p.vizual)}</div>
+    <div class="sk">${vis(p, "../")}</div>
     <div class="blocks"><div><b>Muammo</b><p>${esc(p.muammo)}</p></div><div><b>Yechim</b><p>${esc(p.yechim)}</p></div><div><b>Natija</b><p>${esc(p.natija)}</p></div></div>
     <div class="tags">${(p.teglar || []).map((t) => `<span>#${esc(t)}</span>`).join("")}</div>
   </div></article>

@@ -1,0 +1,36 @@
+{
+  "id": "2026-10-17-121-ta-suhbatdan-organdi",
+  "sana": "2026-10-17",
+  "loyiha": "ai-sotuvchi",
+  "sarlavha": "121 ta haqiqiy suhbatdan o'rgandi",
+  "teglar": [
+    "telegram",
+    "ai",
+    "sotuv"
+  ],
+  "muammo": "Agent ba'zan kerakmas odamlarga ham yozardi: raqobatchilarga, o'z xizmatini sotayotganlarga.",
+  "yechim": "15–17-oktabr kunlari 121 ta mijozni birma-bir ko'rib chiqdik: kimga yozish kerak edi, kimga kerak emas edi. Agentni shu asosda qayta o'qitdik. Yana qo'shildi: har kuni shom vaqtida hisobot, yangi guruhlarni o'zi qidirishi, ish e'lonlari kanallarini kuzatishi, ovozli xabar ostiga matn qo'yishi va mijozlarga eslatmalar.",
+  "natija": "Keraksiz odamlarni agent endi o'zi o'tkazib yuboradi. Shu kungacha 300 ga yaqin mijoz topdi.",
+  "vizual": {
+    "shablon": "iqtibos",
+    "matn": "121 ta haqiqiy suhbatdan o'rgandi"
+  },
+  "storyboard": {
+    "rasm": "media/loyiha/ai-sotuvchi/ai-121.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-121-1.jpg",
+        "izoh": "Suhbatlarni saraladik"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-121-2.jpg",
+        "izoh": "Agent qayta o'qidi"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-121-3.jpg",
+        "izoh": "Har kech hisobot keladi"
+      }
+    ]
+  },
+  "tur": "O'qitish"
+}

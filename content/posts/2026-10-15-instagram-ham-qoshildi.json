@@ -1,0 +1,36 @@
+{
+  "id": "2026-10-15-instagram-ham-qoshildi",
+  "sana": "2026-10-15",
+  "loyiha": "ai-sotuvchi",
+  "sarlavha": "Instagram ham qo'shildi",
+  "teglar": [
+    "instagram",
+    "ai",
+    "sotuv"
+  ],
+  "muammo": "Mijozlar faqat Telegram'da emas, Instagram'da ham yozadi. Doimiy mijozlar bilan kelishilgan ishlar va muddatlar esa yodimizdan chiqib qolardi.",
+  "yechim": "Instagram ulandi: endi agent izohlar va Direct'ni ham kuzatadi. AI bepul modellarga o'tkazildi. Doimiy mijozlar uchun bo'lim qurildi: har bir mijozning kartasi bor, muddat yaqinlashsa eslatma keladi.",
+  "natija": "Bitta agent ikki joyni kuzatadi, AI uchun pul to'lamaymiz.",
+  "vizual": {
+    "shablon": "iqtibos",
+    "matn": "Instagram ham qo'shildi"
+  },
+  "storyboard": {
+    "rasm": "media/loyiha/ai-sotuvchi/ai-instagram.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-instagram-1.jpg",
+        "izoh": "Instagram ulandi"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-instagram-2.jpg",
+        "izoh": "Har mijozning kartasi"
+      },
+      {
+        "src": "media/loyiha/ai-sotuvchi/ai-instagram-3.jpg",
+        "izoh": "Muddat yaqinlashsa eslatadi"
+      }
+    ]
+  },
+  "tur": "Instagram"
+}
