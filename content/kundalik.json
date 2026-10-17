@@ -1,15 +1,25 @@
 [
  {
-  "id": "k-2026-10-15-nima-uchun-yozaman",
-  "sana": "2026-10-15",
+  "id": "k-2026-10-17-nega-yozib-boraman",
+  "sana": "2026-10-17",
   "toifa": "Hayot",
-  "sarlavha": "Nima uchun har kuni yozib boraman",
+  "sarlavha": "Nega har kuni nima qilganimni yozib boraman",
   "matn": [
-   "Yangi mijoz \"nima qilgansiz?\" deb so'raganda, eng yaxshi ishlarim xotiramdan chiqib ketgan bo'lardi. Ko'rsatadigan narsa telefondagi tarqoq skrinshotlar edi.",
-   "Shuning uchun qoida qo'ydim: har kuni hal qilgan bitta muammoni ovozli xabar qilib aytaman, u shu yerda post bo'lib chiqadi. Ishdan tashqari narsalar ham shu yerga yoziladi."
+   "Yangi mijoz bilan gaplashganda deyarli har doim bitta savol chiqadi: \"Oldin nima qilgansiz?\" Men esa telefondan eski skrinshotlarni qidirib, \"mana buni ham qilgandik\" deb tushuntirishga urinardim. Eng yaxshi ishlarimning yarmi esimdan chiqib ketgan bo'lardi.",
+   "Shunda bir narsani tushundim: qilgan ishing yozilmasa, boshqalar uchun u qilinmagandek. Mijoz gapingga emas, ko'rganiga ishonadi.",
+   "Shuning uchun shu sahifani ochdim. Bu yerda har kuni bitta narsa yoziladi: bugun qanday muammoga duch keldik, uni qanday hal qildik va nima o'zgardi. Katta hisobotlar emas, kichik, lekin har kungi qadamlar.",
+   "Nega aynan har kuni? Chunki oy oxirida \"nima qildik\" deb eslash qiyin, kun oxirida bir daqiqa gapirish esa oson. Bir yilda bu 300 dan ortiq yozuv bo'ladi. Hech qanday chiroyli portfolio bunchalik aniq gapira olmaydi.",
+   "Shu paytgacha nima qildik:",
+   "• Har bir loyihaning o'z papkasi bor. Ichida o'sha loyihada hal qilingan muammolar turadi.",
+   "• Taqvim qo'ydik: qaysi kuni nima qilinganini bir qarashda ko'rasiz.",
+   "• Mijozlar nomini yashirdik. Ism va raqamlar faqat ularning roziligi bilan chiqadi.",
+   "• Ishdan tashqari hayotni ham qo'shdik: o'qigan kitoblar, o'rganganlarim va sayohatlar. Sayohatlar rasm bilan, uzun gapsiz.",
+   "• Sahifa telefonda tez ochiladi, Telegram'da esa bitta tugma bilan.",
+   "Eng qiyini dizayn ham, texnika ham bo'lmadi. Eng qiyini har kuni yozishni odat qilish. Shuning uchun keyingi qadam shu: Telegram botga bir daqiqalik ovozli xabar yuboraman, bot uni o'zi yozuvga aylantiradi, men faqat tasdiqlayman. Yozishga alohida vaqt qidirish shart bo'lmaydi.",
+   "Bundan ham yaxshi bo'lishi uchun nima kerak: haqiqiy natijalar, ya'ni mijoz ruxsat bergan raqamlar; har bir loyihaning o'z rangi va uslubi; va sizning savollaringiz. Qaysi mavzuni batafsil yozishimni xohlasangiz, Telegram'da yozing.",
+   "Agar siz ham biznes yuritayotgan bo'lsangiz, bugundan boshlab kuniga bitta jumla yozing: bugun nimani hal qildingiz. Bir oydan keyin o'zingiz hayron qolasiz."
   ],
-  "xulosa": "Yozilmagan ish mijoz uchun qilinmagan ish bo'lib qoladi.",
-  "namuna": true
+  "xulosa": "Yozilmagan ish ko'rinmagan ish bo'lib qoladi."
  },
  {
   "id": "k-2026-10-14-show-your-work",
