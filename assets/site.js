@@ -511,3 +511,20 @@
     });
   })();
 })();
+
+/* ===== Telegram Mini App: faqat Telegram ichida ochilganda ishlaydi ===== */
+(function () {
+  if (!/tgWebApp/.test(location.hash + location.search) && !window.TelegramWebviewProxy) return;
+  var s = document.createElement("script");
+  s.src = "https://telegram.org/js/telegram-web-app.js";
+  s.onload = function () {
+    var tg = window.Telegram && window.Telegram.WebApp; if (!tg) return;
+    document.documentElement.classList.add("tg");
+    try { tg.ready(); tg.expand(); tg.setHeaderColor("#0A4E50"); tg.setBackgroundColor("#0A4E50"); } catch (e) {}
+    // story ochiq bo'lsa Telegram'ning "orqaga" tugmasi uni yopadi
+    var bb = tg.BackButton;
+    new MutationObserver(function () { if (document.querySelector(".st")) bb.show(); else bb.hide(); }).observe(document.body, { childList: true });
+    bb.onClick(function () { history.back(); });
+  };
+  document.head.appendChild(s);
+})();
