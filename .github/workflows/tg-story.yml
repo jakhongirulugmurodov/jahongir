@@ -1,0 +1,16 @@
+name: Telegram story joylash
+on:
+  workflow_dispatch:
+    inputs:
+      rasm: { description: "Rasm yo'li", required: true }
+      havola: { description: "Story ustidagi havola", required: true }
+      maydon: { description: "Havola maydoni: x y w h (foizda)", required: true, default: "50 85.73 49.3 6.9" }
+      soat: { description: "Necha soat tursin (6/12/24/48)", required: true, default: "24" }
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/tg_story.py "${{ inputs.rasm }}" "${{ inputs.havola }}" ${{ inputs.maydon }} "${{ inputs.soat }}"
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
