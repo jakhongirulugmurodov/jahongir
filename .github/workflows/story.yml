@@ -1,0 +1,25 @@
+name: Story joylash (Telegram + Instagram)
+on:
+  workflow_dispatch:
+    inputs:
+      tg_rasm: { description: "Telegram rasmi (repo ichidagi yo'l)", required: true }
+      ig_rasm: { description: "Instagram rasmi (saytdagi ochiq URL)", required: true }
+      havola: { description: "Telegram story ustidagi havola", required: true }
+      maydon: { description: "Havola maydoni: x y w h (foizda)", required: true, default: "50 85.73 49.3 6.9" }
+      soat: { description: "Telegram'da necha soat (6/12/24/48)", required: true, default: "24" }
+      qayer: { description: "ikkalasi / telegram / instagram", required: true, default: "ikkalasi" }
+jobs:
+  telegram:
+    if: inputs.qayer != 'instagram'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/tg_story.py "${{ inputs.tg_rasm }}" "${{ inputs.havola }}" ${{ inputs.maydon }} "${{ inputs.soat }}"
+        env: { TG_BOT_TOKEN: "${{ secrets.TG_BOT_TOKEN }}" }
+  instagram:
+    if: inputs.qayer != 'telegram'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/ig_story.py "${{ inputs.ig_rasm }}"
+        env: { IG_TOKEN: "${{ secrets.IG_TOKEN }}" }
