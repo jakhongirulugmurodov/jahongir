@@ -1,0 +1,14 @@
+name: Instagram ulanishini tekshirish
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/ig_check.py, .github/workflows/ig-check.yml]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/ig_check.py
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
