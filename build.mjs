@@ -143,7 +143,7 @@ const homeData = {
   posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: sketch(p.vizual), demo: !!p.namuna })),
   tg: site.telegram,
   sayohat: sayohat.map((t) => ({ id: t.id, d: t.sana, joy: t.joy, hud: t.hudud || "", dav: t.davlat || "", x: t.izoh || "", img: t.rasmlar.map((r) => (typeof r === "string" ? { s: r, i: "" } : { s: r.src, i: r.izoh || "" })), demo: !!t.namuna })),
-  kundalik: kundalik.map((k) => ({ id: k.id, d: k.sana, c: k.toifa, t: k.sarlavha, p: Array.isArray(k.matn) ? k.matn : [k.matn || ""], x: k.xulosa || "", img: k.rasmlar || [], h: k.balandlik || 0, joy: k.joy || "", book: k.kitob || null, demo: !!k.namuna })),
+  kundalik: kundalik.map((k) => ({ id: k.id, d: k.sana, c: k.toifa, t: k.sarlavha, p: Array.isArray(k.matn) ? k.matn : [k.matn || ""], x: k.xulosa || "", img: k.rasmlar || [], h: k.balandlik || 0, joy: k.joy || "", book: k.kitob || null, sb: k.storyboard ? { c: k.storyboard.rasm, f: (k.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!k.namuna })),
 };
 const uniq = (f) => new Set(sayohat.map(f).filter(Boolean)).size;
 const tStat = { joy: uniq((t) => t.joy), hud: uniq((t) => t.hudud), dav: uniq((t) => t.davlat), img: sayohat.reduce((n, t) => n + t.rasmlar.length, 0) };

@@ -327,7 +327,8 @@
       var dt = new Date(+k.d.slice(0, 4), +k.d.slice(5, 7) - 1, +k.d.slice(8)), meta = [];
       if (k.h) meta.push(k.h + " m"); if (k.joy) meta.push(esc(k.joy));
       var ph = "";
-      if (k.img.length) ph = '<div class="kp-ph n' + Math.min(3, k.img.length) + '">' + k.img.slice(0, 3).map(function (src, i) { return '<button type="button" class="kp-img" data-src="' + esc(src) + '" aria-label="Rasmni kattalashtirish"><img src="' + esc(src) + '" alt="' + esc(k.t) + " — " + (i + 1) + '-rasm" loading="lazy"></button>'; }).join("") + "</div>";
+      if (k.sb) ph = '<button type="button" class="kp-sb" data-kid="' + esc(k.id) + '" aria-label="Storyboardni kadrma-kadr ochish"><img src="' + esc(k.sb.c) + '" alt="' + esc(k.t) + ' — storyboard" loading="lazy"><span class="kp-sb-b">▶ ' + k.sb.f.length + ' kadr</span></button>';
+      if (!ph && k.img.length) ph = '<div class="kp-ph n' + Math.min(3, k.img.length) + '">' + k.img.slice(0, 3).map(function (src, i) { return '<button type="button" class="kp-img" data-src="' + esc(src) + '" aria-label="Rasmni kattalashtirish"><img src="' + esc(src) + '" alt="' + esc(k.t) + " — " + (i + 1) + '-rasm" loading="lazy"></button>'; }).join("") + "</div>";
       var bk = k.book ? '<div class="kp-book"><span class="kp-cover" style="--c:' + esc(k.book.rang) + ";--t:" + esc(k.book.matn_rang) + '"><b>' + esc(k.book.nom) + "</b></span><span><b>" + esc(k.book.nom) + "</b><br>" + esc(k.book.muallif) + (k.book.holat ? ' <em class="' + (k.book.holat === "o'qilmoqda" ? "now" : "") + '">' + esc(k.book.holat) + "</em>" : "") + "</span></div>" : "";
       var long = k.p.join(" ").length > 260;
       return '<article class="kp" id="' + esc(k.id) + '"><div class="kp-date"><b>' + dt.getDate() + "</b><span>" + OY[dt.getMonth()].slice(0, 3) + "</span><i>" + WDL2[dt.getDay()] + '</i></div><div class="kp-sheet"><div class="kp-top"><span class="kchip ' + CLS[k.c] + '">' + esc(k.c) + "</span>" + (meta.length ? '<span class="kp-meta">' + meta.join(" · ") + "</span>" : "") + (k.demo ? '<span class="demo">namuna</span>' : "") + "</div><h3>" + esc(k.t) + "</h3>" + bk + ph +
@@ -348,6 +349,7 @@
         if (!open) { body.style.maxHeight = body.scrollHeight + "px"; body.classList.add("open"); m.textContent = "Yig'ish ↑"; }
         else { body.style.maxHeight = ""; body.classList.remove("open"); m.textContent = "Davomini o'qish ↓"; }
         m.setAttribute("aria-expanded", String(!open)); return; }
+      var sbb = e.target.closest(".kp-sb"); if (sbb && window.__story) { var kk = K.filter(function (x) { return x.id === sbb.dataset.kid; })[0]; if (kk) window.__story([{ joy: kk.t, hud: "", dav: "", d: kk.d, x: "", img: kk.sb.f }], 0, sbb); return; }
       var im = e.target.closest(".kp-img"); if (im) lightbox(im.dataset.src);
     });
     var lightbox = function (src) {
@@ -390,7 +392,8 @@
     tmore.addEventListener("click", function () { tlimit += 8; renderT(); });
     tgrid.addEventListener("click", function (e) { var b = e.target.closest(".tp"); if (b) openStory(+b.dataset.i, b); });
 
-    var openStory = function (ti0, from) {
+    var openStory = function (ti0, from, list) {
+      var T = list || D.sayohat || [];
       var ti = -1, pi = 0, held = false, holdT = 0, sx = 0, sy = 0, down = false, pushed = false, closing = false;
       var o = document.createElement("div"); o.className = "st"; o.setAttribute("role", "dialog"); o.setAttribute("aria-modal", "true");
       o.innerHTML = '<div class="st-bg"></div><button type="button" class="st-tp" aria-label="Oldingi sayohat">‹</button>' +
@@ -470,6 +473,7 @@
       requestAnimationFrame(function () { o.classList.add("on"); });
       o.querySelector(".st-x").focus({ preventScroll: true });
     };
+    window.__story = function (list, i, from) { openStory(i || 0, from, list); };
     renderT();
   }
 

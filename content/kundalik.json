@@ -19,7 +19,36 @@
    "Bundan ham yaxshi bo'lishi uchun nima kerak: haqiqiy natijalar, ya'ni mijoz ruxsat bergan raqamlar; har bir loyihaning o'z rangi va uslubi; va sizning savollaringiz. Qaysi mavzuni batafsil yozishimni xohlasangiz, Telegram'da yozing.",
    "Agar siz ham biznes yuritayotgan bo'lsangiz, bugundan boshlab kuniga bitta jumla yozing: bugun nimani hal qildingiz. Bir oydan keyin o'zingiz hayron qolasiz."
   ],
-  "xulosa": "Yozilmagan ish ko'rinmagan ish bo'lib qoladi."
+  "xulosa": "Yozilmagan ish ko'rinmagan ish bo'lib qoladi.",
+  "storyboard": {
+   "rasm": "media/kundalik/nega-yozaman.jpg",
+   "kadrlar": [
+    {
+     "src": "media/kundalik/nega-yozaman-1.jpg",
+     "izoh": "Har safar shu savol"
+    },
+    {
+     "src": "media/kundalik/nega-yozaman-2.jpg",
+     "izoh": "Eng yaxshi ishlar esdan chiqardi"
+    },
+    {
+     "src": "media/kundalik/nega-yozaman-3.jpg",
+     "izoh": "Shunda tushundim"
+    },
+    {
+     "src": "media/kundalik/nega-yozaman-4.jpg",
+     "izoh": "Har kuni bitta yozuv"
+    },
+    {
+     "src": "media/kundalik/nega-yozaman-5.jpg",
+     "izoh": "Keyingi qadam: ovozli xabar"
+    },
+    {
+     "src": "media/kundalik/nega-yozaman-6.jpg",
+     "izoh": "Eng aniq portfolio shu"
+    }
+   ]
+  }
  },
  {
   "id": "k-2026-10-14-show-your-work",
