@@ -1,0 +1,35 @@
+{
+  "izoh": "Story navbati. GitHub har soat tekshiradi, vaqti kelgan bittasini Telegram va Instagram'ga joylaydi. Bekor qilish: holat = bekor.",
+  "navbat": [
+    {
+      "vaqt": "2026-10-18T09:00+05:00",
+      "tg_rasm": "content/media/story/2026-10-17-guruh-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-17-guruh-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-09-27-bitta-guruhdan-boshlandi.html",
+      "sarlavha": "Guruhda mijoz yozadi, siz esa ko'rmay qolasizmi?",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": 24,
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T12:00+05:00",
+      "tg_rasm": "content/media/story/2026-10-17-instagram-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-17-instagram-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-15-instagram-ham-qoshildi.html",
+      "sarlavha": "Instagram'da \"narxi qancha?\" deb so'rashdi, siz kech ko'rdingizmi?",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": 24,
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T15:00+05:00",
+      "tg_rasm": "content/media/story/2026-10-17-oqitish-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-17-oqitish-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-17-121-ta-suhbatdan-organdi.html",
+      "sarlavha": "AI noto'g'ri odamga yozsa, obro'yingiz ketadi",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": 24,
+      "holat": "kutmoqda"
+    }
+  ]
+}

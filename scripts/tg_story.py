@@ -12,6 +12,7 @@ fields = {
     "business_connection_id": bc,
     "content": json.dumps({"type": "photo", "photo": "attach://story"}),
     "active_period": str(hours * 3600),
+    "post_to_chat_page": "true",  # 24 soatdan keyin ham profilda qoladi
     "areas": json.dumps([{"position": {"x_percentage": x, "y_percentage": y, "width_percentage": w, "height_percentage": h, "rotation_angle": 0, "corner_radius_percentage": 50}, "type": {"type": "link", "url": url}}]),
 }
 b = uuid.uuid4().hex
