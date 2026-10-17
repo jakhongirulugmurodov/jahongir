@@ -4,10 +4,15 @@ on:
     inputs:
       tg_rasm: { description: "Telegram rasmi (repo ichidagi yo'l)", required: true }
       ig_rasm: { description: "Instagram rasmi (saytdagi ochiq URL)", required: true }
-      havola: { description: "Telegram story ustidagi havola", required: true }
+      havola: { description: "Story havolasi (Telegram tugmasi va Instagram'da AI deb yozganga)", required: true }
+      sarlavha: { description: "Post sarlavhasi (agent xabarida)", required: false, default: "" }
       maydon: { description: "Havola maydoni: x y w h (foizda)", required: true, default: "50 85.73 49.3 6.9" }
       soat: { description: "Telegram'da necha soat (6/12/24/48)", required: true, default: "24" }
       qayer: { description: "ikkalasi / telegram / instagram", required: true, default: "ikkalasi" }
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   telegram:
     if: inputs.qayer != 'instagram'
@@ -21,5 +26,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/ig_story.py "${{ inputs.ig_rasm }}"
+      - run: python3 scripts/ig_story.py "${{ inputs.ig_rasm }}" "${{ inputs.havola }}" "${{ inputs.sarlavha }}"
         env: { IG_TOKEN: "${{ secrets.IG_TOKEN }}" }
+      - name: story-map'ni saqlash va saytni yangilash
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
+          git add content/story-map.json
+          git commit -m "story-map: yangi Instagram story" || exit 0
+          git pull --rebase -q && git push -q
+          gh workflow run deploy.yml --ref main

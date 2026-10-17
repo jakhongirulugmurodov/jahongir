@@ -1,4 +1,6 @@
-# Instagram story joylaydi (jahongir.olmos). Foydalanish: python3 scripts/ig_story.py <ochiq rasm URL>
+# Instagram story joylaydi (jahongir.olmos).
+# Foydalanish: python3 scripts/ig_story.py <ochiq rasm URL> [post havolasi] [sarlavha]
+# Havola berilsa, story ID → havola content/story-map.json ga yoziladi (AI agent "AI" deb yozganga shuni yuboradi).
 # Token faqat IG_TOKEN muhit o'zgaruvchisidan olinadi, chop etilmaydi.
 import json, os, sys, time, urllib.request, urllib.parse
 T = os.environ.get("IG_TOKEN", "").strip() or sys.exit("IG_TOKEN topilmadi")
@@ -22,4 +24,9 @@ for _ in range(20):
     time.sleep(3)
 r = call(f"{uid}/media_publish", "POST", creation_id=c["id"])
 print("natija:", json.dumps({"ok": "id" in r, "id": r.get("id"), "xato": r.get("error", {}).get("message")}, ensure_ascii=False))
+if "id" in r and len(sys.argv) > 2:
+    m = json.load(open("content/story-map.json"))
+    m.setdefault("stories", {})[r["id"]] = {"url": sys.argv[2], "title": sys.argv[3] if len(sys.argv) > 3 else ""}
+    json.dump(m, open("content/story-map.json", "w"), ensure_ascii=False, indent=2)
+    print("story-map yangilandi:", r["id"])
 sys.exit(0 if "id" in r else 1)

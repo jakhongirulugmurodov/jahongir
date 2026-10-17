@@ -298,6 +298,8 @@ const urls = ["index.html", ...projects.map((p) => `loyiha/${p.slug}.html`), ...
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site.domen}/${u}</loc></url>`).join("\n")}\n</urlset>\n`);
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${site.domen}/sitemap.xml\n`);
 write(".nojekyll", "");
+// AI agent uchun: Instagram story ID → post havolasi
+if (existsSync(join(ROOT, "content/story-map.json"))) cpSync(join(ROOT, "content/story-map.json"), join(OUT, "story-map.json"));
 if (site.domen) write("CNAME", site.domen.replace(/^https?:\/\//, "") + "\n");
 
 console.log(`Tayyor: ${posts.length} post, ${projects.length} loyiha, ${kundalik.length} kundalik yozuvi, ${sayohat.length} sayohat → dist/`);
