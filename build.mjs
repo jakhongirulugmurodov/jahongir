@@ -137,6 +137,19 @@ if (existsSync(join(ROOT, "content/media"))) cpSync(join(ROOT, "content/media"),
 // papkalar tartibi: eng oxirgi faol loyiha oldinda (ro'yxat oxirida)
 const lastDate = (s) => byProj(s)[0]?.sana || "0000";
 const folderOrder = projects.slice().sort((a, b) => (lastDate(a.slug) < lastDate(b.slug) ? -1 : 1));
+// highlightlar: mavzu bo'yicha guruh (loyiha yoki kundalik), eng yangi faollik oldinda
+const ctaOf = (p) => (p.taklif ? { t: p.taklif.tugma, h: `https://t.me/${site.telegram}?text=${encodeURIComponent(p.taklif.xabar || "")}` } : null);
+const frames = (sb) => (sb.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" }));
+const hlGroups = [
+  ...projects.map((pr) => {
+    const L = byProj(pr.slug).filter((p) => p.storyboard);
+    return L.length ? { id: "p-" + pr.slug, n: pr.qisqa || pr.nom, c: (L[0].storyboard.kadrlar?.[0]?.src || L[0].storyboard.rasm), d: L[0].sana, it: L.map((p) => ({ id: p.id, joy: p.sarlavha, hud: pr.nom, dav: "", d: p.sana, x: "", img: frames(p.storyboard), cta: ctaOf(p), read: `post/${p.id}.html` })) } : null;
+  }),
+  (() => {
+    const L = kundalik.filter((k) => k.storyboard);
+    return L.length ? { id: "kundalik", n: "Kundalik", c: (L[0].storyboard.kadrlar?.[0]?.src || L[0].storyboard.rasm), d: L[0].sana, it: L.map((k) => ({ id: k.id, joy: k.sarlavha, hud: "Kundalik", dav: "", d: k.sana, x: "", img: frames(k.storyboard), cta: null, read: "#kundalik" })) } : null;
+  })(),
+].filter(Boolean).sort((a, b) => (a.d < b.d ? 1 : a.d > b.d ? -1 : 0));
 const homeData = {
   r: "",
   projects: folderOrder.map((p) => {
@@ -145,6 +158,7 @@ const homeData = {
   }),
   posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: vis(p), cta: p.taklif ? { t: p.taklif.tugma, h: `https://t.me/${site.telegram}?text=${encodeURIComponent(p.taklif.xabar || "")}` } : null, sb: p.storyboard ? { c: p.storyboard.rasm, f: (p.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!p.namuna })),
   tg: site.telegram,
+  hl: hlGroups.map((g) => ({ id: g.id, it: g.it })),
   sayohat: sayohat.map((t) => ({ id: t.id, d: t.sana, joy: t.joy, hud: t.hudud || "", dav: t.davlat || "", x: t.izoh || "", img: t.rasmlar.map((r) => (typeof r === "string" ? { s: r, i: "" } : { s: r.src, i: r.izoh || "" })), demo: !!t.namuna })),
   kundalik: kundalik.map((k) => ({ id: k.id, d: k.sana, c: k.toifa, t: k.sarlavha, p: Array.isArray(k.matn) ? k.matn : [k.matn || ""], x: k.xulosa || "", img: k.rasmlar || [], h: k.balandlik || 0, joy: k.joy || "", book: k.kitob || null, sb: k.storyboard ? { c: k.storyboard.rasm, f: (k.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!k.namuna })),
 };
@@ -155,10 +169,11 @@ const photo = site.rasm ? `<img src="${esc(site.rasm)}" alt="${esc(site.ism)}">`
 write("index.html", layout({
   r: "", page: "home", data: homeData, contact: false,
   body: `
-${site.hero ? `<section class="hero-cv" aria-label="${esc(site.ism)}">
+${site.hero ? `<section class="hero-cv${hlGroups.length ? " has-hl" : ""}" aria-label="${esc(site.ism)}">
   <picture class="cv-img"><source media="(max-width: 700px)" srcset="${esc(site.hero_m || site.hero)}"><img src="${esc(site.hero)}" alt="${esc(site.ism)} tog'da" fetchpriority="high"></picture>
   <div class="cv-shade" aria-hidden="true"></div>
-${sayohat.length ? `  <a class="cv-note" href="#sayohat"><span class="pin-dot" aria-hidden="true"></span>${tStat.joy} ta joyda bo'ldim<i>Sayohatlar →</i></a>` : ""}
+${hlGroups.length ? `  <nav class="cv-hl" aria-label="Qisqa story'lar"><div class="hl-row gut">${hlGroups.map((g) => `<button type="button" class="hl" data-g="${esc(g.id)}"><span class="hl-ring"><img src="${esc(g.c)}" alt="" loading="lazy"></span><span class="hl-n">${esc(g.n)}</span></button>`).join("")}</div></nav>
+` : ""}${sayohat.length ? `  <a class="cv-note" href="#sayohat"><span class="pin-dot" aria-hidden="true"></span>${tStat.joy} ta joyda bo'ldim<i>Sayohatlar →</i></a>` : ""}
   <div class="cv-in gut"><div class="cv-txt">
     <p class="kick"><i></i>salom, men</p>
     <h1>${esc(site.ism)}.</h1>

@@ -403,14 +403,14 @@
       o.innerHTML = '<div class="st-bg"></div><button type="button" class="st-tp" aria-label="Oldingi sayohat">‹</button>' +
         '<div class="st-fr"><div class="st-blur"></div><div class="st-img"></div><div class="st-bars"></div>' +
         '<div class="st-top"><span class="st-tt"><b></b><i></i></span><button type="button" class="st-x" aria-label="Yopish">×</button></div>' +
-        '<a class="st-cta" target="_blank" rel="noopener" hidden></a><p class="st-cap"></p><span class="st-ps" aria-hidden="true"><i></i><i></i></span></div>' +
+        '<div class="st-acts" hidden><a class="st-read">To\'liq o\'qish →</a><a class="st-cta" target="_blank" rel="noopener"></a></div><p class="st-cap"></p><span class="st-ps" aria-hidden="true"><i></i><i></i></span></div>' +
         '<button type="button" class="st-nt" aria-label="Keyingi sayohat">›</button>';
       var fr = o.querySelector(".st-fr"), bars = o.querySelector(".st-bars"), box = o.querySelector(".st-img"), blur = o.querySelector(".st-blur"), bg = o.querySelector(".st-bg"), cap = o.querySelector(".st-cap");
       var setPause = function (v) { o.classList.toggle("paused", v); };
       var show = function (nti, npi, dir) {
         var t = T[nti];
         if (nti !== ti) {
-          ti = nti; o.setAttribute("aria-label", t.joy);
+          ti = nti; o.setAttribute("aria-label", t.joy); if (t.id && window.__hlSeen) window.__hlSeen(t.id);
           o.querySelector(".st-tt b").textContent = t.joy;
           o.querySelector(".st-tt i").textContent = [t.hud, t.dav && t.dav !== "O'zbekiston" ? t.dav : "", sdate(t.d, true)].filter(Boolean).join(" · ");
           bars.innerHTML = t.img.map(function () { return "<i><b></b></i>"; }).join("");
@@ -427,7 +427,9 @@
         box.appendChild(img);
         blur.style.backgroundImage = bg.style.backgroundImage = 'url("' + ph.s + '")';
         var c = ph.i || (pi === 0 ? t.x : ""); cap.textContent = c; cap.hidden = !c;
-        var ctaEl = o.querySelector(".st-cta"), lastF = t.cta && pi === t.img.length - 1; ctaEl.hidden = !lastF; if (lastF) { ctaEl.href = t.cta.h; ctaEl.textContent = t.cta.t + " →"; } o.classList.toggle("has-cta", !!lastF); cap.style.animation = "none"; void cap.offsetWidth; cap.style.animation = "";
+        var acts = o.querySelector(".st-acts"), ctaEl = o.querySelector(".st-cta"), rd = o.querySelector(".st-read"), lastF = (t.cta || t.read) && pi === t.img.length - 1; acts.hidden = !lastF;
+        if (lastF) { ctaEl.hidden = !t.cta; if (t.cta) { ctaEl.href = t.cta.h; ctaEl.textContent = t.cta.t + " →"; } rd.hidden = !t.read; if (t.read) rd.href = (D.single && t.read.charAt(0) !== "#") ? "#taqvim" : t.read; }
+        o.classList.toggle("has-cta", !!lastF); cap.style.animation = "none"; void cap.offsetWidth; cap.style.animation = "";
         var nx = t.img[pi + 1] || (T[ti + 1] && T[ti + 1].img[0]); if (nx) new Image().src = nx.s;
       };
       var next = function () { if (pi < T[ti].img.length - 1) show(ti, pi + 1); else if (ti < T.length - 1) show(ti + 1, 0, 1); else close(); };
@@ -468,6 +470,7 @@
       fr.addEventListener("pointercancel", function () { down = false; clearTimeout(holdT); if (held) { held = false; setPause(false); } });
       fr.addEventListener("contextmenu", function (e) { e.preventDefault(); });
       o.querySelector(".st-x").addEventListener("click", function () { close(); });
+      o.querySelector(".st-read").addEventListener("click", function (e) { var h = this.getAttribute("href") || ""; if (h.charAt(0) !== "#") return; e.preventDefault(); close(); setTimeout(function () { var el = document.querySelector(h); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }, 340); });
       o.querySelector(".st-tp").addEventListener("click", prevT);
       o.querySelector(".st-nt").addEventListener("click", nextT);
       o.addEventListener("click", function (e) { if (e.target === o || e.target === bg) close(); });
@@ -479,6 +482,21 @@
       o.querySelector(".st-x").focus({ preventScroll: true });
     };
     window.__story = function (list, i, from) { openStory(i || 0, from, list); };
+    // highlightlar: header ostidagi doiralar
+    (function () {
+      var row = document.querySelector(".cv-hl"); if (!row || !D.hl || !D.hl.length) return;
+      var KEY = "on-hl-seen", seen = {}; try { seen = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {}
+      var flat = [], start = {}, byId = {};
+      D.hl.forEach(function (g) { start[g.id] = flat.length; byId[g.id] = g; g.it.forEach(function (t) { flat.push(t); }); });
+      var paint = function () { [].forEach.call(row.querySelectorAll(".hl"), function (b) { var g = byId[b.dataset.g]; b.classList.toggle("seen", !!g && g.it.every(function (t) { return seen[t.id]; })); }); };
+      window.__hlSeen = function (id) { if (seen[id]) return; seen[id] = 1; try { localStorage.setItem(KEY, JSON.stringify(seen)); } catch (e) {} paint(); };
+      paint();
+      row.addEventListener("click", function (e) {
+        var b = e.target.closest(".hl"); if (!b) return; var g = byId[b.dataset.g]; if (!g) return;
+        var i = start[g.id]; for (var k = 0; k < g.it.length; k++) { if (!seen[g.it[k].id]) { i = start[g.id] + k; break; } }
+        openStory(i, b, flat);
+      });
+    })();
     if (tgrid) renderT();
   }
 
