@@ -1,0 +1,43 @@
+name: Navbat soqchisi
+# GitHub'ning cron'i soatlab kechikadi yoki tashlab ketadi. Shuning uchun bu ish ~55 daqiqa davomida
+# har daqiqada navbatlarni (story, lenta, reels) tekshiradi, oxirida o'zini qayta ishga tushiradi.
+# Cron faqat zanjir uzilib qolsa qayta yoqish uchun. Repo ochiq — Actions daqiqalari bepul.
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency: { group: story-queue, cancel-in-progress: false }
+jobs:
+  soqchi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+      - name: Navbatlarni 55 daqiqa kuzatish
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          IG_TOKEN_MAIN: ${{ secrets.IG_TOKEN }}
+          IG_TOKEN_OSISH: ${{ secrets.IG_TOKEN_OSISH }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
+          end=$(( $(date +%s) + 55*60 ))
+          while [ $(date +%s) -lt $end ]; do
+            git pull --rebase -q || true
+            IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/story_queue.py || true
+            IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/lenta_queue.py || true
+            IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_queue.py || true
+            git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json
+            if ! git diff --cached --quiet; then
+              git commit -qm "navbat: yangi story/post chiqdi"
+              git pull --rebase -q && git push -q && gh workflow run deploy.yml --ref main
+            fi
+            sleep 60
+          done
+      - name: Zanjirni davom ettirish
+        if: always()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh workflow run navbat-soqchi.yml --ref main

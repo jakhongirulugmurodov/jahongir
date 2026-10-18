@@ -1,7 +1,5 @@
 name: Story va lenta navbati
 on:
-  schedule:
-    - cron: "3,13,23,33,43,53 * * * *"   # har 10 daqiqada tekshiradi (GitHub soatlikni ko'p tashlab ketdi)
   workflow_dispatch:
 permissions:
   contents: write
