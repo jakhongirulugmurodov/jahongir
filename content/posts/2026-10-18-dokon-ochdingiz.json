@@ -1,0 +1,48 @@
+{
+  "id": "2026-10-18-dokon-ochdingiz",
+  "sana": "2026-10-18",
+  "loyiha": "osish-nuqtasi",
+  "tur": "Auditoriya",
+  "raqam": 7,
+  "sarlavha": "Do'kon ochdingiz. Mijoz qayerda?",
+  "hook": "Ko'pchilik biznesni do'kondan boshlaydi. Aslida biznes mijozdan boshlanadi.",
+  "muammo": "Do'kon ochiladi, ijara to'lanadi, xodim yollanadi. Keyin “kimga sotaman?” degan savol tug'iladi, lekin mijoz yo'q, oy oxirida esa ijara va oylik kutib turadi. Biznes boshlamoqchi bo'lganlarga men doim uchta savol beraman, ko'pchilikning javobi esa “bilmayman”:",
+  "royxat": [
+    "Auditoriyangiz bormi?",
+    "Kimga sotmoqchisiz?",
+    "Bunga ehtiyoj bormi?"
+  ],
+  "yechim": "Shuning uchun tartib boshqacha bo'lishi kerak: avval auditoriya, keyin ehtiyoj, oxirida do'kon. Biz o'zimiz ham shunday qilyapmiz. O'sish Nuqtasi loyihasida ta'lim, moliya va ruhiy rivojlanish podkastlarining eng foydali qismlarini mualliflar ruxsati bilan olamiz va o'z animatsiyamiz bilan qayta ishlaymiz. Oyiga 90 ta reels: montajning 80 foizidan ko'pini AI bajaradi, shuning uchun 90 ta video 9–10 kunda tayyor bo'ladi.",
+  "natija": "18-oktabr: @osish.nuqtasi sahifasi noldan boshlandi. Har oy natijani shu yerda raqamlar bilan yozib boraman. Biznes ochmoqchimisiz? 15 daqiqalik bepul suhbatda auditoriyangizni qayerdan topishni birga ko'ramiz.",
+  "xulosa": "Avval auditoriya. Keyin do'kon.",
+  "taklif": {
+    "tugma": "Bepul 15 daqiqalik suhbat",
+    "xabar": "Salom! #7 “Do'kon ochdingiz. Mijoz qayerda?” postini o'qidim. Biznesim uchun auditoriya topish bo'yicha 15 daqiqalik bepul suhbat olmoqchiman."
+  },
+  "teglar": [
+    "auditoriya",
+    "biznes",
+    "reels",
+    "podkast"
+  ],
+  "storyboard": {
+    "rasm": "media/loyiha/osish-nuqtasi/osish-7-1.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/osish-nuqtasi/osish-7-1.jpg",
+        "svg": "media/loyiha/osish-nuqtasi/osish-7-1.svg",
+        "izoh": "Do'kon ochildi, mijoz yo'q"
+      },
+      {
+        "src": "media/loyiha/osish-nuqtasi/osish-7-2.jpg",
+        "svg": "media/loyiha/osish-nuqtasi/osish-7-2.svg",
+        "izoh": "Uch savol"
+      },
+      {
+        "src": "media/loyiha/osish-nuqtasi/osish-7-3.jpg",
+        "svg": "media/loyiha/osish-nuqtasi/osish-7-3.svg",
+        "izoh": "Avval auditoriya"
+      }
+    ]
+  }
+}

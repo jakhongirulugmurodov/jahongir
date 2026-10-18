@@ -2,7 +2,7 @@
 import os
 import os as _o
 FD=_o.path.join(_o.path.dirname(_o.path.abspath(__file__)),'fonts')+'/'
-FACES=[("Space Grotesk","space-grotesk",[400,500,700]),("Hanken Grotesk","hanken-grotesk",[400,500,600,700]),("Caveat","caveat",[500,700])]
+FACES=[("Space Grotesk","space-grotesk",[400,500,700]),("Hanken Grotesk","hanken-grotesk",[400,500,600,700]),("Caveat","caveat",[500,700]),("Fraunces","fraunces",[600,700,900]),("Patrick Hand","patrick-hand",[400])]
 def css():
     out=[]
     for fam,slug,ws in FACES:

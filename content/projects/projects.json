@@ -29,5 +29,21 @@
       "Avtomatlashtirish"
     ],
     "qisqa": "Blog tizimi"
+  },
+  {
+    "slug": "osish-nuqtasi",
+    "nom": "O'sish Nuqtasi",
+    "soha": "O'N · media loyiha",
+    "xizmat": "Reels, podkast, AI montaj",
+    "holat": "faol",
+    "tavsif": "Ta'lim, moliya va ruhiy rivojlanish podkastlaridan eng foydali qismlar: mualliflar ruxsati bilan, o'z animatsiyamiz bilan. Oyiga 90 ta reels.",
+    "qachondan": "2026-yil 18-oktabrdan",
+    "xizmatlar": [
+      "Reels",
+      "Podkast",
+      "AI montaj",
+      "Instagram"
+    ],
+    "qisqa": "O'sish Nuqtasi"
   }
 ]
