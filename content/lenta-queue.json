@@ -42,6 +42,36 @@
       "tur": "kanal",
       "fayl": "content/kanal/2026-10-18-nega-har-kuni-yozish.json",
       "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T20:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-10-18-bir-marta-yozasiz-ig.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-19T10:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-10-18-nega-har-kuni-yozish-ig.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-19T18:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-09-27-bitta-guruhdan-boshlandi-ig.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-20T10:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-10-15-instagram-ham-qoshildi-ig.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-20T18:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-10-17-121-ta-suhbatdan-organdi-ig.json",
+      "holat": "kutmoqda"
     }
   ]
 }
