@@ -157,6 +157,9 @@ button{font:inherit;color:inherit}
 .blocks div{border-top:3px solid var(--teal-600);padding-top:10px}
 .blocks b{font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-600);font-weight:700;display:block;margin-bottom:4px}
 .blocks p{margin:4px 0 0;font-size:15px;line-height:1.55}
+.p-hook{font-family:var(--display);font-size:19px;font-weight:700;line-height:1.4;margin:0 0 18px}
+.p-list{margin:8px 0 0;padding-left:18px;font-size:15px;line-height:1.5}.p-list li{margin:2px 0}
+.p-xul{font-family:'Caveat',cursive;font-size:30px;line-height:1.2;color:var(--teal-600);margin:22px 0 4px}
 
 /* mobile day pages */
 .mob{display:none}

@@ -1,4 +1,4 @@
-name: Story navbati
+name: Story va lenta navbati
 on:
   schedule:
     - cron: "3,13,23,33,43,53 * * * *"   # har 10 daqiqada tekshiradi (GitHub soatlikni ko'p tashlab ketdi)
@@ -16,11 +16,15 @@ jobs:
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      - run: python3 scripts/lenta_queue.py
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
       - name: Natijani saqlash va saytni yangilash
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
-          git add content/story-queue.json content/story-map.json
-          git commit -m "story navbati: yangi story chiqdi" || exit 0
+          git add content/story-queue.json content/story-map.json content/lenta-queue.json
+          git commit -m "navbat: yangi story/post chiqdi" || exit 0
           git pull --rebase -q && git push -q
           gh workflow run deploy.yml --ref main

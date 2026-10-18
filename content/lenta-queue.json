@@ -1,0 +1,47 @@
+{
+  "izoh": "Lenta navbati: kanal postlari va IG karusellari. holat: kutmoqda/chiqdi/xato",
+  "navbat": [
+    {
+      "vaqt": "2026-10-18T14:00+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-09-27-bitta-guruhdan-boshlandi.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T14:20+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-10-15-instagram-ham-qoshildi.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T14:40+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-10-17-121-ta-suhbatdan-organdi.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T15:20+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-10-18-bir-marta-yozasiz.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T16:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-10-18-qancha-vaqt-tejaydi-ig.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T16:00+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-10-18-qancha-vaqt-tejaydi.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T17:00+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-10-18-nega-har-kuni-yozish.json",
+      "holat": "kutmoqda"
+    }
+  ]
+}

@@ -3,17 +3,18 @@
   "sana": "2026-10-18",
   "loyiha": "shaxsiy-blog",
   "tur": "Vaqt",
-  "sarlavha": "Bitta postni 4 joyga joylashga har kuni qancha vaqtingiz ketyapti?",
-  "muammo": "Post yozish ishning yarmi xolos. Keyin uni saytga qo'yasiz, Telegram kanalga moslaysiz, Instagram uchun rasmini to'g'rilaysiz, ikki xil story tayyorlaysiz. Har bir joyning o'z o'lchami, o'z matni bor. Bu ish har kuni takrorlanadi va vaqtning ko'pi yozishga emas, aynan shunga ketadi.",
-  "yechim": "Tizim shu takroriy ishni o'ziga oladi. Siz bugun nima qilganingizni aytib berasiz, qolgani tayyorlanadi: sayt posti, Telegram va Instagram story rasmlari, havolalar. Siz faqat ko'rib chiqib, tasdiqlaysiz. Joylash esa navbat bilan o'zi bo'ladi, telefon ushlab o'tirish shart emas.",
-  "natija": "18-oktabr kuni chiqqan uchta story'ning birortasini qo'lda joylamadim. Qo'lda bo'ladigan kunlik ish qolmadi, bo'shagan vaqt ishning o'ziga va mijozlarga ketyapti. Sizga ham shunday tizim qurib, shu vaqtni qaytarib beramiz.",
+  "sarlavha": "Post yozish oson. Uni tarqatish qiyin.",
+  "muammo": "Bitta post tayyor bo'lgach, ish endi boshlanadi. Har kuni shu to'rt bekatdan o'tasiz. Har bekatda bir xil ish, faqat shakli boshqa. Charchatadigani ham shu.",
+  "yechim": "1913-yilda Genri Ford ishchilarni tezroq ishlashga majburlamadi. U ishni ishchining oldiga olib keladigan lenta qurdi: bitta Model T'ni yig'ish 12 soatdan bir yarim soatga tushdi. Biz ham postlar uchun shunday lenta qurdik. Siz bugun nima qilganingizni bir marta aytasiz, sayt posti, kanal posti, Instagram karuseli va story'lar o'zi tayyorlanadi. Siz faqat “tasdiqlandi” deysiz, joylash navbat bilan o'zi bo'ladi.",
+  "natija": "18-oktabr kuni uchta story chiqdi, qo'lda joylangani: nol. Postlaringiz qaysi bekatda “tiqilib” qolayotganini bilmoqchimisiz? 15 daqiqalik bepul tahlil qilib, qaysi bekatni tizimga berish mumkinligini ko'rsataman.",
   "taklif": {
-    "tugma": "Vaqtimni tejaydigan tizim kerak",
-    "xabar": "Salom! Saytingizdagi \"Qancha vaqt tejaydi\" postini o'qidim. Bizga ham postlarni o'zi tarqatadigan tizim kerak."
+    "tugma": "Bepul 15 daqiqalik tahlil",
+    "xabar": "Salom! Saytingizdagi #5 “Post yozish oson. Uni tarqatish qiyin.” postini o'qidim. 15 daqiqalik bepul tahlil olmoqchiman."
   },
   "teglar": [
     "vaqt",
     "avtomatlashtirish",
+    "konveyer",
     "telegram",
     "instagram"
   ],
@@ -36,5 +37,14 @@
         "izoh": "Bo'shagan vaqt mijozlarga"
       }
     ]
-  }
+  },
+  "raqam": 5,
+  "hook": "Ko'pchilik “post yozishga vaqtim yo'q” deydi. Aslida vaqt yozishga emas, tarqatishga ketadi.",
+  "royxat": [
+    "Sayt: matnni joylaysiz, rasm qo'yasiz.",
+    "Telegram kanal: matnni qisqartirib, qayta yozasiz.",
+    "Instagram: rasmni boshqa o'lchamga kesasiz.",
+    "Story: yana ikki xil o'lcham, ikki xil havola."
+  ],
+  "xulosa": "Yozish sizning ishingiz. Tarqatish tizimning ishi."
 }

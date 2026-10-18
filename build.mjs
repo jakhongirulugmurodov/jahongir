@@ -299,10 +299,12 @@ for (const p of posts) {
 <section class="wallpage post-page gut">
   <article class="post"><div class="sheet">
     <a class="back" href="../loyiha/${pr.slug}.html">← ${esc(pr.nom)} papkasi</a>
-    <div class="f-meta"><span>${sana(p.sana)}</span><span>· ${esc(pr.nom)}</span>${p.tur ? `<span>· ${esc(p.tur)}</span>` : ""}${p.namuna ? '<span class="demo">namuna</span>' : ""}</div>
+    <div class="f-meta">${p.raqam ? `<span>#${p.raqam}</span><span>·</span>` : ""}<span>${sana(p.sana)}</span><span>· ${esc(pr.nom)}</span>${p.tur ? `<span>· ${esc(p.tur)}</span>` : ""}${p.namuna ? '<span class="demo">namuna</span>' : ""}</div>
     <h3>${esc(p.sarlavha)}</h3>
     ${player(p, "../")}
-    <div class="blocks"><div><b>Muammo</b><p>${esc(p.muammo)}</p></div><div><b>Yechim</b><p>${esc(p.yechim)}</p></div><div><b>Natija</b><p>${esc(p.natija)}</p></div></div>
+    ${p.hook ? `<p class="p-hook">${esc(p.hook)}</p>` : ""}
+    <div class="blocks"><div><b>Muammo</b><p>${esc(p.muammo)}</p>${p.royxat ? `<ol class="p-list">${p.royxat.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}</div><div><b>Yechim</b><p>${esc(p.yechim)}</p></div><div><b>Natija</b><p>${esc(p.natija)}</p></div></div>
+    ${p.xulosa ? `<p class="p-xul">${esc(p.xulosa)}</p>` : ""}
     ${p.taklif ? `<a class="post-cta" href="https://t.me/${esc(site.telegram)}?text=${esc(encodeURIComponent(typo(p.taklif.xabar || "")))}" target="_blank" rel="noopener">${esc(p.taklif.tugma)} →</a>` : ""}
     <div class="tags">${(p.teglar || []).map((t) => `<span>#${esc(t)}</span>`).join("")}</div>
   </div></article>

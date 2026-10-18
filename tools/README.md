@@ -38,3 +38,7 @@ Har kuni yangi post tayyorlash shu vositalar bilan qilinadi.
 ## Maxfiy kalitlar (GitHub Secrets, hech qachon chatga yozilmaydi)
 - `TG_BOT_TOKEN` — @jahongir_on_bot (faqat story ruxsati, Telegram Business orqali @sp_business_agency).
 - `IG_TOKEN` — Meta ilova "Jahongir Portfolio" (faqat basic + content_publish). ~60 kunda eskiradi, qo'lda yangilanadi.
+
+## carousel/
+- `konveyer.py <papka>` — 10 slaydli karusel panoramasi (10800×1350, doodle uslubi), `render.py` — PNG'ga chizib 10 ta 1080×1350 JPG'ga bo'ladi. Yangi karusel uchun shu faylni nusxalab, slayd matn/rasmlarini almashtiring.
+- Joylash: `content/lenta/<post>-ig.json` + `content/lenta-queue.json` (tur: karusel | kanal). Navbatni `story-queue.yml` har 10 daqiqada bajaradi (`scripts/lenta_queue.py`).
