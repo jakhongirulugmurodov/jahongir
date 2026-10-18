@@ -40,7 +40,7 @@ const day = (d) => +d.slice(8), mon = (d) => +d.slice(5, 7);
 const sana = (d) => `${day(d)}-${OY[mon(d) - 1]}, ${d.slice(0, 4)}`;
 const ROT = ["-2.4deg", "1.8deg", "-1.2deg", "2.6deg", "-1.8deg", "1deg"];
 // O'zbek imlosi: o' g' → o‘ g‘ (U+2018, aylangan vergul), tutuq belgisi → ’ (U+2019). Barcha shriftlarda bor. Faqat ko'rinadigan matnga.
-const typo = (s) => String(s).replace(/([oOgG])['\u2019\u2018`\u02bc\u02bb](?=[A-Za-z\u02bb\u02bc])/g, "$1\u2018").replace(/(?<=[A-Za-z])['`\u02bc](?=[A-Za-z])/g, "\u2019");
+const typo = (s) => String(s).replace(/([A-Za-z])(&#39;|&#x27;|&apos;)(?=[A-Za-z])/g, "$1'").replace(/([oOgG])['\u2019\u2018`\u02bc\u02bb](?=[A-Za-z\u02bb\u02bc])/g, "$1\u2018").replace(/(?<=[A-Za-z])['`\u02bc](?=[A-Za-z])/g, "\u2019");
 const typoAttr = (tag) => tag.replace(/\b(aria-label|alt|title|placeholder|data-cap|content)="([^"]*)"/g, (m, a, v) => `${a}="${typo(v)}"`);
 const typoMarkup = (h) => String(h).replace(/(<(script|style)\b[\s\S]*?<\/\2>)|(<[^>]+>)|([^<]+)/gi, (m, blk, _t, tag, text) => (blk ? blk : tag ? typoAttr(tag) : typo(text)));
 const isPath = (v) => /^(https?:|media\/|post\/|loyiha\/|#|\.\.\/|tg:)/.test(v) || /\.(jpe?g|png|svg|webp|html)$/.test(v);

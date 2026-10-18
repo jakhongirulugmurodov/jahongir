@@ -5,6 +5,7 @@ OKINA, TUTUQ = "\u2018", "\u2019"  # barcha shriftlarda bor (Caveat da U+02BB yo
 _A = "['’‘`ʼʻ]"
 _L = "A-Za-zʻʼ"
 def typo(s):
+    s = re.sub(r"(?<=[A-Za-z])(&#39;|&#x27;|&apos;)(?=[A-Za-z])", "'", s)
     s = re.sub(rf"([oOgG]){_A}(?=[A-Za-z])", rf"\1{OKINA}", s)
     s = re.sub(r"(?<=[A-Za-z])['`\u02bc](?=[A-Za-z])", TUTUQ, s)
     return s
