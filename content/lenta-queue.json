@@ -76,6 +76,18 @@
       "tur": "karusel",
       "fayl": "content/lenta/2026-10-17-121-ta-suhbatdan-organdi-ig.json",
       "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-19T13:00+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-10-18-dokon-ochdingiz.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-21T10:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-10-18-dokon-ochdingiz-ig.json",
+      "holat": "kutmoqda"
     }
   ]
 }
