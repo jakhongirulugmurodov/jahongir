@@ -25,8 +25,13 @@
       "sarlavha": "Instagram'da \"narxi qancha?\" deb so'rashdi, siz kech ko'rdingizmi?",
       "maydon": "50.0 85.73 45.17 6.88",
       "soat": 24,
-      "holat": "kutmoqda",
-      "blok": "ai-sotuvchi"
+      "holat": "chiqdi",
+      "blok": "ai-sotuvchi",
+      "natija": {
+        "telegram": true,
+        "instagram": true,
+        "vaqt": "2026-10-18T07:39+00:00"
+      }
     },
     {
       "vaqt": "2026-10-18T15:00+05:00",
@@ -36,8 +41,13 @@
       "sarlavha": "AI noto'g'ri odamga yozsa, obro'yingiz ketadi",
       "maydon": "50.0 85.73 45.17 6.88",
       "soat": 24,
-      "holat": "kutmoqda",
-      "blok": "ai-sotuvchi"
+      "holat": "chiqdi",
+      "blok": "ai-sotuvchi",
+      "natija": {
+        "telegram": true,
+        "instagram": true,
+        "vaqt": "2026-10-18T07:39+00:00"
+      }
     }
   ]
 }
