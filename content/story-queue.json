@@ -48,6 +48,39 @@
         "instagram": true,
         "vaqt": "2026-10-18T07:39+00:00"
       }
+    },
+    {
+      "vaqt": "2026-10-18T13:40+05:00",
+      "blok": "shaxsiy-blog",
+      "tg_rasm": "content/media/story/2026-10-18-blog-1-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-18-blog-1-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-18-bir-marta-yozasiz.html",
+      "sarlavha": "Har postni Telegram va Instagram'ga alohida joylashdan charchadingizmi?",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": 24,
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T13:40+05:00",
+      "blok": "shaxsiy-blog",
+      "tg_rasm": "content/media/story/2026-10-18-blog-2-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-18-blog-2-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-18-qancha-vaqt-tejaydi.html",
+      "sarlavha": "Bitta postni 4 joyga joylashga har kuni qancha vaqtingiz ketyapti?",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": 24,
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-18T13:40+05:00",
+      "blok": "shaxsiy-blog",
+      "tg_rasm": "content/media/story/2026-10-18-blog-3-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-18-blog-3-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-18-nega-har-kuni-yozish.html",
+      "sarlavha": "Ishingiz yaxshi, lekin buni hech kim ko'rmasa-chi?",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": 24,
+      "holat": "kutmoqda"
     }
   ]
 }
