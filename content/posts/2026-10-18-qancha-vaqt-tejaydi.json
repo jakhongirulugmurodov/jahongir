@@ -1,0 +1,40 @@
+{
+  "id": "2026-10-18-qancha-vaqt-tejaydi",
+  "sana": "2026-10-18",
+  "loyiha": "shaxsiy-blog",
+  "tur": "Vaqt",
+  "sarlavha": "Bitta postni 4 joyga joylashga har kuni qancha vaqtingiz ketyapti?",
+  "muammo": "Post yozish ishning yarmi xolos. Keyin uni saytga qo'yasiz, Telegram kanalga moslaysiz, Instagram uchun rasmini to'g'rilaysiz, ikki xil story tayyorlaysiz. Har bir joyning o'z o'lchami, o'z matni bor. Bu ish har kuni takrorlanadi va vaqtning ko'pi yozishga emas, aynan shunga ketadi.",
+  "yechim": "Tizim shu takroriy ishni o'ziga oladi. Siz bugun nima qilganingizni aytib berasiz, qolgani tayyorlanadi: sayt posti, Telegram va Instagram story rasmlari, havolalar. Siz faqat ko'rib chiqib, tasdiqlaysiz. Joylash esa navbat bilan o'zi bo'ladi, telefon ushlab o'tirish shart emas.",
+  "natija": "18-oktabr kuni chiqqan uchta story'ning birortasini qo'lda joylamadim. Qo'lda bo'ladigan kunlik ish qolmadi, bo'shagan vaqt ishning o'ziga va mijozlarga ketyapti. Sizga ham shunday tizim qurib, shu vaqtni qaytarib beramiz.",
+  "taklif": {
+    "tugma": "Vaqtimni tejaydigan tizim kerak",
+    "xabar": "Salom! Saytingizdagi \"Qancha vaqt tejaydi\" postini o'qidim. Bizga ham postlarni o'zi tarqatadigan tizim kerak."
+  },
+  "teglar": [
+    "vaqt",
+    "avtomatlashtirish",
+    "telegram",
+    "instagram"
+  ],
+  "storyboard": {
+    "rasm": "media/loyiha/avto-story/avto-2.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/avto-story/avto-2-1.jpg",
+        "svg": "media/loyiha/avto-story/avto-2-1.svg",
+        "izoh": "Har kuni: 4 joy, 4 xil o'lcham"
+      },
+      {
+        "src": "media/loyiha/avto-story/avto-2-2.jpg",
+        "svg": "media/loyiha/avto-story/avto-2-2.svg",
+        "izoh": "Siz faqat aytib berasiz"
+      },
+      {
+        "src": "media/loyiha/avto-story/avto-2-3.jpg",
+        "svg": "media/loyiha/avto-story/avto-2-3.svg",
+        "izoh": "Bo'shagan vaqt mijozlarga"
+      }
+    ]
+  }
+}

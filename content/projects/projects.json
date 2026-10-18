@@ -13,5 +13,21 @@
       "Instagram"
     ],
     "qisqa": "AI sotuvchi"
+  },
+  {
+    "slug": "shaxsiy-blog",
+    "nom": "Shaxsiy blog tizimi",
+    "soha": "O'N · o'z mahsulotimiz",
+    "xizmat": "Sayt, Telegram, Instagram",
+    "holat": "faol",
+    "tavsif": "Bir marta yozilgan post sayt, Telegram va Instagram'ga o'zi tarqaladi: blog, story va kanal bitta tizimda.",
+    "qachondan": "2026-yil 17-oktabrdan",
+    "xizmatlar": [
+      "Sayt",
+      "Telegram",
+      "Instagram",
+      "Avtomatlashtirish"
+    ],
+    "qisqa": "Blog tizimi"
   }
 ]
