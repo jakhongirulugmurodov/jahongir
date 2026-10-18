@@ -58,7 +58,12 @@
       "sarlavha": "Har postni Telegram va Instagram'ga alohida joylashdan charchadingizmi?",
       "maydon": "50.0 85.73 45.17 6.88",
       "soat": 24,
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "telegram": true,
+        "instagram": true,
+        "vaqt": "2026-10-18T08:41+00:00"
+      }
     },
     {
       "vaqt": "2026-10-18T13:40+05:00",
@@ -69,7 +74,12 @@
       "sarlavha": "Post yozish oson. Uni tarqatish qiyin.",
       "maydon": "50.0 85.73 45.17 6.88",
       "soat": 24,
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "telegram": true,
+        "instagram": true,
+        "vaqt": "2026-10-18T08:41+00:00"
+      }
     },
     {
       "vaqt": "2026-10-18T13:40+05:00",
@@ -80,7 +90,12 @@
       "sarlavha": "Ishingiz yaxshi, lekin buni hech kim ko'rmasa-chi?",
       "maydon": "50.0 85.73 45.17 6.88",
       "soat": 24,
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "telegram": true,
+        "instagram": true,
+        "vaqt": "2026-10-18T08:41+00:00"
+      }
     }
   ]
 }
