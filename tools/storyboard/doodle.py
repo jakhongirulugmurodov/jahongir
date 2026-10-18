@@ -1,7 +1,7 @@
 # "Doodle" storyboard uslubi: katak qog'oz, marker bilan chizilgan dinamik odamchalar
 # (tanasi teal marker bilan bo'yalgan), oyoq ostida kulrang soya, harakat chiziqlari.
 # Har element "chizilib" chiqadi: chiziqlar pathLength=1 + CSS animatsiya, bo'yoqlar sekin paydo bo'ladi.
-# Loyiha: "Shaxsiy blog tizimi". Boshqa loyihalar boshqa uslubda bo'ladi.
+# Loyiha: "Shaxsiy blog tizimi". Boshqa loyihalar boshqa uslubda bo‘ladi.
 import math, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from uztypo import typo_markup
