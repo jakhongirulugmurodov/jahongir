@@ -42,3 +42,8 @@ Har kuni yangi post tayyorlash shu vositalar bilan qilinadi.
 ## carousel/
 - `konveyer.py <papka>` — 10 slaydli karusel panoramasi (10800×1350, doodle uslubi), `render.py` — PNG'ga chizib 10 ta 1080×1350 JPG'ga bo'ladi. Yangi karusel uchun shu faylni nusxalab, slayd matn/rasmlarini almashtiring.
 - Joylash: `content/lenta/<post>-ig.json` + `content/lenta-queue.json` (tur: karusel | kanal). Navbatni `story-queue.yml` har 10 daqiqada bajaradi (`scripts/lenta_queue.py`).
+
+## reels/ (O‘sish Nuqtasi, @osish.nuqtasi)
+- Tayyor reels Mac'dagi papkada turadi. Partiya: fayllar konteynerga olinadi → `python3 tools/reels/yukla.py <papka> <izohlar.json>` GitHub Release'ga yuklab, `content/reels-queue.json`ga kuniga 3 ta (09:00, 14:00, 20:00) qo'shadi.
+- Joylash: `story-queue.yml` har 10 daqiqada `scripts/reels_queue.py` → `scripts/ig_reel.py` (resumable upload, token: `IG_TOKEN_OSISH`). Mac o'chiq bo'lsa ham ishlaydi.
+- Tokenni tekshirish: "Instagram ulanishini tekshirish" workflow'i, akkaunt = osish.
