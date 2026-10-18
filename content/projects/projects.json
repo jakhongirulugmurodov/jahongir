@@ -15,12 +15,12 @@
     "qisqa": "AI sotuvchi"
   },
   {
-    "slug": "avto-story",
-    "nom": "Sayt va avto-story",
+    "slug": "shaxsiy-blog",
+    "nom": "Shaxsiy blog tizimi",
     "soha": "O'N · o'z mahsulotimiz",
     "xizmat": "Sayt, Telegram, Instagram",
     "holat": "faol",
-    "tavsif": "Saytga bir marta yozilgan post Telegram va Instagram story'lariga o'zi chiqadi.",
+    "tavsif": "Bir marta yozilgan post sayt, Telegram va Instagram'ga o'zi tarqaladi: blog, story va kanal bitta tizimda.",
     "qachondan": "2026-yil 17-oktabrdan",
     "xizmatlar": [
       "Sayt",
@@ -28,6 +28,6 @@
       "Instagram",
       "Avtomatlashtirish"
     ],
-    "qisqa": "Avto-story"
+    "qisqa": "Blog tizimi"
   }
 ]
