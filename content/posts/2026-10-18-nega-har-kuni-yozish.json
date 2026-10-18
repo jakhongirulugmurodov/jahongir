@@ -1,0 +1,39 @@
+{
+  "id": "2026-10-18-nega-har-kuni-yozish",
+  "sana": "2026-10-18",
+  "loyiha": "shaxsiy-blog",
+  "tur": "Sayt",
+  "sarlavha": "Ishingiz yaxshi, lekin buni hech kim ko'rmasa-chi?",
+  "muammo": "Ko'p mutaxassis zo'r ishlaydi, lekin buni ko'rsatmaydi. Mijoz esa ishonishdan oldin isbot qidiradi: nima qilgansiz, qanday natija bo'lgan. Ijtimoiy tarmoqdagi postlar bir-ikki kunda lentaning pastiga tushib ketadi va ishlaringiz yana ko'rinmay qoladi.",
+  "yechim": "Har kuni bitta hal qilingan muammoni yozish odatini qildik: nima bo'ldi, qanday hal qildik, natija qanday. Bu yozuvlar saytga tushadi va o'sha yerda doim turadi: loyihalar papkalarda, kunlar taqvimda. Telegram va Instagram esa odamlarni shu saytga olib keladi.",
+  "natija": "Endi mijozga uzun tushuntirish o'rniga bitta havola yuboraman va u hamma ishimni o'zi ko'radi. Har kungi yozuv ortda iz qoldiradi, ishonch esa shu izdan tug'iladi. Shaxsiy brendingiz uchun shunday blog va sayt qurib beramiz.",
+  "taklif": {
+    "tugma": "Menga ham shunday sayt kerak",
+    "xabar": "Salom! Saytingizdagi \"Nega har kuni yozish kerak\" postini o'qidim. Menga ham ishlarim bir joyda turadigan shunday sayt kerak."
+  },
+  "teglar": [
+    "sayt",
+    "shaxsiy brend",
+    "blog"
+  ],
+  "storyboard": {
+    "rasm": "media/loyiha/avto-story/avto-3.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/avto-story/avto-3-1.jpg",
+        "svg": "media/loyiha/avto-story/avto-3-1.svg",
+        "izoh": "Ish bor, lekin ko'rgan yo'q"
+      },
+      {
+        "src": "media/loyiha/avto-story/avto-3-2.jpg",
+        "svg": "media/loyiha/avto-story/avto-3-2.svg",
+        "izoh": "Har kuni bitta yozuv"
+      },
+      {
+        "src": "media/loyiha/avto-story/avto-3-3.jpg",
+        "svg": "media/loyiha/avto-story/avto-3-3.svg",
+        "izoh": "Bitta havola: hamma ish"
+      }
+    ]
+  }
+}

@@ -178,6 +178,16 @@ class Frame:
         self.line(f"M{x} {y + h} V{y} h{w * 0.38} l14 14 H{x + w} V{y + h} Z", w=4.5, dur=0.3)
         self.text(x + w / 2, y + h + 34, label, size=28)
 
+    def calendar(self, x, y, w, h, marks=(), title="Oktabr"):
+        self.fill(f"M{x} {y} h{w} v{h} h{-w} z", "#fff")
+        self.line(f"M{x + 10} {y} h{w - 20} q10 0 10 10 v{h - 20} q0 10 -10 10 h{-(w - 20)} q-10 0 -10 -10 v{-(h - 20)} q0 -10 10 -10z", w=5, dur=0.4)
+        self.fill(f"M{x} {y} h{w} v54 h{-w} z", DEEP); self.text(x + w / 2, y + 38, title, 32, "#fff", font="Space Grotesk")
+        cw, ch = (w - 40) / 5, (h - 84) / 4
+        for i in range(20):
+            cx, cy = x + 20 + (i % 5) * cw, y + 70 + (i // 5) * ch
+            self.line(f"M{cx + 6} {cy + 6} h{cw - 12} v{ch - 12} h{-(cw - 12)} z", w=3, color=SOFT, dur=0.06)
+            if i in marks: self.fill(f"M{cx + cw / 2 - 11} {cy + ch / 2} a11 11 0 1 0 22 0 a11 11 0 1 0 -22 0", TEAL)
+
     # --- yig'ish -------------------------------------------------------
     def svg(self):
         grid = "".join(f'<path d="M{i} 0V{H}" />' for i in range(0, W + 1, 40)) + "".join(f'<path d="M0 {j}H{W}" />' for j in range(0, H + 1, 40))
