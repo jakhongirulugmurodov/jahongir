@@ -1,4 +1,6 @@
 {
   "business_connection_id": "41iPICSWmUqeFgAALe0lPzsg7Xs",
-  "izoh": "Bu kod tokensiz ishlamaydi. Token faqat GitHub Secrets'da (TG_BOT_TOKEN)."
+  "izoh": "Bu kod tokensiz ishlamaydi. Token faqat GitHub Secrets'da (TG_BOT_TOKEN).",
+  "kanal": "@jahongir_on_blog",
+  "kanal_id": -1004409782635
 }
