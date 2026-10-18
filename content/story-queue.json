@@ -9,7 +9,12 @@
       "sarlavha": "Guruhda mijoz yozadi, siz esa ko'rmay qolasizmi?",
       "maydon": "50.0 85.73 45.17 6.88",
       "soat": 24,
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "telegram": true,
+        "instagram": true,
+        "vaqt": "2026-10-18T05:48+00:00"
+      }
     },
     {
       "vaqt": "2026-10-18T12:00+05:00",
