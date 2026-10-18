@@ -31,7 +31,7 @@
       f.innerHTML = '<div class="shape"><div class="sheet-peek">' + p.c + ' ta hujjat</div><div class="f-body"></div><button type="button" class="f-tab" aria-label="' + esc(p.n) + ' papkasi, ' + p.c + ' ta muammo hal qilindi"><span class="f-name"><span class="fn-l">' + esc(p.n.length <= 18 ? p.n : p.q) + '</span><span class="fn-s">' + esc(p.q) + '</span></span><span class="badge">' + p.c + "</span></button></div>" +
         '<svg class="clip" aria-hidden="true"><use href="#clipS"/></svg>' +
         '<div class="f-content"><div><div class="f-meta"><span class="live">' + (p.holat === "faol" ? "Faol" : "Yakunlangan") + "</span><span>" + esc(p.s) + "</span><span>· " + esc(p.x) + '</span></div><p class="f-desc">' + esc(p.t) + '</p><a class="f-btn" href="' + href + '">Papkani ochish <span aria-hidden="true">→</span></a></div>' +
-        (p.last ? '<div class="f-last"><small>oxirgi yechim</small><b>' + esc(p.last.t) + '</b><div class="sk">' + p.last.sk + "</div></div>" : '<div class="f-last"><small>hali hujjat yo\'q</small></div>') + "</div>";
+        (p.last ? '<div class="f-last"><small>oxirgi yechim</small><b>' + esc(p.last.t) + '</b><div class="sk">' + p.last.sk + "</div></div>" : '<div class="f-last"><small>hali hujjat yo‘q</small></div>') + "</div>";
       f.querySelector(".f-tab").addEventListener("click", function () { pick(i); });
       f.querySelector(".f-body").addEventListener("click", function () { pick(i); });
       f.querySelector(".f-btn").addEventListener("click", function (e) { e.preventDefault(); openInside(p.slug); });
@@ -65,7 +65,7 @@
 
     // touch: press-and-hold, slide to flip through folders
     (function () {
-      var tip = document.createElement("div"); tip.className = "scrub-tip"; tip.textContent = "barmoqni yuring, qo'yib yuboring"; stack.appendChild(tip);
+      var tip = document.createElement("div"); tip.className = "scrub-tip"; tip.textContent = "barmoqni yuring, qo‘yib yuboring"; stack.appendChild(tip);
       var timer = null, on = false, sx = 0, sy = 0, cur = null;
       var at = function (x, y) { var el = document.elementFromPoint(x, y); return el && el.closest ? el.closest(".folder") : null; };
       var peek = function (f) { if (f === cur) return; if (cur) cur.classList.remove("peek"); cur = f; if (f) { try { navigator.vibrate && navigator.vibrate(8); } catch (e) {} f.classList.add("peek"); } };
@@ -137,7 +137,7 @@
         var key = ym + "-" + pad(dd), wd = new Date(y, m - 1, dd).getDay(), s = document.createElement("button"); s.type = "button";
         s.className = "sd" + (byDay[key] ? " has" : ""); s.innerHTML = WD[wd] + "<b>" + dd + "</b>";
         if (byDay[key]) { days.push(dd); (function (x) { s.addEventListener("click", function () { pages.scrollTo({ left: days.indexOf(x) * pages.clientWidth, behavior: "smooth" }); }); })(dd); }
-        else { s.disabled = true; s.setAttribute("aria-label", dd + "-" + OY[m - 1] + ", yozuv yo'q"); }
+        else { s.disabled = true; s.setAttribute("aria-label", dd + "-" + OY[m - 1] + ", yozuv yo‘q"); }
         sb[dd] = s; strip.appendChild(s);
       }
       days.forEach(function (dd) {
@@ -154,7 +154,7 @@
     /* ---- post sheet in place ---- */
     var showPost = function (host, p, backLabel, back) {
       var dd = +p.d.slice(8), mm = +p.d.slice(5, 7);
-      host.innerHTML = '<article class="post"><div class="sheet"><button type="button" class="back">← ' + esc(backLabel) + '</button><div class="f-meta"><span>' + dd + "-" + OY[mm - 1] + ", " + p.d.slice(0, 4) + "</span><span>· " + esc(p.pn) + "</span><span>· " + esc(p.g) + "</span>" + (p.demo ? '<span class="demo">namuna</span>' : "") + "</div><h3>" + esc(p.t) + '</h3><div class="sk">' + p.sk + '</div><div class="blocks"><div><b>' + esc((p.labels || [])[0] || "Muammo") + '</b><p>' + esc(p.m) + "</p></div><div><b>" + esc((p.labels || [])[1] || "Yechim") + "</b><p>" + esc(p.y) + "</p></div><div><b>" + esc((p.labels || [])[2] || "Natija") + "</b><p>" + esc(p.n) + '</p></div></div>' + (p.cta ? '<a class="post-cta" href="' + esc(p.cta.h) + '" target="_blank" rel="noopener">' + esc(p.cta.t) + ' →</a>' : '') + '<div class="tags">' + p.tags.map(function (t) { return "<span>#" + esc(t) + "</span>"; }).join("") + (D.single ? "" : '<a href="post/' + p.id + '.html">havola ↗</a>') + "</div></div></article>";
+      host.innerHTML = '<article class="post"><div class="sheet"><button type="button" class="back">← ' + esc(backLabel) + '</button><div class="f-meta"><span>' + dd + "-" + OY[mm - 1] + ", " + p.d.slice(0, 4) + "</span><span>· " + esc(p.pn) + "</span><span>· " + esc(p.g) + "</span>" + (p.demo ? '<span class="demo">namuna</span>' : "") + "</div><h3>" + esc(p.t) + '</h3>' + (p.pl || '<div class="sk">' + p.sk + '</div>') + '<div class="blocks"><div><b>' + esc((p.labels || [])[0] || "Muammo") + '</b><p>' + esc(p.m) + "</p></div><div><b>" + esc((p.labels || [])[1] || "Yechim") + "</b><p>" + esc(p.y) + "</p></div><div><b>" + esc((p.labels || [])[2] || "Natija") + "</b><p>" + esc(p.n) + '</p></div></div>' + (p.cta ? '<a class="post-cta" href="' + esc(p.cta.h) + '" target="_blank" rel="noopener">' + esc(p.cta.t) + ' →</a>' : '') + '<div class="tags">' + p.tags.map(function (t) { return "<span>#" + esc(t) + "</span>"; }).join("") + (D.single ? "" : '<a href="post/' + p.id + '.html">havola ↗</a>') + "</div></div></article>";
       host.querySelector(".back").onclick = back;
       host.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     };
@@ -171,7 +171,7 @@
         var m = +g.k.slice(5);
         return '<div class="mon">' + OY[m - 1][0].toUpperCase() + OY[m - 1].slice(1) + " " + g.k.slice(0, 4) + '</div><div class="dlist">' + g.items.map(function (d) {
           var k = n++; flat.push(d);
-          return '<button type="button" class="doc" data-k="' + k + '" style="--r:' + ROT[k % 6] + ";--i:" + k + '"><svg class="clip" aria-hidden="true"><use href="#clipS"/></svg><span class="stamp">' + (+d.d.slice(8)) + " " + OY[m - 1].slice(0, 3) + '</span><span class="chip">' + esc(d.g) + '</span><span class="sk">' + d.sk + "</span><h4>" + esc(d.t) + (d.demo ? '<span class="demo">namuna</span>' : "") + "</h4><p>" + esc(d.m) + '</p><span class="read">O\'qish →</span></button>';
+          return '<button type="button" class="doc" data-k="' + k + '" style="--r:' + ROT[k % 6] + ";--i:" + k + '"><svg class="clip" aria-hidden="true"><use href="#clipS"/></svg><span class="stamp">' + (+d.d.slice(8)) + " " + OY[m - 1].slice(0, 3) + '</span><span class="chip">' + esc(d.g) + '</span><span class="sk">' + d.sk + "</span><h4>" + esc(d.t) + (d.demo ? '<span class="demo">namuna</span>' : "") + "</h4><p>" + esc(d.m) + '</p><span class="read">O‘qish →</span></button>';
         }).join("") + "</div>";
       }).join("") || '<p class="empty">Bu papkaga hali hujjat tushmagan.</p>';
       var last = docs[0];
@@ -223,7 +223,7 @@
         col.className = "wcol" + (ds === todayS ? " today" : "") + (L.length ? "" : ds > todayS ? " future" : " empty"); n += L.length;
         var h = document.createElement(L.length ? "button" : "div"); h.className = "wd";
         h.innerHTML = '<b>' + (+ds.slice(8)) + "</b>" + (L.length ? "<span>" + L.length + " ta</span>" : "");
-        if (L.length) { h.type = "button"; h.setAttribute("aria-label", dname(ds) + ", kun ko'rinishida ochish"); (function (x) { h.onclick = function () { anchor = x; view = "kun"; render(); }; })(ds); }
+        if (L.length) { h.type = "button"; h.setAttribute("aria-label", dname(ds) + ", kun ko‘rinishida ochish"); (function (x) { h.onclick = function () { anchor = x; view = "kun"; render(); }; })(ds); }
         col.appendChild(h);
         L.forEach(function (p, j) { col.appendChild(card(p, i + j, function (pp) { showPost(tray, pp, "haftaga qaytish", function () { tray.innerHTML = ""; renderWeek(); document.querySelector(".win").scrollIntoView({ behavior: "smooth", block: "start" }); }); })); });
         if (!L.length && ds <= todayS) { var e = document.createElement("span"); e.className = "nil"; e.textContent = "—"; col.appendChild(e); }
@@ -299,7 +299,7 @@
   /* ================= SEARCH ================= */
   if ((page === "search" || page === "home") && document.getElementById("q")) {
     var q = document.getElementById("q"), items = [].slice.call(document.querySelectorAll("#list .doc")), none = document.getElementById("none"), tagBtns = [].slice.call(document.querySelectorAll("#tags button")), tag = "";
-    var norm = function (s) { return s.toLowerCase().replace(/[ʻʼ'’`]/g, ""); };
+    var norm = function (s) { return s.toLowerCase().replace(/[‘’'’`]/g, ""); };
     var qall = document.getElementById("qall"), showAll = false;
     var run = function () {
       var w = norm(q.value).split(/\s+/).filter(Boolean), shown = 0, idle = !w.length && !tag && !showAll && !!qall;
@@ -321,11 +321,11 @@
   var kfeed = document.getElementById("kfeed");
   if (kfeed) {
     var K = D.kundalik || [], kf = document.getElementById("kfil"), kmore = document.getElementById("kmore"), kst = document.getElementById("kstats");
-    var CATS = ["Hammasi", "Kitob", "O'rgandim", "Hayot"], CLS = { "Kitob": "t-kitob", "O'rgandim": "t-org", "Hayot": "t-hayot" };
+    var CATS = ["Hammasi", "Kitob", "O‘rgandim", "Hayot"], CLS = { "Kitob": "t-kitob", "O‘rgandim": "t-org", "Hayot": "t-hayot" };
     var kcat = "Hammasi", klimit = 5;
     var cnt = function (c) { return K.filter(function (k) { return c === "Hammasi" || k.c === c; }).length; };
     var WDL2 = ["yakshanba", "dushanba", "seshanba", "chorshanba", "payshanba", "juma", "shanba"];
-    kst.innerHTML = [["Kitob", "ta kitob"], ["O'rgandim", "ta saboq"], ["Hayot", "ta o'zgarish"]].map(function (x) { return '<span class="' + CLS[x[0]] + '"><b>' + cnt(x[0]) + "</b> " + x[1] + "</span>"; }).join("");
+    kst.innerHTML = [["Kitob", "ta kitob"], ["O‘rgandim", "ta saboq"], ["Hayot", "ta o‘zgarish"]].map(function (x) { return '<span class="' + CLS[x[0]] + '"><b>' + cnt(x[0]) + "</b> " + x[1] + "</span>"; }).join("");
     kf.innerHTML = CATS.map(function (c) { return '<button type="button" data-c="' + esc(c) + '" aria-pressed="' + (c === kcat) + '">' + esc(c) + " <i>" + cnt(c) + "</i></button>"; }).join("");
     var kpost = function (k) {
       var dt = new Date(+k.d.slice(0, 4), +k.d.slice(5, 7) - 1, +k.d.slice(8)), meta = [];
@@ -333,16 +333,16 @@
       var ph = "";
       if (k.sb) ph = '<button type="button" class="kp-sb" data-kid="' + esc(k.id) + '" aria-label="Storyboardni kadrma-kadr ochish"><img src="' + esc(k.sb.c) + '" alt="' + esc(k.t) + ' — storyboard" loading="lazy"><span class="kp-sb-b">▶ ' + k.sb.f.length + ' kadr</span></button>';
       if (!ph && k.img.length) ph = '<div class="kp-ph n' + Math.min(3, k.img.length) + '">' + k.img.slice(0, 3).map(function (src, i) { return '<button type="button" class="kp-img" data-src="' + esc(src) + '" aria-label="Rasmni kattalashtirish"><img src="' + esc(src) + '" alt="' + esc(k.t) + " — " + (i + 1) + '-rasm" loading="lazy"></button>'; }).join("") + "</div>";
-      var bk = k.book ? '<div class="kp-book"><span class="kp-cover" style="--c:' + esc(k.book.rang) + ";--t:" + esc(k.book.matn_rang) + '"><b>' + esc(k.book.nom) + "</b></span><span><b>" + esc(k.book.nom) + "</b><br>" + esc(k.book.muallif) + (k.book.holat ? ' <em class="' + (k.book.holat === "o'qilmoqda" ? "now" : "") + '">' + esc(k.book.holat) + "</em>" : "") + "</span></div>" : "";
+      var bk = k.book ? '<div class="kp-book"><span class="kp-cover" style="--c:' + esc(k.book.rang) + ";--t:" + esc(k.book.matn_rang) + '"><b>' + esc(k.book.nom) + "</b></span><span><b>" + esc(k.book.nom) + "</b><br>" + esc(k.book.muallif) + (k.book.holat ? ' <em class="' + (k.book.holat === "o‘qilmoqda" ? "now" : "") + '">' + esc(k.book.holat) + "</em>" : "") + "</span></div>" : "";
       var long = k.p.join(" ").length > 260;
       return '<article class="kp" id="' + esc(k.id) + '"><div class="kp-date"><b>' + dt.getDate() + "</b><span>" + OY[dt.getMonth()].slice(0, 3) + "</span><i>" + WDL2[dt.getDay()] + '</i></div><div class="kp-sheet"><div class="kp-top"><span class="kchip ' + CLS[k.c] + '">' + esc(k.c) + "</span>" + (meta.length ? '<span class="kp-meta">' + meta.join(" · ") + "</span>" : "") + (k.demo ? '<span class="demo">namuna</span>' : "") + "</div><h3>" + esc(k.t) + "</h3>" + bk + ph +
-        '<div class="kp-body' + (long ? " clamp" : "") + '">' + k.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + "</div>" + (long ? '<button type="button" class="kp-more" aria-expanded="false">Davomini o\'qish ↓</button>' : "") +
+        '<div class="kp-body' + (long ? " clamp" : "") + '">' + k.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + "</div>" + (long ? '<button type="button" class="kp-more" aria-expanded="false">Davomini o‘qish ↓</button>' : "") +
         (k.x ? '<p class="kp-x"><span aria-hidden="true">→</span> ' + esc(k.x) + "</p>" : "") + "</div></article>";
     };
     var renderK = function () {
       var list = K.filter(function (k) { return kcat === "Hammasi" || k.c === kcat; });
-      kfeed.innerHTML = list.slice(0, klimit).map(kpost).join("") || '<p class="empty">Bu toifada hali yozuv yo\'q.</p>';
-      kmore.hidden = list.length <= klimit; kmore.textContent = "Yana ko'rsatish (" + (list.length - klimit) + ")";
+      kfeed.innerHTML = list.slice(0, klimit).map(kpost).join("") || '<p class="empty">Bu toifada hali yozuv yo‘q.</p>';
+      kmore.hidden = list.length <= klimit; kmore.textContent = "Yana ko‘rsatish (" + (list.length - klimit) + ")";
       [].forEach.call(kf.querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", String(b.dataset.c === kcat)); });
     };
     kf.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; kcat = b.dataset.c; klimit = 5; renderK(); });
@@ -350,8 +350,8 @@
     kfeed.addEventListener("click", function (e) {
       var m = e.target.closest(".kp-more");
       if (m) { var body = m.previousElementSibling, open = m.getAttribute("aria-expanded") === "true";
-        if (!open) { body.style.maxHeight = body.scrollHeight + "px"; body.classList.add("open"); m.textContent = "Yig'ish ↑"; }
-        else { body.style.maxHeight = ""; body.classList.remove("open"); m.textContent = "Davomini o'qish ↓"; }
+        if (!open) { body.style.maxHeight = body.scrollHeight + "px"; body.classList.add("open"); m.textContent = "Yig‘ish ↑"; }
+        else { body.style.maxHeight = ""; body.classList.remove("open"); m.textContent = "Davomini o‘qish ↓"; }
         m.setAttribute("aria-expanded", String(!open)); return; }
       var sbb = e.target.closest(".kp-sb"); if (sbb && window.__story) { var kk = K.filter(function (x) { return x.id === sbb.dataset.kid; })[0]; if (kk) window.__story([{ joy: kk.t, hud: "", dav: "", d: kk.d, x: "", img: kk.sb.f }], 0, sbb); return; }
       var im = e.target.closest(".kp-img"); if (im) lightbox(im.dataset.src);
@@ -391,7 +391,7 @@
     };
     var renderT = function () {
       tgrid.innerHTML = T.slice(0, tlimit).map(tcard).join("");
-      tmore.hidden = T.length <= tlimit; tmore.textContent = "Yana ko'rsatish (" + (T.length - tlimit) + ")";
+      tmore.hidden = T.length <= tlimit; tmore.textContent = "Yana ko‘rsatish (" + (T.length - tlimit) + ")";
     };
     if (tgrid) tmore.addEventListener("click", function () { tlimit += 8; renderT(); });
     if (tgrid) tgrid.addEventListener("click", function (e) { var b = e.target.closest(".tp"); if (b) openStory(+b.dataset.i, b); });
@@ -403,7 +403,7 @@
       o.innerHTML = '<div class="st-bg"></div><button type="button" class="st-tp" aria-label="Oldingi sayohat">‹</button>' +
         '<div class="st-fr"><div class="st-blur"></div><div class="st-img"></div><div class="st-bars"></div>' +
         '<div class="st-top"><span class="st-tt"><b></b><i></i></span><button type="button" class="st-x" aria-label="Yopish">×</button></div>' +
-        '<div class="st-acts" hidden><a class="st-read">To\'liq o\'qish →</a><a class="st-cta" target="_blank" rel="noopener"></a></div><p class="st-cap"></p><span class="st-ps" aria-hidden="true"><i></i><i></i></span></div>' +
+        '<div class="st-acts" hidden><a class="st-read">To‘liq o‘qish →</a><a class="st-cta" target="_blank" rel="noopener"></a></div><p class="st-cap"></p><span class="st-ps" aria-hidden="true"><i></i><i></i></span></div>' +
         '<button type="button" class="st-nt" aria-label="Keyingi sayohat">›</button>';
       var fr = o.querySelector(".st-fr"), bars = o.querySelector(".st-bars"), box = o.querySelector(".st-img"), blur = o.querySelector(".st-blur"), bg = o.querySelector(".st-bg"), cap = o.querySelector(".st-cap");
       var setPause = function (v) { o.classList.toggle("paused", v); };
@@ -412,7 +412,7 @@
         if (nti !== ti) {
           ti = nti; o.setAttribute("aria-label", t.joy); if (t.id && window.__hlSeen) window.__hlSeen(t.id);
           o.querySelector(".st-tt b").textContent = t.joy;
-          o.querySelector(".st-tt i").textContent = [t.hud, t.dav && t.dav !== "O'zbekiston" ? t.dav : "", sdate(t.d, true)].filter(Boolean).join(" · ");
+          o.querySelector(".st-tt i").textContent = [t.hud, t.dav && t.dav !== "O‘zbekiston" ? t.dav : "", sdate(t.d, true)].filter(Boolean).join(" · ");
           bars.innerHTML = t.img.map(function () { return "<i><b></b></i>"; }).join("");
           bars.querySelectorAll("b").forEach(function (b) { b.addEventListener("animationend", function () { if (b.parentNode.classList.contains("on")) next(); }); });
           if (dir) { fr.classList.remove("in-l", "in-r"); void fr.offsetWidth; fr.classList.add(dir > 0 ? "in-r" : "in-l"); }
@@ -518,11 +518,11 @@
       var tag = a.dataset.tag, list = (D.posts || []).filter(function (p) { return p.tags.indexOf(tag) > -1; });
       panel.innerHTML = '<div class="svcp-h"><b>' + esc(a.dataset.nom) + "</b><span>" + list.length + ' ta ish</span><button type="button" class="svcp-x" aria-label="Yopish">×</button></div><div class="dlist" id="svcl"></div>';
       var box = panel.querySelector("#svcl");
-      if (!list.length) box.innerHTML = '<p class="empty">Bu yo\'nalishda yozuvlar tez orada paydo bo\'ladi.</p>';
+      if (!list.length) box.innerHTML = '<p class="empty">Bu yo‘nalishda yozuvlar tez orada paydo bo‘ladi.</p>';
       list.forEach(function (p, i) {
         var b = document.createElement("button"); b.type = "button"; b.className = "doc"; b.style.cssText = "--r:" + ROT[i % 6] + ";--i:" + i;
-        b.innerHTML = '<svg class="clip" aria-hidden="true"><use href="#clipS"/></svg><span class="stamp">' + (+p.d.slice(8)) + " " + OY[+p.d.slice(5, 7) - 1].slice(0, 3) + '</span><span class="chip">' + esc(p.pn) + '</span><span class="sk">' + p.sk + "</span><h4>" + esc(p.t) + (p.demo ? '<span class="demo">namuna</span>' : "") + "</h4><p>" + esc(p.m) + '</p><span class="read">O\'qish →</span>';
-        b.addEventListener("click", function () { b.classList.add("tear"); setTimeout(function () { showPost(box, p, "ro'yxatga qaytish", function () { render(a); panel.scrollIntoView({ behavior: "smooth", block: "start" }); }); }, reduce ? 0 : 420); });
+        b.innerHTML = '<svg class="clip" aria-hidden="true"><use href="#clipS"/></svg><span class="stamp">' + (+p.d.slice(8)) + " " + OY[+p.d.slice(5, 7) - 1].slice(0, 3) + '</span><span class="chip">' + esc(p.pn) + '</span><span class="sk">' + p.sk + "</span><h4>" + esc(p.t) + (p.demo ? '<span class="demo">namuna</span>' : "") + "</h4><p>" + esc(p.m) + '</p><span class="read">O‘qish →</span>';
+        b.addEventListener("click", function () { b.classList.add("tear"); setTimeout(function () { showPost(box, p, "ro‘yxatga qaytish", function () { render(a); panel.scrollIntoView({ behavior: "smooth", block: "start" }); }); }, reduce ? 0 : 420); });
         box.appendChild(b);
       });
       panel.querySelector(".svcp-x").onclick = close;
@@ -548,7 +548,7 @@
     var tg = window.Telegram && window.Telegram.WebApp; if (!tg) return;
     document.documentElement.classList.add("tg");
     try { tg.ready(); tg.expand(); tg.setHeaderColor("#0A4E50"); tg.setBackgroundColor("#0A4E50"); } catch (e) {}
-    // story ochiq bo'lsa Telegram'ning "orqaga" tugmasi uni yopadi
+    // story ochiq bo‘lsa Telegram'ning "orqaga" tugmasi uni yopadi
     var bb = tg.BackButton;
     new MutationObserver(function () { if (document.querySelector(".st")) bb.show(); else bb.hide(); }).observe(document.body, { childList: true });
     bb.onClick(function () { history.back(); });
@@ -556,9 +556,51 @@
   document.head.appendChild(s);
 })();
 
-/* ===== post varag'idagi storyboard: bosilsa kadrlar story kabi ochiladi ===== */
+/* ===== post varag‘idagi storyboard: bosilsa kadrlar story kabi ochiladi ===== */
 document.addEventListener("click", function (e) {
-  var im = e.target.closest && e.target.closest(".post .sk-img"); if (!im || !window.__story || !window.D) return;
+  var im = e.target.closest && e.target.closest(".post .sk-img, .post .pl-stage, .post .film"); if (!im || !window.__story || !window.D) return;
+  if (im.classList.contains("pl-stage")) im = im.parentNode;
   var p = (window.D.posts || []).filter(function (x) { return x.id === im.dataset.pid; })[0]; if (!p || !p.sb) return;
   window.__story([{ joy: p.t, hud: p.pn, dav: "", d: p.d, x: "", img: p.sb.f, cta: p.cta }], 0, im);
 });
+
+// Mini-film (kartochkalar) va chizilib chiqadigan pleyer (post sahifasi)
+(function () {
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var seen = typeof IntersectionObserver !== "undefined" ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) { e.target.__vis = e.isIntersecting; if (e.isIntersecting && e.target.__kick) e.target.__kick(); });
+  }, { threshold: 0.35 }) : null;
+  // kartochkadagi kadrlar: 2.4 soniyada almashadi, faqat ekranda ko‘rinsa
+  function initFilm(el) {
+    if (el.__init) return; el.__init = 1;
+    var f = el.querySelectorAll(".film-f"), d = el.querySelectorAll(".film-n i"), i = 0;
+    if (f.length < 2 || reduce) return;
+    if (seen) seen.observe(el); else el.__vis = true;
+    setInterval(function () {
+      if (!el.__vis || document.hidden || !el.isConnected) return;
+      f[i].classList.remove("on"); d[i] && d[i].classList.remove("on");
+      i = (i + 1) % f.length; f[i].classList.add("on"); d[i] && d[i].classList.add("on");
+    }, 2400);
+  }
+  // pleyer: SVG kadr chiziladi → tugagach keyingisi; rasm bo‘lsa 3 soniya
+  function initPlayer(el) {
+    if (el.__init) return; el.__init = 1;
+    var F = [].slice.call(el.querySelectorAll(".pl-f")), dots = el.querySelectorAll(".pl-dots button"), cap = el.querySelector(".pl-cap"), i = 0, t = 0;
+    function len(fr) { var sv = fr.querySelector("svg"); return sv ? (parseFloat(sv.getAttribute("data-len")) || 3) * 1000 + 1400 : 3000; }
+    function show(n, restart) {
+      clearTimeout(t); F[i].classList.remove("on"); dots[i] && dots[i].classList.remove("on");
+      i = n; var fr = F[i]; fr.classList.add("on"); dots[i] && dots[i].classList.add("on"); cap.textContent = fr.getAttribute("data-cap") || "";
+      var sv = fr.querySelector("svg");
+      if (sv && restart !== false && !reduce) { var c = sv.cloneNode(true); sv.parentNode.replaceChild(c, sv); }
+      if (reduce) return;
+      t = setTimeout(function () { if (el.__vis !== false && !document.hidden) show((i + 1) % F.length); else el.__kick = function () { el.__kick = null; show((i + 1) % F.length); }; }, len(fr));
+    }
+    [].forEach.call(dots, function (b, n) { b.addEventListener("click", function (e) { e.stopPropagation(); show(n); }); });
+    el.querySelector(".pl-re").addEventListener("click", function (e) { e.stopPropagation(); show(i); });
+    if (seen) seen.observe(el);
+    show(0);
+  }
+  function scan(root) { (root || document).querySelectorAll(".film").forEach(initFilm); (root || document).querySelectorAll(".player").forEach(initPlayer); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { scan(); }); else scan();
+  if (typeof MutationObserver !== "undefined") new MutationObserver(function (ms) { ms.forEach(function (m) { m.addedNodes.forEach(function (n) { if (n.nodeType === 1) scan(n.parentNode || n); }); }); }).observe(document.body || document.documentElement, { childList: true, subtree: true });
+})();

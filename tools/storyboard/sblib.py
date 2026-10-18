@@ -1,3 +1,6 @@
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+from uztypo import typo_markup
 # 6-panel hand-drawn storyboard for the "Nega yozib boraman" post
 INK="#17211F"; T="#16A6A9"; SOFT="#9AD2D2"; DEEP="#0A4E50"; P="#0E7E80"
 W,H=1800,1160; PW,PH=560,470; GX,GY=30,30; TOP=110
@@ -39,4 +42,5 @@ def render(title,right,panels,out):
 <text x="{GX}" y="70" font-family="Space Grotesk" font-weight="700" font-size="44" fill="{INK}">{title}<tspan fill="{T}">.</tspan></text>
 <text x="{W-GX}" y="70" text-anchor="end" font-family="Caveat" font-weight="700" font-size="34" fill="{P}">{right}</text>
 {"".join(p)}</svg>'''
+    svg=typo_markup(svg)
     open(out,"w").write(f'<!doctype html><html><head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?x"><style>body{{margin:0}}</style></head><body>{svg}</body></html>')

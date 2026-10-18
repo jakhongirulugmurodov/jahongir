@@ -673,3 +673,35 @@ html.st-lock,html.st-lock body{overflow:hidden}
 .st-acts .st-cta{position:static;margin:0;animation:none;width:max-content;max-width:100%}
 .st-acts [hidden]{display:none}
 .st-read{padding:13px 24px;border-radius:999px;background:#fff;color:var(--deep);font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(0,0,0,.6);max-width:100%;text-align:center}
+
+/* mini-film: storyboard kadrlari butun blok bo'ylab, navbat bilan almashadi */
+.sk:has(> .film){height:auto;padding:0;border:0;background:none;display:block;overflow:visible;box-shadow:none}
+.film{position:relative;display:block;width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:6px;border:1.6px solid #1E3A39;background:#FBFBF8}
+.film-f{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .7s ease,transform 2.6s ease-out}
+.film-f.on{opacity:1;transform:scale(1)}
+.film-n{position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:5px}
+.film-n i{width:6px;height:6px;border-radius:50%;background:rgba(14,126,128,.3);transition:background .3s,width .3s}
+.film-n i.on{width:16px;border-radius:3px;background:var(--primary)}
+/* kartochka: rasm chetdan-chetga */
+.doc:has(.film){padding:0 0 18px;overflow:hidden}
+.doc:has(.film) .sk{margin:0 0 14px}
+.doc:has(.film) .film{border:0;border-radius:4px 4px 0 0;border-bottom:1.6px solid #1E3A39}
+.doc:has(.film) .chip,.doc:has(.film) h4,.doc:has(.film) p,.doc:has(.film) .read{margin-left:18px;margin-right:18px}
+.doc:has(.film) .chip{display:none}
+.doc:has(.film) .stamp{top:auto;bottom:16px;right:16px;z-index:2}
+.doc:has(.film) .clip{z-index:3}
+.paper:has(.film) .sk{margin-left:-12px;margin-right:-12px}
+/* pleyer: kadrlar ko'z oldida chiziladi */
+.player{margin:18px 0 24px}
+.pl-stage{position:relative;aspect-ratio:4/3;border:1.6px solid #1E3A39;border-radius:8px;overflow:hidden;background:#FBFBF8;cursor:zoom-in}
+.pl-f{position:absolute;inset:0;opacity:0;transition:opacity .45s ease;pointer-events:none}
+.pl-f.on{opacity:1}
+.pl-f svg,.pl-f img{display:block;width:100%;height:100%;object-fit:cover}
+.pl-bar{display:flex;align-items:center;gap:12px;margin-top:10px}
+.pl-dots{display:flex;gap:6px}
+.pl-dots button{width:9px;height:9px;padding:0;border:0;border-radius:5px;background:#C9DCDC;cursor:pointer;transition:width .3s,background .3s}
+.pl-dots button.on{width:24px;background:var(--primary)}
+.pl-cap{flex:1;font-family:var(--hand);font-weight:700;font-size:22px;color:var(--teal-900);line-height:1.1}
+.pl-re{width:34px;height:34px;border-radius:50%;border:1.6px solid #1E3A39;background:#fff;font-size:17px;line-height:1;cursor:pointer;color:var(--teal-900)}
+.pl-re:hover{background:#E9F3F3}
+@media (prefers-reduced-motion: reduce){.film-f{transition:none}}

@@ -39,7 +39,13 @@ const OY = ["yanvar", "fevral", "mart", "aprel", "may", "iyun", "iyul", "avgust"
 const day = (d) => +d.slice(8), mon = (d) => +d.slice(5, 7);
 const sana = (d) => `${day(d)}-${OY[mon(d) - 1]}, ${d.slice(0, 4)}`;
 const ROT = ["-2.4deg", "1.8deg", "-1.2deg", "2.6deg", "-1.8deg", "1deg"];
-const write = (rel, html) => { const f = join(OUT, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, html); };
+// O'zbek imlosi: o' g' → o‘ g‘ (U+2018, aylangan vergul), tutuq belgisi → ’ (U+2019). Barcha shriftlarda bor. Faqat ko'rinadigan matnga.
+const typo = (s) => String(s).replace(/([oOgG])['\u2019\u2018`\u02bc\u02bb](?=[A-Za-z\u02bb\u02bc])/g, "$1\u2018").replace(/(?<=[A-Za-z])['`\u02bc](?=[A-Za-z])/g, "\u2019");
+const typoAttr = (tag) => tag.replace(/\b(aria-label|alt|title|placeholder|data-cap|content)="([^"]*)"/g, (m, a, v) => `${a}="${typo(v)}"`);
+const typoMarkup = (h) => String(h).replace(/(<(script|style)\b[\s\S]*?<\/\2>)|(<[^>]+>)|([^<]+)/gi, (m, blk, _t, tag, text) => (blk ? blk : tag ? typoAttr(tag) : typo(text)));
+const isPath = (v) => /^(https?:|media\/|post\/|loyiha\/|#|\.\.\/|tg:)/.test(v) || /\.(jpe?g|png|svg|webp|html)$/.test(v);
+const typoData = (v, k) => (typeof v === "string" ? (isPath(v) || ["id", "ps", "slug", "pid", "tg", "page"].includes(k) ? v : v.includes("<") ? typoMarkup(v) : typo(v)) : Array.isArray(v) ? v.map((x) => typoData(x, k)) : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([kk, x]) => [kk, typoData(x, kk)])) : v);
+const write = (rel, html) => { const f = join(OUT, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, rel.endsWith(".html") ? typoMarkup(html) : html); };
 const short = (s, n = 1) => esc(String(s).split(/\s+/).slice(0, n).join(" ").toLowerCase());
 const byProj = (s) => posts.filter((p) => p.loyiha === s);
 
@@ -65,8 +71,22 @@ function sketch(v = {}) {
   }
 }
 
-// storyboard bo'lsa mini chizma o'rniga muqova rasmi
-const vis = (p, r = "") => (p.storyboard ? `<img class="sk-img" src="${r}${esc(p.storyboard.rasm)}" alt="${esc(p.sarlavha)} — storyboard" data-pid="${esc(p.id)}" loading="lazy">` : sketch(p.vizual));
+// storyboard bo'lsa: kartochkada kadrlar mini-film bo'lib almashadi (butun blok bo'ylab)
+const film = (p, r = "") => {
+  const K = p.storyboard.kadrlar || [];
+  if (!K.length) return `<img class="sk-img" src="${r}${esc(p.storyboard.rasm)}" alt="${esc(p.sarlavha)} — storyboard" data-pid="${esc(p.id)}" loading="lazy">`;
+  return `<span class="film" data-pid="${esc(p.id)}">${K.map((k, i) => `<img class="film-f${i ? "" : " on"}" src="${r}${esc(k.src)}" alt="${i ? "" : esc(p.sarlavha) + " — storyboard"}" loading="lazy">`).join("")}<span class="film-n" aria-hidden="true">${K.map((_, i) => `<i${i ? "" : ' class="on"'}></i>`).join("")}</span></span>`;
+};
+const vis = (p, r = "") => (p.storyboard ? film(p, r) : sketch(p.vizual));
+// post sahifasida: kadrlar "chizilib" chiqadigan pleyer (SVG bo'lsa jonli, bo'lmasa rasm)
+const svgOf = (k) => (k.svg && existsSync(join(ROOT, "content", k.svg)) ? readFileSync(join(ROOT, "content", k.svg), "utf8") : "");
+const player = (p, r = "") => {
+  if (!p.storyboard) return `<div class="sk">${sketch(p.vizual)}</div>`;
+  const K = p.storyboard.kadrlar || [];
+  if (!K.length) return `<div class="sk">${film(p, r)}</div>`;
+  return `<div class="player" data-pid="${esc(p.id)}"><div class="pl-stage" role="button" tabindex="0" aria-label="Storyboard'ni katta ochish">${K.map((k, i) => `<div class="pl-f${i ? "" : " on"}" data-cap="${esc(k.izoh || "")}">${svgOf(k) || `<img src="${r}${esc(k.src)}" alt="${esc(k.izoh || p.sarlavha)}" loading="lazy">`}</div>`).join("")}</div>
+<div class="pl-bar"><span class="pl-dots">${K.map((_, i) => `<button type="button" aria-label="${i + 1}-kadr"${i ? "" : ' class="on"'}></button>`).join("")}</span><span class="pl-cap">${esc(K[0].izoh || "")}</span><button type="button" class="pl-re" aria-label="Qayta ko'rish">↻</button></div></div>`;
+};
 
 const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap">`;
 const SVGDEFS = `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F7F7"/><stop offset=".35" stop-color="#A9B4B4"/><stop offset=".55" stop-color="#E9EEEE"/><stop offset="1" stop-color="#7E8A8A"/></linearGradient><radialGradient id="pinHead" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#9AD2D2"/><stop offset=".35" stop-color="#16A6A9"/><stop offset="1" stop-color="#0A4E50"/></radialGradient><symbol id="clipS" viewBox="0 0 26 78"><path d="M9 70 V16 a7 7 0 0 1 14 0 V58 a5 5 0 0 1 -10 0 V22" fill="none" stroke="url(#metal)" stroke-width="2.6" stroke-linecap="round"/></symbol><symbol id="pinS" viewBox="0 0 26 38"><path d="M13 22 L14.2 37" stroke="#8C9898" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="13" cy="21.5" rx="7.5" ry="2.6" fill="#0A4E50"/><path d="M8 20 C8 14, 9 11, 10 9 L16 9 C17 11, 18 14, 18 20 Z" fill="url(#pinHead)"/><ellipse cx="13" cy="8" rx="8.5" ry="6.5" fill="url(#pinHead)"/><ellipse cx="10.5" cy="6" rx="2.6" ry="1.6" fill="#fff" opacity=".7"/></symbol></defs></svg>`;
@@ -111,7 +131,7 @@ ${body}
 </main>
 ${contact ? contactBand() : ""}
 <footer class="foot gut">© ${new Date().getFullYear()} ${esc(site.brend)} · Mijoz nomlari va raqamlari ularning roziligisiz ko'rsatilmaydi.</footer>
-${data ? `<script>window.D=${JSON.stringify(data).replace(/</g, "\\u003c")};</script>` : ""}
+${data ? `<script>window.D=${JSON.stringify(typoData(data)).replace(/</g, "\\u003c")};</script>` : ""}
 <script src="${r}assets/site.js" defer></script>
 </body>
 </html>
@@ -138,7 +158,7 @@ if (existsSync(join(ROOT, "content/media"))) cpSync(join(ROOT, "content/media"),
 const lastDate = (s) => byProj(s)[0]?.sana || "0000";
 const folderOrder = projects.slice().sort((a, b) => (lastDate(a.slug) < lastDate(b.slug) ? -1 : 1));
 // highlightlar: mavzu bo'yicha guruh (loyiha yoki kundalik), eng yangi faollik oldinda
-const ctaOf = (p) => (p.taklif ? { t: p.taklif.tugma, h: `https://t.me/${site.telegram}?text=${encodeURIComponent(p.taklif.xabar || "")}` } : null);
+const ctaOf = (p) => (p.taklif ? { t: p.taklif.tugma, h: `https://t.me/${site.telegram}?text=${encodeURIComponent(typo(p.taklif.xabar || ""))}` } : null);
 const frames = (sb) => (sb.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" }));
 const hlGroups = [
   ...projects.map((pr) => {
@@ -156,7 +176,7 @@ const homeData = {
     const L = byProj(p.slug)[0];
     return { slug: p.slug, n: p.nom, q: p.qisqa || p.nom, s: p.soha, x: p.xizmat, t: p.tavsif, since: p.qachondan || "", xs: p.xizmatlar || [], c: byProj(p.slug).length, holat: p.holat, last: L ? { t: L.sarlavha, sk: vis(L) } : null };
   }),
-  posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: vis(p), cta: p.taklif ? { t: p.taklif.tugma, h: `https://t.me/${site.telegram}?text=${encodeURIComponent(p.taklif.xabar || "")}` } : null, sb: p.storyboard ? { c: p.storyboard.rasm, f: (p.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!p.namuna })),
+  posts: posts.map((p) => ({ id: p.id, d: p.sana, ps: p.loyiha, pn: projBy[p.loyiha].nom, t: p.sarlavha, m: p.muammo, y: p.yechim, n: p.natija, g: p.tur || "Umumiy", tags: p.teglar || [], sk: vis(p), pl: player(p), cta: p.taklif ? { t: p.taklif.tugma, h: `https://t.me/${site.telegram}?text=${encodeURIComponent(typo(p.taklif.xabar || ""))}` } : null, sb: p.storyboard ? { c: p.storyboard.rasm, f: (p.storyboard.kadrlar || []).map((r) => ({ s: r.src, i: r.izoh || "" })) } : null, demo: !!p.namuna })),
   tg: site.telegram,
   hl: hlGroups.map((g) => ({ id: g.id, it: g.it })),
   sayohat: sayohat.map((t) => ({ id: t.id, d: t.sana, joy: t.joy, hud: t.hudud || "", dav: t.davlat || "", x: t.izoh || "", img: t.rasmlar.map((r) => (typeof r === "string" ? { s: r, i: "" } : { s: r.src, i: r.izoh || "" })), demo: !!t.namuna })),
@@ -281,9 +301,9 @@ for (const p of posts) {
     <a class="back" href="../loyiha/${pr.slug}.html">← ${esc(pr.nom)} papkasi</a>
     <div class="f-meta"><span>${sana(p.sana)}</span><span>· ${esc(pr.nom)}</span>${p.tur ? `<span>· ${esc(p.tur)}</span>` : ""}${p.namuna ? '<span class="demo">namuna</span>' : ""}</div>
     <h3>${esc(p.sarlavha)}</h3>
-    <div class="sk">${vis(p, "../")}</div>
+    ${player(p, "../")}
     <div class="blocks"><div><b>Muammo</b><p>${esc(p.muammo)}</p></div><div><b>Yechim</b><p>${esc(p.yechim)}</p></div><div><b>Natija</b><p>${esc(p.natija)}</p></div></div>
-    ${p.taklif ? `<a class="post-cta" href="https://t.me/${esc(site.telegram)}?text=${esc(encodeURIComponent(p.taklif.xabar || ""))}" target="_blank" rel="noopener">${esc(p.taklif.tugma)} →</a>` : ""}
+    ${p.taklif ? `<a class="post-cta" href="https://t.me/${esc(site.telegram)}?text=${esc(encodeURIComponent(typo(p.taklif.xabar || "")))}" target="_blank" rel="noopener">${esc(p.taklif.tugma)} →</a>` : ""}
     <div class="tags">${(p.teglar || []).map((t) => `<span>#${esc(t)}</span>`).join("")}</div>
   </div></article>
   <nav class="pn" aria-label="Shu papkadagi boshqa hujjatlar"><span>${older ? `<a href="${older.id}.html">← ${esc(older.sarlavha)}</a>` : ""}</span><span style="text-align:right">${newer ? `<a href="${newer.id}.html">${esc(newer.sarlavha)} →</a>` : ""}</span></nav>

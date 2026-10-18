@@ -3,6 +3,8 @@
 # spec: {"nom","sana","kicker","sarlavha","lead","kadrlar":[[rasm, izoh],[rasm, izoh]]}
 # Natija: <nom>-tg.html (Telegram: "To'liq o'qish →" tugmasi) va <nom>-ig.html (Instagram: "AI deb yozing").
 import json, os, sys, html
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from uztypo import typo_markup
 spec = json.load(open(sys.argv[1])); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
 E = html.escape
 FONTS = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap">'
@@ -46,5 +48,5 @@ def page(mode):
 document.querySelectorAll('.card').forEach(function(c){{c.style.width=w+'px'}});}})()</script>
 {cta}<p class="url">jahongir.onagy.app</p></body></html>"""
 for m in ("tg", "ig"):
-    open(os.path.join(out, f"{spec['nom']}-{m}.html"), "w").write(page(m))
+    open(os.path.join(out, f"{spec['nom']}-{m}.html"), "w").write(typo_markup(page(m)))
 print("ok", spec["nom"])

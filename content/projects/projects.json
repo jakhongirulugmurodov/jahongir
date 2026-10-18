@@ -13,5 +13,21 @@
       "Instagram"
     ],
     "qisqa": "AI sotuvchi"
+  },
+  {
+    "slug": "avto-story",
+    "nom": "Sayt va avto-story",
+    "soha": "O'N · o'z mahsulotimiz",
+    "xizmat": "Sayt, Telegram, Instagram",
+    "holat": "faol",
+    "tavsif": "Saytga bir marta yozilgan post Telegram va Instagram story'lariga o'zi chiqadi.",
+    "qachondan": "2026-yil 17-oktabrdan",
+    "xizmatlar": [
+      "Sayt",
+      "Telegram",
+      "Instagram",
+      "Avtomatlashtirish"
+    ],
+    "qisqa": "Avto-story"
   }
 ]

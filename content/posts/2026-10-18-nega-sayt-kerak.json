@@ -1,0 +1,38 @@
+{
+  "id": "2026-10-18-nega-sayt-kerak",
+  "sana": "2026-10-18",
+  "loyiha": "avto-story",
+  "tur": "Sayt",
+  "sarlavha": "Instagram'da postingiz bor-ku, nega yana sayt kerak?",
+  "muammo": "Instagram va Telegram'dagi postlar bir-ikki kunda lentaning pastiga tushib, ko'milib ketadi. Yangi mijoz ishlaringizni ko'rmoqchi bo'lsa, yuzlab postni varaqlashi kerak. Sahifa bloklansa yoki algoritm o'zgarsa, hammasi bir kunda ko'rinmay qoladi.",
+  "yechim": "Sayt ishlaringizning uyi bo'ladi: har bir loyiha o'z papkasida, har kunlik yangiliklar taqvimda, tepada story doiralari turadi. Telegram va Instagram esa odamlarni shu uyga olib keladigan eshikka aylanadi: har bir story va post saytdagi to'liq maqolaga olib boradi.",
+  "natija": "Mijozga bitta havola yuborasiz va u hamma ishingizni bir joyda ko'radi. Biror narsani so'rasa, o'sha postning havolasini tashlaysiz. Shaxsiy brendingiz uchun shunday sayt qurib beramiz.",
+  "taklif": {
+    "tugma": "Menga ham shunday sayt kerak",
+    "xabar": "Salom! Saytingizdagi \"Nega sayt kerak\" postini o'qidim. Menga ham ishlarim bir joyda turadigan shunday sayt kerak."
+  },
+  "teglar": [
+    "sayt",
+    "shaxsiy brend"
+  ],
+  "storyboard": {
+    "rasm": "media/loyiha/avto-story/avto-3.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/avto-story/avto-3-1.jpg",
+        "svg": "media/loyiha/avto-story/avto-3-1.svg",
+        "izoh": "Postlar lentada ko'milib ketadi"
+      },
+      {
+        "src": "media/loyiha/avto-story/avto-3-2.jpg",
+        "svg": "media/loyiha/avto-story/avto-3-2.svg",
+        "izoh": "Sayt: ishlaringiz uyi"
+      },
+      {
+        "src": "media/loyiha/avto-story/avto-3-3.jpg",
+        "svg": "media/loyiha/avto-story/avto-3-3.svg",
+        "izoh": "Telegram va Instagram: saytga eshik"
+      }
+    ]
+  }
+}
