@@ -45,13 +45,21 @@
       "vaqt": "2026-10-18T16:00+05:00",
       "tur": "karusel",
       "fayl": "content/lenta/2026-10-18-qancha-vaqt-tejaydi-ig.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-10-18T11:06+00:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18001916391003054\", \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-18T16:00+05:00",
       "tur": "kanal",
       "fayl": "content/kanal/2026-10-18-qancha-vaqt-tejaydi.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-10-18T11:06+00:00",
+        "chiqish": "natija: {\"ok\": true, \"message_id\": 8, \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-18T17:00+05:00",
