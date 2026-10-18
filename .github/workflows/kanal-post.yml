@@ -1,0 +1,12 @@
+name: Telegram kanalga post
+on:
+  workflow_dispatch:
+    inputs:
+      post: { description: "content/kanal/ ichidagi JSON yo'li", required: true }
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/tg_channel_post.py "${{ inputs.post }}"
+        env: { TG_BOT_TOKEN: "${{ secrets.TG_BOT_TOKEN }}" }
