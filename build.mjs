@@ -322,6 +322,9 @@ write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${site.domen}/sitemap.xml
 write(".nojekyll", "");
 // AI agent uchun: Instagram story ID → post havolasi
 if (existsSync(join(ROOT, "content/story-map.json"))) cpSync(join(ROOT, "content/story-map.json"), join(OUT, "story-map.json"));
+// O'sish Nuqtasi "90 reels" paneli uchun ochiq ma'lumot (navbat, statistika, Mac papka holati)
+mkdirSync(join(OUT, "data"), { recursive: true });
+for (const f of ["reels-queue.json", "reels-stats.json", "reels-papka.json"]) if (existsSync(join(ROOT, "content", f))) cpSync(join(ROOT, "content", f), join(OUT, "data", f));
 if (site.domen) write("CNAME", site.domen.replace(/^https?:\/\//, "") + "\n");
 
 console.log(`Tayyor: ${posts.length} post, ${projects.length} loyiha, ${kundalik.length} kundalik yozuvi, ${sayohat.length} sayohat → dist/`);

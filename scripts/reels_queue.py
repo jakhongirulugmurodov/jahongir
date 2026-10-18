@@ -16,4 +16,7 @@ else:
     print(r.stdout.strip(), r.stderr.strip()[-300:])
     x["holat"] = "chiqdi" if r.returncode == 0 else "xato"
     x["natija"] = {"vaqt": datetime.now(timezone.utc).isoformat(timespec="minutes"), "chiqish": (r.stdout + r.stderr).strip()[-200:]}
+    import re as _re
+    m = _re.search(r'"id": "(\d+)"', r.stdout)
+    if m: x["media_id"] = m.group(1)
 json.dump(q, open(Q, "w"), ensure_ascii=False, indent=2)

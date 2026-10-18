@@ -1,0 +1,23 @@
+name: Reels statistikasi (O'sish Nuqtasi)
+on:
+  schedule:
+    - cron: "17 3 * * *"   # har kuni 08:17 (Toshkent)
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/reels_stats.py
+        env: { IG_TOKEN: "${{ secrets.IG_TOKEN_OSISH }}" }
+      - name: Saqlash va saytni yangilash
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
+          git add content/reels-stats.json
+          git commit -m "reels statistikasi yangilandi" || exit 0
+          git pull --rebase -q && git push -q
+          gh workflow run deploy.yml --ref main
