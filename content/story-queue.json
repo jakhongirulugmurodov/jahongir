@@ -106,7 +106,12 @@
       "sarlavha": "Do'kon ochdingiz. Mijoz qayerda?",
       "maydon": "50.0 85.73 45.17 6.88",
       "soat": 24,
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "telegram": true,
+        "instagram": true,
+        "vaqt": "2026-10-18T14:22+00:00"
+      }
     }
   ]
 }

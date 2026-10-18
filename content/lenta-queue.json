@@ -65,7 +65,11 @@
       "vaqt": "2026-10-18T17:00+05:00",
       "tur": "kanal",
       "fayl": "content/kanal/2026-10-18-nega-har-kuni-yozish.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-10-18T14:22+00:00",
+        "chiqish": "natija: {\"ok\": true, \"message_id\": 9, \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-18T20:00+05:00",
