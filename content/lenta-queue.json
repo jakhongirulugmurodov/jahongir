@@ -113,7 +113,11 @@
       "vaqt": "2026-10-19T13:00+05:00",
       "tur": "kanal",
       "fayl": "content/kanal/2026-10-18-dokon-ochdingiz.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-10-19T08:00+00:00",
+        "chiqish": "natija: {\"ok\": true, \"message_id\": 10, \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-21T10:00+05:00",
