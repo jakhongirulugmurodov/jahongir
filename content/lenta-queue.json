@@ -85,7 +85,11 @@
       "vaqt": "2026-10-19T10:00+05:00",
       "tur": "karusel",
       "fayl": "content/lenta/2026-10-18-nega-har-kuni-yozish-ig.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-10-19T05:01+00:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18113132831463940\", \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-19T18:00+05:00",
