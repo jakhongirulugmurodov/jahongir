@@ -44,7 +44,7 @@ Har kuni yangi post tayyorlash shu vositalar bilan qilinadi.
 - Joylash: `content/lenta/<post>-ig.json` + `content/lenta-queue.json` (tur: karusel | kanal). Navbatni `story-queue.yml` har 10 daqiqada bajaradi (`scripts/lenta_queue.py`).
 
 ## reels/ (O‘sish Nuqtasi, @osish.nuqtasi)
-- Tayyor reels Mac'da ~/Osish Nuqtasi Reels papkasiga tashlanadi: video.mp4 + shu nomli video.txt (caption). Navbatga olinganlari Navbatda/ ichiga o'tkaziladi. Partiya: fayllar konteynerga olinadi → `python3 tools/reels/yukla.py <papka> <izohlar.json>` GitHub Release'ga yuklab, `content/reels-queue.json`ga qo'shadi. Birinchi partiya: papkada kamida 10 ta bo'lganda boshlanadi.
-- Kunlik soni zaxiraga qarab (navbat + papka): 10–20 → 1 ta (14:00), 21–40 → 2 ta (10:00, 19:00), 41+ → 3 ta (09:00, 14:00, 20:00).
-- Joylash: `story-queue.yml` har 10 daqiqada `scripts/reels_queue.py` → `scripts/ig_reel.py` (resumable upload, token: `IG_TOKEN_OSISH`). Mac o'chiq bo'lsa ham ishlaydi.
+- Tayyor reels Mac'da ~/Osish Nuqtasi Reels papkasiga tashlanadi: video.mp4 + shu nomli video.txt (caption). Navbatga olinganlari Navbatda/ ichiga o'tkaziladi. Partiya: fayllar konteynerga olinadi → `tools/reels/inbox.sh <papka> <izohlar.json>` ularni bo'laklab reels-inbox shoxiga yuboradi, "Reels qabul" ishi (`reels-inbox.yml`) yig'ib Release'ga yuklaydi va `content/reels-queue.json`ga qo'shadi (`yukla.py`). Tayyor bo'lishi bilan navbatga olinadi — kutish chegarasi yo'q.
+- Kunlik soni zaxiraga qarab (navbat + papka): 1–20 → 1 ta (14:00), 21–40 → 2 ta (10:00, 19:00), 41+ → 3 ta (09:00, 14:00, 20:00).
+- Joylash: `navbat-soqchi.yml` har daqiqada `scripts/reels_queue.py` → `scripts/ig_reel.py` (resumable upload, token: `IG_TOKEN_OSISH`). Mac o'chiq bo'lsa ham ishlaydi.
 - Tokenni tekshirish: "Instagram ulanishini tekshirish" workflow'i, akkaunt = osish.
