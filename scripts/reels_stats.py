@@ -9,6 +9,7 @@ def get(path, **p):
     try: return json.load(urllib.request.urlopen(B + path + "?" + urllib.parse.urlencode(p), timeout=60))
     except urllib.error.HTTPError as e: return json.load(e)
 me = get("me", fields="user_id,username,followers_count,media_count")
+if not me.get("username"): sys.exit("token ishlamayapti, eski ma'lumot saqlab qolindi: " + json.dumps(me.get("error", me), ensure_ascii=False)[:300])
 S = "content/reels-stats.json"
 old = json.load(open(S)) if os.path.exists(S) else {}
 q = json.load(open("content/reels-queue.json"))
