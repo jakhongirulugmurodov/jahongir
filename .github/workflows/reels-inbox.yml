@@ -1,0 +1,40 @@
+name: Reels qabul
+# Mac'dan kelgan videolar (100MB'dan katta bo'lsa bo'laklarga bo'lingan) reels-inbox shoxiga tushadi.
+# Bu ish ularni yig'ib GitHub Release'ga yuklaydi, content/reels-queue.json'ga qo'shadi va shoxni o'chiradi.
+on:
+  push:
+    branches: [reels-inbox]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: reels-inbox, cancel-in-progress: false }
+jobs:
+  qabul:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: reels-inbox, path: inbox }
+      - uses: actions/checkout@v4
+        with: { ref: main, path: main }
+      - name: Yig'ish, yuklash, navbatga qo'shish
+        env: { GH_TOKEN: "${{ github.token }}" }
+        working-directory: main
+        run: |
+          set -e
+          mkdir -p /tmp/v
+          cd ../inbox/inbox
+          for f in $(ls | grep -E '\.part[0-9]+$' | sed -E 's/\.part[0-9]+$//' | sort -u); do cat "$f".part* > /tmp/v/"$f"; done
+          for f in *.mp4; do [ -f "$f" ] && cp "$f" /tmp/v/ || true; done
+          cp izohlar.json /tmp/izohlar.json
+          cd "$GITHUB_WORKSPACE/main"
+          git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
+          ok=0
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 tools/reels/yukla.py /tmp/v /tmp/izohlar.json
+            git add content/reels-queue.json && git commit -qm "reels: navbatga yangi videolar"
+            if git push -q origin HEAD:main; then ok=1; break; fi
+            sleep 10
+          done
+          [ $ok = 1 ]
+          git push origin --delete reels-inbox || true
