@@ -17,22 +17,19 @@
     "blog"
   ],
   "storyboard": {
-    "rasm": "media/loyiha/avto-story/avto-3.jpg",
+    "rasm": "media/loyiha/blog-qahramon/p6-1.jpg",
     "kadrlar": [
       {
-        "src": "media/loyiha/avto-story/avto-3-1.jpg",
-        "svg": "media/loyiha/avto-story/avto-3-1.svg",
-        "izoh": "Ish bor, lekin ko'rgan yo'q"
+        "src": "media/loyiha/blog-qahramon/p6-1.jpg",
+        "izoh": "Mijoz isbot qidiradi"
       },
       {
-        "src": "media/loyiha/avto-story/avto-3-2.jpg",
-        "svg": "media/loyiha/avto-story/avto-3-2.svg",
-        "izoh": "Har kuni bitta yozuv"
+        "src": "media/loyiha/blog-qahramon/p6-2.jpg",
+        "izoh": "Har kuni bitta hal qilingan ish"
       },
       {
-        "src": "media/loyiha/avto-story/avto-3-3.jpg",
-        "svg": "media/loyiha/avto-story/avto-3-3.svg",
-        "izoh": "Bitta havola: hamma ish"
+        "src": "media/loyiha/blog-qahramon/p6-3.jpg",
+        "izoh": "Bitta havola, hammasi ko‘rinadi"
       }
     ]
   },

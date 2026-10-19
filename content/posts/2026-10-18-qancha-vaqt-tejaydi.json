@@ -19,22 +19,19 @@
     "instagram"
   ],
   "storyboard": {
-    "rasm": "media/loyiha/avto-story/avto-2.jpg",
+    "rasm": "media/loyiha/blog-qahramon/p5-1.jpg",
     "kadrlar": [
       {
-        "src": "media/loyiha/avto-story/avto-2-1.jpg",
-        "svg": "media/loyiha/avto-story/avto-2-1.svg",
-        "izoh": "Har kuni: 4 joy, 4 xil o'lcham"
+        "src": "media/loyiha/blog-qahramon/p5-1.jpg",
+        "izoh": "Post tayyor, ish endi boshlanadi"
       },
       {
-        "src": "media/loyiha/avto-story/avto-2-2.jpg",
-        "svg": "media/loyiha/avto-story/avto-2-2.svg",
-        "izoh": "Siz faqat aytib berasiz"
+        "src": "media/loyiha/blog-qahramon/p5-2.jpg",
+        "izoh": "4 bekat, har kuni"
       },
       {
-        "src": "media/loyiha/avto-story/avto-2-3.jpg",
-        "svg": "media/loyiha/avto-story/avto-2-3.svg",
-        "izoh": "Bo'shagan vaqt mijozlarga"
+        "src": "media/loyiha/blog-qahramon/p5-3.jpg",
+        "izoh": "Tarqatish tizimning ishi"
       }
     ]
   },
