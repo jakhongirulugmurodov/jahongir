@@ -1,10 +1,9 @@
-# Reels navbati (@osish.nuqtasi). Videolar GitHub Release'da turadi, bu skript vaqti kelganini yuklab olib Instagram'ga joylaydi.
-# Kunlik chiqish soni ZAXIRAGA qarab o'zgaradi (Jahongir qoidasi): zaxira = navbatda kutayotganlar + Mac papkada tayyorlar.
-#   zaxira 10–20  → kuniga 1 ta (14:00)
-#   zaxira 21–40  → kuniga 2 ta (10:00, 19:00)
-#   zaxira 41+    → kuniga 3 ta (09:00, 14:00, 20:00)
-# Maqsad: doim ~10 kunlik zaxira qolsin, montaj partiyalab kelsa ham sahifa jim qolmasin.
-# Har ishga tushishda kutayotganlarning taxminiy chiqish vaqti ham qayta hisoblanadi (panel uchun).
+# Reels navbati (@osish.nuqtasi). Videolar GitHub Release'da turadi, bu skript vaqti kelganini Instagram'ga joylaydi.
+# Kunlik chiqish soni ZAXIRAGA qarab (Jahongir qoidasi): zaxira = navbatda kutayotganlar + Mac papkada tayyorlar.
+#   1–20 → kuniga 1 ta (14:00) · 21–40 → 2 ta (10:00, 19:00) · 41+ → 3 ta (09:00, 14:00, 20:00)
+# Barqarorlik (tasdiqlangan): son kun boshida qotiriladi va kun davomida o'zgarmaydi;
+# pastga tushish kechikadi — 2 tadan 1 taga zaxira 15 dan kam bo'lganda, 3 tadan 2 taga 35 dan kam bo'lganda qaytadi.
+# Istisno: kun 0 bilan boshlangan bo'lsa (zaxira bo'sh edi), video kelishi bilan o'sha kunning o'zida ko'tariladi.
 import json, os, re, subprocess, sys
 from datetime import datetime, timezone, timedelta
 TZ = timezone(timedelta(hours=5)); Q = "content/reels-queue.json"
@@ -12,13 +11,24 @@ if not os.path.exists(Q): sys.exit(0)
 q = json.load(open(Q)); now = datetime.now(TZ)
 papka = json.load(open("content/reels-papka.json")).get("papkada", []) if os.path.exists("content/reels-papka.json") else []
 SLOTS = {1: [(14, 0)], 2: [(10, 0), (19, 0)], 3: [(9, 0), (14, 0), (20, 0)]}
-def kvota(z): return 3 if z >= 41 else 2 if z >= 21 else 1 if z >= 1 else 0
+def kvota(z, oldingi=0):
+    n = 3 if z >= 41 else 2 if z >= 21 else 1 if z >= 1 else 0
+    if z >= 1:
+        if oldingi >= 3 and z >= 35: n = max(n, 3)
+        if oldingi >= 2 and z >= 15: n = max(n, 2)
+    return n
 kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
-zaxira = len(kut) + len(papka); n = kvota(zaxira)
+zaxira = len(kut) + len(papka)
+old = q.get("kunlik", {}); bugun_s = now.date().isoformat()
+if old.get("kun") == bugun_s:
+    n = old.get("kuniga", 0)
+    if n == 0 and zaxira: n = kvota(zaxira, old.get("oldingi", 0))
+else:
+    n = kvota(zaxira, old.get("kuniga", 0))
 bugun = [x for x in q["navbat"] if x.get("holat") in ("chiqdi", "xato") and datetime.fromisoformat(x["natija"]["vaqt"]).astimezone(TZ).date() == now.date()]
 due = [now.replace(hour=h, minute=m, second=0, microsecond=0) for h, m in SLOTS.get(n, [])]
 kerak = sum(1 for t in due if t <= now) - len(bugun)
-q["kunlik"] = {"zaxira": zaxira, "kuniga": n, "yangilandi": now.isoformat(timespec="minutes")}
+q["kunlik"] = {"zaxira": zaxira, "kuniga": n, "kun": bugun_s, "oldingi": old.get("oldingi", 0) if old.get("kun") == bugun_s else old.get("kuniga", 0), "yangilandi": now.isoformat(timespec="minutes")}
 def joyla(x):
     os.makedirs("/tmp/reel", exist_ok=True)
     url = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'jakhongirulugmurodov/jahongir')}/releases/download/{x['release']}/{x['fayl']}"
