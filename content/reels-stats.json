@@ -1,12 +1,28 @@
 {
-  "yangilandi": "2026-10-18T14:30+00:00",
+  "yangilandi": "2026-10-19T08:53+00:00",
   "akkaunt": "osish.nuqtasi",
   "obunachi": 0,
-  "postlar": 0,
-  "reels": {},
+  "postlar": 1,
+  "reels": {
+    "18207621847322628": {
+      "fayl": "1-video.mp4",
+      "vaqt": "2026-10-19T13:36+05:00",
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
   "tarix": [
     {
       "kun": "2026-10-18",
+      "obunachi": 0,
+      "korish": 0
+    },
+    {
+      "kun": "2026-10-19",
       "obunachi": 0,
       "korish": 0
     }
