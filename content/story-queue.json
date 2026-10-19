@@ -112,6 +112,50 @@
         "instagram": true,
         "vaqt": "2026-10-18T14:22+00:00"
       }
+    },
+    {
+      "vaqt": "2026-10-20T10:00+05:00",
+      "tg_rasm": "content/media/story/2026-10-17-instagram-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-17-instagram-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-15-instagram-ham-qoshildi.html",
+      "sarlavha": "Instagram'da \"narxi qancha?\" deb so'rashdi, siz kech ko'rdingizmi?",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": "48",
+      "holat": "kutmoqda",
+      "blok": "ai-sotuvchi"
+    },
+    {
+      "vaqt": "2026-10-20T13:00+05:00",
+      "blok": "osish-nuqtasi",
+      "tg_rasm": "content/media/story/2026-10-19-jamoa-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-19-jamoa-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-19-uch-jamoa.html",
+      "sarlavha": "3 ta jamoa. 6 oy. Sahifani 4–5 kishi ko‘radi.",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": "48",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-21T10:00+05:00",
+      "blok": "osish-nuqtasi",
+      "tg_rasm": "content/media/story/2026-10-18-dokon-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-18-dokon-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-18-dokon-ochdingiz.html",
+      "sarlavha": "Do'kon ochdingiz. Mijoz qayerda?",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": "48",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-22T18:00+05:00",
+      "tg_rasm": "content/media/story/2026-10-17-oqitish-tg.jpg",
+      "ig_rasm": "https://jahongir.onagy.app/media/story/2026-10-17-oqitish-ig.jpg",
+      "havola": "https://jahongir.onagy.app/post/2026-10-17-121-ta-suhbatdan-organdi.html",
+      "sarlavha": "AI noto'g'ri odamga yozsa, obro'yingiz ketadi",
+      "maydon": "50.0 85.73 45.17 6.88",
+      "soat": "48",
+      "holat": "kutmoqda",
+      "blok": "ai-sotuvchi"
     }
   ]
 }

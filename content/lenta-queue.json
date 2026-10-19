@@ -124,6 +124,18 @@
       "tur": "karusel",
       "fayl": "content/lenta/2026-10-18-dokon-ochdingiz-ig.json",
       "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-20T13:00+05:00",
+      "tur": "kanal",
+      "fayl": "content/kanal/2026-10-19-uch-jamoa.json",
+      "holat": "kutmoqda"
+    },
+    {
+      "vaqt": "2026-10-22T10:00+05:00",
+      "tur": "karusel",
+      "fayl": "content/lenta/2026-10-19-uch-jamoa-ig.json",
+      "holat": "kutmoqda"
     }
   ]
 }
