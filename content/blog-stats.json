@@ -1,7 +1,7 @@
 {
-  "yangilandi": "2026-10-19T08:56+00:00",
-  "akkaunt": "jahongir.olmos",
-  "obunachi": 11,
+  "yangilandi": "2026-10-19T16:10+00:00",
+  "akkaunt": null,
+  "obunachi": 0,
   "postlar": {
     "18001916391003054": {
       "fayl": "content/lenta/2026-10-18-qancha-vaqt-tejaydi-ig.json",
@@ -41,7 +41,7 @@
     },
     {
       "kun": "2026-10-19",
-      "obunachi": 11
+      "obunachi": 0
     }
   ]
 }
