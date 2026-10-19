@@ -1,7 +1,7 @@
 # Mac'dan olingan tayyor reels partiyasini GitHub Release'ga yuklaydi va content/reels-queue.json'ga jadval bilan qo'shadi.
 # Foydalanish (repo ildizidan): python3 tools/reels/yukla.py <videolar papkasi> <izohlar.json>
 # izohlar.json: {"fayl.mp4": "caption", ...} — tartib shu bo'yicha. Release nomi: reels-YYYY-MM.
-# Jadval: navbatdagi oxirgi vaqtdan keyin, har kuni soatlar (09:00, 14:00, 20:00) bo'yicha.
+# Jadval: bu yerdagi vaqt taxminiy; aniq chiqish soni va vaqtini scripts/reels_queue.py zaxiraga qarab har daqiqada qayta hisoblaydi.
 import json, os, subprocess, sys, re
 from datetime import datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")); from uztypo import typo
