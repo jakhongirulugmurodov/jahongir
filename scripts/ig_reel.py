@@ -1,5 +1,4 @@
-# Instagram Reels joylaydi (O'sish Nuqtasi: @osish.nuqtasi). Video lokal fayldan "resumable upload" bilan yuboriladi,
-# ochiq URL kerak emas. Foydalanish: python3 scripts/ig_reel.py <video.mp4> <caption fayli> [muqova soniyasi ms]
+# Instagram Reels joylaydi (O'sish Nuqtasi: @osish.nuqtasi). Video ochiq URL orqali (GitHub Release havolasi) beriladi. Foydalanish: python3 scripts/ig_reel.py <ochiq video URL> <caption fayli> [muqova soniyasi ms]
 # Token faqat IG_TOKEN muhit o'zgaruvchisidan (workflow'da IG_TOKEN_OSISH), chop etilmaydi.
 import json, os, sys, time, urllib.request, urllib.parse
 T = os.environ.get("IG_TOKEN", "").strip() or sys.exit("IG_TOKEN topilmadi")
@@ -12,14 +11,17 @@ def call(path, method="GET", **p):
     except urllib.error.HTTPError as e: return json.load(e)
 uid = call("me", fields="user_id").get("user_id") or sys.exit("akkaunt topilmadi (token?)")
 extra = {"thumb_offset": sys.argv[3]} if len(sys.argv) > 3 else {}
-c = call(f"{uid}/media", "POST", media_type="REELS", upload_type="resumable", caption=cap, share_to_feed="true", **extra)
+# Instagram Login (graph.instagram.com) faqat ochiq video_url qabul qiladi (resumable yuklash faqat Facebook Login'da).
+# Repo ochiq: Release havolasi -> GitHub vaqtinchalik imzolangan havolaga yo'naltiradi; oxirgi havolani beramiz.
+src = video
+if src.startswith("http"):
+    class NoRedir(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *a, **k): return None
+    try: urllib.request.build_opener(NoRedir).open(urllib.request.Request(src, method="HEAD"), timeout=30)
+    except urllib.error.HTTPError as e:
+        if e.code in (301, 302, 303, 307, 308): src = e.headers["Location"]
+c = call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, share_to_feed="true", **extra)
 if "id" not in c: sys.exit("konteyner xato: " + json.dumps(c.get("error", c), ensure_ascii=False))
-size = os.path.getsize(video)
-req = urllib.request.Request(f"https://rupload.facebook.com/ig-api-upload/{V}/{c['id']}", open(video, "rb").read(),
-                             {"Authorization": f"OAuth {T}", "offset": "0", "file_size": str(size), "Content-Type": "application/octet-stream"})
-try: up = json.load(urllib.request.urlopen(req, timeout=600))
-except urllib.error.HTTPError as e: up = json.load(e)
-if not up.get("success"): sys.exit("yuklash xato: " + json.dumps(up, ensure_ascii=False)[:300])
 for _ in range(120):  # video ishlov berilishi bir necha daqiqa olishi mumkin
     s = call(c["id"], fields="status_code,status")
     if s.get("status_code") == "FINISHED": break

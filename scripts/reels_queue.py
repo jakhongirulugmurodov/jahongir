@@ -21,11 +21,9 @@ kerak = sum(1 for t in due if t <= now) - len(bugun)
 q["kunlik"] = {"zaxira": zaxira, "kuniga": n, "yangilandi": now.isoformat(timespec="minutes")}
 def joyla(x):
     os.makedirs("/tmp/reel", exist_ok=True)
-    d = subprocess.run(["gh", "release", "download", x["release"], "-p", x["fayl"], "-D", "/tmp/reel", "--clobber"], capture_output=True, text=True)
-    if d.returncode:
-        x["holat"] = "xato"; x["natija"] = {"vaqt": now.isoformat(timespec="minutes"), "xato": "yuklab olinmadi"}; return
+    url = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'jakhongirulugmurodov/jahongir')}/releases/download/{x['release']}/{x['fayl']}"
     open("/tmp/reel/cap.txt", "w").write(x["izoh"])
-    r = subprocess.run(["python3", "scripts/ig_reel.py", f"/tmp/reel/{x['fayl']}", "/tmp/reel/cap.txt"], capture_output=True, text=True)
+    r = subprocess.run(["python3", "scripts/ig_reel.py", url, "/tmp/reel/cap.txt"], capture_output=True, text=True)
     print(r.stdout.strip(), r.stderr.strip()[-300:])
     x["holat"] = "chiqdi" if r.returncode == 0 else "xato"
     x["natija"] = {"vaqt": datetime.now(TZ).isoformat(timespec="minutes"), "chiqish": (r.stdout + r.stderr).strip()[-200:]}
