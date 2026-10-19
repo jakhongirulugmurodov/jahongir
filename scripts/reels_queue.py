@@ -31,7 +31,11 @@ def joyla(x):
     x["natija"] = {"vaqt": datetime.now(TZ).isoformat(timespec="minutes"), "chiqish": (r.stdout + r.stderr).strip()[-200:]}
     m = re.search(r'"id": "(\d+)"', r.stdout)
     if m: x["media_id"] = m.group(1)
-if kerak > 0 and kut:
+darhol = [x for x in kut if x.get("darhol")]  # qo'lda "darhol": true qo'yilgani jadvalni kutmaydi (masalan, test)
+if darhol:
+    joyla(darhol[0]); darhol[0].pop("darhol", None); kerak = 0
+    kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
+elif kerak > 0 and kut:
     joyla(kut[0])  # bir ishga tushishda ko'pi bilan 1 ta
     kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
 # taxminiy jadval: qolganlarni kvota bo'yicha keyingi slotlarga taqsimlash
