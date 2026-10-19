@@ -11,5 +11,5 @@ for x in sorted(due, key=lambda x: x["vaqt"]):
     r = subprocess.run(["python3", S[x["tur"]], x["fayl"]], capture_output=True, text=True)
     print(x["tur"], x["fayl"], r.stdout.strip()[-300:], r.stderr.strip()[-300:])
     x["holat"] = "chiqdi" if r.returncode == 0 else "xato"
-    x["natija"] = {"vaqt": datetime.now(timezone.utc).isoformat(timespec="minutes"), "chiqish": r.stdout.strip()[-200:]}
+    x["natija"] = {"vaqt": datetime.now(timezone.utc).isoformat(timespec="minutes"), "chiqish": (r.stdout + r.stderr).strip()[-300:]}
 json.dump(q, open(Q, "w"), ensure_ascii=False, indent=2)
