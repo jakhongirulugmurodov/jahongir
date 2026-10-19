@@ -1,0 +1,54 @@
+{
+  "id": "2026-10-19-uch-jamoa",
+  "sana": "2026-10-19",
+  "loyiha": "osish-nuqtasi",
+  "tur": "Auditoriya",
+  "raqam": 8,
+  "sarlavha": "3 ta jamoa. 6 oy. Sahifani 4–5 kishi ko‘radi.",
+  "hook": "Bugun bir do‘kon egasi bilan gaplashdik. 6 oyda 3 ta marketing jamoasi bilan ishlashgan, lekin birortasi ishni oxiriga yetkazmagan.",
+  "muammo": "Do‘kon tabobat mahsulotlarini sotadi, ochilganiga olti oy bo‘ldi. Shu vaqt ichida uchta marketing jamoasi kelib-ketdi: o‘rtada muammolar chiqdi, ish yakunlanmadi. Hozir sahifani kuniga 4–5 kishi ko‘radi. Egalari esa uch narsani xohlaydi:",
+  "royxat": [
+    "Har kuni kamida ma’lum miqdorda savdo bo‘lib tursin",
+    "Do‘kon taniqli bo‘lsin",
+    "B2B savdo ko‘tarilsin"
+  ],
+  "yechim": "Uchalasi ham to‘g‘ri istak. Lekin uchalasining poydevori bitta — auditoriya. Muammo jamoalarda emas, tartibda: do‘kon ochildi, auditoriya esa keyin qidirildi. CB Insights 101 ta yopilgan startapni o‘rgangan: 42 foizining asosiy sababi “bozorda ehtiyoj yo‘q” bo‘lgan. Hozir shu do‘kon uchun bir oylik kontent reja, xarajatlar va har bir xarajat qanday qiymat berishini hisoblab tayyorlayapmiz.",
+  "natija": "Biz ham o‘zimizdan boshladik: O‘sish Nuqtasi sahifasida birinchi videomiz chiqdi. Podkastlarning eng foydali qismlarini qirqib, qayta montaj qilib joylayapmiz. Noldan auditoriya qanday yig‘ilishini kuzatmoqchi bo‘lsangiz — @osish.nuqtasi.",
+  "xulosa": "Auditoriyasiz marketing ishlamaydi.",
+  "taklif": {
+    "tugma": "Bepul 15 daqiqalik suhbat",
+    "xabar": "Salom! #8 “3 ta jamoa. 6 oy.” postini o‘qidim. Do‘konim uchun auditoriya topish bo‘yicha 15 daqiqalik bepul suhbat olmoqchiman."
+  },
+  "teglar": [
+    "auditoriya",
+    "biznes",
+    "marketing",
+    "podkast"
+  ],
+  "storyboard": {
+    "rasm": "media/loyiha/osish-nuqtasi/osish-8-1.jpg",
+    "kadrlar": [
+      {
+        "src": "media/loyiha/osish-nuqtasi/osish-8-1.jpg",
+        "svg": "media/loyiha/osish-nuqtasi/osish-8-1.svg",
+        "izoh": "3 ta jamoa, 6 oy"
+      },
+      {
+        "src": "media/loyiha/osish-nuqtasi/osish-8-2.jpg",
+        "svg": "media/loyiha/osish-nuqtasi/osish-8-2.svg",
+        "izoh": "Poydevor bitta"
+      },
+      {
+        "src": "media/loyiha/osish-nuqtasi/osish-8-3.jpg",
+        "svg": "media/loyiha/osish-nuqtasi/osish-8-3.svg",
+        "izoh": "Avval auditoriya"
+      }
+    ]
+  },
+  "manbalar": [
+    {
+      "nom": "CB Insights (CMO Council orqali)",
+      "url": "https://cmocouncil.org/expert-views/cmo-blog/define-the-need-before-you-bleed-marketing-rigor-can-reduce-start-up-failure"
+    }
+  ]
+}
