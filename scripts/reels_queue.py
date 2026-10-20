@@ -29,7 +29,24 @@ bugun = [x for x in q["navbat"] if x.get("holat") in ("chiqdi", "xato") and date
 due = [now.replace(hour=h, minute=m, second=0, microsecond=0) for h, m in SLOTS.get(n, [])]
 kerak = sum(1 for t in due if t <= now) - len(bugun)
 q["kunlik"] = {"zaxira": zaxira, "kuniga": n, "kun": bugun_s, "oldingi": old.get("oldingi", 0) if old.get("kun") == bugun_s else old.get("kuniga", 0), "yangilandi": now.isoformat(timespec="minutes")}
+def takrormi(x):
+    # Shu video jahongir.olmos'da allaqachon bormi (qo'lda joylangan bo'lsa)? Bir xil video ikki akkauntda — Instagram ikkinchisini "original emas" deb tavsiyadan tushiradi.
+    tok = os.environ.get("IG_TOKEN_MAIN", "").strip()
+    if not tok: return False
+    import urllib.request, urllib.parse
+    bosh = lambda t: re.sub(r"\W+", " ", (t or "").lower()).strip()[:60]
+    try:
+        u = "https://graph.instagram.com/v23.0/me/media?" + urllib.parse.urlencode({"fields": "caption", "limit": "50", "access_token": tok})
+        caps = [bosh(m.get("caption")) for m in json.load(urllib.request.urlopen(u, timeout=30)).get("data", [])]
+    except Exception:
+        return False
+    b = bosh(x.get("izoh"))
+    return bool(b) and len(b) >= 25 and b in caps
 def joyla(x):
+    if takrormi(x):
+        x["holat"] = "takror"
+        x["natija"] = {"vaqt": datetime.now(TZ).isoformat(timespec="minutes"), "chiqish": "jahongir.olmos'da allaqachon bor — takror joylanmadi"}
+        print("takror:", x["fayl"]); return
     os.makedirs("/tmp/reel", exist_ok=True)
     url = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'jakhongirulugmurodov/jahongir')}/releases/download/{x['release']}/{x['fayl']}"
     open("/tmp/reel/cap.txt", "w").write(x["izoh"])

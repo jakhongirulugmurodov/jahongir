@@ -29,7 +29,7 @@ jobs:
             git pull --rebase -q || true
             IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/story_queue.py || true
             IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/lenta_queue.py || true
-            IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_queue.py || true
+            IG_TOKEN="$IG_TOKEN_OSISH" IG_COLLAB="jahongir.olmos" python3 scripts/reels_queue.py || true
             git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json
             if ! git diff --cached --quiet; then
               git commit -qm "navbat: yangi story/post chiqdi"
