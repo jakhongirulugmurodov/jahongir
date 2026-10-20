@@ -20,7 +20,13 @@ if src.startswith("http"):
     try: urllib.request.build_opener(NoRedir).open(urllib.request.Request(src, method="HEAD"), timeout=30)
     except urllib.error.HTTPError as e:
         if e.code in (301, 302, 303, 307, 308): src = e.headers["Location"]
+# Belgilanadigan akkauntlar (IG_USER_TAGS="hasankhoja,boshqa"): reels ichida "user_tags" sifatida; rad etilsa tegsiz qayta uriniladi
+tags = [u.strip().lstrip("@") for u in os.environ.get("IG_USER_TAGS", "").split(",") if u.strip()]
+if tags: extra["user_tags"] = json.dumps([{"username": u} for u in tags])
 c = call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, share_to_feed="true", **extra)
+if "id" not in c and tags:
+    print("user_tags rad etildi, tegsiz qayta urinamiz:", json.dumps(c.get("error", c), ensure_ascii=False)[:200])
+    extra.pop("user_tags"); c = call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, share_to_feed="true", **extra)
 if "id" not in c: sys.exit("konteyner xato: " + json.dumps(c.get("error", c), ensure_ascii=False))
 for _ in range(120):  # video ishlov berilishi bir necha daqiqa olishi mumkin
     s = call(c["id"], fields="status_code,status")

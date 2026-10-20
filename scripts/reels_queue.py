@@ -33,7 +33,8 @@ def joyla(x):
     os.makedirs("/tmp/reel", exist_ok=True)
     url = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'jakhongirulugmurodov/jahongir')}/releases/download/{x['release']}/{x['fayl']}"
     open("/tmp/reel/cap.txt", "w").write(x["izoh"])
-    r = subprocess.run(["python3", "scripts/ig_reel.py", url, "/tmp/reel/cap.txt"], capture_output=True, text=True)
+    env = {**os.environ, "IG_USER_TAGS": ",".join(x.get("teglar", []))}  # navbat elementidagi "teglar": ["hasankhoja"]
+    r = subprocess.run(["python3", "scripts/ig_reel.py", url, "/tmp/reel/cap.txt"], capture_output=True, text=True, env=env)
     print(r.stdout.strip(), r.stderr.strip()[-300:])
     x["holat"] = "chiqdi" if r.returncode == 0 else "xato"
     x["natija"] = {"vaqt": datetime.now(TZ).isoformat(timespec="minutes"), "chiqish": (r.stdout + r.stderr).strip()[-200:]}
