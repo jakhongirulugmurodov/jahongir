@@ -133,7 +133,11 @@
       "vaqt": "2026-10-20T13:00+05:00",
       "tur": "kanal",
       "fayl": "content/kanal/2026-10-19-uch-jamoa.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-10-20T08:01+00:00",
+        "chiqish": "natija: {\"ok\": true, \"message_id\": 11, \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-22T10:00+05:00",
