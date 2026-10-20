@@ -101,7 +101,11 @@
       "vaqt": "2026-10-20T10:00+05:00",
       "tur": "karusel",
       "fayl": "content/lenta/2026-10-15-instagram-ham-qoshildi-ig.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-10-20T05:01+00:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18027130241865040\", \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-20T18:00+05:00",
