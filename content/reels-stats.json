@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-10-19T18:41+00:00",
+  "yangilandi": "2026-10-20T08:35+00:00",
   "akkaunt": "osish.nuqtasi",
   "obunachi": 0,
   "postlar": 1,
@@ -23,6 +23,11 @@
     },
     {
       "kun": "2026-10-19",
+      "obunachi": 0,
+      "korish": 168
+    },
+    {
+      "kun": "2026-10-20",
       "obunachi": 0,
       "korish": 168
     }

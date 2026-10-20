@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-10-19T18:41+00:00",
+  "yangilandi": "2026-10-20T08:35+00:00",
   "akkaunt": "jahongir.olmos",
   "obunachi": 11,
   "postlar": {
@@ -16,8 +16,8 @@
     "17999650698042060": {
       "fayl": "content/lenta/2026-10-18-bir-marta-yozasiz-ig.json",
       "vaqt": "2026-10-18T15:32+00:00",
-      "views": 5,
-      "reach": 4,
+      "views": 6,
+      "reach": 5,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -26,8 +26,18 @@
     "18113132831463940": {
       "fayl": "content/lenta/2026-10-18-nega-har-kuni-yozish-ig.json",
       "vaqt": "2026-10-19T05:01+00:00",
-      "views": 13,
-      "reach": 4,
+      "views": 15,
+      "reach": 5,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18027130241865040": {
+      "fayl": "content/lenta/2026-10-15-instagram-ham-qoshildi-ig.json",
+      "vaqt": "2026-10-20T05:01+00:00",
+      "views": 10,
+      "reach": 2,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -41,6 +51,10 @@
     },
     {
       "kun": "2026-10-19",
+      "obunachi": 11
+    },
+    {
+      "kun": "2026-10-20",
       "obunachi": 11
     }
   ]
