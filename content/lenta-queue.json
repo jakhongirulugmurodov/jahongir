@@ -131,7 +131,12 @@
       "vaqt": "2026-10-21T10:00+05:00",
       "tur": "karusel",
       "fayl": "content/lenta/2026-10-18-dokon-ochdingiz-ig.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "chiqdi_format": "karusel (reels o'tmadi)",
+      "natija": {
+        "vaqt": "2026-10-21T05:01+00:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18032935496850936\", \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-10-20T13:00+05:00",
