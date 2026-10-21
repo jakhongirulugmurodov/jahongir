@@ -1,18 +1,42 @@
 {
-  "yangilandi": "2026-10-20T08:35+00:00",
+  "yangilandi": "2026-10-21T08:37+00:00",
   "akkaunt": "osish.nuqtasi",
-  "obunachi": 0,
-  "postlar": 1,
+  "obunachi": 3,
+  "postlar": 3,
   "reels": {
     "18207621847322628": {
       "fayl": "1-video.mp4",
       "vaqt": "2026-10-19T13:36+05:00",
-      "views": 168,
-      "reach": 125,
-      "likes": 6,
-      "comments": 13,
+      "views": 177,
+      "reach": 129,
+      "likes": 7,
+      "comments": 16,
       "saved": 0,
       "shares": 2
+    },
+    "17942758299362073": {
+      "fayl": "2-video.mp4",
+      "vaqt": "2026-10-20T14:01+05:00"
+    },
+    "18027063764862768": {
+      "fayl": "3-video.mp4",
+      "vaqt": "2026-10-20T20:52+05:00",
+      "views": 175,
+      "reach": 128,
+      "likes": 4,
+      "comments": 15,
+      "saved": 2,
+      "shares": 0
+    },
+    "17904240690606169": {
+      "fayl": "4-video.mp4",
+      "vaqt": "2026-10-21T00:53+05:00",
+      "views": 144,
+      "reach": 114,
+      "likes": 4,
+      "comments": 10,
+      "saved": 0,
+      "shares": 0
     }
   },
   "tarix": [
@@ -30,6 +54,11 @@
       "kun": "2026-10-20",
       "obunachi": 0,
       "korish": 168
+    },
+    {
+      "kun": "2026-10-21",
+      "obunachi": 3,
+      "korish": 496
     }
   ]
 }
