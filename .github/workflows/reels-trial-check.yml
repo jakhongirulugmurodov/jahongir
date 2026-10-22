@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - env: { IG_TOKEN: "${{ secrets.IG_TOKEN_OSISH }}" }
-        run: python3 scripts/ig_trial_check.py "https://github.com/${{ github.repository }}/releases/download/reels-2026-10/8-video.mp4" | tee trial.txt
+        run: python3 scripts/ig_trial_check.py "https://github.com/${{ github.repository }}/releases/download/reels-2026-10/8-video.mp4" | tee trial.txt; while read -r l; do echo "::notice::${l:0:900}"; done < trial.txt
       - uses: actions/upload-artifact@v4
         with: { name: trial, path: trial.txt }
