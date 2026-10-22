@@ -25,6 +25,9 @@ for name, cap in caps.items():
     p = os.path.join(src, name)
     if safe != name: os.replace(p, os.path.join(src, safe)); p = os.path.join(src, safe)
     subprocess.run(["gh", "release", "upload", tag, p, "--clobber"], check=True)
-    t = nxt(t); q["navbat"].append({"vaqt": t.isoformat(timespec="minutes"), "release": tag, "fayl": safe, "izoh": typo(cap), "holat": "kutmoqda"})
+    t = nxt(t); it = {"vaqt": t.isoformat(timespec="minutes"), "release": tag, "fayl": safe, "izoh": typo(cap), "holat": "kutmoqda"}
+    teg = [u for u in dict.fromkeys(re.findall(r"@([A-Za-z0-9._]+[A-Za-z0-9_])", cap)) if u != "osish.nuqtasi"]  # caption'dagi @spiker → reels'da belgilanadi
+    if teg: it["teglar"] = teg
+    q["navbat"].append(it)
     print(t.strftime("%d-%m %H:%M"), safe)
 json.dump(q, open(Q, "w"), ensure_ascii=False, indent=2)
