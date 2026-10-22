@@ -157,7 +157,12 @@
       "vaqt": "2026-10-22T10:00+05:00",
       "tur": "karusel",
       "fayl": "content/lenta/2026-10-19-uch-jamoa-ig.json",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "chiqdi_format": "karusel (reels o'tmadi)",
+      "natija": {
+        "vaqt": "2026-10-22T05:00+00:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18113506220114426\", \"xato\": null}"
+      }
     }
   ]
 }
