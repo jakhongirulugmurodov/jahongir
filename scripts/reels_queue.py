@@ -2,7 +2,7 @@
 # Kunlik chiqish soni ZAXIRAGA qarab (Jahongir qoidasi): zaxira = navbatda kutayotganlar + Mac papkada tayyorlar.
 #   1–20 → kuniga 1 ta (20:30) · 21–40 → 2 ta (13:00, 20:30) · 41+ → 3 ta (09:00, 13:00, 20:30)
 # TRIGGER rejimi (22-10 tasdiqlangan, q['rejim']='trigger' — standart): oldingi reels o'sishdan to'xtashi bilan keyingisi chiqadi:
-#   kamida 6 soat o'tgan + oxirgi 2 soatda soatiga <5 ko'rish (content/reels-soatlik.json); soatlik o'lchov yo'q bo'lsa 12 soatda;
+#   kamida 3 soat o‘tgan (22-10: sinov guruhi 1–2 soatda tugaydi) + oxirgi 2 soatda soatiga <5 ko'rish (content/reels-soatlik.json); soatlik o'lchov yo'q bo'lsa 12 soatda;
 #   24 soatdan keyin baribir; kuniga ≤3 ta; 23:00–08:00 chiqmaydi; zaxira <7 bo'lsa oddiy jadvalga (kuniga 1 ta, 20:30) qaytadi.
 # Vaqt sinovi (22-10 tasdiqlangan, trigger yoqilgach to'xtatildi): kuniga 1 ta bo'lganda 10 ta video kunma-kun 13:00 va 20:30 da almashib chiqadi
 # (har biriga "sinov_soat" yoziladi); 10 tasi chiqqach faqat 20:30 qoladi.
@@ -45,7 +45,7 @@ def trigger_kerak():
     if now.hour < 8 or now.hour >= 23 or len(bugun) >= 3: return 0, "tun (23–08) yoki kunlik 3 ta"
     if not oxirgi: return 1, "birinchi video"
     h = (now - datetime.fromisoformat(oxirgi["natija"]["vaqt"])).total_seconds() / 3600
-    if h < 6: return 0, f"oxirgisiga {h:.1f} soat"
+    if h < 3: return 0, f"oxirgisiga {h:.1f} soat"
     if h >= 24: return 1, "24 soat o'tdi"
     rows = SOAT.get(oxirgi.get("media_id") or "", {}).get("olchov", [])
     if len(rows) < 3: return (1, "o'lchov yo'q, 12 soat o'tdi") if h >= 12 else (0, "o'lchov kam")
