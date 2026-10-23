@@ -11,7 +11,10 @@ SEC, FADE = 3.5, 0.4
 def ffmpeg():
     p = shutil.which("ffmpeg")
     if p: return p
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "imageio-ffmpeg"], check=True)
+    # Runner'da ffmpeg yo'q: kutubxonani aniq papkaga o'rnatib, shu jarayonda import qilamiz (user-site sys.path'da bo'lmasligi mumkin)
+    tgt = "/tmp/iff"
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--target", tgt, "imageio-ffmpeg"], check=True)
+    sys.path.insert(0, tgt)
     import imageio_ffmpeg
     return imageio_ffmpeg.get_ffmpeg_exe()
 
@@ -39,6 +42,8 @@ args += ["-filter_complex", ";".join(parts) + chain, "-map", "[vout]", "-map", f
          "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", out]
 r = subprocess.run(args, capture_output=True, text=True)
 if r.returncode or not os.path.exists(out): sys.exit("video yig'ilmadi: " + r.stderr[-400:])
+if os.environ.get("DRY"):  # sinov: faqat video yig'iladi, hech narsa yuklanmaydi/joylanmaydi
+    print("DRY ok:", out, os.path.getsize(out), "bayt"); sys.exit(0)
 
 # GitHub Release'ga yuklash (ochiq havola kerak — Instagram videoni o'zi yuklab oladi)
 env = dict(os.environ)

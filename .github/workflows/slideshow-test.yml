@@ -1,0 +1,12 @@
+name: Slayd-reels sinovi (joylamaydi)
+# Karusel slaydlaridan Reels videosi yig'ilishini tekshiradi. Instagram'ga hech narsa yuborilmaydi.
+on:
+  workflow_dispatch:
+    inputs:
+      fayl: { description: "content/lenta/<post>-ig.json", default: "content/lenta/2026-10-19-uch-jamoa-ig.json" }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: DRY=1 python3 scripts/ig_slideshow_reel.py "${{ inputs.fayl }}"
