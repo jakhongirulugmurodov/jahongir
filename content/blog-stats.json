@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-10-22T08:39+00:00",
+  "yangilandi": "2026-10-23T08:35+00:00",
   "akkaunt": "jahongir.olmos",
   "obunachi": 11,
   "postlar": {
@@ -26,8 +26,8 @@
     "18113132831463940": {
       "fayl": "content/lenta/2026-10-18-nega-har-kuni-yozish-ig.json",
       "vaqt": "2026-10-19T05:01+00:00",
-      "views": 15,
-      "reach": 5,
+      "views": 16,
+      "reach": 6,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -36,8 +36,8 @@
     "18107482142351976": {
       "fayl": "content/lenta/2026-09-27-bitta-guruhdan-boshlandi-ig.json",
       "vaqt": "2026-10-21T13:01+00:00",
-      "views": 3,
-      "reach": 2,
+      "views": 4,
+      "reach": 3,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -66,8 +66,8 @@
     "18032935496850936": {
       "fayl": "content/lenta/2026-10-18-dokon-ochdingiz-ig.json",
       "vaqt": "2026-10-21T05:01+00:00",
-      "views": 5,
-      "reach": 1,
+      "views": 8,
+      "reach": 3,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -76,9 +76,9 @@
     "18113506220114426": {
       "fayl": "content/lenta/2026-10-19-uch-jamoa-ig.json",
       "vaqt": "2026-10-22T05:00+00:00",
-      "views": 1,
-      "reach": 0,
-      "likes": 0,
+      "views": 9,
+      "reach": 5,
+      "likes": 1,
       "comments": 0,
       "saved": 0,
       "shares": 0
@@ -103,6 +103,10 @@
     },
     {
       "kun": "2026-10-22",
+      "obunachi": 11
+    },
+    {
+      "kun": "2026-10-23",
       "obunachi": 11
     }
   ]

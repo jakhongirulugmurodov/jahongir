@@ -1,8 +1,8 @@
 {
-  "yangilandi": "2026-10-22T08:39+00:00",
+  "yangilandi": "2026-10-23T08:35+00:00",
   "akkaunt": "osish.nuqtasi",
-  "obunachi": 3,
-  "postlar": 5,
+  "obunachi": 4,
+  "postlar": 9,
   "reels": {
     "18207621847322628": {
       "fayl": "1-video.mp4",
@@ -21,8 +21,8 @@
     "18027063764862768": {
       "fayl": "3-video.mp4",
       "vaqt": "2026-10-20T20:52+05:00",
-      "views": 180,
-      "reach": 130,
+      "views": 182,
+      "reach": 132,
       "likes": 5,
       "comments": 15,
       "saved": 1,
@@ -31,8 +31,8 @@
     "17904240690606169": {
       "fayl": "4-video.mp4",
       "vaqt": "2026-10-21T00:53+05:00",
-      "views": 152,
-      "reach": 116,
+      "views": 155,
+      "reach": 117,
       "likes": 5,
       "comments": 10,
       "saved": 0,
@@ -51,11 +51,51 @@
     "17934815496141594": {
       "fayl": "7-video.mp4",
       "vaqt": "2026-10-22T11:50+05:00",
-      "views": 103,
-      "reach": 95,
-      "likes": 0,
+      "views": 112,
+      "reach": 106,
+      "likes": 2,
       "comments": 0,
       "saved": 0,
+      "shares": 0
+    },
+    "17912773401513999": {
+      "fayl": "8-video.mp4",
+      "vaqt": "2026-10-22T18:26+05:00",
+      "views": 132,
+      "reach": 116,
+      "likes": 7,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "17889085233478637": {
+      "fayl": "6-video.mp4",
+      "vaqt": "2026-10-22T20:40+05:00",
+      "views": 1415,
+      "reach": 1152,
+      "likes": 16,
+      "comments": 0,
+      "saved": 3,
+      "shares": 2
+    },
+    "18130226179831738": {
+      "fayl": "9-video.mp4",
+      "vaqt": "2026-10-23T08:01+05:00",
+      "views": 143,
+      "reach": 118,
+      "likes": 2,
+      "comments": 0,
+      "saved": 0,
+      "shares": 1
+    },
+    "17913046101489086": {
+      "fayl": "10-video.mp4",
+      "vaqt": "2026-10-23T12:38+05:00",
+      "views": 111,
+      "reach": 67,
+      "likes": 2,
+      "comments": 0,
+      "saved": 1,
       "shares": 0
     }
   },
@@ -84,6 +124,11 @@
       "kun": "2026-10-22",
       "obunachi": 3,
       "korish": 622
+    },
+    {
+      "kun": "2026-10-23",
+      "obunachi": 4,
+      "korish": 2437
     }
   ]
 }
