@@ -229,7 +229,7 @@
       "media_id": "18157435492511818"
     },
     {
-      "vaqt": "2026-10-25T08:00+05:00",
+      "vaqt": "2026-10-25T10:42+05:00",
       "release": "reels-2026-10",
       "fayl": "18-video.mp4",
       "izoh": "Ishingiz yoqmaydi. Lekin ketolmaysiz. Nega?\n\nPulning asl kuchi — xohlaganingizni qilish emas. Xohlamaganingizni qilmaslik. To‘rt oylik zaxirangiz bo‘lsa, qadriyatingizga zid shart qo‘yilganda «men ketdim» deya olasiz. Ishsiz qolganda ham yoqmagan taklifga «yo‘q» deya olasiz.\n\nZaxira bo‘lmasa — yoqmagan odam bilan, yoqmagan loyihada, yoqmagan joyda ishlashga majbursiz. Sizni ushlab turgan narsa rahbar emas. Zaxiraning yo‘qligi.\n\nIshsiz qolsangiz, necha oy xotirjam yashay olasiz?\n\nHasanxo‘ja ustoz bilan suhbatdan · @hasankhoja\n#jamgarma #moliyaviysavodxonlik #erkinlik #osishnuqtasi",
@@ -239,7 +239,7 @@
       ]
     },
     {
-      "vaqt": "2026-10-25T18:00+05:00",
+      "vaqt": "2026-10-25T20:42+05:00",
       "release": "reels-2026-10",
       "fayl": "19-video.mp4",
       "izoh": "Shogird ustoz tanlamaydi. Ustoz shogird tanlaydi.\n\nBiznesmenga borib «meni shogirdlikka oling» desangiz, bitta savol eshitasiz: «Qo‘lingdan nima keladi?» Ustoz shogird tayyor bo‘lganda topiladi. Tayyor bo‘lish — uning qaysidir og‘rig‘iga yechim bera olish, yonida turishga loyiq bo‘lish.\n\nEng birinchi ustoz esa — ota yoki ona. Bola boshqa joydan ustoz qidirishni ota-onasidan ko‘ngli qolgandagina boshlaydi.\n\nHayotingizdagi birinchi ustoz kim bo‘lgan?\n\nHasanxo‘ja ustoz bilan suhbatdan · @hasankhoja\n#ustoz #shogird #mentor #osishnuqtasi",
@@ -545,10 +545,10 @@
   ],
   "kunlik": {
     "rejim": "trigger",
-    "zaxira": 42,
+    "zaxira": 41,
     "kuniga": 3,
     "kun": "2026-10-25",
     "oldingi": 1,
-    "yangilandi": "2026-10-25T00:41+05:00"
+    "yangilandi": "2026-10-25T00:43+05:00"
   }
 }
