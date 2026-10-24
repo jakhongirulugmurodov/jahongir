@@ -28,13 +28,14 @@ jobs:
           cp izohlar.json /tmp/izohlar.json
           cd "$GITHUB_WORKSPACE/main"
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
+          # Yuklash bir marta; push navbat soqchisining har daqiqalik commitlari bilan to'qnashsa — rebase qilib qayta urinish
+          git fetch -q origin main && git reset -q --hard origin/main
+          python3 tools/reels/yukla.py /tmp/v /tmp/izohlar.json
+          git add content/reels-queue.json && git commit -qm "reels: navbatga yangi videolar"
           ok=0
-          for i in 1 2 3 4 5; do
-            git fetch -q origin main && git reset -q --hard origin/main
-            python3 tools/reels/yukla.py /tmp/v /tmp/izohlar.json
-            git add content/reels-queue.json && git commit -qm "reels: navbatga yangi videolar"
+          for i in $(seq 1 15); do
             if git push -q origin HEAD:main; then ok=1; break; fi
-            sleep 10
+            sleep $((RANDOM % 8 + 3)); git pull -q --rebase origin main || { git rebase --abort; exit 1; }
           done
           [ $ok = 1 ]
           git push origin --delete reels-inbox || true
