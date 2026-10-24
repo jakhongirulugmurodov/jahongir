@@ -1,13 +1,13 @@
 {
-  "yangilandi": "2026-10-23T08:35+00:00",
+  "yangilandi": "2026-10-24T08:10+00:00",
   "akkaunt": "jahongir.olmos",
-  "obunachi": 11,
+  "obunachi": 12,
   "postlar": {
     "18001916391003054": {
       "fayl": "content/lenta/2026-10-18-qancha-vaqt-tejaydi-ig.json",
       "vaqt": "2026-10-18T11:06+00:00",
-      "views": 27,
-      "reach": 10,
+      "views": 28,
+      "reach": 11,
       "likes": 6,
       "comments": 2,
       "saved": 0,
@@ -16,8 +16,8 @@
     "17999650698042060": {
       "fayl": "content/lenta/2026-10-18-bir-marta-yozasiz-ig.json",
       "vaqt": "2026-10-18T15:32+00:00",
-      "views": 7,
-      "reach": 6,
+      "views": 9,
+      "reach": 7,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -26,8 +26,8 @@
     "18113132831463940": {
       "fayl": "content/lenta/2026-10-18-nega-har-kuni-yozish-ig.json",
       "vaqt": "2026-10-19T05:01+00:00",
-      "views": 16,
-      "reach": 6,
+      "views": 17,
+      "reach": 7,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -36,8 +36,8 @@
     "18107482142351976": {
       "fayl": "content/lenta/2026-09-27-bitta-guruhdan-boshlandi-ig.json",
       "vaqt": "2026-10-21T13:01+00:00",
-      "views": 4,
-      "reach": 3,
+      "views": 5,
+      "reach": 4,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -56,8 +56,8 @@
     "18127875985851620": {
       "fayl": "content/lenta/2026-10-17-121-ta-suhbatdan-organdi-ig.json",
       "vaqt": "2026-10-20T13:01+00:00",
-      "views": 17,
-      "reach": 4,
+      "views": 21,
+      "reach": 5,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -76,9 +76,9 @@
     "18113506220114426": {
       "fayl": "content/lenta/2026-10-19-uch-jamoa-ig.json",
       "vaqt": "2026-10-22T05:00+00:00",
-      "views": 9,
-      "reach": 5,
-      "likes": 1,
+      "views": 11,
+      "reach": 7,
+      "likes": 2,
       "comments": 0,
       "saved": 0,
       "shares": 0
@@ -108,6 +108,10 @@
     {
       "kun": "2026-10-23",
       "obunachi": 11
+    },
+    {
+      "kun": "2026-10-24",
+      "obunachi": 12
     }
   ]
 }
