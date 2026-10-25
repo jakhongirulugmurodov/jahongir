@@ -2,7 +2,7 @@
 # Kunlik chiqish soni ZAXIRAGA qarab (Jahongir qoidasi): zaxira = navbatda kutayotganlar + Mac papkada tayyorlar.
 #   1–20 → kuniga 1 ta (20:30) · 21–40 → 2 ta (13:00, 20:30) · 41+ → 3 ta (09:00, 13:00, 20:30)
 # TRIGGER rejimi (22-10 tasdiqlangan, q['rejim']='trigger' — standart): oldingi reels o'sishdan to'xtashi bilan keyingisi chiqadi:
-#   kamida 3 soat o‘tgan (22-10: sinov guruhi 1–2 soatda tugaydi) + oxirgi 2 soatda soatiga <5 ko'rish (content/reels-soatlik.json); soatlik o'lchov yo'q bo'lsa 12 soatda;
+#   kamida 3 soat o‘tgan (22-10: sinov guruhi 1–2 soatda tugaydi) + oxirgi 2 soatda soatiga <2% (kamida <5) ko'rish o'sishi (content/reels-soatlik.json; 25-10 dan); soatlik o'lchov yo'q bo'lsa 12 soatda;
 #   24 soatdan keyin baribir; kuniga ≤3 ta; 23:00–08:00 chiqmaydi; zaxira <7 bo'lsa oddiy jadvalga (kuniga 1 ta, 20:30) qaytadi.
 # Vaqt sinovi (22-10 tasdiqlangan, trigger yoqilgach to'xtatildi): kuniga 1 ta bo'lganda 10 ta video kunma-kun 13:00 va 20:30 da almashib chiqadi
 # (har biriga "sinov_soat" yoziladi); 10 tasi chiqqach faqat 20:30 qoladi.
@@ -50,7 +50,8 @@ def trigger_kerak():
     rows = SOAT.get(oxirgi.get("media_id") or "", {}).get("olchov", [])
     if len(rows) < 3: return (1, "o'lchov yo'q, 12 soat o'tdi") if h >= 12 else (0, "o'lchov kam")
     a, b, c = [r.get("views", 0) for r in rows[-3:]]
-    return (1, f"to'xtadi: +{b - a}, +{c - b}") if (b - a) < 5 and (c - b) < 5 else (0, f"o'syapti: +{b - a}, +{c - b}")
+    lim = max(5, c * 0.02)  # 25-10 tasdiqlangan: to'xtash chegarasi — soatiga 2% (kichik videolarda kamida +5)
+    return (1, f"to'xtadi: +{b - a}, +{c - b} (chegara {lim:.0f})") if (b - a) < lim and (c - b) < lim else (0, f"o'syapti: +{b - a}, +{c - b} (chegara {lim:.0f})")
 TRIG_ON = TRIG and zaxira >= 7
 if TRIG_ON: kerak, sabab = trigger_kerak(); print("trigger:", sabab)
 q["kunlik"] = {"rejim": "trigger" if TRIG_ON else "jadval", "zaxira": zaxira, "kuniga": n, "kun": bugun_s, "oldingi": old.get("oldingi", 0) if old.get("kun") == bugun_s else old.get("kuniga", 0), "yangilandi": now.isoformat(timespec="minutes")}
