@@ -1,13 +1,13 @@
 {
-  "yangilandi": "2026-10-24T08:10+00:00",
+  "yangilandi": "2026-10-25T08:28+00:00",
   "akkaunt": "jahongir.olmos",
   "obunachi": 12,
   "postlar": {
     "18001916391003054": {
       "fayl": "content/lenta/2026-10-18-qancha-vaqt-tejaydi-ig.json",
       "vaqt": "2026-10-18T11:06+00:00",
-      "views": 28,
-      "reach": 11,
+      "views": 30,
+      "reach": 12,
       "likes": 6,
       "comments": 2,
       "saved": 0,
@@ -111,6 +111,10 @@
     },
     {
       "kun": "2026-10-24",
+      "obunachi": 12
+    },
+    {
+      "kun": "2026-10-25",
       "obunachi": 12
     }
   ]
