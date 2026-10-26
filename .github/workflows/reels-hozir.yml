@@ -1,0 +1,43 @@
+name: Reels hozir chiqsin
+# "90 Reels" panelidagi tugma shu ishga olib keladi: Run workflow → navbatdagi birinchi reels "darhol" belgilanadi,
+# navbat soqchisi uni 1–2 daqiqada joylaydi (soqchi ishlamayotgan bo'lsa, shu ish uni yoqadi).
+# Claude ishtirok etmaydi; repo ochiq bo'lgani uchun Actions daqiqalari bepul. Faqat repo egasi/yozuvchilari ishga tushira oladi.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  hozir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Navbatdagi reels'ni darhol belgilash
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
+          for i in 1 2 3 4 5 6 7 8; do
+            git pull --rebase -q || true
+            python3 - <<'PY'
+          import json, sys
+          p = "content/reels-queue.json"; q = json.load(open(p))
+          kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
+          if not kut: print("::warning::Navbat bo'sh — chiqadigan reels yo'q"); sys.exit(0)
+          if any(x.get("darhol") for x in kut): print("::notice::" + next(x["fayl"] for x in kut if x.get("darhol")) + " allaqachon darhol chiqishga belgilangan"); sys.exit(0)
+          kut[0]["darhol"] = True
+          json.dump(q, open(p, "w"), ensure_ascii=False, indent=2)
+          print("::notice::" + kut[0]["fayl"] + " darhol chiqadi (1–2 daqiqada)")
+          PY
+            git add content/reels-queue.json
+            git diff --cached --quiet && break
+            git commit -qm "reels: panel tugmasi — navbatdagi reels darhol chiqsin"
+            if git push -q; then break; fi
+            sleep $((RANDOM % 6 + 3))
+          done
+      - name: Navbat soqchisi ishlayotganini tekshirish
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          n=$(gh run list --workflow navbat-soqchi.yml --status in_progress --json databaseId -q 'length')
+          q=$(gh run list --workflow navbat-soqchi.yml --status queued --json databaseId -q 'length')
+          if [ "$n" = "0" ] && [ "$q" = "0" ]; then gh workflow run navbat-soqchi.yml --ref main; echo "::notice::Soqchi ishlamayotgan edi — qayta yoqildi"; fi
