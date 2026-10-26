@@ -20,13 +20,22 @@ if src.startswith("http"):
     try: urllib.request.build_opener(NoRedir).open(urllib.request.Request(src, method="HEAD"), timeout=30)
     except urllib.error.HTTPError as e:
         if e.code in (301, 302, 303, 307, 308): src = e.headers["Location"]
-# Belgilanadigan akkauntlar (IG_USER_TAGS="hasankhoja,boshqa"): reels ichida "user_tags" sifatida; rad etilsa tegsiz qayta uriniladi
+# Belgilanadigan akkauntlar (IG_USER_TAGS="hasankhoja,boshqa") — reels ichida "user_tags";
+# hammuallif taklifi (IG_COLLABS="mohirustoz", ko'pi bilan 3 ta) — "collaborators". Rad etilsa avval collab'siz, keyin tegsiz qayta uriniladi.
 tags = [u.strip().lstrip("@") for u in os.environ.get("IG_USER_TAGS", "").split(",") if u.strip()]
-if tags: extra["user_tags"] = json.dumps([{"username": u} for u in tags])
-c = call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, share_to_feed="true", **extra)
+collabs = [u.strip().lstrip("@") for u in os.environ.get("IG_COLLABS", "").split(",") if u.strip()][:3]
+def cont(t, cb):
+    e = dict(extra)
+    if t: e["user_tags"] = json.dumps([{"username": u} for u in t])
+    if cb: e["collaborators"] = json.dumps(cb)
+    return call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, share_to_feed="true", **e)
+c = cont(tags, collabs)
+if "id" not in c and collabs:
+    print("collaborators rad etildi, collab'siz qayta urinamiz:", json.dumps(c.get("error", c), ensure_ascii=False)[:200])
+    c = cont(tags, [])
 if "id" not in c and tags:
     print("user_tags rad etildi, tegsiz qayta urinamiz:", json.dumps(c.get("error", c), ensure_ascii=False)[:200])
-    extra.pop("user_tags"); c = call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, share_to_feed="true", **extra)
+    c = cont([], [])
 if "id" not in c: sys.exit("konteyner xato: " + json.dumps(c.get("error", c), ensure_ascii=False))
 for _ in range(120):  # video ishlov berilishi bir necha daqiqa olishi mumkin
     s = call(c["id"], fields="status_code,status")
