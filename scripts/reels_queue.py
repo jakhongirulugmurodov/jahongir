@@ -3,7 +3,7 @@
 #   1–20 → kuniga 1 ta (20:30) · 21–40 → 2 ta (13:00, 20:30) · 41+ → 3 ta (09:00, 13:00, 20:30)
 # TRIGGER rejimi (22-10 tasdiqlangan, q['rejim']='trigger' — standart): oldingi reels o'sishdan to'xtashi bilan keyingisi chiqadi:
 #   kamida 3 soat o‘tgan (22-10: sinov guruhi 1–2 soatda tugaydi) + oxirgi 2 soatda soatiga <2% (kamida <5) ko'rish o'sishi (content/reels-soatlik.json; 25-10 dan); soatlik o'lchov yo'q bo'lsa 12 soatda;
-#   24 soatdan keyin baribir; kuniga ≤3 ta; 23:00–08:00 chiqmaydi; zaxira <7 bo'lsa oddiy jadvalga (kuniga 1 ta, 20:30) qaytadi.
+#   24 soatdan keyin baribir; kuniga ≤3 ta (90 lik rejadan orqada qolinsa ≤4); 23:00–08:00 chiqmaydi; zaxira <7 bo'lsa oddiy jadvalga (kuniga 1 ta, 20:30) qaytadi.
 # Vaqt sinovi (22-10 tasdiqlangan, trigger yoqilgach to'xtatildi): kuniga 1 ta bo'lganda 10 ta video kunma-kun 13:00 va 20:30 da almashib chiqadi
 # (har biriga "sinov_soat" yoziladi); 10 tasi chiqqach faqat 20:30 qoladi.
 # Barqarorlik (tasdiqlangan): son kun boshida qotiriladi va kun davomida o'zgarmaydi;
@@ -36,13 +36,18 @@ if old.get("kun") == bugun_s:
 else:
     n = kvota(zaxira, old.get("kuniga", 0))
 bugun = [x for x in q["navbat"] if x.get("holat") in ("chiqdi", "xato") and datetime.fromisoformat(x["natija"]["vaqt"]).astimezone(TZ).date() == now.date()]
+# Oylik reja (26-10): 19-10 – 18-11 da 90 ta. Kunlik chegara 3 ta; rejadan orqada qolinsa (qolgan ÷ qolgan kun > 3) o'sha kuni 4 tagacha.
+REJA_OXIRI, REJA_SONI = datetime(2026, 11, 18, tzinfo=TZ).date(), 90
+oldin = sum(1 for x in q["navbat"] if x.get("holat") == "chiqdi" and datetime.fromisoformat(x["natija"]["vaqt"]).astimezone(TZ).date() < now.date())
+qolgan_kun = (REJA_OXIRI - now.date()).days + 1
+CAP = min(4, max(3, -(-(REJA_SONI - oldin) // qolgan_kun))) if qolgan_kun > 0 and oldin < REJA_SONI else 3
 due = [now.replace(hour=h, minute=m, second=0, microsecond=0) for h, m in slots(n, now.date())]
 kerak = sum(1 for t in due if t <= now) - len(bugun)
 SOAT = json.load(open("content/reels-soatlik.json")) if os.path.exists("content/reels-soatlik.json") else {}
 chiq = [x for x in q["navbat"] if x.get("holat") == "chiqdi" and x.get("natija", {}).get("vaqt")]
 oxirgi = max(chiq, key=lambda x: datetime.fromisoformat(x["natija"]["vaqt"])) if chiq else None
 def trigger_kerak():
-    if now.hour < 8 or now.hour >= 23 or len(bugun) >= 3: return 0, "tun (23–08) yoki kunlik 3 ta"
+    if now.hour < 8 or now.hour >= 23 or len(bugun) >= CAP: return 0, f"tun (23–08) yoki kunlik {CAP} ta"
     if not oxirgi: return 1, "birinchi video"
     h = (now - datetime.fromisoformat(oxirgi["natija"]["vaqt"])).total_seconds() / 3600
     if h < 3: return 0, f"oxirgisiga {h:.1f} soat"
