@@ -26,12 +26,14 @@ jobs:
           for f in $(ls | grep -E '\.part[0-9]+$' | sed -E 's/\.part[0-9]+$//' | sort -u); do cat "$f".part* > /tmp/v/"$f"; done
           for f in *.mp4; do [ -f "$f" ] && cp "$f" /tmp/v/ || true; done
           cp izohlar.json /tmp/izohlar.json
+          MANZIL=$(cat manzil.txt 2>/dev/null || echo osish)
+          if [ "$MANZIL" = cinematic ]; then export REELS_QUEUE=content/cinematic-queue.json REELS_PREFIX=cinematic; else export REELS_QUEUE=content/reels-queue.json REELS_PREFIX=reels; fi
           cd "$GITHUB_WORKSPACE/main"
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
           # Yuklash bir marta; push navbat soqchisining har daqiqalik commitlari bilan to'qnashsa — rebase qilib qayta urinish
           git fetch -q origin main && git reset -q --hard origin/main
           python3 tools/reels/yukla.py /tmp/v /tmp/izohlar.json
-          git add content/reels-queue.json && git commit -qm "reels: navbatga yangi videolar"
+          git add "$REELS_QUEUE" && git commit -qm "reels ($MANZIL): navbatga yangi videolar"
           ok=0
           for i in $(seq 1 15); do
             if git push -q origin HEAD:main; then ok=1; break; fi

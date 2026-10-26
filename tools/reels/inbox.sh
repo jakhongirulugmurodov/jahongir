@@ -1,10 +1,10 @@
 #!/bin/bash
 # Tayyor reels partiyasini reels-inbox shoxi orqali Release'ga yuboradi (sessiyadan Release API yopiq).
-# Foydalanish (repo ildizidan): tools/reels/inbox.sh <videolar papkasi> <izohlar.json>
+# Foydalanish (repo ildizidan): tools/reels/inbox.sh <videolar papkasi> <izohlar.json> [manzil: osish (standart) | cinematic]
 # Videolar 60MB bo'laklarga bo'linadi (GitHub 100MB fayl chegarasi); "Reels qabul" ishi yig'ib, navbatga qo'shadi va shoxni o'chiradi.
 set -e
-SRC="$1"; CAPS="$2"; REPO=$(pwd); W=$(mktemp -d)
-mkdir -p "$W/inbox"; cp "$CAPS" "$W/inbox/izohlar.json"
+SRC="$1"; CAPS="$2"; MANZIL="${3:-osish}"; REPO=$(pwd); W=$(mktemp -d)
+mkdir -p "$W/inbox"; cp "$CAPS" "$W/inbox/izohlar.json"; echo "$MANZIL" > "$W/inbox/manzil.txt"
 for f in "$SRC"/*.mp4; do split -b 60m -d -a 2 "$f" "$W/inbox/$(basename "$f").part"; done
 cd "$W"; git init -q -b reels-inbox
 git -c user.name=reels-bot -c user.email=reels-bot@users.noreply.github.com add . 

@@ -5,8 +5,9 @@
 import json, os, subprocess, sys, re
 from datetime import datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")); from uztypo import typo
-TZ = timezone(timedelta(hours=5)); Q = "content/reels-queue.json"
-src, caps = sys.argv[1], json.load(open(sys.argv[2])); q = json.load(open(Q))
+TZ = timezone(timedelta(hours=5)); Q = os.environ.get("REELS_QUEUE", "content/reels-queue.json")  # cinematic: content/cinematic-queue.json
+PREFIX = os.environ.get("REELS_PREFIX", "reels")
+src, caps = sys.argv[1], json.load(open(sys.argv[2])); q = json.load(open(Q)) if os.path.exists(Q) else {"soatlar": ["09:00"], "navbat": []}
 slots = [tuple(map(int, s.split(":"))) for s in q["soatlar"]]
 last = max([datetime.fromisoformat(x["vaqt"]) for x in q["navbat"]] + [datetime.now(TZ) + timedelta(minutes=30)])
 def nxt(t):
@@ -16,16 +17,16 @@ def nxt(t):
         for h, m in slots:
             c = datetime(day.year, day.month, day.day, h, m, tzinfo=TZ)
             if c > t: return c
-tag = "reels-" + datetime.now(TZ).strftime("%Y-%m")
+tag = PREFIX + "-" + datetime.now(TZ).strftime("%Y-%m")
 if subprocess.run(["gh", "release", "view", tag], capture_output=True).returncode:
-    subprocess.run(["gh", "release", "create", tag, "-t", f"O‘sish Nuqtasi reels {tag[6:]}", "-n", "Instagram uchun tayyor reels (navbat: content/reels-queue.json)"], check=True)
+    subprocess.run(["gh", "release", "create", tag, "-t", f"{PREFIX} {tag[len(PREFIX)+1:]}", "-n", "Instagram uchun tayyor reels (navbat: content/reels-queue.json)"], check=True)
 t = last
 for name, cap in caps.items():
     safe = re.sub(r"[^A-Za-z0-9._-]+", "-", name)
     p = os.path.join(src, name)
     if safe != name: os.replace(p, os.path.join(src, safe)); p = os.path.join(src, safe)
     subprocess.run(["gh", "release", "upload", tag, p, "--clobber"], check=True)
-    t = nxt(t); it = {"vaqt": t.isoformat(timespec="minutes"), "release": tag, "fayl": safe, "izoh": typo(cap), "holat": "kutmoqda"}
+    t = nxt(t); it = {"vaqt": t.isoformat(timespec="minutes"), "release": tag, "fayl": safe, "izoh": typo(cap or os.environ.get("REELS_DEFAULT_CAPTION", "")), "holat": "kutmoqda"}
     teg = [u for u in dict.fromkeys(re.findall(r"@([A-Za-z0-9._]+[A-Za-z0-9_])", cap)) if u != "osish.nuqtasi"]  # caption'dagi @spiker → reels'da belgilanadi
     if teg: it["teglar"] = teg
     q["navbat"].append(it)

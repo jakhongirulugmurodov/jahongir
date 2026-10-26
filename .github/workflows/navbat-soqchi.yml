@@ -21,6 +21,7 @@ jobs:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           IG_TOKEN_MAIN: ${{ secrets.IG_TOKEN }}
           IG_TOKEN_OSISH: ${{ secrets.IG_TOKEN_OSISH }}
+          IG_TOKEN_CINEMATIC: ${{ secrets.IG_TOKEN_CINEMATIC }}
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
@@ -30,9 +31,10 @@ jobs:
             IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/story_queue.py || true
             IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/lenta_queue.py || true
             IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_soatlik.py || true
+            IG_TOKEN="$IG_TOKEN_CINEMATIC" python3 scripts/cinematic_queue.py || true   # @cinematic.soul52 (token qo‘yilmaguncha jim)
             python3 scripts/tg_buyruq.py || true   # Telegram botdagi "Reels hozir chiqsin" tugmasi
             IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_queue.py || true
-            git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json content/reels-soatlik.json content/tg-buyruq.json
+            git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json content/reels-soatlik.json content/tg-buyruq.json content/cinematic-queue.json
             if ! git diff --cached --quiet; then
               git commit -qm "navbat: yangi story/post chiqdi"
               git pull --rebase -q && git push -q && gh workflow run deploy.yml --ref main
