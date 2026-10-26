@@ -1,0 +1,23 @@
+name: IG token tekshiruvi
+# Token ishlayotganini tekshiradi: faqat akkaunt nomi va turi chiqadi (token chop etilmaydi).
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/ig-token-check.yml]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          T1: ${{ secrets.IG_TOKEN_CINEMATIC }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          t = os.environ.get("T1", "").strip()
+          if not t: print("::error::IG_TOKEN_CINEMATIC topilmadi"); raise SystemExit(0)
+          try: r = json.load(urllib.request.urlopen("https://graph.instagram.com/v23.0/me?" + urllib.parse.urlencode({"fields": "user_id,username,account_type,media_count", "access_token": t}), timeout=30))
+          except urllib.error.HTTPError as e: r = json.load(e)
+          if "username" in r: print(f"::notice::IG_TOKEN_CINEMATIC ishlaydi: @{r['username']} ({r.get('account_type')}), postlar: {r.get('media_count')}")
+          else: print("::error::Token ishlamadi: " + str(r.get("error", {}).get("message", r))[:200])
+          PY
