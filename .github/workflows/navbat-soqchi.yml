@@ -27,7 +27,7 @@ jobs:
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
           end=$(( $(date +%s) + 55*60 ))
           while [ $(date +%s) -lt $end ]; do
-            git pull --rebase -q || true
+            git pull --rebase -q -X theirs || git rebase --abort 2>/dev/null || true
             IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/story_queue.py || true
             IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/lenta_queue.py || true
             IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_soatlik.py || true
@@ -37,7 +37,8 @@ jobs:
             git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json content/reels-soatlik.json content/tg-buyruq.json content/cinematic-queue.json
             if ! git diff --cached --quiet; then
               git commit -qm "navbat: yangi story/post chiqdi"
-              git pull --rebase -q && git push -q && gh workflow run deploy.yml --ref main
+              # To'qnashuvda soqchining o'z yozuvi (nima chiqqani) ustun turadi; rebase hech qachon yarim qolmasin
+              if git pull --rebase -q -X theirs || { git rebase --abort 2>/dev/null; git pull --rebase -q -X theirs; }; then git push -q && gh workflow run deploy.yml --ref main; else git rebase --abort 2>/dev/null || true; fi
             fi
             sleep 60
           done
