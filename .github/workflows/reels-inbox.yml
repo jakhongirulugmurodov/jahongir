@@ -27,7 +27,7 @@ jobs:
           for f in *.mp4; do [ -f "$f" ] && cp "$f" /tmp/v/ || true; done
           cp izohlar.json /tmp/izohlar.json
           MANZIL=$(cat manzil.txt 2>/dev/null || echo osish)
-          if [ "$MANZIL" = cinematic ]; then export REELS_QUEUE=content/cinematic-queue.json REELS_PREFIX=cinematic REELS_DEFAULT_CAPTION="$(cat content/cinematic-izoh.txt 2>/dev/null)"; else export REELS_QUEUE=content/reels-queue.json REELS_PREFIX=reels; fi
+          if [ "$MANZIL" = cinematic ]; then export REELS_QUEUE=content/cinematic-queue.json REELS_PREFIX=cinematic REELS_DEFAULT_CAPTION="$(cat "$GITHUB_WORKSPACE/main/content/cinematic-izoh.txt" 2>/dev/null)"; else export REELS_QUEUE=content/reels-queue.json REELS_PREFIX=reels; fi
           cd "$GITHUB_WORKSPACE/main"
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
           # Yuklash bir marta; push navbat soqchisining har daqiqalik commitlari bilan to'qnashsa — rebase qilib qayta urinish
