@@ -361,5 +361,11 @@
       "holat": "kutmoqda"
     }
   ],
-  "reja_boshi": "2026-10-26"
+  "reja_boshi": "2026-10-26",
+  "kunlik": {
+    "kun": "2026-10-26",
+    "kuniga": 8,
+    "bugun": 1,
+    "navbatda": 49
+  }
 }
