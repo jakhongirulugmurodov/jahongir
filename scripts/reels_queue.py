@@ -79,13 +79,18 @@ elif kerak > 0 and kut:
     joyla(kut[0])  # bir ishga tushishda ko'pi bilan 1 ta
     if n == 1 and SINOV > 0: kut[0]["sinov_soat"] = "%02d:%02d" % slots(n, now.date())[0]
     kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
-# taxminiy jadval (trigger): har ~10 soatda bittadan, tungi 00–08 soat o'tkazib yuboriladi (aniq vaqtni o'sish hal qiladi)
+# taxminiy jadval (trigger, 27-10): oldingisidan 3–6 soat keyin — taxminan har 6 soatda, kuniga ≤3 ta, faqat 08:00–23:00
+# (aniq vaqtni o'sish hal qiladi: video tez to'xtasa, keyingisi oldinroq chiqadi)
 if TRIG_ON:
-    t = max(now, datetime.fromisoformat(oxirgi["natija"]["vaqt"]) + timedelta(hours=10)) if oxirgi else now
+    t = max(now, datetime.fromisoformat(oxirgi["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=6)) if oxirgi else now
+    sanoq = {now.date(): len(bugun)}
     for x in kut:
-        if t.hour >= 23: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
-        elif t.hour < 8: t = t.replace(hour=8, minute=0)
-        x["vaqt"] = t.isoformat(timespec="minutes"); t += timedelta(hours=10)
+        while True:
+            if t.hour >= 23: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
+            elif t.hour < 8: t = t.replace(hour=8, minute=0)
+            elif sanoq.get(t.date(), 0) >= 3: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
+            else: break
+        x["vaqt"] = t.isoformat(timespec="minutes"); sanoq[t.date()] = sanoq.get(t.date(), 0) + 1; t += timedelta(hours=6)
     kut = []
 # taxminiy jadval: qolganlarni kvota bo'yicha keyingi slotlarga taqsimlash
 t = now; i = 0; posted_today = len(bugun) + (1 if kerak > 0 else 0)
