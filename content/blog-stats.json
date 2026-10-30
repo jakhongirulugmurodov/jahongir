@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-10-29T10:01+00:00",
+  "yangilandi": "2026-10-30T10:05+00:00",
   "akkaunt": "jahongir.olmos",
   "obunachi": 12,
   "postlar": {
@@ -66,7 +66,7 @@
     "18032935496850936": {
       "fayl": "content/lenta/2026-10-18-dokon-ochdingiz-ig.json",
       "vaqt": "2026-10-21T05:01+00:00",
-      "views": 13,
+      "views": 14,
       "reach": 6,
       "likes": 0,
       "comments": 0,
@@ -131,6 +131,10 @@
     },
     {
       "kun": "2026-10-29",
+      "obunachi": 12
+    },
+    {
+      "kun": "2026-10-30",
       "obunachi": 12
     }
   ]
