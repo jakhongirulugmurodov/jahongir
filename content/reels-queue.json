@@ -573,23 +573,29 @@
         "vaqt": "2026-10-31T16:13+05:00",
         "chiqish": "natija: {\"ok\": true, \"id\": \"18117609698012523\", \"xato\": null}"
       },
-      "media_id": "18117609698012523"
+      "media_id": "18117609698012523",
+      "kuchsiz": true
     },
     {
       "vaqt": "2026-11-01T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "64-video.mp4",
       "izoh": "O‘zbekistonda eng aqlli qatlam o‘qituvchilikka kirmagan. Qayerga ketgan?\n\nMohir ustozning kuzatuvi: 2000–2010-yillargacha o‘qituvchilik ikkinchi-uchinchi darajali, hatto pastki klass kasbi deb ko‘rilgan. Shuning uchun intellektual qatlam bu sohani tanlamagan — chet elga chiqib ketgan yoki tadbirkorlikka kirgan.\n\nO‘qituvchilikda fidoyilar qolgan — juda kam. Va bu orada katta uzilish bo‘lgan. Bugun biz shu uzilishning ichida yashayapmiz.\n\nSiz maktabda o‘qiganingizda fidoyi ustozingiz bo‘lganmi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#talim #oqituvchi #ozbekiston #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "mohirustoz"
       ],
       "collab": [
         "mohirustoz"
-      ]
+      ],
+      "natija": {
+        "vaqt": "2026-10-31T17:44+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18176461150454128\", \"xato\": null}"
+      },
+      "media_id": "18176461150454128"
     },
     {
-      "vaqt": "2026-11-01T14:00+05:00",
+      "vaqt": "2026-11-01T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "35-video.mp4",
       "izoh": "Bolangiz 14 ga kirib «birdan» o‘zgardimi? O‘zgargan narsa boshqa.\n\nUstoz: ko‘pchilik o‘smir yoshda bola ayniydi deb vahima qiladi. Aslida o‘smirlik undan oldingi bosqichdagi tarbiyangizni ko‘rsatadi. Siz yedirgan, singdirgan, o‘zingiz bilmasdan o‘rgatgan narsalar — hammasi shu yerda chiqadi.\n\nOldin u sizning bosimingiz ostida o‘zini ko‘rsata olmasdi. Endi o‘zida kuch sezdi — va namoyon qildi. Xolos.\n\nO‘smirlik — natija. Sabab 10 yil oldin.\n\nSizningcha, o‘smir bola o‘zgaradimi yoki ochiladimi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#osmir #farzandtarbiyasi #otaona #osishnuqtasi",
@@ -601,7 +607,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-01T20:00+05:00",
+      "vaqt": "2026-11-01T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "83-video.mp4",
       "izoh": "Hayotingizdagi eng muhim insonni aldamang 🤍\n\nSiz qochsangiz ham yoningizda turadigan, uxlasangiz ham, o‘tirsangiz ham siz bilan birga bo‘ladigan bir inson bor.\n\nBu — o‘zingiz.\n\nO‘zingizga bergan va’dalaringiz ustidan chiqyapsizmi? Bir yaxshilab o‘ylab ko‘ring.\n\n⏰ \"Ertalab falon vaqtda turaman\" dedingizmi? Nima bo‘lsa ham turing. Bunga jiddiy, mas’uliyat bilan qarash kerak.\n\n💬 \"Biror ishni qilaman\" dedingizmi? O‘zingizga bergan va’da butun dunyoga — sakkiz milliard odamga bergan va’dangizdan ham ustun tursin.\n\nEng muhim insonni hech qachon aldab kelmang.\n\n👇 O‘zingizga bergan qaysi va’dani hali bajarmadingiz? Bugun boshlaymizmi?\n\n#vada #intizom #nafs #motivatsiya #hayot #ozgarish #ibrat #masuliyat #uzbekistan #maqsad",
@@ -611,7 +617,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-02T08:00+05:00",
+      "vaqt": "2026-11-01T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "36-video.mp4",
       "izoh": "Ustoz bolalariga telefon olib berishdan qo‘rqmaydi. Sababi bolada emas.\n\nO‘zi telefondan ko‘zini olmaydigan ota «sen o‘ynama» deydi. Ishlamaydi. Ustoz: «Menda telefonning xili bor, qaramayman. Shunday bo‘lsam, bola ham shunday bo‘ladi.»\n\nOna telefon bilan band — bola «ayam» desa, «hozir» deydi. Bola o‘rganadi: shunday bo‘lishi kerak ekan. Shuning uchun ota-ona avval o‘zini tarbiya qiladi. Oddiy telefon misolida.\n\nBolangiz sizni kuniga necha soat telefon bilan ko‘radi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#telefon #farzandtarbiyasi #otaona #osishnuqtasi",
@@ -623,7 +629,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-02T14:00+05:00",
+      "vaqt": "2026-11-02T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "23-video.mp4",
       "izoh": "Nasiyaga olish mumkin. Faqat bitta holatda.\n\nRivojlanishingiz, ishingiz, daromadingiz uchun zarur bo‘lsa — oling. Minimal kerak bo‘lgan kompyuter — ha. 55 ekranni 65 qilish uchun — yo‘q. Do‘stingiz olgani uchun — yo‘q. Qo‘shningiz olgani uchun — yo‘q. Qarindoshlar gapirmasligi uchun — yo‘q. Ishlab turgan narsani almashtirish uchun — yo‘q.\n\nHasanxo‘ja ustozning me’yori bitta so‘z: maqsad. Telefoningiz ishlayaptimi? Unda nima qilasiz almashtirib?\n\nOxirgi nasiyangiz zaruratdan edimi yoki xohishdan?\n\nHasanxo‘ja ustoz bilan suhbatdan · @hasankhoja\n#nasiya #moliya #isrof #osishnuqtasi",
@@ -633,7 +639,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-02T20:00+05:00",
+      "vaqt": "2026-11-02T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "65-video.mp4",
       "izoh": "Rotshildlar boylikni avloddan avlodga o‘tkazadi. Biz bilimni o‘tkaza olmadik.\n\nBizda esa — Mohir ustozning so‘zi bilan — bitta emas, bir nechta avlod yo‘qolib qolgan. Ustoz-shogird an’anasi uzilgan. Bilim avlodga o‘tmagan.\n\nShuning uchun bugungi ustozlar ko‘p narsani noldan boshlashga majbur. Uzilgan zanjirni kim ulaydi? Hozirgi avlod.\n\nSizda bilimini sizga o‘tkazgan ustoz bo‘lganmi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#ustozshogird #talim #pedagogika #osishnuqtasi",
@@ -646,7 +652,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-03T08:00+05:00",
+      "vaqt": "2026-11-02T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "37-video.mp4",
       "izoh": "Bolangiz hozir qayerda — bilasiz. Ikkinchi savolga javob bera olasizmi?\n\nMaktab rahbari: ota-ona bolasining jismonan qayerdaligini doim biladi — shu to‘garakda, shu darsda, soat 10 da shu xonada. Lekin ruhan qayerda? Nima ko‘ryapti? Qaysi blogerni kuzatyapti? Qayerdadir pul tikyaptimi? Kim bilan yozishyapti?\n\nOldin o‘rtog‘i eshik oldiga chaqirib kelardi — ota ko‘rardi. Hozir o‘rtoq ekranda. Nazorat jismoniy, bola esa virtual.\n\nBolangizning oxirgi ko‘rgan videosini bilasizmi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#farzandtarbiyasi #internet #otaona #osishnuqtasi",
@@ -658,7 +664,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-03T14:00+05:00",
+      "vaqt": "2026-11-03T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "66-video.mp4",
       "izoh": "Ishdan haydalmaydigan joyga o‘tirgan odam bilan bir narsa bo‘ladi.\n\nMohir ustoz: komfort zona — qulay muhit emas. Ishdan haydalmaydigan darajadagi ishga joylashish. Shu joyga kelgandan keyin odamlarning katta qismi o‘sishdan to‘xtaydi — ustozning aytishicha, tadqiqotlar buni ko‘rsatadi.\n\nBu o‘qituvchilarga xos emas — hamma kasbda bor. Insonning fitrati: bir narsa osonlashgandan keyin shu yerda qolib ketamiz.\n\nOxirgi marta qachon ishingizda yangi narsa o‘rgandingiz?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#komfortzona #osish #karyera #osishnuqtasi",
@@ -671,7 +677,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-03T20:00+05:00",
+      "vaqt": "2026-11-03T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "38-video.mp4",
       "izoh": "Siz «hali yosh» deb yurgan yoshda ular nima qilgan?\n\nUstoz: hamma buyuk olimlar o‘smir yoshda olim bo‘lgan. Ibn Sino: «18 yoshdan keyin yangi ilm olganim yo‘q». Buxoro amirini davolaganda o‘smir edi. Imom Buxoriy buyuk kitobini o‘smirlikda boshlagan. Navoiyning birinchi devoni — bolalikda.\n\nIjod, ilm, yutuq — hammasi 10 bilan 20 orasida. Biz esa shu yoshni «hali kichkina» deb o‘tkazib yuboramiz.\n\nSiz 15 yoshda nima bilan band edingiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#ibnsino #talim #osmir #osishnuqtasi",
@@ -683,7 +689,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-04T08:00+05:00",
+      "vaqt": "2026-11-03T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "84-video.mp4",
       "izoh": "Bizning eng katta dushmanimiz kim? ⚔️\n\nU tashqarida emas. U doim yonimizda, ro‘paramizda turibdi.\nBu shayton ham emas. Bu — nafs.\n\nUning xohlaganini bermasangiz — masalan, ertalab o‘rningizdan tursangiz — u isyon qiladi, uyquga tortaveradi.\nLekin uni yengsangiz, kun bo‘yi tetik yurasiz, o‘zingizga bo‘lgan ishonchingiz oshadi.\n\nBuyuk avliyolardan bo‘lgan Boyazid Bistomiy rohimahullohdan so‘rashibdi:\n\"Bu darajaga erishish uchun nimalarni bosib o‘tdingiz? Biz ham sizdek bo‘lishimiz uchun nima qilaylik?\"\n\nU zot javob beribdilar:\n\"Qirq yil nafsim nimani istagan bo‘lsa, bermaganman.\" 🤲\n\n👇 Bugun nafsingizga qanday \"yo‘q\" dedingiz? Izohda yozing.\n\n#nafs #ibrat #avliyolar #ruhiyat #intizom #motivatsiya #hayot #imon #uzbekistan #ozgarish",
@@ -693,7 +699,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-04T14:00+05:00",
+      "vaqt": "2026-11-04T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "39-video.mp4",
       "izoh": "Bolasini 100% nazorat qiladigan ota-ona 20 yildan keyin nimaga duch keladi?\n\nUstoz: men to‘liq nazoratni ma’qullamayman. Bunday bola ijodkor bo‘lmaydi. Sizsiz fikrlamaydi. «Yozaymi, yozmaymi» — doim kattalarning og‘ziga qaraydi.\n\nYangilik qilish uchun u qoqilishi, turtilishi, xato qilishi kerak edi. Siz qo‘ymagansiz. Ma’naviy ozuqa berish o‘rniga taqiq qo‘ygansiz.\n\nNazorat qancha bo‘lsa, ijod shuncha kam.\n\nBolangiz o‘zi qaror qiladigan oxirgi narsa nima bo‘ldi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#nazorat #farzandtarbiyasi #otaona #osishnuqtasi",
@@ -705,7 +711,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-04T20:00+05:00",
+      "vaqt": "2026-11-04T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "67-video.mp4",
       "izoh": "Sizning psixologiyangiz 1000 yil oldingi odamnikidan farq qilmaydi.\n\nQo‘rquvdan qo‘rqamiz, mukofotga intilamiz — fitrat bir xil. Mohir ustoz buni Robert Chaldinining «Influence» kitobidagi cheklanganlik qoidasi bilan tushuntirdi: biror narsa cheklangan bo‘lsa, odam uni qadrlaydi.\n\nMana shu suv — «faqat shu suv qoldi» desangiz, qadrlab ichasiz. Bola ham shu qoida bilan ishlaydi. Ustoz o‘zgarmas qoidalarni bilishi kerak — zamon o‘zgaradi, psixologiya emas.\n\nBolangizda qaysi narsaning qadri ketgan?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#psixologiya #tarbiya #ustoz #osishnuqtasi",
@@ -718,7 +724,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-05T08:00+05:00",
+      "vaqt": "2026-11-04T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "40-video.mp4",
       "izoh": "Bolangiz ichidagi xafani bitta gap tuzatadi. Lekin uni aytish — eng og‘ir ish.\n\nUstoz: ota-ona gohida aybini tan olishi kerak. «Bobongga gap qaytarganimga afsus qilaman.» «Onangga o‘sha vaqtda qilganim noto‘g‘ri ekan.» Shuni aytsangiz, bolaning miyasida turgan o‘sha xato to‘g‘rilanadi.\n\nTavba — shu. Xatoni tan olish. Nafsga eng yoqimsiz ish — ayniqsa bolaning oldida.\n\nBolangizdan oxirgi marta qachon «men xato qildim» degansiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#otaona #farzandtarbiyasi #oila #osishnuqtasi",
@@ -730,7 +736,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-05T14:00+05:00",
+      "vaqt": "2026-11-05T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "68-video.mp4",
       "izoh": "100–200 ta kitob o‘qigan o‘qituvchi. Lekin yetkaza olmaydi. Nega endi bu muammo bo‘lib qoldi?\n\nMohir ustoz: oldin «yetkazib berish» talab qilinmagan — ustoz avtoritet edi, bola baribir eshitardi. 2016-yildan keyin O‘zbekiston ochildi, xususiy maktablar, o‘quv markazlar paydo bo‘ldi. Pul to‘lovchi — ota-ona.\n\nPul to‘lagan odam sifat talab qiladi: «nimaga yaxshiroq o‘qitmayapsan?» Ana shunda pedagogik mahoratga ehtiyoj tug‘ildi. Avtoritet davri tugadi — mahorat davri boshlandi.\n\nSizningcha, bilim muhimmi yoki uni yetkaza olish?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#pedagogika #oquvmarkaz #talim #osishnuqtasi",
@@ -743,7 +749,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-05T20:00+05:00",
+      "vaqt": "2026-11-05T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "41-video.mp4",
       "izoh": "Bolasi 30 ga kirgan. Hali ham u bilan gaplasha olmaydi. Orada nima turibdi?\n\nUstoz: ko‘p ota-ona bolasi bilan odamga o‘xshab gaplashmaydi. Orada Xitoy devori — o‘zi ham o‘tolmaydi, bolani ham o‘tkazmaydi. Devorning nomi — «Men». «Men xato qilmayman, mening qarorim eng zo‘ri, men hammadan aqlliman.»\n\nBolalaringiz — to‘rtta, beshta boylik. Ular siz bilmaydigan yaxshi fikrlar aytadi. Aniq.\n\nOta-onangiz bilan ochiq gaplasha olasizmi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#otaona #oila #munosabat #osishnuqtasi",
@@ -755,7 +761,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-06T08:00+05:00",
+      "vaqt": "2026-11-05T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "85-video.mp4",
       "izoh": "Tasavvur qiling: sizni bir hafta kamerada kuzatishadi 🎥\n\nYoshligimda dunyoni boshqacharoq anglash uchun shunday bir narsani o‘ylaganman:\n\n🏨 Bir mehmonxonaga kelib joylashyapsan. Senga aytishdi:\n— Bir hafta shu yerda yashaysan.\n— Har burchakka kamera qo‘yilgan, 1000–2000 kishi seni kuzatib turadi.\n— Muzlatkich to‘la ovqat, seyf to‘la pul.\n— Nima qilish — o‘z ixtiyoringda, o‘z tanlovingda.\n\nEng qizig‘i: bir haftadan keyin kameraga yozilgan hamma narsani senga qaytarib ko‘rsatamiz.\n\n🌿 Yaxshi inson bo‘lsang — tog' bag‘rida, chiroyli daryo bo‘yidagi dachada umring oxirigacha yashaysan.\n⛓ Yomon inson bo‘lsang — umr bo‘yi qamoqda azob chekasan.\n\nEndi o‘zingiz o‘ylab ko‘ring: men o‘zimni qanday tutishim kerak?\n\nAslida qaror qabul qilayotganingizda sizni minglab emas, millionlab, balki milliardlab farishtalar kuzatib turibdi — \"bu yigit, bu qiz shunday vaziyatda qanday qaror qabul qilarkan?\"\n\n👇 Biz o‘zimizni qanday tutyapmiz? Fikringizni yozing.\n\n#ibrat #hayot #tanlov #qaror #imon #ruhiyat #motivatsiya #nafs #uzbekistan #fikr",
@@ -765,7 +771,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-06T14:00+05:00",
+      "vaqt": "2026-11-06T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "42-video.mp4",
       "izoh": "Uyda «taxt»da o‘tirgan otalar bir narsani bilmaydi.\n\nUstoz: otalar o‘ziga soxta taxt yasab oladi. Kerak emas — yerda o‘tiravering. Chunki bolangiz nazdida orada devor bor — siz taxtda emas, baribir yerda turgan bo‘lasiz.\n\nHaqiqiy taxt — sokin o‘tirib, yaxshi gaplashib, bolaga aytganini qildira olish. Gapini o‘tkaza olmay jirillagan ota — taxtdan tushgan ota.\n\nObro‘ ovozdan keladimi yoki so‘zdan?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#ota #farzandtarbiyasi #oila #osishnuqtasi",
@@ -777,7 +783,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-06T20:00+05:00",
+      "vaqt": "2026-11-06T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "24-video.mp4",
       "izoh": "Odam uch xil bo‘ladi: nur, ko‘zgu va qora tuynuk.\n\nNur — o‘zi yorug‘lik tarqatadi. Ko‘zgu — o‘zi nur bo‘lmasa ham, birovning nurini boshqalarga yetkazadi. Qora tuynuk — o‘zi yaxshilik chiqarmaydi, boshqalarnikini ham yutib yuboradi.\n\nHasanxo‘ja ustozning iltimosi bitta: nur bo‘ling yoki ko‘zgu bo‘ling. Lekin hech qachon yutuvchi bo‘lmang.\n\nAtrofingizda «ko‘zgu» odamlar bormi?\n\nHasanxo‘ja ustoz bilan suhbatdan · @hasankhoja\n#yaxshilik #hikmat #insoniylik #osishnuqtasi",
@@ -787,7 +793,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-07T08:00+05:00",
+      "vaqt": "2026-11-06T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "69-video.mp4",
       "izoh": "Ustoz attestatsiya sertifikati bilan keladi: «istagan joyga kiraman». Ishga olishmaydi.\n\nMohir ustoz: hamma sohada o‘qituvchi yetmayapti, o‘rtachadan pastini ham olishga majbur bo‘lishyapti. Lekin sertifikat bilan kelgan ustozni akademiya ishga olmaydi. Ustoz hayron: «sertifikatim bor-ku?»\n\nKeyin sekin-sekin tushunib yetadi: pedagogik mahorati yaxshi emas ekan. Va izlanishni boshlaydi. Sertifikat eshikni ochadi — sinfni ochmaydi.\n\nSertifikat va mahorat — qaysi birini ko‘proq ko‘rgansiz?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#oqituvchi #pedagogika #sertifikat #osishnuqtasi",
@@ -800,7 +806,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-07T14:00+05:00",
+      "vaqt": "2026-11-07T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "43-video.mp4",
       "izoh": "Bolangizdan kechirim so‘rashdan oldin bitta narsani tekshiring.\n\nUstoz: kechirim so‘rasangiz, bola buni tobelik deb tushunsa — munosabat buziladi. Chegara — bolaning fahmi. Kattadek fikrlaydigan yoshda: «O‘g‘lim, o‘shanda seni xafa qilgan ekanman» desa bo‘ladi.\n\nKichik bolaga esa boshqacha: «O‘sha vaqtda senga shu yaxshi deb o‘ylaganmiz, vaziyat shunday edi.» Xatoni tan olish — boshqa, kechirim so‘rash — boshqa.\n\nSiz bu farqqa qo‘shilasizmi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#farzandtarbiyasi #otaona #kechirim #osishnuqtasi",
@@ -812,7 +818,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-07T20:00+05:00",
+      "vaqt": "2026-11-07T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "86-video.mp4",
       "izoh": "Eng katta olam qayerda? 🌌\n\nUlamolar dunyoni ikkiga bo‘lishgan:\n🔹 Olami kabir — katta olam\n🔹 Olami sag‘ir — kichik olam\nZamonaviy tilda makro olam va mikro olam deymiz.\n\nEng qizig‘i shundaki, bizni o‘rab turgan milliardlab galaktikalar — bu kichik olam hisoblanadi.\n\nUnda katta olam qayerda?\n✨ Bu — sizning ichki dunyongiz. Qalbingiz, ko‘nglingizdan kechayotgan kechinmalar, ruhiyatingiz.\n\nBarcha galaktikalaru yulduzlarni yig‘ib kelganda ham, qiymat jihatidan sizning qalbingizdan ulug' bo‘lmaydi. 🤍\n\nQalbingizni asrang.\n\n👇 Ichki dunyongizga oxirgi marta qachon e’tibor berdingiz?\n\n#qalb #ruhiyat #ichkidunyo #ibrat #imon #hayot #koinot #motivatsiya #uzbekistan #fikr",
@@ -822,7 +828,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-08T08:00+05:00",
+      "vaqt": "2026-11-07T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "44-video.mp4",
       "izoh": "Ulug‘ olimlarning qadriga eng yetmaydigan odamlar kimlar?\n\nUstoz: eng yaqinlari. Uydagilar uning insoniy kamchiliklarini, toyilishlarini ko‘radi — va shu kamchiliklar parda bo‘lib, uning ulug‘ligini to‘sib qo‘yadi. «Boshqalar bilmaydi, uyda u unaqa emas» deyiladi. Yo‘q — u ichi ham ulug‘ odam, kamchiligi bilan birga.\n\nBola oldida baqirib yuborish — ojizlik. Lekin bu uning ma’naviy kamolotini bekor qilmaydi.\n\nYaqiningizning qadrini uzoqdagilar ko‘proq bilganini sezganmisiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#ustoz #oila #qadr #osishnuqtasi",
@@ -834,7 +840,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-08T14:00+05:00",
+      "vaqt": "2026-11-08T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "70-video.mp4",
       "izoh": "Darsdan tashqarida muloyim. Darsda — sher. Bu xarakter emas.\n\nMohir ustoz: sabab — tajribasizlik. Ustoz o‘z prinsiplarini, chegaralarini bilmaydi, pedagogik bilimi yetarli emas — va sinfdagi nazoratni yo‘qotadi. Nazoratni qaytarib olishning ikki yo‘li bor: qo‘rquv yoki hurmat.\n\nHurmat qozonishga ko‘zi yetmagan ustoz birdan-bir yo‘l — sher bo‘lish deb o‘ylaydi. Baqiriq — kuch emas, nazorat yo‘qolganining belgisi.\n\nSinfda «sher»ga aylangan paytlaringiz bo‘lganmi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#ustoz #sinfboshqaruvi #pedagogika #osishnuqtasi",
@@ -847,7 +853,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-08T20:00+05:00",
+      "vaqt": "2026-11-08T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "45-video.mp4",
       "izoh": "«Bolamni ikki yilda tanimay qoldim.» Bu ota-onalarda bitta umumiy sana bor.\n\nMaktab rahbari: ilk smartfon hozir 5–6-sinfda olinyapti. Ana shu yerdan bolada o‘zgarish boshlanadi. Ikki-uch yilda «u biz bilan gaplashmayapti».\n\nIldiz: ota-ona va bolaning dunyosi bitta emas. Ko‘radigan narsasi, gaplashadigan mavzusi, o‘qiydigan kitobi — tutashadigan nuqta yo‘q. Natijada ota-ona bola uchun avtoritet emas. Shunchaki birga yashaydigan odam.\n\nBolangiz bilan umumiy mavzuingiz bormi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#smartfon #farzandtarbiyasi #osmir #osishnuqtasi",
@@ -859,7 +865,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-09T08:00+05:00",
+      "vaqt": "2026-11-08T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "71-video.mp4",
       "izoh": "Mehribon bo‘lsangiz — bo‘yningizga chiqadi. Qattiq bo‘lsangiz — nafratlanadi. Chegara qayerda?\n\nMohir ustozning formulasi: qoidalarda qattiqqo‘l, muomalada yumshoq. Misol: «dars paytida telefon mumkin emas» — prinsip. Bolaga chiroyli gapirasiz, chiroyli dars o‘tasiz. Lekin telefon chiqsa — sinov yo‘q: qoida bo‘yicha olib qo‘yasiz.\n\nPrinsiplarda — sher. Munosabatda, bolaning ruhiyatini hurmat qilishda — hilm. Pedagogikada buni «mehribon talabchanlik» deyishadi.\n\nSiz qaysi tomonga ko‘proq og‘asiz: qattiqlikmi, yumshoqlikmi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#pedagogika #sinfboshqaruvi #tarbiya #osishnuqtasi",
@@ -872,7 +878,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-09T14:00+05:00",
+      "vaqt": "2026-11-09T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "46-video.mp4",
       "izoh": "Bolangizga «buni qilma, uni ko‘rma» deysiz. U baribir qiladi. Nega?\n\nUstoz buni ovqat bilan tushuntirdi: «Yema, ichma» deysiz. Bola: «Tanam bir narsa yegisi kelyapti — nima yeyman?» Unga man qilgan narsangizdan totliroq, to‘yimliroq narsa berishingiz kerak. Toza suv, foydali shirinlik, yaxshi ovqat — nafs qonsin. Keyin man qilsangiz, qiladi.\n\nLekin siz ovqat ham bermagansiz, suv ham. Faqat «ichma, yema». Qiladimi? Umuman mumkin emas.\n\nBolangizga taqiq o‘rniga nima beryapsiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#farzandtarbiyasi #otaona #tarbiya #osishnuqtasi",
@@ -884,7 +890,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-09T20:00+05:00",
+      "vaqt": "2026-11-09T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "87-video.mp4",
       "izoh": "Yo asli kabi ko‘rin, yo ko‘ringaning kabi bo‘l 🎭\n— Hazrati Rumiy\n\nJamoat joyida biz juda ehtiyotkor, shijoatli, taqvodor, g‘ayratli, ilmga intiluvchi inson bo‘lib ko‘rinishimiz mumkin.\n\nLekin bizning haqiqatimiz yolg‘iz qolganda, hech kim ko‘rmayotganda ochiladi.\n\n🏠 Uyda yolg‘iz qolganda ham xuddi shunaqamisiz?\n\nAgar orada katta farq bo‘lsa — mana shu bizning haqiqatimiz yoki yolg‘onimiz.\n\nO‘tmishdagi buyuklar nima uchun buyuk bo‘lgan?\nChunki ular odamlar o‘ylagandan necha barobar kuchliroq bo‘lgan. ✨\n\n👇 Sizningcha, yolg‘iz qolgandagi odam — haqiqiy odammi? Izohda yozing.\n\n#rumiy #ibrat #haqiqat #samimiyat #hayot #nafs #ruhiyat #motivatsiya #uzbekistan #hikmat",
@@ -894,7 +900,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-10T08:00+05:00",
+      "vaqt": "2026-11-09T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "47-video.mp4",
       "izoh": "Ko‘p ota-ona bolasiga asalga botirilgan so‘rg‘ich beradi. Bilmasdan.\n\nUstoz: chaqaloq yig‘laydi — emizish kerak. O‘rniga so‘rg‘ich. Ta’mi yo‘q — asalga, qandga tegizib beradi. Qonmaydi baribir. Yana yig‘laydi.\n\nBolalarga e’tiborimizning aksari — shu. Haqiqiy ozuqa o‘rniga to‘sqa. Keyin bola o‘sha ozuqani telefondan, ko‘chadan, jinoyatdan qidiradi.\n\nBolangizning ruhi bugun nima «yedi»?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#farzandtarbiyasi #etibor #otaona #osishnuqtasi",
@@ -906,7 +912,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-10T14:00+05:00",
+      "vaqt": "2026-11-10T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "72-video.mp4",
       "izoh": "Ustoz vazifangizni qaytardi: «qayta ishlaysan». Hurmatingiz oshdimi yoki tushdimi?\n\nBoshlovchining javobi: oshdi — «ishimni qaytaryapti, o‘zimni emas». Mohir ustoz: mehribon qattiqqo‘l ustoz telefonni olib qo‘yadi, lekin sababini aytadi — «sen zo‘r o‘quvchi bo‘lishing kerak, men seni o‘ylaganim uchun olyapman».\n\nBizdagi xato: «ota-onangni chaqiraman, ol telefonni bu yoqqa» — va haqorat. Bu shaxsiyatga o‘tish. Samimiyat yo‘qoladi. Tarbiya qilyapman deb o‘ylaymiz — xato qilamiz.\n\nIshni qaytaradigan, lekin hurmat qiladigan ustozingiz bo‘lganmi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#ustoz #hurmat #tarbiya #osishnuqtasi",
@@ -919,7 +925,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-10T20:00+05:00",
+      "vaqt": "2026-11-10T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "48-video.mp4",
       "izoh": "Ustozning otasi urishishni onasiga topshirardi. Sababi otalarni o‘ylantiradi.\n\nDadasi bolalari bilan ham, qizlari bilan ham juda hurmat bilan gaplashardi. Qattiqroq chora kerak bo‘lsa — onasi orqali. «Dadang shunday dedilar.» O‘zi ochiq aytmasdi.\n\nSabab: maqomini saqlagan. Pardani saqlagan. Otaning so‘zi kam, lekin og‘ir bo‘lishi kerak.\n\nSizning uyingizda «qattiq gap» kimdan chiqadi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#ota #oila #farzandtarbiyasi #osishnuqtasi",
@@ -931,7 +937,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-11T08:00+05:00",
+      "vaqt": "2026-11-10T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "73-video.mp4",
       "izoh": "O‘quvchi IT ga oshiq. Mening darsimni yomon ko‘radi. Nima qilish kerak?\n\nMohir ustoz: «unga yo‘q, bunga yo‘q» emas — fanni ishlatish kerak. Bola bilan kelishing: «IT ga borasan, lekin IT ga borishing uchun arab tilidan darslaringni qilib qo‘yasan». Hamkorlik — majburlashdan kuchli.\n\nChunki hozirgi yoshlarga ota-onasi «qilasan» desa, qilgisi kelmaydi. Ijodkor inson shunaqa: qilgisi kelib turgan ishni ham «qil» desangiz, qilmaydi.\n\nBolangizning qiziqishini darsga bog‘lay olganmisiz?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#farzandtarbiyasi #motivatsiya #talim #osishnuqtasi",
@@ -944,7 +950,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-11T14:00+05:00",
+      "vaqt": "2026-11-11T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "25-video.mp4",
       "izoh": "Ramazon har yili bir narsani isbotlaydi: biz qila olarkanmiz.\n\nBir kosa ovqatga qornimiz to‘yarkan. Qancha kech yotmaylik, 4:30 da tura olarkanmiz. Qancha band bo‘lmaylik, iftorga uyga yetib kelarkanmiz. Jamoatga, bir soat ibodatga vaqt topilarkan.\n\nDemak, qolgan 11 oyda «vaqt yo‘q» emas. «Xohish yo‘q». Ramazon — bizga o‘zimizning kimligimizni ko‘rsatib qo‘yadigan davr.\n\nRamazondan keyin qaysi odatingiz saqlanib qoldi?\n\nHasanxo‘ja ustoz bilan suhbatdan · @hasankhoja\n#ramazon #odat #ibodat #osishnuqtasi",
@@ -954,7 +960,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-11T20:00+05:00",
+      "vaqt": "2026-11-11T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "49-video.mp4",
       "izoh": "Masjid ichida hojat qilgan odam. Sahobalar to‘xtatmoqchi bo‘ldi. Payg‘ambarimiz boshqa buyruq berdi.\n\n«To‘xtanglar, bo‘shanib olsin.» Keyin chaqirib, muloyim tushuntirdilar: masjid bunday joy emas, tashqarida joyi bor. Sahobalarga: «Qo‘pollik qilmanglar. Bir chelak suv bilan poklab qo‘yinglar.»\n\nKatta odamning qalbini shunday ehtiyot qilganlar. Bola-chi? Biz esa «tegma, yugurma, o‘tirma» bilan katta qilamiz.\n\nQo‘pollik qaytadi. Muloyimlik ham.\n\nBolangizga oxirgi marta qachon muloyim tushuntirgansiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#tarbiya #muloyimlik #otaona #osishnuqtasi",
@@ -966,7 +972,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-12T08:00+05:00",
+      "vaqt": "2026-11-11T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "88-video.mp4",
       "izoh": "Har bir qarorni ikkiga bo‘ling: qisqa muddat va uzoq muddat ⚖️\n\nDunyoda bir kuch bor — gravitatsiya. U doim pastga tortadi. Ertalab ham shunday: yotoqdan tura olmaysiz 😴\n\nNafsingiz xohlaganini berdingiz — u vaqtincha lazzatlandi.\n\nMen qaror qabul qilishda doim o‘zimga savol beraman:\n⏱ Bu qaror menga qisqa muddatda foyda keltiradimi?\n📈 Yoki uzoq muddatda?\n\nNafs xohlaganini berish — qisqa muddatda maza.\nLekin uzoq muddatda — hasrat.\n\nMasalan, ertalab tura olmay uxlab qoldingiz. Nafs bir necha daqiqa, bir necha soat maza qildi.\nLekin uyg‘onganingizda o‘zingizga aytadigan birinchi gapingiz:\n\"Kunimni boshlashdagi eng birinchi xatoni qildim — vaqtida turmadim.\"\n\n👇 Siz bugun qaysi qarorni uzoq muddatni o‘ylab qabul qildingiz?\n\n#nafs #qaror #intizom #motivatsiya #erta_turish #hayot #ozgarish #ibrat #uzbekistan #maqsad",
@@ -976,7 +982,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-12T14:00+05:00",
+      "vaqt": "2026-11-12T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "50-video.mp4",
       "izoh": "Ustoz bolaligida dadasidan «jannat qanaqa?» deb so‘ragan. Javobi hali ham esida.\n\nBesh yoshli bola kuniga 400–500 ta savol beradi. Qo‘shnilar aytib berarkan: «Dadangizning qulog‘ini yeb tashlardinglar.» Dadasi erinmay javob berardi. Jannat qanaqa? Daraxti qanaqa? Savol ko‘payib ketdi. Dadasi: «Endi borib kelsak aytamiz-da.»\n\nBola tug‘ilishidan qiziquvchan. Siz yaxshi narsa ko‘rsating — qolganini o‘zi davom ettiradi.\n\nBolangizning oxirgi savoli nima edi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#bolalar #ota #farzandtarbiyasi #osishnuqtasi",
@@ -988,7 +994,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-12T20:00+05:00",
+      "vaqt": "2026-11-12T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "74-video.mp4",
       "izoh": "Bolani o‘quv markazga majburlab olib kelish kerakmi?\n\nMohir ustozning javobi ko‘pchilikka yoqmaydi: bola hech narsaga qiziqmasa, uyda telefondan boshini ko‘tarmasa — urushib bo‘lsa ham olib kelish kerak. Matematika bo‘ladimi, boshqa fan bo‘ladimi — o‘qigani yaxshi.\n\n«Ikki yil umrini sarflaydi» deysizmi? To‘g‘ri. Lekin shu ikki yilni telefonda o‘tkazsa, undan yomon yo‘lga kirib qolishi mumkin. Majburlash — qiziqish bo‘lmaganda emas, hech narsa bo‘lmaganda.\n\nSiz qaysi tomondasiz: majburlashmi, kutishmi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#farzandtarbiyasi #otaona #oquvmarkaz #osishnuqtasi",
@@ -1001,7 +1007,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-13T08:00+05:00",
+      "vaqt": "2026-11-12T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "51-video.mp4",
       "izoh": "Bola 25 yoshda ota-onasini «ko‘rib qoladi». Shundan keyin nima yo‘qoladi?\n\nUstoz: katta bo‘lganda qaraydi — «dadam yana ham rahm qilgan ekan», «onam dadamni o‘chirib yuborgan ekan». Sizning xatolaringizni anglaydi. Anglaganda so‘zingizning vazni ketaveradi.\n\nSo‘zingizning vaznini siz belgilaysiz. Bola anglab yetdi — ota-ona esa anglab yetmadi. Anglaganda aytardi-ku.\n\nOta-onangizni qachon «ko‘rib qolgansiz»?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#otaona #oila #munosabat #osishnuqtasi",
@@ -1013,7 +1019,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-13T14:00+05:00",
+      "vaqt": "2026-11-13T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "75-video.mp4",
       "izoh": "Ota-onalar bir avloddan ikkinchisiga o‘tib kelayotgan bitta xato qiladi. Misol — rus tili.\n\nMohir ustoz: 20 yil oldin rus tilini bilmagani uchun ish topa olmagan odamlar bor. Endi o‘sha fikr bilan nevarasini rus tiliga beryapti — «ertaga ish topa olmaydi». Toshkentda rus tili kerakmi? Kerak. Lekin keyingi 10 yilda-chi? Tadqiqot qiling.\n\nXato shu: o‘z zamonasidagi aktual bilimni keyingi zamonda ham aktual deb o‘ylash. O‘z zamoningizning yarasini bolangizga davo qilmang.\n\nBolangizga qaysi tilni o‘rgatyapsiz — va nega?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#rustili #farzandtarbiyasi #kelajak #osishnuqtasi",
@@ -1026,7 +1032,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-13T20:00+05:00",
+      "vaqt": "2026-11-13T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "89-video.mp4",
       "izoh": "Eng yaxshi makiyaj — solih amallar ✨\n\nHazrati Ali roziyallohu anhuning shunday gaplari bor:\n\"Chiroyli odamlar har doim yaxshi bo‘lmasligi mumkin. Lekin yaxshi odamlar har doim chiroylidir.\"\n\nQilayotgan ishlarimiz yuzimizga o‘rnashib qolarkan.\n\nKimdir tashqi ko‘rinishdan simmetrik, \"oltin kesma\" bo‘yicha chiroyli tuzilgan bo‘lishi mumkin. Lekin yuziga, ko‘ziga, tabassumiga qarasangiz — negadir sovuqlik sezasiz.\n\nEng yaxshi makiyaj qimmatbaho kosmetikada emas.\n🤲 Yaxshi ishlarni qilsangiz — yuzingizda nur bo‘lib aks etarkan.\n\nNurli inson bo‘lishni istayman.\nMendan dastxat so‘rashsa, doim bitta narsa yozaman:\n\"Alloh ilmingizni va nuringizni ziyoda qilsin.\" 🤍\n\n👇 Siz ham shu duoga \"Omin\" deb yozing.\n\n#nur #solihamallar #hazratiali #ibrat #chiroy #imon #hayot #ruhiyat #uzbekistan #hikmat",
@@ -1036,7 +1042,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-14T08:00+05:00",
+      "vaqt": "2026-11-13T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "52-video.mp4",
       "izoh": "Bo‘yi sizga yetgan o‘g‘lingizni endi tarbiyalab bo‘ladimi? Ustoz «ha» dedi — bitta shart bilan.\n\nXatoni anglamaguncha davo to‘g‘ri bo‘lmaydi. 15 yoshli o‘g‘lingizga oldin nima o‘rgatgansiz — shuni o‘ylang. Har bir harakatidan ayb topishdan oldin: aybning negizi qayerda? Men tomonimda.\n\nGap qaytaradi? Kimga qaytargan? Ota-ona bir-biriga qanday munosabatda bo‘lgan? Ota o‘z ota-onasiga, akasiga qanday munosabatda bo‘lgan?\n\nO‘smir bilan ishni qaysi savoldan boshlash kerak deb o‘ylaysiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#osmir #farzandtarbiyasi #otaona #osishnuqtasi",
@@ -1048,7 +1054,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-14T14:00+05:00",
+      "vaqt": "2026-11-14T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "53-video.mp4",
       "izoh": "Bolaga eng katta zarba — urishganingiz emas. Undan keyin qilmagan bitta ishingiz.\n\nMana olish pasaytiradi, pastga tushish ko‘taradi. «O‘shanda yoshlik qilgan ekanmiz, noto‘g‘ri bo‘lgan ekan» — bir og‘iz gap darajangizni qaytaradi. Ustoz: o‘zingizni qancha katta olsangiz, shuncha pasayasiz. Kam deb bilsangiz — yuksalasiz.\n\nMaktab rahbari: ota-ona ideal bo‘lishga urinadi, xato qiladi, keyin kechirim so‘ramaydi. Zarba — xato emas. Zarba — tuzatilmagan xato.\n\nOta-onangiz sizdan kechirim so‘raganmi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#otaona #farzandtarbiyasi #oila #osishnuqtasi",
@@ -1060,7 +1066,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-14T20:00+05:00",
+      "vaqt": "2026-11-14T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "77-video.mp4",
       "izoh": "1000 ta zo‘r prezentatsiya, sertifikatlar qator. Baribir ishlamaydi — ustozda bitta narsa bo‘lmasa.\n\nMohir ustoz: ustozning roli endi hard skills emas, soft skills. Ustoz bir vaqtning o‘zida psixolog bo‘lishga majbur. Ota-ona bilan to‘g‘ridan-to‘g‘ri hamkorlik qilib, bolaning hayot tarziga aralashishi kerak.\n\nBolaning turmush tarziga ta’sir qilolmagan ustozga o‘qitish tobora qiyinlashib boraveradi. Dars o‘tish kamlik qiladi.\n\nUstoz bolaning hayotiga aralashishi kerakmi? Chegara qayerda?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#ustoz #pedagogika #softskills #osishnuqtasi",
@@ -1073,7 +1079,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-15T08:00+05:00",
+      "vaqt": "2026-11-14T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "54-video.mp4",
       "izoh": "Ota-onangizning xatosini yuziga aytish kerakmi? Javob 10 yildan keyin sizga ham tegishli bo‘ladi.\n\nUstoz: ota-onaning xatosi, kamchiligi aytilmaydi. Chunki ular xatoni ham yaxshilik ilinjida qilgan — niyati yaxshi, maqsadi yaxshi.\n\n«Men hozir qarorlarimdan qoniqib turibman. 10 yildan keyin xato topishim mumkin. Farzandim ham xuddi shunday — bolasiga yaxshilik qilaman deb xato qiladi, keyin to‘g‘rilaydi.»\n\nOtadan o‘tsin xato — demagin xato.\n\nOta-onangiz qaysi xatosini yaxshilik deb qilgan?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#otaona #oila #hurmat #osishnuqtasi",
@@ -1085,7 +1091,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-15T14:00+05:00",
+      "vaqt": "2026-11-15T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "90-video.mp4",
       "izoh": "Nafs bilan sulh tuzish 🤝\n\nBir kuni Zunnun Misriy hazratlarining nafsi qatiqli osh yegisi keldi. U zot yemadilar.\nShu tarzda yetti yil qatiqli osh yemadilar.\n\nYetti yildan keyin nafs bor kuchini to‘plab isyon qildi.\nShunda u zot o‘zlariga shart qo‘ydilar:\n\"Mayli. Ikki rak’at namoz o‘qiyman va shu ikki rak’atda Qur’oni karimni to‘liq xatm qilaman.\"\n\nShartni bajargach, ko‘ngillari yana ham sokin bo‘ldi va dedilar: \"Yo‘q, baribir yemayman.\"\n\nBiroz vaqt o‘tib eshik taqilladi. Ochsalar — qo‘lida qatiqli osh bilan bir odam turibdi:\n\"Payg‘ambarimiz alayhissalomni tushimda ko‘rdim. Ular: 'Zunnun Misriyga qatiqli osh olib borgin va unga ayt: nafsi bilan bir muddat sulh tuzsin', dedilar.\"\n\n💡 Nafsimiz bilan sulh tuzishda biz unga shart qo‘yishimiz kerak ekan.\n\n👇 Siz nafsingizga qanday shart qo‘yasiz? Izohda yozing.\n\n#nafs #ibrat #avliyolar #zunnunmisriy #hikoya #imon #ruhiyat #intizom #uzbekistan #hikmat",
@@ -1095,7 +1101,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-15T20:00+05:00",
+      "vaqt": "2026-11-15T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "78-video.mp4",
       "izoh": "Arab tilini sun’iy intellektdan o‘rgansa bo‘ladi. Videodan ham. Unda bola markazga nega keladi?\n\nMohir ustoz: ma’lumotda muammo yo‘q. Bola markazga to‘rt narsa uchun keladi: muhit; tajriba — noto‘g‘ri yo‘ldan ketmaslik; onlaynda oxirigacha boradiganlar 10 foiz, xolos; va kelajagi bilan ishlay oladigan, psixologiyasini tushunadigan ustoz.\n\nShuning uchun sun’iy intellekt ustozning o‘rnini bosmaydi — qadrini oshiradi. AI ma’lumot beradi, ustoz — sabab.\n\nSiz onlayn kursni oxirigacha o‘qiganmisiz?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#suniyintellekt #ustoz #oquvmarkaz #osishnuqtasi",
@@ -1108,7 +1114,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-16T08:00+05:00",
+      "vaqt": "2026-11-15T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "55-video.mp4",
       "izoh": "Yoshlar nega zararli odatlarga boradi? Ustozning javobi — bitta so‘z.\n\nBo‘shliq. Ruhan to‘ygan odam ichkilikka ehtiyoj sezmaydi, buzuqlikka ehtiyoj sezmaydi — chunki kerakli ozuqani olib bo‘lgan. Yigitlarning qilig‘i — ruhiy bo‘shliqni to‘ldirish, xolos. Berilmagan.\n\nBo‘y yoshdagi bolaga «qilma, etma» emas — gaplashish kerak. Tushuntirish kerak. Ruhga ozuqa kerak.\n\nBo‘shliqni nima to‘ldiradi deb o‘ylaysiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#yoshlar #tarbiya #ruhiyat #osishnuqtasi",
@@ -1120,7 +1126,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-16T14:00+05:00",
+      "vaqt": "2026-11-16T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "26-video.mp4",
       "izoh": "Bolangiz sizga ochilishini xohlaysizmi? Unga tanlov bering.\n\n«Bugun kinoga boramiz» emas. «Kino, o‘yin maydonchasi, tog‘ — qaysi biri?» Tog‘ desa, nega bugun bo‘lmasligini tushuntiring: yomg‘ir, tabiat ko‘rinmaydi, qaytib kelasiz. Qaysi kino, qaysi zal — yana u tanlasin.\n\nBola qarori hurmat qilinganini sezganda sizga ochiladi, aytadi, so‘raydi. «Meni eshitishdi» degan ko‘nikma kattalikda juda katta foyda beradi.\n\nUyingizda qarorlarni faqat kattalar beradimi?\n\nHasanxo‘ja ustoz bilan suhbatdan · @hasankhoja\n#farzandtarbiyasi #otaona #bolalar #osishnuqtasi",
@@ -1130,7 +1136,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-16T20:00+05:00",
+      "vaqt": "2026-11-16T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "56-video.mp4",
       "izoh": "Hozir bolangizga taqiqlagan narsalarni o‘zingiz bolaligingizda qilgansiz.\n\nMaktab rahbari: bizning davrimizda jismoniy nazorat kam edi. Mahalla tepasidagi hovuzda cho‘milganmiz — simlar chiqib yotgan, o‘rdaklar suzgan. Temir terib sotganmiz. Birinchi sinfda uchta katta yo‘ldan o‘zimiz o‘tganmiz — «o‘ngga qara, chapga qara».\n\nHozir do‘konga ham «sen borma, xavfli». Taksi, GPS, soat. Nazorat kuchli. Lekin boshqa tomondan — ochiq.\n\nBolaligingizda qaysi «xavfli» ishni qilgansiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#bolalik #farzandtarbiyasi #otaona #osishnuqtasi",
@@ -1142,7 +1148,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-17T08:00+05:00",
+      "vaqt": "2026-11-16T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "79-video.mp4",
       "izoh": "Ishonchli mutaxassisni qanday topasiz? Malika bozori va bitta bloger.\n\nMalika bozorida yuzlab do‘kon. Yaxshi telefon olish uchun nima qilasiz? Taniqli bittasiga borasiz, tanish qildirasiz. Mohir ustoz: har sohada shunday — o‘z qadriyatingizdagi ishonchli bitta odamni toping, qolganlarini u ko‘rsatadi.\n\nO‘zi ham shunday qilgan: bir yil bloger qidirgan, oxiri bitta blogerni pul berib chaqirib, undan so‘ragan — «bizga mos blogerlar kim?» Hammasini o‘zingiz qidirmang.\n\nSiz mutaxassisni qanday tanlaysiz — reklama orqalimi, tanish orqalimi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#biznes #jamoa #maslahat #osishnuqtasi",
@@ -1155,7 +1161,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-17T14:00+05:00",
+      "vaqt": "2026-11-17T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "57-video.mp4",
       "izoh": "Bolangiz qo‘lidan telefonni tortib olishdan oldin o‘zingizga bitta savol bering.\n\nMaktab rahbari: 20 yoshli odam telefonda o‘tirsa, qo‘lidan shartta tortib olmaysiz-ku. Tushuntirasiz: «vaqting ketyapti, senga shu xalaqit beryapti». Bolaga ham shunday — bu pedagogikada «bolani jiddiy olish» deyiladi.\n\nBolani qanday olsangiz, u o‘ziga ham shunday qaraydi. Ustoz: bizda 20 yoshlining ham gapiga quloq solinmaydi. Bolani jiddiy olish kerak.\n\nBolangizning fikrini oxirgi marta qachon so‘ragansiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#farzandtarbiyasi #telefon #otaona #osishnuqtasi",
@@ -1167,7 +1173,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-17T20:00+05:00",
+      "vaqt": "2026-11-17T14:00+05:00",
       "release": "reels-2026-10",
       "fayl": "91-video.mp4",
       "izoh": "Tomchi toshni teshadi 💧\n\nTomchi tomaveradi, tomaveradi... va oxiri toshni teshadi.\nToshni teshgan narsa — tomchining kuchi emas, uning davomiyligi.\n\nTasavvur qiling: 1 million tomchi tomdi va oxirgisi toshni teshdi.\n\nEndi vaqtni orqaga qaytaring. O‘sha millioninchi tomchi tomayotganda toshga emas, qo‘lingizga tushsa — qo‘lingizni hech qachon teshib o‘tmaydi.\n\nChunki uning kuchi o‘zidan oldin tushgan 999 999 ta tomchida edi.\n\nShuning uchun biror ishni qilsak, uni bardavom, muntazam qilishni o‘rganishimiz kerak ekan. 🔁\n\nNatija bir kunda kelmaydi — u har kungi kichik qadamlardan yig‘iladi.\n\n👇 Siz qaysi ishni har kuni muntazam qilyapsiz? Izohda yozing.\n\n#muntazamlik #intizom #motivatsiya #maqsad #ozgarish #hayot #ibrat #sabr #uzbekistan #rivojlanish",
@@ -1177,7 +1183,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-18T08:00+05:00",
+      "vaqt": "2026-11-17T20:00+05:00",
       "release": "reels-2026-10",
       "fayl": "76-video.mp4",
       "izoh": "Ijtimoiy tarmoqning eng katta zarari — diqqat emas, kayfiyat emas. Uyqu.\n\nMohir ustoz Amerikadagi tadqiqotni keltirdi: o‘smirlarning katta qismi yetti soatdan kam uxlaydi — telefon va ijtimoiy tarmoqlar sababli. Bu to‘g‘ridan-to‘g‘ri bolaning aqliy faoliyatiga ta’sir qiladi va maktabda ko‘rinadi.\n\nBola darsda «qolmayapti»mi — avval telefonini emas, uyqusini tekshiring.\n\nBolangiz soat nechada yotadi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#uyqu #ijtimoiytarmoq #farzandtarbiyasi #osishnuqtasi",
@@ -1190,7 +1196,7 @@
       ]
     },
     {
-      "vaqt": "2026-11-18T14:00+05:00",
+      "vaqt": "2026-11-18T08:00+05:00",
       "release": "reels-2026-10",
       "fayl": "58-video.mp4",
       "izoh": "Aka-uka urushsa ajratmang. Ustoz shunday deydi.\n\nO‘nta o‘yinchoq, ukasiga bittasini ham bermaydi. Urishish o‘rniga o‘rgating: «Bersang, Alloh senga beradi.» Bersangiz — bola urushmaydi.\n\nLekin kurashishlarini butunlay taqiqlab bo‘lmaydi — kurashuvchanlik so‘nmasligi kerak. Bu tabiiy. Bola xato qilishi, tuyg‘usini ifoda qilishi kerak. Man qilmang — yo‘naltiring. Sekin-sekin.\n\n«Xo‘p deb qo‘yaver» — fikrlamaslikka o‘rgatish. Qo‘shilasizmi?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#akauka #farzandtarbiyasi #bolalar #osishnuqtasi",
@@ -1208,6 +1214,6 @@
     "kuniga": 3,
     "kun": "2026-10-31",
     "oldingi": 3,
-    "yangilandi": "2026-10-31T17:42+05:00"
+    "yangilandi": "2026-10-31T17:44+05:00"
   }
 }
