@@ -586,7 +586,12 @@
       "release": "cinematic-2026-10",
       "fayl": "cs-049.mp4",
       "izoh": "#TVアニメ @cinematic.soul52\n\n話題の世界の絶品料理がついに公開!! 🍽️🔥\n\n誰もが驚く美味しい料理の世界を一挙にお届け!\n\nさらに、予想を超える珍しい食材や、想像を絶する驚きの調理法に加え、思わず目を疑ってしまうような「驚きの瞬間」まで発生!!",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-01T17:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18076294469756764\", \"xato\": null}"
+      },
+      "media_id": "18076294469756764"
     },
     {
       "vaqt": "2026-12-15T09:00+05:00",
@@ -1090,7 +1095,7 @@
   "kunlik": {
     "kun": "2026-11-01",
     "kuniga": 8,
-    "bugun": 5,
-    "navbatda": 51
+    "bugun": 6,
+    "navbatda": 50
   }
 }
