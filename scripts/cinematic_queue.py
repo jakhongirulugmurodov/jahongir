@@ -6,6 +6,8 @@ import json, os, re, subprocess, sys
 from datetime import datetime, timezone, timedelta
 TZ = timezone(timedelta(hours=5)); Q = "content/cinematic-queue.json"
 if not os.environ.get("IG_TOKEN", "").strip() or not os.path.exists(Q): sys.exit(0)
+# 02-11 (Jahongir): content/cinematic-pauza fayli bor ekan — hech narsa chiqmaydi (o'chirilsa davom etadi)
+if os.path.exists("content/cinematic-pauza"): print("cinematic: pauza"); sys.exit(0)
 q = json.load(open(Q)); now = datetime.now(TZ)
 REJA, KUN, MAKS = q.get("reja_soni", 100), q.get("reja_kun", 14), 8
 SLOTS = [(8, 30), (10, 0), (11, 30), (13, 0), (15, 0), (17, 0), (19, 0), (21, 0)]
