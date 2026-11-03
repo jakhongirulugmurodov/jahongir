@@ -1177,7 +1177,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-02.mp4",
       "izoh": "Bitta bo‘kirish = 6 oylik mehnat 🔊\n2014-yilgi «Godzilla» filmida yirtqichning bo‘kirishi ustida yarim yil ishlangan va faqat 50-variant tasdiqlangan. Ovozni yoqib qayta tinglang.\n#godzilla #monsterverse #kinofakt #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-03T17:40+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18500089048099768\", \"xato\": null}"
+      },
+      "media_id": "18500089048099768"
     },
     {
       "vaqt": "2027-02-05T09:00+05:00",
@@ -1492,7 +1497,7 @@
   "kunlik": {
     "kun": "2026-11-03",
     "kuniga": 8,
-    "bugun": 1,
-    "navbatda": 45
+    "bugun": 2,
+    "navbatda": 44
   }
 }
