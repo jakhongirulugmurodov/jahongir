@@ -1,7 +1,7 @@
 name: Instagram statistikasi (O'sish Nuqtasi + jahongir.olmos)
 on:
   schedule:
-    - cron: "17 3 * * *"   # har kuni 08:17 (Toshkent)
+    - cron: "17 3-15/3 * * *"   # 03-11: kuniga 5 marta — 08:17, 11:17, 14:17, 17:17, 20:17 (Toshkent)
   workflow_dispatch:
 permissions:
   contents: write
@@ -21,5 +21,6 @@ jobs:
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
           git add content/reels-stats.json content/blog-stats.json
           git commit -m "reels statistikasi yangilandi" || exit 0
-          git pull --rebase -q && git push -q
+          # navbat soqchisi har daqiqa commit qiladi — to'qnashsa qayta urinish (03-11)
+          for i in $(seq 1 10); do git pull --rebase -q -X theirs origin main && git push -q && break || { git rebase --abort 2>/dev/null; sleep $((RANDOM % 8 + 3)); }; done
           gh workflow run deploy.yml --ref main
