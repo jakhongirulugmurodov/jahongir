@@ -1201,7 +1201,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-04.mp4",
       "izoh": "Times Square — 36 000 ta fotosuratdan ⚡\n«The Amazing Spider-Man 2» (2014) uchun jamoa Times Square’ni 36 000 dan ortiq fotosurat asosida raqamli qayta qurgan. Electro jangining VFX ishi bir yil davom etgan, Jamie Foxx esa har safar ~4,5 soat grimda o‘tirgan.\n#spiderman #electro #amazingspiderman #kino #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-03T20:41+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"17895504561435937\", \"xato\": null}"
+      },
+      "media_id": "17895504561435937"
     },
     {
       "vaqt": "2027-02-07T09:00+05:00",
@@ -1502,7 +1507,7 @@
   "kunlik": {
     "kun": "2026-11-03",
     "kuniga": 8,
-    "bugun": 3,
-    "navbatda": 43
+    "bugun": 4,
+    "navbatda": 42
   }
 }
