@@ -1213,7 +1213,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-05.mp4",
       "izoh": "5 soatlik material — lekin film 2 soat 🦍\n«Godzilla vs. Kong» (2021) rejissyori Adam Wingard neon Gonkong jangini ssenariydan oldin tasavvur qilgan. Uning 5 soatlik filmga yetadigan materiali bo‘lgan, lekin rejissyor versiyasini chiqarmagan. Premyera 123,1 mln $ — pandemiya davridagi eng katta jahon premyerasi.\nKong yoki Godzilla? 👇\n#godzillavskong #kong #godzilla #kino #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-03T22:12+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18039669650893574\", \"xato\": null}"
+      },
+      "media_id": "18039669650893574"
     },
     {
       "vaqt": "2027-02-08T09:00+05:00",
@@ -1507,7 +1512,7 @@
   "kunlik": {
     "kun": "2026-11-03",
     "kuniga": 8,
-    "bugun": 4,
-    "navbatda": 42
+    "bugun": 5,
+    "navbatda": 41
   }
 }
