@@ -1165,7 +1165,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-01.mp4",
       "izoh": "Uch bosh — uch xil fe’l 🐉\n«Godzilla: King of the Monsters» (2019) filmida King Ghidorahning har bir boshi o‘z xarakteriga ega: o‘rtadagisi hukmron, qolgan ikkitasi unga bo‘ysunadi. Rejissyor Maykl Dogertining ilk montaji deyarli 3 soat bo‘lgan — u buni «Godzilla: mini-serial» deb atagan.\nQaysi titan sizga yoqadi? Izohda yozing 👇\n#godzilla #kingghidorah #monsterverse #kino #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-03T16:09+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18641693158044802\", \"xato\": null}"
+      },
+      "media_id": "18641693158044802"
     },
     {
       "vaqt": "2027-02-04T09:00+05:00",
@@ -1485,9 +1490,9 @@
   ],
   "reja_boshi": "2026-10-26",
   "kunlik": {
-    "kun": "2026-11-02",
-    "kuniga": 7,
-    "bugun": 3,
+    "kun": "2026-11-03",
+    "kuniga": 8,
+    "bugun": 1,
     "navbatda": 45
   }
 }
