@@ -1261,7 +1261,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-10.mp4",
       "izoh": "40 yil — bitta ovoz 🎙\nPeter Cullen Optimus Primega 1984-yilgi multfilmdan beri ovoz beradi. Ovoz obrazini u akasi Larri — Vyetnam urushi qatnashchisi, dengiz piyodasidan olgan.\n#optimusprime #transformers #petercullen #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-04T13:04+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18115689317272305\", \"xato\": null}"
+      },
+      "media_id": "18115689317272305"
     },
     {
       "vaqt": "2027-02-12T09:00+05:00",
@@ -1527,7 +1532,7 @@
   "kunlik": {
     "kun": "2026-11-04",
     "kuniga": 8,
-    "bugun": 3,
-    "navbatda": 38
+    "bugun": 4,
+    "navbatda": 37
   }
 }
