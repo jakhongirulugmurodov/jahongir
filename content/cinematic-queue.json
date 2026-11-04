@@ -1273,7 +1273,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-11.mp4",
       "izoh": "Eski Camaro → yangi Camaro 🐝\n2007-yilgi «Transformers»da Bumblebee 1976-yilgi Camaro bo‘lib chiqadi va keyin 2007-yilgi Camaro‘ga «yangilanadi». General Motors bilan kelishuv filmga ~3 mln $ tejab bergan. G‘oya Spilbergniki: «bola va uning mashinasi».\n#bumblebee #transformers #camaro #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-04T15:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18073349117771926\", \"xato\": null}"
+      },
+      "media_id": "18073349117771926"
     },
     {
       "vaqt": "2027-02-13T09:00+05:00",
@@ -1532,7 +1537,7 @@
   "kunlik": {
     "kun": "2026-11-04",
     "kuniga": 8,
-    "bugun": 4,
-    "navbatda": 37
+    "bugun": 5,
+    "navbatda": 36
   }
 }
