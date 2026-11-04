@@ -1285,7 +1285,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-12.mp4",
       "izoh": "Nega Godzilla pushti? 💗\n«Godzilla x Kong: The New Empire» (2024)da Tiamat makonidagi radiatsiya Godzillaning tikanlarini pushti-binafsha rangga bo‘yaydi. Bu — tarixdagi eng ko‘p yig‘gan Godzilla filmi (572,5 mln $).\n#godzilla #godzillaxkong #monsterverse #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-04T17:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18195896287392668\", \"xato\": null}"
+      },
+      "media_id": "18195896287392668"
     },
     {
       "vaqt": "2027-02-14T09:00+05:00",
@@ -1537,7 +1542,7 @@
   "kunlik": {
     "kun": "2026-11-04",
     "kuniga": 8,
-    "bugun": 5,
-    "navbatda": 36
+    "bugun": 6,
+    "navbatda": 35
   }
 }
