@@ -1225,7 +1225,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-06.mp4",
       "izoh": "Marvel uni olishni istamagan edi 🦾\n«Iron Man» (2008) uchun Marvel rahbarlari Robert Downey Jr.ga qarshi bo‘lgan. Natijada aynan shu film MCU’ni boshlab berdi. Zirhni Stan Winston studiyasi haqiqiy metall va rezinadan yasagan, «I am Iron Man» esa improvizatsiya edi.\n#ironman #marvel #mcu #tonystark #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-04T08:31+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18028493861910064\", \"xato\": null}"
+      },
+      "media_id": "18028493861910064"
     },
     {
       "vaqt": "2027-02-09T09:00+05:00",
@@ -1512,7 +1517,7 @@
   "kunlik": {
     "kun": "2026-11-04",
     "kuniga": 8,
-    "bugun": 0,
-    "navbatda": 41
+    "bugun": 1,
+    "navbatda": 40
   }
 }
