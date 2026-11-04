@@ -1297,7 +1297,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-13.mp4",
       "izoh": "Super Sonic ✨\n«Sonic the Hedgehog 2» (2022)da oltin rangdagi kuch Xaos zumradlaridan keladi. Film videoo‘yin filmlari orasida premyera rekordini o‘rnatgan. Tails’ning ovozi — o‘yinlardagi aktrisa Kollin O‘Shonessining o‘zi.\n#sonic #supersonic #sonic2 #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-04T19:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18132591976690894\", \"xato\": null}"
+      },
+      "media_id": "18132591976690894"
     },
     {
       "vaqt": "2027-02-15T09:00+05:00",
@@ -1542,7 +1547,7 @@
   "kunlik": {
     "kun": "2026-11-04",
     "kuniga": 8,
-    "bugun": 6,
-    "navbatda": 35
+    "bugun": 7,
+    "navbatda": 34
   }
 }
