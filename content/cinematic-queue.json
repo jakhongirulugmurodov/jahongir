@@ -1237,7 +1237,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-07.mp4",
       "izoh": "108 metr 🦖\n2014-yilgi «Godzilla» o‘sha paytda ekrandagi eng baland Godzilla bo‘lgan. Erkak MUTO qanotlari stels samolyotlardan ilhomlangan, urg‘ochisi esa kattaroq va 8 oyoqda yuradi.\n#godzilla #godzilla2014 #monsterverse #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-04T10:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18147029617584097\", \"xato\": null}"
+      },
+      "media_id": "18147029617584097"
     },
     {
       "vaqt": "2027-02-10T09:00+05:00",
@@ -1517,7 +1522,7 @@
   "kunlik": {
     "kun": "2026-11-04",
     "kuniga": 8,
-    "bugun": 1,
-    "navbatda": 40
+    "bugun": 2,
+    "navbatda": 39
   }
 }
