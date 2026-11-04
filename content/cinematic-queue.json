@@ -1309,7 +1309,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-15.mp4",
       "izoh": "Optimus qaysi mashina? 🚛\n2007-yilgi filmda Optimus Prime — 1994-yilgi Peterbilt 379. Asl G1 multfilmidagi Optimus esa 1980-yilgi Freightliner FL86 asosida chizilgan.\n#optimusprime #transformers #peterbilt #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-04T21:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"17946327366087368\", \"xato\": null}"
+      },
+      "media_id": "17946327366087368"
     },
     {
       "vaqt": "2027-02-16T09:00+05:00",
@@ -1547,7 +1552,7 @@
   "kunlik": {
     "kun": "2026-11-04",
     "kuniga": 8,
-    "bugun": 7,
-    "navbatda": 34
+    "bugun": 8,
+    "navbatda": 33
   }
 }
