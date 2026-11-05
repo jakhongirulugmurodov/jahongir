@@ -1369,7 +1369,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-22.mp4",
       "izoh": "Tom Hollandning ilk chiqishi 🕸\nTom Hollandning Spider-Man’i shaxsiy filmidan oldin «Captain America: Civil War» (2016)da paydo bo‘lgan.\n#spiderman #tomholland #marvel #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-05T15:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18112640021227677\", \"xato\": null}"
+      },
+      "media_id": "18112640021227677"
     },
     {
       "vaqt": "2027-02-21T09:00+05:00",
@@ -1572,7 +1577,7 @@
   "kunlik": {
     "kun": "2026-11-05",
     "kuniga": 8,
-    "bugun": 4,
-    "navbatda": 29
+    "bugun": 5,
+    "navbatda": 28
   }
 }
