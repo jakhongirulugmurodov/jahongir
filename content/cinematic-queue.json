@@ -1321,7 +1321,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-16.mp4",
       "izoh": "Haqiqiy jangovar kema ⚓\n«Battleship» (2012) haqiqiy USS Missouri bortida suratga olingan. Bosh rollardan birini hech qachon aktyorlik qilmagan, ikki oyog‘idan ayrilgan polkovnik Gregori Gadson ijro etgan. Bu Rianna’ning ilk kino roli ham edi.\n#battleship #ussmissouri #kino #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-05T08:30+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18217934098348000\", \"xato\": null}"
+      },
+      "media_id": "18217934098348000"
     },
     {
       "vaqt": "2027-02-17T09:00+05:00",
@@ -1552,7 +1557,7 @@
   "kunlik": {
     "kun": "2026-11-05",
     "kuniga": 8,
-    "bugun": 0,
-    "navbatda": 33
+    "bugun": 1,
+    "navbatda": 32
   }
 }
