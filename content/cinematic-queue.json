@@ -1357,7 +1357,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-21.mp4",
       "izoh": "Uch avlod — bitta kadr 🕷\n«Spider-Man: No Way Home» (2021)da Tobi Maguayr, Endryu Garfild va Tom Holland birinchi marta birga chiqqan. Sizning Spider-Man’ingiz kim? 👇\n#spiderman #nowayhome #tomholland #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-05T13:02+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18111216875219964\", \"xato\": null}"
+      },
+      "media_id": "18111216875219964"
     },
     {
       "vaqt": "2027-02-20T09:00+05:00",
@@ -1567,7 +1572,7 @@
   "kunlik": {
     "kun": "2026-11-05",
     "kuniga": 8,
-    "bugun": 3,
-    "navbatda": 30
+    "bugun": 4,
+    "navbatda": 29
   }
 }
