@@ -1381,7 +1381,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-23.mp4",
       "izoh": "240 ta personaj, 6 ta olam 🎨\n«Spider-Man: Across the Spider-Verse» (2023)da 6 ta olamdan 240 ta personaj bor va har biri o‘z animatsiya uslubida chizilgan.\n#acrossthespiderverse #milesmorales #spiderman2099 #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-05T17:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"17953495548326348\", \"xato\": null}"
+      },
+      "media_id": "17953495548326348"
     },
     {
       "vaqt": "2027-02-22T09:00+05:00",
@@ -1577,7 +1582,7 @@
   "kunlik": {
     "kun": "2026-11-05",
     "kuniga": 8,
-    "bugun": 5,
-    "navbatda": 28
+    "bugun": 6,
+    "navbatda": 27
   }
 }
