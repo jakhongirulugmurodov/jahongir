@@ -1333,7 +1333,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-18.mp4",
       "izoh": "Sochlar suv ostida 🏴‍☠️\n«Pirates of the Caribbean: Dead Men Tell No Tales» (2017)da Salazarning suzib yurgan sochi — suv ostida kostyum va parikda suratga olingan kaskadyor asosidagi grafika. Xavyer Bardem har kuni 3 soat grimda o‘tirgan.\n#piratesofthecaribbean #jacksparrow #salazar #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-05T10:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18119715791089528\", \"xato\": null}"
+      },
+      "media_id": "18119715791089528"
     },
     {
       "vaqt": "2027-02-18T09:00+05:00",
@@ -1557,7 +1562,7 @@
   "kunlik": {
     "kun": "2026-11-05",
     "kuniga": 8,
-    "bugun": 1,
-    "navbatda": 32
+    "bugun": 2,
+    "navbatda": 31
   }
 }
