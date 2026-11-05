@@ -1405,7 +1405,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-25.mp4",
       "izoh": "Birinchi milliardli Spider-Man 💰\n«Spider-Man: Far From Home» (2019) 1 mlrd $ dan oshgan birinchi Spider-Man filmi bo‘ldi (1,132 mlrd $).\n#spiderman #farfromhome #marvel #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-05T21:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18146927551601462\", \"xato\": null}"
+      },
+      "media_id": "18146927551601462"
     },
     {
       "vaqt": "2027-02-24T09:00+05:00",
@@ -1587,7 +1592,7 @@
   "kunlik": {
     "kun": "2026-11-05",
     "kuniga": 8,
-    "bugun": 7,
-    "navbatda": 26
+    "bugun": 8,
+    "navbatda": 25
   }
 }
