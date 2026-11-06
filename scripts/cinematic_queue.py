@@ -25,11 +25,17 @@ due = sum(1 for h, m in sl if now.replace(hour=h, minute=m, second=0, microsecon
 oxirgi = max((T(x) for x in chiq), default=None)
 oraliq_ok = not oxirgi or now - oxirgi >= timedelta(minutes=90)
 kecha = now.hour < 8 or now.hour >= 23
+# 06-11 (Jahongir): hech qanday teg yo'q — izohdan @akkaunt va #heshteglar olib tashlanadi, user_tags/collab bo'sh
+def tegsiz(s):
+    s = re.sub(r'(?<!\S)@[\w.]+', '', s)
+    s = re.sub(r'(?<!\S)#(?!\d+(?:\W|$))\w+', '', s)
+    s = "\n".join(re.sub(r'[ \t]{2,}', ' ', l).strip() for l in s.split("\n"))
+    return re.sub(r'\n{3,}', '\n\n', s).strip()
 def joyla(x):
     os.makedirs("/tmp/cin", exist_ok=True)
     url = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'jakhongirulugmurodov/jahongir')}/releases/download/{x['release']}/{x['fayl']}"
-    open("/tmp/cin/cap.txt", "w").write(x.get("izoh", ""))
-    env = {**os.environ, "IG_USER_TAGS": ",".join(x.get("teglar", [])), "IG_COLLABS": ""}
+    open("/tmp/cin/cap.txt", "w").write(tegsiz(x.get("izoh", "")))
+    env = {**os.environ, "IG_USER_TAGS": "", "IG_COLLABS": ""}
     r = subprocess.run(["python3", "scripts/ig_reel.py", url, "/tmp/cin/cap.txt"], capture_output=True, text=True, env=env)
     print(r.stdout.strip(), r.stderr.strip()[-300:])
     x["holat"] = "chiqdi" if r.returncode == 0 else "xato"
