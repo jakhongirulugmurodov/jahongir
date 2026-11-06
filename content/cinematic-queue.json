@@ -1465,7 +1465,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-30.mp4",
       "izoh": "1962-yil 📖\nSpider-Man birinchi marta 1962-yilda «Amazing Fantasy #15» komiksida paydo bo‘lgan. Mualliflari — Stan Li va Stiv Ditko.\n#spiderman #stanlee #marvel #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-06T16:24+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18014348303766970\", \"xato\": null}"
+      },
+      "media_id": "18014348303766970"
     },
     {
       "vaqt": "2027-03-01T09:00+05:00",
@@ -1612,7 +1617,7 @@
   "kunlik": {
     "kun": "2026-11-06",
     "kuniga": 8,
-    "bugun": 4,
-    "navbatda": 21
+    "bugun": 5,
+    "navbatda": 20
   }
 }
