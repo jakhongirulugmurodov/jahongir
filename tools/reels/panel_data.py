@@ -19,7 +19,10 @@ if not nav: nav = [{"fayl": "—", "vaqt": "", "holat": "bosh", "media_id": "", 
 if not st: st = [{"media_id": "-", "fayl": "—", "korish": 0, "qamrov": 0, "layk": 0, "izoh": 0, "saqlash": 0, "ulashish": 0}]
 if not pa: pa = [{"fayl": "—", "holat": "bosh"}]
 cq = L("content/cinematic-queue.json", {"navbat": []})  # @cinematic.soul52 — alohida navbat (2 haftada 100 ta)
-cin = [{"fayl": x["fayl"], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"], "media_id": x.get("media_id", "")} for x in cq["navbat"] if x["holat"] != "almashtirildi"] or [{"fayl": "—", "vaqt": "", "holat": "bosh", "media_id": ""}]
+cs = L("content/cinematic-stats.json", {})  # 06-11: @ispanchik.100k statistikasi (har qatorda ko'rish; obunachi — akkaunt bo'yicha)
+cin = [{"fayl": x["fayl"], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"], "media_id": x.get("media_id", ""),
+        "korish": cs.get("reels", {}).get(x.get("media_id") or "-", {}).get("views", ""), "layk": cs.get("reels", {}).get(x.get("media_id") or "-", {}).get("likes", ""),
+        "obunachi": cs.get("obunachi", ""), "akkaunt": cs.get("akkaunt", "")} for x in cq["navbat"] if x["holat"] != "almashtirildi"] or [{"fayl": "—", "vaqt": "", "holat": "bosh", "media_id": ""}]
 for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("cinematic", cin)]:
     json.dump({"rows": rows}, open(f"{out}/{n}.json", "w"), ensure_ascii=False)
 print({"navbat": len(nav), "statistika": len(st), "tarix": len(tr), "papka": len(pa), "obunachi": s.get("obunachi"), "papka_tekshirildi": p.get("tekshirildi")})
