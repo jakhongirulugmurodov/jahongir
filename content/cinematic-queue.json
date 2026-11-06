@@ -1417,7 +1417,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-26.mp4",
       "izoh": "140 daqiqa ⏱\n«Across the Spider-Verse» — AQSh studiyasi chiqargan eng uzun animatsion film.\n#spiderverse #spiderman #kinofakt #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-06T08:30+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18017815988991792\", \"xato\": null}"
+      },
+      "media_id": "18017815988991792"
     },
     {
       "vaqt": "2027-02-25T09:00+05:00",
@@ -1592,7 +1597,7 @@
   "kunlik": {
     "kun": "2026-11-06",
     "kuniga": 8,
-    "bugun": 0,
-    "navbatda": 25
+    "bugun": 1,
+    "navbatda": 24
   }
 }
