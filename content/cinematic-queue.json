@@ -1441,7 +1441,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-28.mp4",
       "izoh": "16 yillik kutish 🤖\nJeyms Kemeron «Alita: Battle Angel»ni 2003-yilda e’lon qilgan, lekin «Avatar» uchun to‘xtatib qo‘ygan. Film 2019-yilda Robert Rodriges rejissyorligida chiqdi. Alita to‘liq CGI — Roza Salazar harakatlari asosida.\n#alita #alitabattleangel #kino #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-06T11:31+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"17865735657695873\", \"xato\": null}"
+      },
+      "media_id": "17865735657695873"
     },
     {
       "vaqt": "2027-02-27T09:00+05:00",
@@ -1602,7 +1607,7 @@
   "kunlik": {
     "kun": "2026-11-06",
     "kuniga": 8,
-    "bugun": 2,
-    "navbatda": 23
+    "bugun": 3,
+    "navbatda": 22
   }
 }
