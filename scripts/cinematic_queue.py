@@ -1,4 +1,4 @@
-# @cinematic.soul52 reels navbati. Videolar GitHub Release'da (cinematic-YYYY-MM), navbat — content/cinematic-queue.json.
+# Cinematic reels navbati (06-11 dan yangi akkaunt; @cinematic.soul52 to‘xtatildi). Videolar GitHub Release'da (cinematic-YYYY-MM), navbat — content/cinematic-queue.json.
 # Reja (26-10, Jahongir): 2 haftada 100 ta reels. Birinchi video chiqqan kundan 14 kun sanaladi; har kuni ertalab
 # "qolgan ÷ qolgan kun" hisoblanadi (kuniga ko'pi bilan 8 ta), shuncha slot ochiladi. 23:00–08:00 chiqmaydi, oraliq kamida 90 daqiqa.
 # "darhol": true qo'yilgani jadvalni kutmaydi. Token: IG_TOKEN (workflow'da IG_TOKEN_CINEMATIC); token bo'lmasa jim chiqadi.
