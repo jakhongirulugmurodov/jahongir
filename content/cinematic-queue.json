@@ -1429,7 +1429,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-27.mp4",
       "izoh": "«And I am Iron Man» 🫰\n«Avengers: Endgame» (2019)da dastlab Toni bu lahzada hech narsa demagan. Montajchi Jeff Ford taklifi bilan gap oxirgi daqiqada qo‘shilgan — 2008-yilgi «Iron Man» finaliga ishora.\n#endgame #ironman #tonystark #marvel #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-06T10:01+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"17877716226584624\", \"xato\": null}"
+      },
+      "media_id": "17877716226584624"
     },
     {
       "vaqt": "2027-02-26T09:00+05:00",
@@ -1597,7 +1602,7 @@
   "kunlik": {
     "kun": "2026-11-06",
     "kuniga": 8,
-    "bugun": 1,
-    "navbatda": 24
+    "bugun": 2,
+    "navbatda": 23
   }
 }
