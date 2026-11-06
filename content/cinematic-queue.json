@@ -1453,7 +1453,12 @@
       "release": "cinematic-2026-11",
       "fayl": "cm-29.mp4",
       "izoh": "Butunlay Nyu-Yorkda 🗽\n«The Amazing Spider-Man 2» (2014) to‘liq Nyu-York shtatida suratga olingan ilk Spider-Man filmi — o‘sha paytda u yerdagi eng katta loyiha edi.\n#spiderman #newyork #amazingspiderman #cinematicsoul",
-      "holat": "kutmoqda"
+      "holat": "chiqdi",
+      "natija": {
+        "vaqt": "2026-11-06T13:02+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"17951597331350699\", \"xato\": null}"
+      },
+      "media_id": "17951597331350699"
     },
     {
       "vaqt": "2027-02-28T09:00+05:00",
@@ -1607,7 +1612,7 @@
   "kunlik": {
     "kun": "2026-11-06",
     "kuniga": 8,
-    "bugun": 3,
-    "navbatda": 22
+    "bugun": 4,
+    "navbatda": 21
   }
 }
