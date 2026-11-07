@@ -1,8 +1,8 @@
 {
-  "yangilandi": "2026-11-06T19:22+00:00",
+  "yangilandi": "2026-11-07T10:02+00:00",
   "akkaunt": "ispanchik.100k",
-  "obunachi": 2,
-  "postlar": 18,
+  "obunachi": 3,
+  "postlar": 23,
   "reels": {
     "18153025450558604": {
       "fayl": "cs-001.mp4",
@@ -17,7 +17,7 @@
     "18079613348565527": {
       "fayl": "cs-002.mp4",
       "vaqt": "2026-11-06T19:46+05:00",
-      "views": 11,
+      "views": 12,
       "reach": 2,
       "likes": 1,
       "comments": 0,
@@ -27,8 +27,8 @@
     "18205782238333475": {
       "fayl": "cs-003.mp4",
       "vaqt": "2026-11-06T21:17+05:00",
-      "views": 5,
-      "reach": 1,
+      "views": 7,
+      "reach": 2,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -37,6 +37,56 @@
     "18081169268398692": {
       "fayl": "cs-004.mp4",
       "vaqt": "2026-11-06T22:48+05:00",
+      "views": 5,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18118125085815940": {
+      "fayl": "cs-005.mp4",
+      "vaqt": "2026-11-07T08:31+05:00",
+      "views": 2,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "17917905336515915": {
+      "fayl": "cs-006.mp4",
+      "vaqt": "2026-11-07T10:02+05:00",
+      "views": 1,
+      "reach": 1,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18119756068797934": {
+      "fayl": "cs-007.mp4",
+      "vaqt": "2026-11-07T11:33+05:00",
+      "views": 3,
+      "reach": 2,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18121949479756252": {
+      "fayl": "cs-008.mp4",
+      "vaqt": "2026-11-07T13:04+05:00",
+      "views": 1,
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18143588155615186": {
+      "fayl": "cs-009.mp4",
+      "vaqt": "2026-11-07T15:01+05:00",
       "views": 0,
       "reach": 0,
       "likes": 0,
@@ -50,6 +100,11 @@
       "kun": "2026-11-06",
       "obunachi": 2,
       "korish": 20
+    },
+    {
+      "kun": "2026-11-07",
+      "obunachi": 3,
+      "korish": 35
     }
   ]
 }
