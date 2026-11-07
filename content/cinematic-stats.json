@@ -1,14 +1,14 @@
 {
-  "yangilandi": "2026-11-07T10:02+00:00",
+  "yangilandi": "2026-11-07T17:44+00:00",
   "akkaunt": "ispanchik.100k",
   "obunachi": 3,
-  "postlar": 23,
+  "postlar": 26,
   "reels": {
     "18153025450558604": {
       "fayl": "cs-001.mp4",
       "vaqt": "2026-11-06T18:15+05:00",
-      "views": 4,
-      "reach": 2,
+      "views": 5,
+      "reach": 3,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -17,8 +17,8 @@
     "18079613348565527": {
       "fayl": "cs-002.mp4",
       "vaqt": "2026-11-06T19:46+05:00",
-      "views": 12,
-      "reach": 2,
+      "views": 13,
+      "reach": 4,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -27,8 +27,8 @@
     "18205782238333475": {
       "fayl": "cs-003.mp4",
       "vaqt": "2026-11-06T21:17+05:00",
-      "views": 7,
-      "reach": 2,
+      "views": 8,
+      "reach": 3,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -37,8 +37,8 @@
     "18081169268398692": {
       "fayl": "cs-004.mp4",
       "vaqt": "2026-11-06T22:48+05:00",
-      "views": 5,
-      "reach": 1,
+      "views": 6,
+      "reach": 2,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -47,8 +47,8 @@
     "18118125085815940": {
       "fayl": "cs-005.mp4",
       "vaqt": "2026-11-07T08:31+05:00",
-      "views": 2,
-      "reach": 1,
+      "views": 3,
+      "reach": 2,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -57,8 +57,8 @@
     "17917905336515915": {
       "fayl": "cs-006.mp4",
       "vaqt": "2026-11-07T10:02+05:00",
-      "views": 1,
-      "reach": 1,
+      "views": 2,
+      "reach": 2,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -67,8 +67,8 @@
     "18119756068797934": {
       "fayl": "cs-007.mp4",
       "vaqt": "2026-11-07T11:33+05:00",
-      "views": 3,
-      "reach": 2,
+      "views": 4,
+      "reach": 3,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -77,8 +77,8 @@
     "18121949479756252": {
       "fayl": "cs-008.mp4",
       "vaqt": "2026-11-07T13:04+05:00",
-      "views": 1,
-      "reach": 2,
+      "views": 2,
+      "reach": 3,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -87,8 +87,38 @@
     "18143588155615186": {
       "fayl": "cs-009.mp4",
       "vaqt": "2026-11-07T15:01+05:00",
-      "views": 0,
-      "reach": 0,
+      "views": 3,
+      "reach": 3,
+      "likes": 2,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18029764661866162": {
+      "fayl": "cs-010.mp4",
+      "vaqt": "2026-11-07T17:00+05:00",
+      "views": 2,
+      "reach": 2,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18596035417069804": {
+      "fayl": "cs-011.mp4",
+      "vaqt": "2026-11-07T19:00+05:00",
+      "views": 5,
+      "reach": 1,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18221765020348601": {
+      "fayl": "cs-012.mp4",
+      "vaqt": "2026-11-07T21:01+05:00",
+      "views": 1,
+      "reach": 1,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -104,7 +134,7 @@
     {
       "kun": "2026-11-07",
       "obunachi": 3,
-      "korish": 35
+      "korish": 54
     }
   ]
 }
