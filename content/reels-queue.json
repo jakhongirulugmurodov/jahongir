@@ -1314,15 +1314,20 @@
       "release": "reels-2026-10",
       "fayl": "54-video.mp4",
       "izoh": "Ota-onangizning xatosini yuziga aytish kerakmi? Javob 10 yildan keyin sizga ham tegishli bo‘ladi.\n\nUstoz: ota-onaning xatosi, kamchiligi aytilmaydi. Chunki ular xatoni ham yaxshilik ilinjida qilgan — niyati yaxshi, maqsadi yaxshi.\n\n«Men hozir qarorlarimdan qoniqib turibman. 10 yildan keyin xato topishim mumkin. Farzandim ham xuddi shunday — bolasiga yaxshilik qilaman deb xato qiladi, keyin to‘g‘rilaydi.»\n\nOtadan o‘tsin xato — demagin xato.\n\nOta-onangiz qaysi xatosini yaxshilik deb qilgan?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#otaona #oila #hurmat #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
-      ]
+      ],
+      "natija": {
+        "vaqt": "2026-11-08T14:04+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18030276944918742\", \"xato\": null}"
+      },
+      "media_id": "18030276944918742"
     },
     {
-      "vaqt": "2026-11-08T20:02+05:00",
+      "vaqt": "2026-11-08T14:03+05:00",
       "release": "reels-2026-10",
       "fayl": "90-video.mp4",
       "izoh": "Nafs bilan sulh tuzish 🤝\n\nBir kuni Zunnun Misriy hazratlarining nafsi qatiqli osh yegisi keldi. U zot yemadilar.\nShu tarzda yetti yil qatiqli osh yemadilar.\n\nYetti yildan keyin nafs bor kuchini to‘plab isyon qildi.\nShunda u zot o‘zlariga shart qo‘ydilar:\n\"Mayli. Ikki rak’at namoz o‘qiyman va shu ikki rak’atda Qur’oni karimni to‘liq xatm qilaman.\"\n\nShartni bajargach, ko‘ngillari yana ham sokin bo‘ldi va dedilar: \"Yo‘q, baribir yemayman.\"\n\nBiroz vaqt o‘tib eshik taqilladi. Ochsalar — qo‘lida qatiqli osh bilan bir odam turibdi:\n\"Payg‘ambarimiz alayhissalomni tushimda ko‘rdim. Ular: 'Zunnun Misriyga qatiqli osh olib borgin va unga ayt: nafsi bilan bir muddat sulh tuzsin', dedilar.\"\n\n💡 Nafsimiz bilan sulh tuzishda biz unga shart qo‘yishimiz kerak ekan.\n\n👇 Siz nafsingizga qanday shart qo‘yasiz? Izohda yozing.\n\n#nafs #ibrat #avliyolar #zunnunmisriy #hikoya #imon #ruhiyat #intizom #uzbekistan #hikmat",
@@ -1441,10 +1446,10 @@
   ],
   "kunlik": {
     "rejim": "trigger",
-    "zaxira": 12,
+    "zaxira": 11,
     "kuniga": 1,
     "kun": "2026-11-08",
     "oldingi": 2,
-    "yangilandi": "2026-11-08T14:02+05:00"
+    "yangilandi": "2026-11-08T14:03+05:00"
   }
 }
