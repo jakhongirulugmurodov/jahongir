@@ -1,8 +1,8 @@
 {
-  "yangilandi": "2026-11-08T10:15+00:00",
+  "yangilandi": "2026-11-08T17:55+00:00",
   "akkaunt": "ispanchik.100k",
-  "obunachi": 3,
-  "postlar": 31,
+  "obunachi": 2,
+  "postlar": 34,
   "reels": {
     "18153025450558604": {
       "fayl": "cs-001.mp4",
@@ -37,8 +37,8 @@
     "18081169268398692": {
       "fayl": "cs-004.mp4",
       "vaqt": "2026-11-06T22:48+05:00",
-      "views": 7,
-      "reach": 3,
+      "views": 8,
+      "reach": 4,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -47,8 +47,8 @@
     "18118125085815940": {
       "fayl": "cs-005.mp4",
       "vaqt": "2026-11-07T08:31+05:00",
-      "views": 4,
-      "reach": 3,
+      "views": 5,
+      "reach": 4,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -117,8 +117,8 @@
     "18221765020348601": {
       "fayl": "cs-012.mp4",
       "vaqt": "2026-11-07T21:01+05:00",
-      "views": 2,
-      "reach": 2,
+      "views": 5,
+      "reach": 3,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -127,8 +127,8 @@
     "18351796273268246": {
       "fayl": "cs-013.mp4",
       "vaqt": "2026-11-08T08:31+05:00",
-      "views": 9,
-      "reach": 1,
+      "views": 10,
+      "reach": 2,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -157,8 +157,8 @@
     "18100892363108732": {
       "fayl": "cs-016.mp4",
       "vaqt": "2026-11-08T13:02+05:00",
-      "views": 4,
-      "reach": 1,
+      "views": 9,
+      "reach": 2,
       "likes": 1,
       "comments": 0,
       "saved": 0,
@@ -167,6 +167,36 @@
     "18018725441958705": {
       "fayl": "cs-017.mp4",
       "vaqt": "2026-11-08T15:01+05:00",
+      "views": 10,
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18116688155581427": {
+      "fayl": "cs-018.mp4",
+      "vaqt": "2026-11-08T17:01+05:00",
+      "views": 2,
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "17920657938494358": {
+      "fayl": "cs-019.mp4",
+      "vaqt": "2026-11-08T19:00+05:00",
+      "views": 3,
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    },
+    "18419344537080889": {
+      "fayl": "cs-020.mp4",
+      "vaqt": "2026-11-08T21:01+05:00",
       "views": 0,
       "reach": 0,
       "likes": 0,
@@ -188,8 +218,8 @@
     },
     {
       "kun": "2026-11-08",
-      "obunachi": 3,
-      "korish": 84
+      "obunachi": 2,
+      "korish": 110
     }
   ]
 }
