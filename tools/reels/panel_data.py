@@ -28,6 +28,7 @@ def _r(x): return ns.get("reels", {}).get(x.get("media_id") or "-", {})
 nb = [{"fayl": x["fayl"], "nom": (x.get("izoh") or "").strip().split("\n")[0][:80], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"],
        "media_id": x.get("media_id", ""), "korish": _r(x).get("views", ""), "layk": _r(x).get("likes", ""), "saqlash": _r(x).get("saved", ""), "ulashish": _r(x).get("shares", ""),
        "obunachi": ns.get("obunachi", "")} for x in nq["navbat"]] or [{"fayl": "—", "nom": "", "vaqt": "", "holat": "bosh", "media_id": "", "korish": "", "layk": "", "saqlash": "", "ulashish": "", "obunachi": ""}]
-for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("cinematic", cin), ("nurbrand", nb)]:
+nbt = [{"kun": t["kun"], "obunachi": t.get("obunachi", 0), "korish": t.get("korish", 0)} for t in ns.get("tarix", [])] or [{"kun": "", "obunachi": "", "korish": ""}]
+for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("cinematic", cin), ("nurbrand", nb), ("nurbrand_tarix", nbt)]:
     json.dump({"rows": rows}, open(f"{out}/{n}.json", "w"), ensure_ascii=False)
 print({"navbat": len(nav), "statistika": len(st), "tarix": len(tr), "papka": len(pa), "obunachi": s.get("obunachi"), "papka_tekshirildi": p.get("tekshirildi")})
