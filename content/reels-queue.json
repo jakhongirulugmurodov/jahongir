@@ -1398,12 +1398,17 @@
       "release": "reels-2026-10",
       "fayl": "56-video.mp4",
       "izoh": "Hozir bolangizga taqiqlagan narsalarni o‘zingiz bolaligingizda qilgansiz.\n\nMaktab rahbari: bizning davrimizda jismoniy nazorat kam edi. Mahalla tepasidagi hovuzda cho‘milganmiz — simlar chiqib yotgan, o‘rdaklar suzgan. Temir terib sotganmiz. Birinchi sinfda uchta katta yo‘ldan o‘zimiz o‘tganmiz — «o‘ngga qara, chapga qara».\n\nHozir do‘konga ham «sen borma, xavfli». Taksi, GPS, soat. Nazorat kuchli. Lekin boshqa tomondan — ochiq.\n\nBolaligingizda qaysi «xavfli» ishni qilgansiz?\n\nFarzand tarbiyasi haqidagi suhbatdan\n#bolalik #farzandtarbiyasi #otaona #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
-      ]
+      ],
+      "natija": {
+        "vaqt": "2026-11-10T20:32+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"17991067362076202\", \"xato\": null}"
+      },
+      "media_id": "17991067362076202"
     },
     {
       "vaqt": "2026-11-11T20:30+05:00",
@@ -1472,6 +1477,6 @@
     "kuniga": 1,
     "kun": "2026-11-10",
     "oldingi": 1,
-    "yangilandi": "2026-11-10T20:29+05:00"
+    "yangilandi": "2026-11-10T20:31+05:00"
   }
 }
