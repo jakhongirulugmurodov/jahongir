@@ -15,13 +15,15 @@ jobs:
         env: { IG_TOKEN: "${{ secrets.IG_TOKEN_OSISH }}" }
       - run: python3 scripts/cinematic_stats.py || true   # 06-11: @ispanchik.100k
         env: { IG_TOKEN: "${{ secrets.IG_TOKEN_CINEMATIC_YANGI }}" }
+      - run: python3 scripts/cinematic_stats.py || true   # 10-11: @nur_brand_uzb
+        env: { IG_TOKEN: "${{ secrets.IG_TOKEN_NURBRAND }}", STATS_QUEUE: content/nurbrand-queue.json, STATS_OUT: content/nurbrand-stats.json }
       - run: python3 scripts/blog_stats.py
         env: { IG_TOKEN: "${{ secrets.IG_TOKEN }}" }
       - name: Saqlash va saytni yangilash
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
-          git add content/reels-stats.json content/blog-stats.json; [ -f content/cinematic-stats.json ] && git add content/cinematic-stats.json
+          git add content/reels-stats.json content/blog-stats.json; [ -f content/cinematic-stats.json ] && git add content/cinematic-stats.json; [ -f content/nurbrand-stats.json ] && git add content/nurbrand-stats.json
           git commit -m "reels statistikasi yangilandi" || exit 0
           # navbat soqchisi har daqiqa commit qiladi — to'qnashsa qayta urinish (03-11)
           for i in $(seq 1 10); do git pull --rebase -q -X theirs origin main && git push -q && break || { git rebase --abort 2>/dev/null; sleep $((RANDOM % 8 + 3)); }; done

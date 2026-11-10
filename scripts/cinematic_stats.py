@@ -10,9 +10,11 @@ def get(path, **p):
     except urllib.error.HTTPError as e: return json.load(e)
 me = get("me", fields="user_id,username,followers_count,media_count")
 if not me.get("username"): sys.exit("token ishlamayapti, eski ma'lumot saqlab qolindi: " + json.dumps(me.get("error", me), ensure_ascii=False)[:300])
-S = "content/cinematic-stats.json"
+S = os.environ.get("STATS_OUT", "content/cinematic-stats.json")  # 10-11: nurbrand ham shu skript bilan (STATS_QUEUE/STATS_OUT)
 old = json.load(open(S)) if os.path.exists(S) else {}
-q = json.load(open("content/cinematic-queue.json"))
+QF = os.environ.get("STATS_QUEUE", "content/cinematic-queue.json")
+if not os.path.exists(QF): sys.exit(0)
+q = json.load(open(QF))
 reels = {}
 for x in q["navbat"]:
     mid = x.get("media_id")

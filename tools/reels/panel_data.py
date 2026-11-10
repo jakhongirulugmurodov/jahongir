@@ -23,6 +23,11 @@ cs = L("content/cinematic-stats.json", {})  # 06-11: @ispanchik.100k statistikas
 cin = [{"fayl": x["fayl"], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"], "media_id": x.get("media_id", ""),
         "korish": cs.get("reels", {}).get(x.get("media_id") or "-", {}).get("views", ""), "layk": cs.get("reels", {}).get(x.get("media_id") or "-", {}).get("likes", ""),
         "obunachi": cs.get("obunachi", ""), "akkaunt": cs.get("akkaunt", "")} for x in cq["navbat"] if x["holat"] != "almashtirildi"] or [{"fayl": "—", "vaqt": "", "holat": "bosh", "media_id": ""}]
-for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("cinematic", cin)]:
+nq = L("content/nurbrand-queue.json", {"navbat": []}); ns = L("content/nurbrand-stats.json", {})  # 10-11: @nur_brand_uzb
+def _r(x): return ns.get("reels", {}).get(x.get("media_id") or "-", {})
+nb = [{"fayl": x["fayl"], "nom": (x.get("izoh") or "").strip().split("\n")[0][:80], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"],
+       "media_id": x.get("media_id", ""), "korish": _r(x).get("views", ""), "layk": _r(x).get("likes", ""), "saqlash": _r(x).get("saved", ""), "ulashish": _r(x).get("shares", ""),
+       "obunachi": ns.get("obunachi", "")} for x in nq["navbat"]] or [{"fayl": "—", "nom": "", "vaqt": "", "holat": "bosh", "media_id": "", "korish": "", "layk": "", "saqlash": "", "ulashish": "", "obunachi": ""}]
+for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("cinematic", cin), ("nurbrand", nb)]:
     json.dump({"rows": rows}, open(f"{out}/{n}.json", "w"), ensure_ascii=False)
 print({"navbat": len(nav), "statistika": len(st), "tarix": len(tr), "papka": len(pa), "obunachi": s.get("obunachi"), "papka_tekshirildi": p.get("tekshirildi")})
