@@ -1415,13 +1415,18 @@
       "release": "reels-2026-10",
       "fayl": "79-video.mp4",
       "izoh": "Ishonchli mutaxassisni qanday topasiz? Malika bozori va bitta bloger.\n\nMalika bozorida yuzlab do‘kon. Yaxshi telefon olish uchun nima qilasiz? Taniqli bittasiga borasiz, tanish qildirasiz. Mohir ustoz: har sohada shunday — o‘z qadriyatingizdagi ishonchli bitta odamni toping, qolganlarini u ko‘rsatadi.\n\nO‘zi ham shunday qilgan: bir yil bloger qidirgan, oxiri bitta blogerni pul berib chaqirib, undan so‘ragan — «bizga mos blogerlar kim?» Hammasini o‘zingiz qidirmang.\n\nSiz mutaxassisni qanday tanlaysiz — reklama orqalimi, tanish orqalimi?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#biznes #jamoa #maslahat #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "mohirustoz"
       ],
       "collab": [
         "mohirustoz"
-      ]
+      ],
+      "natija": {
+        "vaqt": "2026-11-11T20:31+05:00",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18182390722437194\", \"xato\": null}"
+      },
+      "media_id": "18182390722437194"
     },
     {
       "vaqt": "2026-11-12T20:30+05:00",
@@ -1477,6 +1482,6 @@
     "kuniga": 1,
     "kun": "2026-11-11",
     "oldingi": 1,
-    "yangilandi": "2026-11-11T20:29+05:00"
+    "yangilandi": "2026-11-11T20:30+05:00"
   }
 }
