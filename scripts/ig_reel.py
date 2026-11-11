@@ -24,11 +24,16 @@ if src.startswith("http"):
 # hammuallif taklifi (IG_COLLABS="mohirustoz", ko'pi bilan 3 ta) — "collaborators". Rad etilsa avval collab'siz, keyin tegsiz qayta uriniladi.
 tags = [u.strip().lstrip("@") for u in os.environ.get("IG_USER_TAGS", "").split(",") if u.strip()]
 collabs = [u.strip().lstrip("@") for u in os.environ.get("IG_COLLABS", "").split(",") if u.strip()][:3]
+# Trial reels (11-11): IG_TRIAL="SS_PERFORMANCE" (yaxshi ishlasa Instagram o'zi hammaga chiqaradi) yoki "MANUAL" (faqat trialda qoladi).
+# Trial rad etilsa oddiy post QILINMAYDI — xato bilan chiqadi.
+TRIAL = os.environ.get("IG_TRIAL", "").strip().upper()
 def cont(t, cb):
     e = dict(extra)
+    if TRIAL: e["trial_params"] = json.dumps({"graduation_strategy": TRIAL})
     if t: e["user_tags"] = json.dumps([{"username": u} for u in t])
     if cb: e["collaborators"] = json.dumps(cb)
-    return call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, share_to_feed="true", **e)
+    if not TRIAL: e["share_to_feed"] = "true"
+    return call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, **e)
 c = cont(tags, collabs)
 if "id" not in c and collabs:
     print("collaborators rad etildi, collab'siz qayta urinamiz:", json.dumps(c.get("error", c), ensure_ascii=False)[:200])
@@ -44,5 +49,5 @@ for _ in range(120):  # video ishlov berilishi bir necha daqiqa olishi mumkin
     time.sleep(5)
 else: sys.exit("ishlov berish juda uzoq davom etdi")
 r = call(f"{uid}/media_publish", "POST", creation_id=c["id"])
-print("natija:", json.dumps({"ok": "id" in r, "id": r.get("id"), "xato": r.get("error", {}).get("message")}, ensure_ascii=False))
+print("natija:", json.dumps({"ok": "id" in r, "trial": TRIAL or None, "id": r.get("id"), "xato": r.get("error", {}).get("message")}, ensure_ascii=False))
 sys.exit(0 if "id" in r else 1)
