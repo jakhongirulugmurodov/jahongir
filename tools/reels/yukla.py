@@ -1,6 +1,6 @@
 # Mac'dan olingan tayyor reels partiyasini GitHub Release'ga yuklaydi va content/reels-queue.json'ga jadval bilan qo'shadi.
 # Foydalanish (repo ildizidan): python3 tools/reels/yukla.py <videolar papkasi> <izohlar.json>
-# izohlar.json: {"fayl.mp4": "caption", ...} — tartib shu bo'yicha. Release nomi: reels-YYYY-MM.
+# izohlar.json: {"fayl.mp4": "caption", ...} yoki {"fayl.mp4": {"izoh": "...", "teglar": [...], "trial": "SS_PERFORMANCE"}} — tartib shu bo'yicha. Release nomi: reels-YYYY-MM.
 # Jadval: bu yerdagi vaqt taxminiy; aniq chiqish soni va vaqtini scripts/reels_queue.py zaxiraga qarab har daqiqada qayta hisoblaydi.
 import json, os, subprocess, sys, re
 from datetime import datetime, timedelta, timezone
@@ -22,6 +22,8 @@ if subprocess.run(["gh", "release", "view", tag], capture_output=True).returncod
     subprocess.run(["gh", "release", "create", tag, "-t", f"{PREFIX} {tag[len(PREFIX)+1:]}", "-n", "Instagram uchun tayyor reels (navbat: content/reels-queue.json)"], check=True)
 t = last
 for name, cap in caps.items():
+    qosh = {}
+    if isinstance(cap, dict): qosh = {k: v for k, v in cap.items() if k in ("teglar", "collab", "trial") and v}; cap = cap.get("izoh", "")
     safe = re.sub(r"[^A-Za-z0-9._-]+", "-", name)
     p = os.path.join(src, name)
     if safe != name: os.replace(p, os.path.join(src, safe)); p = os.path.join(src, safe)
@@ -29,6 +31,7 @@ for name, cap in caps.items():
     t = nxt(t); it = {"vaqt": t.isoformat(timespec="minutes"), "release": tag, "fayl": safe, "izoh": typo(cap or os.environ.get("REELS_DEFAULT_CAPTION", "")), "holat": "kutmoqda"}
     teg = [u for u in dict.fromkeys(re.findall(r"@([A-Za-z0-9._]+[A-Za-z0-9_])", cap)) if u != "osish.nuqtasi"]  # caption'dagi @spiker → reels'da belgilanadi
     if teg: it["teglar"] = teg
+    it.update(qosh)
     q["navbat"].append(it)
     print(t.strftime("%d-%m %H:%M"), safe)
 json.dump(q, open(Q, "w"), ensure_ascii=False, indent=2)
