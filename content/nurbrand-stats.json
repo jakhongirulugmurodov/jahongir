@@ -1,16 +1,16 @@
 {
-  "yangilandi": "2026-11-10T19:42+00:00",
+  "yangilandi": "2026-11-11T10:53+00:00",
   "akkaunt": "nur_brand_uzb",
-  "obunachi": 18574,
+  "obunachi": 18571,
   "postlar": 721,
   "reels": {
     "18186210172425788": {
       "fayl": "nb-01.mp4",
       "vaqt": "2026-11-10T19:01+05:00",
-      "views": 1361,
-      "reach": 1194,
-      "likes": 20,
-      "comments": 1,
+      "views": 1619,
+      "reach": 1402,
+      "likes": 26,
+      "comments": 2,
       "saved": 0,
       "shares": 0
     }
@@ -20,6 +20,11 @@
       "kun": "2026-11-10",
       "obunachi": 18574,
       "korish": 1361
+    },
+    {
+      "kun": "2026-11-11",
+      "obunachi": 18571,
+      "korish": 1619
     }
   ]
 }
