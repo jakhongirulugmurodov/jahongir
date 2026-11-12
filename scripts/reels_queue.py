@@ -4,6 +4,7 @@
 # TRIGGER rejimi (22-10 tasdiqlangan, q['rejim']='trigger' — standart): oldingi reels o'sishdan to'xtashi bilan keyingisi chiqadi:
 #   kamida 3 soat o‘tgan (22-10: sinov guruhi 1–2 soatda tugaydi) + oxirgi 2 soatda soatiga <2% (kamida <5) ko'rish o'sishi (content/reels-soatlik.json; 25-10 dan); soatlik o'lchov yo'q bo'lsa 12 soatda;
 #   31-10: 1,5 soatda <300 ko'rish bo'lsa (kuchsiz) — darhol keyingisi, kunlik chegaraga sanalmaydi (jami ≤6);
+#   12-11: TRIAL reels — kuchsiz/3 soat qoidasi qo'llanmaydi, faqat o'sish to'xtashi (yoki 6 soat); 3 ta chegaraga sanalmaydi, jami ≤6;
 #   6 soatdan keyin baribir (27-10 dan; oldin 24 soat); kuniga ≤3 ta (90 lik rejadan orqada qolinsa ≤4); 23:00–08:00 chiqmaydi; zaxira <7 bo'lsa oddiy jadvalga (kuniga 1 ta, 20:30) qaytadi.
 # Vaqt sinovi (22-10 tasdiqlangan, trigger yoqilgach to'xtatildi): kuniga 1 ta bo'lganda 10 ta video kunma-kun 13:00 va 20:30 da almashib chiqadi
 # (har biriga "sinov_soat" yoziladi); 10 tasi chiqqach faqat 20:30 qoladi.
@@ -48,11 +49,20 @@ SOAT = json.load(open("content/reels-soatlik.json")) if os.path.exists("content/
 chiq = [x for x in q["navbat"] if x.get("holat") == "chiqdi" and x.get("natija", {}).get("vaqt")]
 oxirgi = max(chiq, key=lambda x: datetime.fromisoformat(x["natija"]["vaqt"])) if chiq else None
 KUCHSIZ, MAKS_KUN = 300, 6
-kuchsiz_bugun = sum(1 for x in bugun if x.get("kuchsiz"))
+kuchsiz_bugun = sum(1 for x in bugun if x.get("kuchsiz") or x.get("trial"))  # 12-11: trial'lar ham 3 ta chegaraga sanalmaydi (jami ≤6)
 def trigger_kerak():
     if now.hour < 8 or now.hour >= 23 or len(bugun) >= MAKS_KUN or len(bugun) - kuchsiz_bugun >= CAP: return 0, f"tun (23–08) yoki kunlik {CAP} ta (+kuchsizlar, jami ≤{MAKS_KUN})"
     if not oxirgi: return 1, "birinchi video"
     h = (now - datetime.fromisoformat(oxirgi["natija"]["vaqt"])).total_seconds() / 3600
+    # 12-11 (Jahongir): TRIAL — "kuchsiz" va 3 soat qoidasi yo'q; ko'rishlar o'sishdan to'xtashi bilan keyingisi
+    # (oxirgi 2 o'lchovda soatiga <2%, kamida <5); o'lchov kam bo'lsa 6 soatda baribir. Kunlik jami ≤6, 23–08 chiqmaydi.
+    if oxirgi.get("trial"):
+        rows = SOAT.get(oxirgi.get("media_id") or "", {}).get("olchov", [])
+        if h >= 6: return 1, f"trial: {h:.1f} soat o'tdi"
+        if len(rows) < 3: return 0, f"trial: o'lchov kam ({len(rows)})"
+        a, b, c = [r.get("views", 0) for r in rows[-3:]]
+        lim = max(5, c * 0.02)
+        return (1, f"trial to'xtadi: +{b - a}, +{c - b} (chegara {lim:.0f})") if (b - a) < lim and (c - b) < lim else (0, f"trial o'syapti: +{b - a}, +{c - b} (chegara {lim:.0f})")
     # 31-10 (Jahongir): kuchsiz video (1,5 soatda <300 ko'rish) — 3 soat kutilmaydi, keyingisi darhol; u kunlik chegaraga sanalmaydi
     rw = SOAT.get(oxirgi.get("media_id") or "", {}).get("olchov", [])
     if h >= 1.5 and rw and rw[-1].get("views", 0) < KUCHSIZ:
