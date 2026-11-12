@@ -5,6 +5,7 @@ out = sys.argv[1]; os.makedirs(out, exist_ok=True)
 L = lambda f, d: json.load(open(f)) if os.path.exists(f) else d
 q = L("content/reels-queue.json", {"navbat": []}); s = L("content/reels-stats.json", {}); p = L("content/reels-papka.json", {})
 def spiker(f):  # 26-10 Jahongir: ≤26 Hasanxo‘ja, 27–58 farzand tarbiyasi suhbati, 59–79 Mohir Mirzaxmedov, 80–91 Muhammadali Eshonqulov; 12-11: v*.mp4 — Hasanxon domla («Alohida mavzu»)
+    if f.startswith("aziz"): return "Ekspertlar gapirsin"  # 12-11: «Ekspertlar gapirsin» podkasti (boshlovchi Aziz)
     if f.startswith("v"): return "Farzand tarbiyasi"
     try: n = int(f.split("-")[0])
     except ValueError: return ""
