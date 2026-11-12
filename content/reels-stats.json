@@ -1,7 +1,7 @@
 {
-  "yangilandi": "2026-11-12T18:53+00:00",
+  "yangilandi": "2026-11-12T19:53+00:00",
   "akkaunt": "osish.nuqtasi",
-  "obunachi": 1237,
+  "obunachi": 1239,
   "postlar": 41,
   "reels": {
     "18207621847322628": {
@@ -252,7 +252,7 @@
       "fayl": "60-video.mp4",
       "vaqt": "2026-10-27T23:11+05:00",
       "views": 1157,
-      "reach": 779,
+      "reach": 781,
       "likes": 14,
       "comments": 0,
       "saved": 3,
@@ -335,12 +335,12 @@
     "18118602343794624": {
       "fayl": "33-video.mp4",
       "vaqt": "2026-10-30T19:34+05:00",
-      "views": 1918,
-      "reach": 1400,
+      "views": 1929,
+      "reach": 1406,
       "likes": 67,
       "comments": 4,
       "saved": 18,
-      "shares": 75
+      "shares": 78
     },
     "18147696766603282": {
       "fayl": "82-video.mp4",
@@ -465,12 +465,12 @@
     "17901495087608384": {
       "fayl": "84-video.mp4",
       "vaqt": "2026-11-02T08:01+05:00",
-      "views": 131350,
+      "views": 131451,
       "reach": 97017,
-      "likes": 6355,
+      "likes": 6362,
       "comments": 123,
-      "saved": 855,
-      "shares": 2510
+      "saved": 857,
+      "shares": 2508
     },
     "17954305905301642": {
       "fayl": "39-video.mp4",
@@ -515,7 +515,7 @@
     "17906868420599745": {
       "fayl": "41-video.mp4",
       "vaqt": "2026-11-03T11:03+05:00",
-      "views": 68788,
+      "views": 68792,
       "reach": 49444,
       "likes": 2209,
       "comments": 96,
@@ -665,7 +665,7 @@
     "18234051580325788": {
       "fayl": "48-video.mp4",
       "vaqt": "2026-11-05T20:07+05:00",
-      "views": 19337,
+      "views": 19340,
       "reach": 14311,
       "likes": 885,
       "comments": 25,
@@ -685,8 +685,8 @@
     "17981066910148297": {
       "fayl": "25-video.mp4",
       "vaqt": "2026-11-06T09:31+05:00",
-      "views": 10497,
-      "reach": 8878,
+      "views": 10501,
+      "reach": 8888,
       "likes": 371,
       "comments": 12,
       "saved": 47,
@@ -695,8 +695,8 @@
     "17977335927167186": {
       "fayl": "49-video.mp4",
       "vaqt": "2026-11-06T16:25+05:00",
-      "views": 7119,
-      "reach": 5805,
+      "views": 7122,
+      "reach": 5807,
       "likes": 223,
       "comments": 1,
       "saved": 32,
@@ -705,12 +705,12 @@
     "18104548904548287": {
       "fayl": "88-video.mp4",
       "vaqt": "2026-11-06T22:26+05:00",
-      "views": 19129,
-      "reach": 14176,
+      "views": 19151,
+      "reach": 14205,
       "likes": 1399,
       "comments": 28,
-      "saved": 228,
-      "shares": 562
+      "saved": 229,
+      "shares": 563
     },
     "18146930236588765": {
       "fayl": "50-video.mp4",
@@ -755,11 +755,11 @@
     "18128141423315623": {
       "fayl": "89-video.mp4",
       "vaqt": "2026-11-07T16:18+05:00",
-      "views": 61648,
+      "views": 61691,
       "reach": 41998,
-      "likes": 4854,
+      "likes": 4856,
       "comments": 189,
-      "saved": 469,
+      "saved": 470,
       "shares": 1665
     },
     "17945295390383881": {
@@ -795,9 +795,9 @@
     "17936486793146900": {
       "fayl": "90-video.mp4",
       "vaqt": "2026-11-09T08:01+05:00",
-      "views": 56753,
-      "reach": 36451,
-      "likes": 2928,
+      "views": 56791,
+      "reach": 36473,
+      "likes": 2932,
       "comments": 105,
       "saved": 290,
       "shares": 1356
@@ -805,8 +805,8 @@
     "18062065691795989": {
       "fayl": "78-video.mp4",
       "vaqt": "2026-11-09T14:03+05:00",
-      "views": 601,
-      "reach": 418,
+      "views": 602,
+      "reach": 420,
       "likes": 6,
       "comments": 4,
       "saved": 0,
@@ -896,7 +896,7 @@
       "fayl": "77-video.mp4",
       "vaqt": "2026-11-12T13:52+05:00",
       "views": 122,
-      "reach": 107,
+      "reach": 108,
       "likes": 0,
       "comments": 0,
       "saved": 0,
@@ -1041,8 +1041,8 @@
     },
     {
       "kun": "2026-11-12",
-      "obunachi": 1237,
-      "korish": 474304
+      "obunachi": 1239,
+      "korish": 474534
     }
   ]
 }
