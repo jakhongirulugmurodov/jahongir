@@ -1,14 +1,14 @@
 {
-  "yangilandi": "2026-11-12T13:53+00:00",
+  "yangilandi": "2026-11-12T14:53+00:00",
   "akkaunt": "nur_brand_uzb",
-  "obunachi": 18571,
-  "postlar": 722,
+  "obunachi": 18566,
+  "postlar": 723,
   "reels": {
     "18186210172425788": {
       "fayl": "nb-01.mp4",
       "vaqt": "2026-11-10T19:01+05:00",
-      "views": 1734,
-      "reach": 1483,
+      "views": 1736,
+      "reach": 1485,
       "likes": 28,
       "comments": 2,
       "saved": 0,
@@ -17,12 +17,22 @@
     "18155967613528004": {
       "fayl": "nb-02.mp4",
       "vaqt": "2026-11-11T19:01+05:00",
-      "views": 1814,
-      "reach": 1533,
+      "views": 1830,
+      "reach": 1535,
       "likes": 23,
       "comments": 1,
       "saved": 2,
       "shares": 1
+    },
+    "18090212528298393": {
+      "fayl": "nb-03.mp4",
+      "vaqt": "2026-11-12T19:01+05:00",
+      "views": 185,
+      "reach": 122,
+      "likes": 6,
+      "comments": 2,
+      "saved": 0,
+      "shares": 0
     }
   },
   "tarix": [
@@ -38,8 +48,8 @@
     },
     {
       "kun": "2026-11-12",
-      "obunachi": 18571,
-      "korish": 3548
+      "obunachi": 18566,
+      "korish": 3751
     }
   ]
 }
