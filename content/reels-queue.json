@@ -1293,23 +1293,6 @@
       "media_id": "17899810800405135"
     },
     {
-      "vaqt": "2026-11-08T14:01+05:00",
-      "release": "reels-2026-10",
-      "fayl": "77-video.mp4",
-      "izoh": "1000 ta zo‘r prezentatsiya, sertifikatlar qator. Baribir ishlamaydi — ustozda bitta narsa bo‘lmasa.\n\nMohir ustoz: ustozning roli endi hard skills emas, soft skills. Ustoz bir vaqtning o‘zida psixolog bo‘lishga majbur. Ota-ona bilan to‘g‘ridan-to‘g‘ri hamkorlik qilib, bolaning hayot tarziga aralashishi kerak.\n\nBolaning turmush tarziga ta’sir qilolmagan ustozga o‘qitish tobora qiyinlashib boraveradi. Dars o‘tish kamlik qiladi.\n\nUstoz bolaning hayotiga aralashishi kerakmi? Chegara qayerda?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#ustoz #pedagogika #softskills #osishnuqtasi",
-      "holat": "xato",
-      "teglar": [
-        "mohirustoz"
-      ],
-      "collab": [
-        "mohirustoz"
-      ],
-      "natija": {
-        "vaqt": "2026-11-08T14:02+05:00",
-        "chiqish": "Instagram videoni qabul qilmadi: ERROR"
-      }
-    },
-    {
       "vaqt": "2026-11-08T14:02+05:00",
       "release": "reels-2026-10",
       "fayl": "54-video.mp4",
@@ -1501,6 +1484,24 @@
         "chiqish": "natija: {\"ok\": true, \"trial\": \"SS_PERFORMANCE\", \"id\": \"18143453260723205\", \"xato\": null}"
       },
       "media_id": "18143453260723205"
+    },
+    {
+      "vaqt": "2026-11-13T08:00+05:00",
+      "release": "reels-2026-10",
+      "fayl": "77-video.mp4",
+      "izoh": "1000 ta zo‘r prezentatsiya, sertifikatlar qator. Baribir ishlamaydi — ustozda bitta narsa bo‘lmasa.\n\nMohir ustoz: ustozning roli endi hard skills emas, soft skills. Ustoz bir vaqtning o‘zida psixolog bo‘lishga majbur. Ota-ona bilan to‘g‘ridan-to‘g‘ri hamkorlik qilib, bolaning hayot tarziga aralashishi kerak.\n\nBolaning turmush tarziga ta’sir qilolmagan ustozga o‘qitish tobora qiyinlashib boraveradi. Dars o‘tish kamlik qiladi.\n\nUstoz bolaning hayotiga aralashishi kerakmi? Chegara qayerda?\n\nMohir Mirzaxmedov («Ustoz kundaligi») bilan suhbatdan\n#ustoz #pedagogika #softskills #osishnuqtasi",
+      "holat": "kutmoqda",
+      "teglar": [
+        "mohirustoz"
+      ],
+      "collab": [
+        "mohirustoz"
+      ],
+      "trial": "SS_PERFORMANCE",
+      "oldingi_xato": {
+        "vaqt": "2026-11-08T14:02+05:00",
+        "chiqish": "Instagram videoni qabul qilmadi: ERROR"
+      }
     },
     {
       "vaqt": "2026-11-13T08:00+05:00",
