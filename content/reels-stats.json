@@ -1,7 +1,7 @@
 {
-  "yangilandi": "2026-11-14T10:20+00:00",
+  "yangilandi": "2026-11-14T12:53+00:00",
   "akkaunt": "ekspert_gapirsin",
-  "obunachi": 1269,
+  "obunachi": 1271,
   "postlar": 42,
   "reels": {
     "18207621847322628": {
@@ -71,7 +71,7 @@
     "17889085233478637": {
       "fayl": "6-video.mp4",
       "vaqt": "2026-10-22T20:40+05:00",
-      "views": 1506,
+      "views": 1507,
       "reach": 1221,
       "likes": 20,
       "comments": 2,
@@ -121,7 +121,7 @@
     "18436437949176724": {
       "fayl": "13-video.mp4",
       "vaqt": "2026-10-23T21:16+05:00",
-      "views": 1779,
+      "views": 1781,
       "reach": 1539,
       "likes": 25,
       "comments": 2,
@@ -132,7 +132,7 @@
       "fayl": "14-video.mp4",
       "vaqt": "2026-10-24T08:01+05:00",
       "views": 2384,
-      "reach": 2056,
+      "reach": 2057,
       "likes": 40,
       "comments": 8,
       "saved": 13,
@@ -201,8 +201,8 @@
     "18096965789449426": {
       "fayl": "21-video.mp4",
       "vaqt": "2026-10-26T15:23+05:00",
-      "views": 12258,
-      "reach": 9796,
+      "views": 12259,
+      "reach": 9797,
       "likes": 276,
       "comments": 14,
       "saved": 104,
@@ -281,8 +281,8 @@
     "18640242703004213": {
       "fayl": "30-video.mp4",
       "vaqt": "2026-10-28T15:40+05:00",
-      "views": 1841,
-      "reach": 1526,
+      "views": 1842,
+      "reach": 1528,
       "likes": 46,
       "comments": 2,
       "saved": 7,
@@ -325,8 +325,8 @@
     "18133861951806469": {
       "fayl": "32-video.mp4",
       "vaqt": "2026-10-30T13:32+05:00",
-      "views": 6659,
-      "reach": 5054,
+      "views": 6663,
+      "reach": 5056,
       "likes": 113,
       "comments": 2,
       "saved": 65,
@@ -335,12 +335,12 @@
     "18118602343794624": {
       "fayl": "33-video.mp4",
       "vaqt": "2026-10-30T19:34+05:00",
-      "views": 2408,
-      "reach": 1735,
-      "likes": 90,
+      "views": 2470,
+      "reach": 1779,
+      "likes": 93,
       "comments": 7,
-      "saved": 23,
-      "shares": 109
+      "saved": 24,
+      "shares": 114
     },
     "18147696766603282": {
       "fayl": "82-video.mp4",
@@ -375,8 +375,8 @@
     "18176461150454128": {
       "fayl": "64-video.mp4",
       "vaqt": "2026-10-31T17:44+05:00",
-      "views": 1032,
-      "reach": 656,
+      "views": 1033,
+      "reach": 657,
       "likes": 10,
       "comments": 2,
       "saved": 2,
@@ -385,8 +385,8 @@
     "17990282076077238": {
       "fayl": "35-video.mp4",
       "vaqt": "2026-10-31T19:15+05:00",
-      "views": 410,
-      "reach": 333,
+      "views": 412,
+      "reach": 336,
       "likes": 13,
       "comments": 2,
       "saved": 3,
@@ -395,8 +395,8 @@
     "18121356701325921": {
       "fayl": "83-video.mp4",
       "vaqt": "2026-10-31T20:46+05:00",
-      "views": 673,
-      "reach": 524,
+      "views": 676,
+      "reach": 526,
       "likes": 29,
       "comments": 4,
       "saved": 5,
@@ -405,7 +405,7 @@
     "18158922052521994": {
       "fayl": "36-video.mp4",
       "vaqt": "2026-11-01T08:01+05:00",
-      "views": 385,
+      "views": 386,
       "reach": 308,
       "likes": 7,
       "comments": 2,
@@ -426,7 +426,7 @@
       "fayl": "65-video.mp4",
       "vaqt": "2026-11-01T14:07+05:00",
       "views": 286,
-      "reach": 244,
+      "reach": 245,
       "likes": 1,
       "comments": 2,
       "saved": 0,
@@ -465,12 +465,12 @@
     "17901495087608384": {
       "fayl": "84-video.mp4",
       "vaqt": "2026-11-02T08:01+05:00",
-      "views": 133555,
-      "reach": 98161,
-      "likes": 6479,
+      "views": 133749,
+      "reach": 98311,
+      "likes": 6491,
       "comments": 124,
       "saved": 875,
-      "shares": 2558
+      "shares": 2563
     },
     "17954305905301642": {
       "fayl": "39-video.mp4",
@@ -495,8 +495,8 @@
     "18127491686299006": {
       "fayl": "40-video.mp4",
       "vaqt": "2026-11-03T08:01+05:00",
-      "views": 481,
-      "reach": 353,
+      "views": 482,
+      "reach": 354,
       "likes": 13,
       "comments": 6,
       "saved": 2,
@@ -515,9 +515,9 @@
     "17906868420599745": {
       "fayl": "41-video.mp4",
       "vaqt": "2026-11-03T11:03+05:00",
-      "views": 68864,
+      "views": 68871,
       "reach": 49450,
-      "likes": 2208,
+      "likes": 2209,
       "comments": 96,
       "saved": 520,
       "shares": 1576
@@ -525,9 +525,9 @@
     "18129933124879233": {
       "fayl": "85-video.mp4",
       "vaqt": "2026-11-03T17:04+05:00",
-      "views": 1766,
+      "views": 1768,
       "reach": 1442,
-      "likes": 44,
+      "likes": 45,
       "comments": 5,
       "saved": 16,
       "shares": 7
@@ -536,7 +536,7 @@
       "fayl": "42-video.mp4",
       "vaqt": "2026-11-03T18:35+05:00",
       "views": 598,
-      "reach": 423,
+      "reach": 424,
       "likes": 23,
       "comments": 10,
       "saved": 5,
@@ -565,8 +565,8 @@
     "18235369726324550": {
       "fayl": "43-video.mp4",
       "vaqt": "2026-11-04T09:31+05:00",
-      "views": 1258,
-      "reach": 974,
+      "views": 1259,
+      "reach": 975,
       "likes": 27,
       "comments": 4,
       "saved": 12,
@@ -625,8 +625,8 @@
     "18127313452981752": {
       "fayl": "46-video.mp4",
       "vaqt": "2026-11-05T09:32+05:00",
-      "views": 618,
-      "reach": 503,
+      "views": 619,
+      "reach": 504,
       "likes": 13,
       "comments": 4,
       "saved": 1,
@@ -635,9 +635,9 @@
     "18146645032596629": {
       "fayl": "87-video.mp4",
       "vaqt": "2026-11-05T11:03+05:00",
-      "views": 1897,
+      "views": 1900,
       "reach": 1621,
-      "likes": 68,
+      "likes": 69,
       "comments": 10,
       "saved": 12,
       "shares": 10
@@ -665,12 +665,12 @@
     "18234051580325788": {
       "fayl": "48-video.mp4",
       "vaqt": "2026-11-05T20:07+05:00",
-      "views": 19851,
-      "reach": 14627,
-      "likes": 908,
-      "comments": 26,
-      "saved": 193,
-      "shares": 309
+      "views": 19911,
+      "reach": 14673,
+      "likes": 912,
+      "comments": 28,
+      "saved": 194,
+      "shares": 313
     },
     "18473700769138999": {
       "fayl": "73-video.mp4",
@@ -685,7 +685,7 @@
     "17981066910148297": {
       "fayl": "25-video.mp4",
       "vaqt": "2026-11-06T09:31+05:00",
-      "views": 10548,
+      "views": 10550,
       "reach": 8929,
       "likes": 371,
       "comments": 12,
@@ -705,11 +705,11 @@
     "18104548904548287": {
       "fayl": "88-video.mp4",
       "vaqt": "2026-11-06T22:26+05:00",
-      "views": 20083,
-      "reach": 14859,
-      "likes": 1467,
-      "comments": 30,
-      "saved": 236,
+      "views": 20134,
+      "reach": 14900,
+      "likes": 1470,
+      "comments": 32,
+      "saved": 237,
       "shares": 585
     },
     "18146930236588765": {
@@ -745,8 +745,8 @@
     "18134509117762620": {
       "fayl": "75-video.mp4",
       "vaqt": "2026-11-07T14:46+05:00",
-      "views": 911,
-      "reach": 608,
+      "views": 913,
+      "reach": 609,
       "likes": 12,
       "comments": 6,
       "saved": 0,
@@ -755,17 +755,17 @@
     "18128141423315623": {
       "fayl": "89-video.mp4",
       "vaqt": "2026-11-07T16:18+05:00",
-      "views": 63034,
-      "reach": 42682,
-      "likes": 4994,
+      "views": 63104,
+      "reach": 42761,
+      "likes": 5000,
       "comments": 192,
-      "saved": 488,
-      "shares": 1698
+      "saved": 489,
+      "shares": 1699
     },
     "17945295390383881": {
       "fayl": "52-video.mp4",
       "vaqt": "2026-11-07T22:19+05:00",
-      "views": 2193,
+      "views": 2194,
       "reach": 1923,
       "likes": 35,
       "comments": 4,
@@ -776,7 +776,7 @@
       "fayl": "53-video.mp4",
       "vaqt": "2026-11-08T08:01+05:00",
       "views": 2623,
-      "reach": 2164,
+      "reach": 2165,
       "likes": 60,
       "comments": 4,
       "saved": 10,
@@ -795,18 +795,18 @@
     "17936486793146900": {
       "fayl": "90-video.mp4",
       "vaqt": "2026-11-09T08:01+05:00",
-      "views": 57426,
-      "reach": 36908,
-      "likes": 2970,
+      "views": 57470,
+      "reach": 36937,
+      "likes": 2972,
       "comments": 106,
-      "saved": 290,
-      "shares": 1400
+      "saved": 292,
+      "shares": 1401
     },
     "18062065691795989": {
       "fayl": "78-video.mp4",
       "vaqt": "2026-11-09T14:03+05:00",
-      "views": 652,
-      "reach": 455,
+      "views": 653,
+      "reach": 456,
       "likes": 6,
       "comments": 4,
       "saved": 0,
@@ -816,7 +816,7 @@
       "fayl": "55-video.mp4",
       "vaqt": "2026-11-09T15:34+05:00",
       "views": 2399,
-      "reach": 1919,
+      "reach": 1920,
       "likes": 118,
       "comments": 8,
       "saved": 28,
@@ -826,7 +826,7 @@
       "fayl": "26-video.mp4",
       "vaqt": "2026-11-09T21:35+05:00",
       "views": 1722,
-      "reach": 1462,
+      "reach": 1463,
       "likes": 16,
       "comments": 4,
       "saved": 3,
@@ -835,8 +835,8 @@
     "17991067362076202": {
       "fayl": "56-video.mp4",
       "vaqt": "2026-11-10T20:32+05:00",
-      "views": 474,
-      "reach": 409,
+      "views": 475,
+      "reach": 411,
       "likes": 7,
       "comments": 4,
       "saved": 0,
@@ -845,8 +845,8 @@
     "18182390722437194": {
       "fayl": "79-video.mp4",
       "vaqt": "2026-11-11T20:31+05:00",
-      "views": 206,
-      "reach": 185,
+      "views": 207,
+      "reach": 186,
       "likes": 3,
       "comments": 4,
       "saved": 0,
@@ -855,8 +855,8 @@
     "18034555181906596": {
       "fayl": "57-video.mp4",
       "vaqt": "2026-11-12T00:43+05:00",
-      "views": 281,
-      "reach": 218,
+      "views": 284,
+      "reach": 221,
       "likes": 8,
       "comments": 2,
       "saved": 1,
@@ -915,11 +915,11 @@
     "18099345065440781": {
       "fayl": "v2.mp4",
       "vaqt": "2026-11-13T08:01+05:00",
-      "views": 1889,
-      "reach": 1444,
+      "views": 1892,
+      "reach": 1448,
       "likes": 33,
       "comments": 5,
-      "saved": 7,
+      "saved": 6,
       "shares": 6
     },
     "18120150565806941": {
@@ -965,8 +965,8 @@
     "18113050694265341": {
       "fayl": "v6.mp4",
       "vaqt": "2026-11-14T11:44+05:00",
-      "views": 129,
-      "reach": 114,
+      "views": 132,
+      "reach": 116,
       "likes": 2,
       "comments": 0,
       "saved": 0,
@@ -975,11 +975,21 @@
     "18076412147754157": {
       "fayl": "aziz2.mp4",
       "vaqt": "2026-11-14T14:31+05:00",
-      "views": 129,
-      "reach": 84,
+      "views": 137,
+      "reach": 119,
       "likes": 1,
       "comments": 0,
       "saved": 1,
+      "shares": 0
+    },
+    "18160300069510957": {
+      "fayl": "v7.mp4",
+      "vaqt": "2026-11-14T17:19+05:00",
+      "views": 103,
+      "reach": 3,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
       "shares": 0
     }
   },
@@ -1121,8 +1131,8 @@
     },
     {
       "kun": "2026-11-14",
-      "obunachi": 1269,
-      "korish": 484452
+      "obunachi": 1271,
+      "korish": 485092
     }
   ]
 }
