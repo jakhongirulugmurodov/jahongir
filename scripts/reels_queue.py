@@ -4,6 +4,7 @@
 # TRIGGER rejimi (22-10 tasdiqlangan, q['rejim']='trigger' — standart): oldingi reels o'sishdan to'xtashi bilan keyingisi chiqadi:
 #   kamida 3 soat o‘tgan (22-10: sinov guruhi 1–2 soatda tugaydi) + oxirgi 2 soatda soatiga <2% (kamida <5) ko'rish o'sishi (content/reels-soatlik.json; 25-10 dan); soatlik o'lchov yo'q bo'lsa 12 soatda;
 #   31-10: 1,5 soatda <300 ko'rish bo'lsa (kuchsiz) — darhol keyingisi, kunlik chegaraga sanalmaydi (jami ≤6);
+#   14-11: IKKI OQIM (trial ≤3/kun MANUAL + 24 soatdan keyin oddiy nusxa ≤3/kun) — pastdagi izohga qarang; quyidagi 12-11 qoidasi o'rniga.
 #   12-11: TRIAL reels — kuchsiz/3 soat qoidasi qo'llanmaydi, faqat o'sish to'xtashi (yoki 6 soat); 3 ta chegaraga sanalmaydi, jami ≤6;
 #   6 soatdan keyin baribir (27-10 dan; oldin 24 soat); kuniga ≤3 ta (90 lik rejadan orqada qolinsa ≤4); 23:00–08:00 chiqmaydi; zaxira <7 bo'lsa oddiy jadvalga (kuniga 1 ta, 20:30) qaytadi.
 # Vaqt sinovi (22-10 tasdiqlangan, trigger yoqilgach to'xtatildi): kuniga 1 ta bo'lganda 10 ta video kunma-kun 13:00 va 20:30 da almashib chiqadi
@@ -48,33 +49,43 @@ kerak = sum(1 for t in due if t <= now) - len(bugun)
 SOAT = json.load(open("content/reels-soatlik.json")) if os.path.exists("content/reels-soatlik.json") else {}
 chiq = [x for x in q["navbat"] if x.get("holat") == "chiqdi" and x.get("natija", {}).get("vaqt")]
 oxirgi = max(chiq, key=lambda x: datetime.fromisoformat(x["natija"]["vaqt"])) if chiq else None
-KUCHSIZ, MAKS_KUN = 300, 6
-kuchsiz_bugun = sum(1 for x in bugun if x.get("kuchsiz") or x.get("trial"))  # 12-11: trial'lar ham 3 ta chegaraga sanalmaydi (jami ≤6)
+KUCHSIZ, MAKS_KUN, T_CAP, O_CAP = 300, 6, 3, 3
+# 14-11 (Jahongir, "boshla"): IKKI OQIM. 1) TRIAL — yangi video avval trial (MANUAL: Instagram o'zi ochmaydi), kuniga ≤3 ta;
+#    keyingi trial oldingi trial'ning ko'rishi o'sishdan to'xtashi bilan (oxirgi 2 o'lchovda soatiga <2%, kamida <5) yoki 6 soatda.
+# 2) ODDIY — har bir trial chiqqanidan kamida 24 soat keyin o'sha video oddiy post bo'lib qayta chiqadi ("oddiy_of" = trial media_id,
+#    "erta" = eng erta vaqt), trial natijasidan qat'i nazar; kuniga ≤3 ta, oldingi oddiy postdan 3–6 soat keyin (o'sish to'xtasa
+#    yoki 1,5 soatda <300 ko'rish bo'lsa — oldinroq). Bir ishga tushishda ko'pi bilan 1 ta post; ikkalasi tayyor bo'lsa oddiy oldin. 23–08 chiqmaydi.
+is_tr = lambda x: bool(x.get("trial"))
+def oxir(cond):
+    c = [x for x in chiq if cond(x)]
+    return max(c, key=lambda x: datetime.fromisoformat(x["natija"]["vaqt"])) if c else None
+def toxtadi(x, min_h, kuchsiz=False):
+    if not x: return 1, "birinchi"
+    h = (now - datetime.fromisoformat(x["natija"]["vaqt"])).total_seconds() / 3600
+    rows = SOAT.get(x.get("media_id") or "", {}).get("olchov", [])
+    if kuchsiz and h >= 1.5 and rows and rows[-1].get("views", 0) < KUCHSIZ: return 1, f"kuchsiz: {h:.1f} soatda {rows[-1].get('views', 0)} ko'rish"
+    if h < min_h: return 0, f"oxirgisiga {h:.1f} soat"
+    if h >= 6: return 1, f"{h:.1f} soat o'tdi"
+    if len(rows) < 3: return 0, f"o'lchov kam ({len(rows)})"
+    a_, b_, c_ = [r.get("views", 0) for r in rows[-3:]]
+    lim = max(5, c_ * 0.02)
+    return (1, f"to'xtadi: +{b_ - a_}, +{c_ - b_} (chegara {lim:.0f})") if (b_ - a_) < lim and (c_ - b_) < lim else (0, f"o'syapti: +{b_ - a_}, +{c_ - b_} (chegara {lim:.0f})")
+tanlov = None
 def trigger_kerak():
-    if now.hour < 8 or now.hour >= 23 or len(bugun) >= MAKS_KUN or len(bugun) - kuchsiz_bugun >= CAP: return 0, f"tun (23–08) yoki kunlik {CAP} ta (+kuchsizlar, jami ≤{MAKS_KUN})"
-    if not oxirgi: return 1, "birinchi video"
-    h = (now - datetime.fromisoformat(oxirgi["natija"]["vaqt"])).total_seconds() / 3600
-    # 12-11 (Jahongir): TRIAL — "kuchsiz" va 3 soat qoidasi yo'q; ko'rishlar o'sishdan to'xtashi bilan keyingisi
-    # (oxirgi 2 o'lchovda soatiga <2%, kamida <5); o'lchov kam bo'lsa 6 soatda baribir. Kunlik jami ≤6, 23–08 chiqmaydi.
-    if oxirgi.get("trial"):
-        rows = SOAT.get(oxirgi.get("media_id") or "", {}).get("olchov", [])
-        if h >= 6: return 1, f"trial: {h:.1f} soat o'tdi"
-        if len(rows) < 3: return 0, f"trial: o'lchov kam ({len(rows)})"
-        a, b, c = [r.get("views", 0) for r in rows[-3:]]
-        lim = max(5, c * 0.02)
-        return (1, f"trial to'xtadi: +{b - a}, +{c - b} (chegara {lim:.0f})") if (b - a) < lim and (c - b) < lim else (0, f"trial o'syapti: +{b - a}, +{c - b} (chegara {lim:.0f})")
-    # 31-10 (Jahongir): kuchsiz video (1,5 soatda <300 ko'rish) — 3 soat kutilmaydi, keyingisi darhol; u kunlik chegaraga sanalmaydi
-    rw = SOAT.get(oxirgi.get("media_id") or "", {}).get("olchov", [])
-    if h >= 1.5 and rw and rw[-1].get("views", 0) < KUCHSIZ:
-        oxirgi["kuchsiz"] = True
-        return 1, f"kuchsiz: {h:.1f} soatda {rw[-1].get('views', 0)} ko'rish (<{KUCHSIZ})"
-    if h < 3: return 0, f"oxirgisiga {h:.1f} soat"
-    if h >= 6: return 1, f"{h:.1f} soat o'tdi (27-10: kutish ko'pi bilan 6 soat)"
-    rows = SOAT.get(oxirgi.get("media_id") or "", {}).get("olchov", [])
-    if len(rows) < 3: return (1, "o'lchov yo'q, 12 soat o'tdi") if h >= 12 else (0, "o'lchov kam")
-    a, b, c = [r.get("views", 0) for r in rows[-3:]]
-    lim = max(5, c * 0.02)  # 25-10 tasdiqlangan: to'xtash chegarasi — soatiga 2% (kichik videolarda kamida +5)
-    return (1, f"to'xtadi: +{b - a}, +{c - b} (chegara {lim:.0f})") if (b - a) < lim and (c - b) < lim else (0, f"o'syapti: +{b - a}, +{c - b} (chegara {lim:.0f})")
+    global tanlov
+    if now.hour < 8 or now.hour >= 23 or len(bugun) >= MAKS_KUN: return 0, f"tun (23–08) yoki kunlik jami {MAKS_KUN} ta"
+    sabab = []
+    od = sorted([x for x in kut if x.get("oddiy_of") and datetime.fromisoformat(x["erta"]) <= now], key=lambda x: x["erta"])
+    if od and sum(1 for x in bugun if not is_tr(x)) < O_CAP:
+        k, sb = toxtadi(oxir(lambda x: not is_tr(x)), 3, kuchsiz=True); sabab.append("oddiy " + sb)
+        if k: tanlov = od[0]; return 1, "; ".join(sabab)
+    else: sabab.append("oddiy: tayyori yo'q yoki kunlik " + str(O_CAP))
+    tr = [x for x in kut if is_tr(x)]
+    if tr and sum(1 for x in bugun if is_tr(x)) < T_CAP:
+        k, sb = toxtadi(oxir(is_tr), 0); sabab.append("trial " + sb)
+        if k: tanlov = tr[0]; return 1, "; ".join(sabab)
+    else: sabab.append("trial: navbat bo'sh yoki kunlik " + str(T_CAP))
+    return 0, "; ".join(sabab)
 TRIG_ON = TRIG and zaxira >= 7
 if TRIG_ON: kerak, sabab = trigger_kerak(); print("trigger:", sabab)
 q["kunlik"] = {"rejim": "trigger" if TRIG_ON else "jadval", "zaxira": zaxira, "kuniga": n, "kun": bugun_s, "oldingi": old.get("oldingi", 0) if old.get("kun") == bugun_s else old.get("kuniga", 0), "yangilandi": now.isoformat(timespec="minutes")}
@@ -89,26 +100,41 @@ def joyla(x):
     x["natija"] = {"vaqt": datetime.now(TZ).isoformat(timespec="minutes"), "chiqish": (r.stdout + r.stderr).strip()[-200:]}
     m = re.search(r'"id": "(\d+)"', r.stdout)
     if m: x["media_id"] = m.group(1)
+    if x["holat"] == "chiqdi" and x.get("trial"): oddiy_nusxa(x)
+def oddiy_nusxa(x):  # 14-11: trial'dan 24 soat keyin o'sha video oddiy post bo'lib chiqadi
+    if any(y.get("oddiy_of") == x.get("media_id") for y in q["navbat"]): return
+    erta = (datetime.fromisoformat(x["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=24)).isoformat(timespec="minutes")
+    y = {k: v for k, v in x.items() if k in ("fayl", "release", "izoh", "teglar", "collab")}
+    y.update({"holat": "kutmoqda", "oddiy_of": x.get("media_id"), "erta": erta, "vaqt": erta})
+    q["navbat"].append(y)
+for x in [x for x in q["navbat"] if x.get("trial") and x.get("holat") == "chiqdi" and x.get("media_id")]: oddiy_nusxa(x)  # chiqib bo'lgan trial'lar uchun ham
 darhol = [x for x in kut if x.get("darhol")]  # qo'lda "darhol": true qo'yilgani jadvalni kutmaydi (masalan, test)
 if darhol:
     joyla(darhol[0]); darhol[0].pop("darhol", None); kerak = 0
     kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
 elif kerak > 0 and kut:
-    joyla(kut[0])  # bir ishga tushishda ko'pi bilan 1 ta
+    joyla(tanlov or kut[0])  # bir ishga tushishda ko'pi bilan 1 ta
     if n == 1 and SINOV > 0: kut[0]["sinov_soat"] = "%02d:%02d" % slots(n, now.date())[0]
     kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
 # taxminiy jadval (trigger, 27-10): oldingisidan 3–6 soat keyin — taxminan har 6 soatda, kuniga ≤3 ta, faqat 08:00–23:00
 # (aniq vaqtni o'sish hal qiladi: video tez to'xtasa, keyingisi oldinroq chiqadi)
-if TRIG_ON:
-    t = max(now, datetime.fromisoformat(oxirgi["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=6)) if oxirgi else now
-    sanoq = {now.date(): len(bugun)}
-    for x in kut:
-        while True:
-            if t.hour >= 23: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
-            elif t.hour < 8: t = t.replace(hour=8, minute=0)
-            elif sanoq.get(t.date(), 0) >= 3: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
-            else: break
-        x["vaqt"] = t.isoformat(timespec="minutes"); sanoq[t.date()] = sanoq.get(t.date(), 0) + 1; t += timedelta(hours=6)
+if TRIG_ON:  # 14-11: ikki oqim alohida — trial har ~4 soatda (≤3/kun), oddiy erta vaqtidan keyin har ~6 soatda (≤3/kun); 08:00–23:00
+    kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
+    def taqsim(items, start, step, cap, sanoq, erta=lambda x: None):
+        t = start
+        for x in items:
+            e = erta(x)
+            if e and e > t: t = e
+            while True:
+                if t.hour >= 23: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
+                elif t.hour < 8: t = t.replace(hour=8, minute=0)
+                elif sanoq.get(t.date(), 0) >= cap: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
+                else: break
+            x["vaqt"] = t.isoformat(timespec="minutes"); sanoq[t.date()] = sanoq.get(t.date(), 0) + 1; t += timedelta(hours=step)
+    ot, oo = oxir(is_tr), oxir(lambda x: not is_tr(x))
+    taqsim([x for x in kut if is_tr(x)], max(now, datetime.fromisoformat(ot["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=3)) if ot else now, 4, T_CAP, {now.date(): sum(1 for x in bugun if is_tr(x))})
+    taqsim(sorted([x for x in kut if x.get("oddiy_of")], key=lambda x: x["erta"]), max(now, datetime.fromisoformat(oo["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=4)) if oo else now, 6, O_CAP,
+           {now.date(): sum(1 for x in bugun if not is_tr(x))}, erta=lambda x: datetime.fromisoformat(x["erta"]).astimezone(TZ))
     kut = []
 # taxminiy jadval: qolganlarni kvota bo'yicha keyingi slotlarga taqsimlash
 t = now; i = 0; posted_today = len(bugun) + (1 if kerak > 0 else 0)

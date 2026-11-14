@@ -11,7 +11,7 @@ def spiker(f):  # 26-10 Jahongir: ≤26 Hasanxo‘ja, 27–58 farzand tarbiyasi 
     except ValueError: return ""
     return "Hasanxo‘ja" if n <= 26 else "Farzand tarbiyasi" if n <= 58 else "Mohir Mirzaxmedov" if n <= 79 else "Muhammadali Eshonqulov" if n <= 91 else ""
 nav = [{"fayl": x["fayl"], "vaqt": x.get("natija", {}).get("vaqt") or x["vaqt"], "holat": x["holat"], "media_id": x.get("media_id", ""), "spiker": spiker(x["fayl"]),
-        "teglar": ", ".join("@" + t for t in x.get("teglar", [])), "collab": ", ".join("@" + t for t in x.get("collab", [])), "trial": "trial" if x.get("trial") else ""} for x in q["navbat"]]
+        "teglar": ", ".join("@" + t for t in x.get("teglar", [])), "collab": ", ".join("@" + t for t in x.get("collab", [])), "trial": "trial" if x.get("trial") else "oddiy" if x.get("oddiy_of") else ""} for x in q["navbat"]]  # 14-11: "oddiy" — trial'dan keyingi oddiy nusxa
 st = [{"media_id": k, "fayl": v.get("fayl", ""), "korish": v.get("views", 0), "qamrov": v.get("reach", 0), "layk": v.get("likes", 0),
        "izoh": v.get("comments", 0), "saqlash": v.get("saved", 0), "ulashish": v.get("shares", 0)} for k, v in s.get("reels", {}).items()]
 tr = [{"kun": t["kun"], "obunachi": t.get("obunachi", 0), "korish": t.get("korish", 0)} for t in s.get("tarix", [])]
