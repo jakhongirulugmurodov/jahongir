@@ -71,21 +71,15 @@ def toxtadi(x, min_h, kuchsiz=False):
     lim = max(5, c_ * 0.02)
     return (1, f"to'xtadi: +{b_ - a_}, +{c_ - b_} (chegara {lim:.0f})") if (b_ - a_) < lim and (c_ - b_) < lim else (0, f"o'syapti: +{b_ - a_}, +{c_ - b_} (chegara {lim:.0f})")
 tanlov = None
+# 17-11 (Jahongir, "ishni boshla"): BITTA OQIM, 24/7. Trial'dan keyin qayta yuklash bekor (takror fayl qamrovni tushirdi: v2 trialda 1935, oddiyda 81).
+# Har video to'g'ridan-to'g'ri oddiy post; keyingisi oxirgi postning ko'rishi o'sishdan to'xtashi bilan (oxirgi 2 o'lchovda soatiga <2%, kamida <5;
+# kamida 2 soat, ko'pi bilan 6 soat). Tungi tanaffus yo'q, "kuchsiz" qoidasi yo'q. Himoya: kuniga jami ≤8 ta.
+# "trial" maydoni faqat qo'lda qo'yilgan sinovlar uchun qoladi — trial bo'lgan video keyin oddiy post qilinmaydi.
+MAKS_KUN = 8
 def trigger_kerak():
-    global tanlov
-    if now.hour < 8 or now.hour >= 23 or len(bugun) >= MAKS_KUN: return 0, f"tun (23–08) yoki kunlik jami {MAKS_KUN} ta"
-    sabab = []
-    od = sorted([x for x in kut if x.get("oddiy_of") and datetime.fromisoformat(x["erta"]) <= now], key=lambda x: x["erta"])
-    if od and sum(1 for x in bugun if not is_tr(x)) < O_CAP:
-        k, sb = toxtadi(oxir(lambda x: not is_tr(x)), 3, kuchsiz=True); sabab.append("oddiy " + sb)
-        if k: tanlov = od[0]; return 1, "; ".join(sabab)
-    else: sabab.append("oddiy: tayyori yo'q yoki kunlik " + str(O_CAP))
-    tr = [x for x in kut if is_tr(x)]
-    if tr and sum(1 for x in bugun if is_tr(x)) < T_CAP:
-        k, sb = toxtadi(oxir(is_tr), 0); sabab.append("trial " + sb)
-        if k: tanlov = tr[0]; return 1, "; ".join(sabab)
-    else: sabab.append("trial: navbat bo'sh yoki kunlik " + str(T_CAP))
-    return 0, "; ".join(sabab)
+    if len(bugun) >= MAKS_KUN: return 0, f"kunlik jami {MAKS_KUN} ta"
+    k, sb = toxtadi(oxirgi, 2)
+    return k, sb
 TRIG_ON = TRIG and zaxira >= 7
 if TRIG_ON: kerak, sabab = trigger_kerak(); print("trigger:", sabab)
 q["kunlik"] = {"rejim": "trigger" if TRIG_ON else "jadval", "zaxira": zaxira, "kuniga": n, "kun": bugun_s, "oldingi": old.get("oldingi", 0) if old.get("kun") == bugun_s else old.get("kuniga", 0), "yangilandi": now.isoformat(timespec="minutes")}
@@ -100,14 +94,6 @@ def joyla(x):
     x["natija"] = {"vaqt": datetime.now(TZ).isoformat(timespec="minutes"), "chiqish": (r.stdout + r.stderr).strip()[-200:]}
     m = re.search(r'"id": "(\d+)"', r.stdout)
     if m: x["media_id"] = m.group(1)
-    if x["holat"] == "chiqdi" and x.get("trial"): oddiy_nusxa(x)
-def oddiy_nusxa(x):  # 14-11: trial'dan 24 soat keyin o'sha video oddiy post bo'lib chiqadi
-    if any(y.get("oddiy_of") == x.get("media_id") for y in q["navbat"]): return
-    erta = (datetime.fromisoformat(x["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=24)).isoformat(timespec="minutes")
-    y = {k: v for k, v in x.items() if k in ("fayl", "release", "izoh", "teglar", "collab")}
-    y.update({"holat": "kutmoqda", "oddiy_of": x.get("media_id"), "erta": erta, "vaqt": erta})
-    q["navbat"].append(y)
-for x in [x for x in q["navbat"] if x.get("trial") and x.get("holat") == "chiqdi" and x.get("media_id")]: oddiy_nusxa(x)  # chiqib bo'lgan trial'lar uchun ham
 darhol = [x for x in kut if x.get("darhol")]  # qo'lda "darhol": true qo'yilgani jadvalni kutmaydi (masalan, test)
 if darhol:
     joyla(darhol[0]); darhol[0].pop("darhol", None); kerak = 0
@@ -118,23 +104,15 @@ elif kerak > 0 and kut:
     kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
 # taxminiy jadval (trigger, 27-10): oldingisidan 3–6 soat keyin — taxminan har 6 soatda, kuniga ≤3 ta, faqat 08:00–23:00
 # (aniq vaqtni o'sish hal qiladi: video tez to'xtasa, keyingisi oldinroq chiqadi)
-if TRIG_ON:  # 14-11: ikki oqim alohida — trial har ~4 soatda (≤3/kun), oddiy erta vaqtidan keyin har ~6 soatda (≤3/kun); 08:00–23:00
+if TRIG_ON:  # 17-11: bitta oqim, 24/7 — taxminan har 3 soatda, kuniga ≤8 ta (aniq vaqtni o'sish hal qiladi)
     kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
-    def taqsim(items, start, step, cap, sanoq, erta=lambda x: None):
-        t = start
-        for x in items:
-            e = erta(x)
-            if e and e > t: t = e
-            while True:
-                if t.hour >= 23: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
-                elif t.hour < 8: t = t.replace(hour=8, minute=0)
-                elif sanoq.get(t.date(), 0) >= cap: t = (t + timedelta(days=1)).replace(hour=8, minute=0)
-                else: break
-            x["vaqt"] = t.isoformat(timespec="minutes"); sanoq[t.date()] = sanoq.get(t.date(), 0) + 1; t += timedelta(hours=step)
-    ot, oo = oxir(is_tr), oxir(lambda x: not is_tr(x))
-    taqsim([x for x in kut if is_tr(x)], max(now, datetime.fromisoformat(ot["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=3)) if ot else now, 4, T_CAP, {now.date(): sum(1 for x in bugun if is_tr(x))})
-    taqsim(sorted([x for x in kut if x.get("oddiy_of")], key=lambda x: x["erta"]), max(now, datetime.fromisoformat(oo["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=4)) if oo else now, 6, O_CAP,
-           {now.date(): sum(1 for x in bugun if not is_tr(x))}, erta=lambda x: datetime.fromisoformat(x["erta"]).astimezone(TZ))
+    chiq2 = [x for x in q["navbat"] if x.get("holat") == "chiqdi" and x.get("natija", {}).get("vaqt")]
+    ox = max(chiq2, key=lambda x: datetime.fromisoformat(x["natija"]["vaqt"])) if chiq2 else None
+    t = max(now, datetime.fromisoformat(ox["natija"]["vaqt"]).astimezone(TZ) + timedelta(hours=3)) if ox else now
+    sanoq = {now.date(): sum(1 for x in q["navbat"] if x.get("holat") in ("chiqdi", "xato") and datetime.fromisoformat(x["natija"]["vaqt"]).astimezone(TZ).date() == now.date())}
+    for x in kut:
+        while sanoq.get(t.date(), 0) >= MAKS_KUN: t = (t + timedelta(days=1)).replace(hour=0, minute=0)
+        x["vaqt"] = t.isoformat(timespec="minutes"); sanoq[t.date()] = sanoq.get(t.date(), 0) + 1; t += timedelta(hours=3)
     kut = []
 # taxminiy jadval: qolganlarni kvota bo'yicha keyingi slotlarga taqsimlash
 t = now; i = 0; posted_today = len(bugun) + (1 if kerak > 0 else 0)
