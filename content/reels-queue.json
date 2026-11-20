@@ -2415,9 +2415,9 @@
   "kunlik": {
     "rejim": "trigger",
     "zaxira": 12,
-    "kuniga": 2,
-    "kun": "2026-11-20",
+    "kuniga": 1,
+    "kun": "2026-11-21",
     "oldingi": 2,
-    "yangilandi": "2026-11-20T23:59+05:00"
+    "yangilandi": "2026-11-21T00:00+05:00"
   }
 }
