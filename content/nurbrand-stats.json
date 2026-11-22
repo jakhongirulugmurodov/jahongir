@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-11-22T16:54+00:00",
+  "yangilandi": "2026-11-22T17:54+00:00",
   "akkaunt": "nur_brand_uzb",
   "obunachi": 18533,
   "postlar": 735,
@@ -7,7 +7,7 @@
     "18186210172425788": {
       "fayl": "nb-01.mp4",
       "vaqt": "2026-11-10T19:01+05:00",
-      "views": 1896,
+      "views": 1897,
       "reach": 1599,
       "likes": 32,
       "comments": 2,
@@ -17,8 +17,8 @@
     "18155967613528004": {
       "fayl": "nb-02.mp4",
       "vaqt": "2026-11-11T19:01+05:00",
-      "views": 2056,
-      "reach": 1716,
+      "views": 2060,
+      "reach": 1718,
       "likes": 29,
       "comments": 2,
       "saved": 2,
@@ -27,7 +27,7 @@
     "18090212528298393": {
       "fayl": "nb-03.mp4",
       "vaqt": "2026-11-12T19:01+05:00",
-      "views": 1982,
+      "views": 1983,
       "reach": 1670,
       "likes": 35,
       "comments": 7,
@@ -67,8 +67,8 @@
     "18126427024912198": {
       "fayl": "nb-07.mp4",
       "vaqt": "2026-11-16T19:01+05:00",
-      "views": 655,
-      "reach": 533,
+      "views": 658,
+      "reach": 534,
       "likes": 6,
       "comments": 2,
       "saved": 0,
@@ -77,7 +77,7 @@
     "18094414109216467": {
       "fayl": "nb-08.mp4",
       "vaqt": "2026-11-17T19:01+05:00",
-      "views": 582,
+      "views": 586,
       "reach": 476,
       "likes": 19,
       "comments": 2,
@@ -87,7 +87,7 @@
     "18008827470096866": {
       "fayl": "nb-09.mp4",
       "vaqt": "2026-11-18T19:01+05:00",
-      "views": 1942,
+      "views": 1943,
       "reach": 1670,
       "likes": 36,
       "comments": 6,
@@ -97,8 +97,8 @@
     "18113005784636969": {
       "fayl": "nb-10.mp4",
       "vaqt": "2026-11-19T19:01+05:00",
-      "views": 339,
-      "reach": 276,
+      "views": 340,
+      "reach": 277,
       "likes": 14,
       "comments": 0,
       "saved": 0,
@@ -107,8 +107,8 @@
     "18002388696035088": {
       "fayl": "nb-11.mp4",
       "vaqt": "2026-11-20T19:01+05:00",
-      "views": 430,
-      "reach": 337,
+      "views": 432,
+      "reach": 340,
       "likes": 13,
       "comments": 3,
       "saved": 0,
@@ -117,12 +117,12 @@
     "18131816731865368": {
       "fayl": "v1_montaj.mp4",
       "vaqt": "2026-11-22T13:58+05:00",
-      "views": 1001,
-      "reach": 831,
-      "likes": 17,
-      "comments": 3,
+      "views": 1096,
+      "reach": 887,
+      "likes": 19,
+      "comments": 4,
       "saved": 2,
-      "shares": 1
+      "shares": 2
     }
   },
   "tarix": [
@@ -189,7 +189,7 @@
     {
       "kun": "2026-11-22",
       "obunachi": 18533,
-      "korish": 12698
+      "korish": 12810
     }
   ]
 }
