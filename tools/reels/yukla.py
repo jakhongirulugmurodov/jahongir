@@ -5,7 +5,7 @@
 import json, os, subprocess, sys, re
 from datetime import datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")); from uztypo import typo
-TZ = timezone(timedelta(hours=5)); Q = os.environ.get("REELS_QUEUE", "content/reels-queue.json")  # cinematic: content/cinematic-queue.json
+TZ = timezone(timedelta(hours=5)); Q = os.environ.get("REELS_QUEUE", "content/reels-queue.json")
 PREFIX = os.environ.get("REELS_PREFIX", "reels")
 src, caps = sys.argv[1], json.load(open(sys.argv[2])); q = json.load(open(Q)) if os.path.exists(Q) else {"soatlar": ["09:00"], "navbat": []}
 slots = [tuple(map(int, s.split(":"))) for s in q["soatlar"]]

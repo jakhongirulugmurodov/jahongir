@@ -1,5 +1,5 @@
-# Cinematic navbati akkaunti (06-11 dan @ispanchik.100k) statistikasi: obunachilar va navbatdan chiqqan har bir reels'ning raqamlari.
-# Natija: content/cinematic-stats.json ("90 reels" panelidagi Cinematic bo'limi uchun). Token: IG_TOKEN (workflow'da IG_TOKEN_CINEMATIC_YANGI).
+# Umumiy akkaunt statistikasi: STATS_QUEUE navbatidagi akkauntning obunachilari va chiqqan har bir reels'ning raqamlari → STATS_OUT.
+# Hozir @nur_brand_uzb uchun ishlatiladi (workflow'da IG_TOKEN_NURBRAND). 22-11: cinematic loyihasi olib tashlandi, fayl nomi akkaunt_stats.py bo'ldi.
 import json, os, sys, urllib.request, urllib.parse
 from datetime import datetime, timezone
 T = os.environ.get("IG_TOKEN", "").strip() or sys.exit("IG_TOKEN topilmadi")
@@ -10,9 +10,9 @@ def get(path, **p):
     except urllib.error.HTTPError as e: return json.load(e)
 me = get("me", fields="user_id,username,followers_count,media_count")
 if not me.get("username"): sys.exit("token ishlamayapti, eski ma'lumot saqlab qolindi: " + json.dumps(me.get("error", me), ensure_ascii=False)[:300])
-S = os.environ.get("STATS_OUT", "content/cinematic-stats.json")  # 10-11: nurbrand ham shu skript bilan (STATS_QUEUE/STATS_OUT)
+S = os.environ.get("STATS_OUT", "content/nurbrand-stats.json")  # 10-11: nurbrand ham shu skript bilan (STATS_QUEUE/STATS_OUT)
 old = json.load(open(S)) if os.path.exists(S) else {}
-QF = os.environ.get("STATS_QUEUE", "content/cinematic-queue.json")
+QF = os.environ.get("STATS_QUEUE", "content/nurbrand-queue.json")
 if not os.path.exists(QF): sys.exit(0)
 q = json.load(open(QF))
 reels = {}
