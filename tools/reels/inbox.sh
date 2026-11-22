@@ -1,6 +1,6 @@
 #!/bin/bash
 # Tayyor reels partiyasini reels-inbox shoxi orqali Release'ga yuboradi (sessiyadan Release API yopiq).
-# Foydalanish (repo ildizidan): tools/reels/inbox.sh <videolar papkasi> <izohlar.json> [manzil: osish (standart) | nurbrand]
+# Foydalanish (repo ildizidan): tools/reels/inbox.sh <videolar papkasi> <izohlar.json> [manzil: osish (standart) | nurbrand | haya]
 # Videolar 60MB bo'laklarga bo'linadi (GitHub 100MB fayl chegarasi); "Reels qabul" ishi yig'ib, navbatga qo'shadi va shoxni o'chiradi.
 set -e
 SRC="$1"; CAPS="$2"; MANZIL="${3:-osish}"; REPO=$(pwd); W=$(mktemp -d)

@@ -22,6 +22,7 @@ jobs:
           IG_TOKEN_MAIN: ${{ secrets.IG_TOKEN }}
           IG_TOKEN_OSISH: ${{ secrets.IG_TOKEN_OSISH }}
           IG_TOKEN_NURBRAND: ${{ secrets.IG_TOKEN_NURBRAND }}
+          IG_TOKEN_HAYA: ${{ secrets.IG_TOKEN_HAYA }}
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
@@ -32,9 +33,10 @@ jobs:
             IG_TOKEN="$IG_TOKEN_MAIN" python3 scripts/lenta_queue.py || true
             IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_soatlik.py || true
             IG_TOKEN="$IG_TOKEN_NURBRAND" python3 scripts/nurbrand_queue.py || true   # @nur_brand_uzb (10-11): kuniga 1 ta, 19:00
+            IG_TOKEN="$IG_TOKEN_HAYA" python3 scripts/haya_queue.py || true   # @haya.perfum (22-11): kuniga 1 ta, shomda, reels + story
             python3 scripts/tg_buyruq.py || true   # Telegram botdagi "Reels hozir chiqsin" tugmasi
             IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_queue.py || true
-            git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json content/reels-soatlik.json content/tg-buyruq.json content/nurbrand-queue.json
+            git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json content/reels-soatlik.json content/tg-buyruq.json content/nurbrand-queue.json content/haya-queue.json
             if ! git diff --cached --quiet; then
               git commit -qm "navbat: yangi story/post chiqdi"
               # To'qnashuvda soqchining o'z yozuvi (nima chiqqani) ustun turadi; rebase hech qachon yarim qolmasin
