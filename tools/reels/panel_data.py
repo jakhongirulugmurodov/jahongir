@@ -20,14 +20,18 @@ pa = [{"fayl": f, "holat": "tayyor"} for f in p.get("papkada", [])] + [{"fayl": 
 if not nav: nav = [{"fayl": "—", "vaqt": "", "holat": "bosh", "media_id": "", "spiker": "", "teglar": "", "collab": "", "trial": ""}]
 if not st: st = [{"media_id": "-", "fayl": "—", "korish": 0, "qamrov": 0, "layk": 0, "izoh": 0, "saqlash": 0, "ulashish": 0}]
 if not pa: pa = [{"fayl": "—", "holat": "bosh"}]
-nq = L("content/nurbrand-queue.json", {"navbat": []}); ns = L("content/nurbrand-stats.json", {})  # 10-11: @nur_brand_uzb
-def _r(x): return ns.get("reels", {}).get(x.get("media_id") or "-", {})
-nb = [{"fayl": x["fayl"], "nom": (x.get("izoh") or "").strip().split("\n")[0][:80], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"],
+def akk(qf, sf, kamp):  # 22-11: Nur Brand va Haya Perfum uchun bir xil jadval
+    nq = L(qf, {"navbat": []}); ns = L(sf, {})
+    _r = lambda x: ns.get("reels", {}).get(x.get("media_id") or "-", {})
+    rows = [{"fayl": x["fayl"], "nom": (x.get("izoh") or "").strip().split("\n")[0][:80], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"],
        "media_id": x.get("media_id", ""), "korish": _r(x).get("views", ""), "layk": _r(x).get("likes", ""), "saqlash": _r(x).get("saved", ""), "ulashish": _r(x).get("shares", ""),
-       "obunachi": ns.get("obunachi", ""),
-       "kampaniya": "kuz" if x["fayl"].startswith("nb-") else "qish",  # 22-11: kuz (nb-01..11, 10–20-noyabr) — tarix; qish (v*_montaj) — joriy
+       "obunachi": ns.get("obunachi", ""), "kampaniya": kamp(x),
        "story": ("chiqdi" if (x.get("story_natija") or {}).get("ok") else "xato" if x.get("story_natija") else "navbatda") if x.get("story") else ""} for x in nq["navbat"]] or [{"fayl": "—", "nom": "", "vaqt": "", "holat": "bosh", "media_id": "", "korish": "", "layk": "", "saqlash": "", "ulashish": "", "obunachi": "", "kampaniya": "", "story": ""}]
-nbt = [{"kun": t["kun"], "obunachi": t.get("obunachi", 0), "korish": t.get("korish", 0)} for t in ns.get("tarix", [])] or [{"kun": "", "obunachi": "", "korish": ""}]
-for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("nurbrand", nb), ("nurbrand_tarix", nbt)]:
+    tar = [{"kun": t["kun"], "obunachi": t.get("obunachi", 0), "korish": t.get("korish", 0)} for t in ns.get("tarix", [])] or [{"kun": "", "obunachi": "", "korish": ""}]
+    return rows, tar
+# 22-11: kuz (nb-01..11, 10–20-noyabr) — tarix; qish (v*_montaj) — joriy
+nb, nbt = akk("content/nurbrand-queue.json", "content/nurbrand-stats.json", lambda x: "kuz" if x["fayl"].startswith("nb-") else "qish")
+hy, hyt = akk("content/haya-queue.json", "content/haya-stats.json", lambda x: "haya")
+for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("nurbrand", nb), ("nurbrand_tarix", nbt), ("haya", hy), ("haya_tarix", hyt)]:
     json.dump({"rows": rows}, open(f"{out}/{n}.json", "w"), ensure_ascii=False)
 print({"navbat": len(nav), "statistika": len(st), "tarix": len(tr), "papka": len(pa), "obunachi": s.get("obunachi"), "papka_tekshirildi": p.get("tekshirildi")})
