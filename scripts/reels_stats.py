@@ -1,4 +1,4 @@
-# @osish.nuqtasi statistikasi: obunachilar va har bir chiqqan reels'ning ko'rish/layk/saqlash raqamlari.
+# @ekspertgapirsin (avval @osish.nuqtasi; 22-11 nomi o‘zgardi) statistikasi: obunachilar va har bir chiqqan reels'ning ko'rish/layk/saqlash raqamlari.
 # Natija: content/reels-stats.json ("90 reels" paneli uchun). Token: IG_TOKEN (workflow'da IG_TOKEN_OSISH).
 import json, os, sys, urllib.request, urllib.parse
 from datetime import datetime, timezone

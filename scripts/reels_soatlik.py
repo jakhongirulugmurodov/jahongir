@@ -1,4 +1,4 @@
-# @osish.nuqtasi reels'larining soatlik o'sishi: chiqqanidan keyin 72 soat davomida har ~soatda
+# @ekspertgapirsin (avval @osish.nuqtasi; 22-11 nomi o‘zgardi) reels'larining soatlik o'sishi: chiqqanidan keyin 72 soat davomida har ~soatda
 # ko'rish/qamrov/saqlash/ulashish yoziladi → content/reels-soatlik.json. Navbat soqchisi har daqiqada chaqiradi,
 # lekin har reels uchun so'rov soatiga ko'pi bilan 1 marta ketadi. Token: IG_TOKEN (workflow'da IG_TOKEN_OSISH).
 import json, os, sys, urllib.request, urllib.parse

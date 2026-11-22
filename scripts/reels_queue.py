@@ -1,4 +1,4 @@
-# Reels navbati (@osish.nuqtasi). Videolar GitHub Release'da turadi, bu skript vaqti kelganini Instagram'ga joylaydi.
+# Reels navbati (@ekspertgapirsin (avval @osish.nuqtasi; 22-11 nomi o‘zgardi)). Videolar GitHub Release'da turadi, bu skript vaqti kelganini Instagram'ga joylaydi.
 # Kunlik chiqish soni ZAXIRAGA qarab (Jahongir qoidasi): zaxira = navbatda kutayotganlar + Mac papkada tayyorlar.
 #   1–20 → kuniga 1 ta (20:30) · 21–40 → 2 ta (13:00, 20:30) · 41+ → 3 ta (09:00, 13:00, 20:30)
 # TRIGGER rejimi (22-10 tasdiqlangan, q['rejim']='trigger' — standart): oldingi reels o'sishdan to'xtashi bilan keyingisi chiqadi:

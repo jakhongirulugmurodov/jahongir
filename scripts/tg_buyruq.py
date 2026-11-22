@@ -25,7 +25,7 @@ def chiqar():
     d = next((x for x in kut if x.get("darhol")), None)
     if d: return f"{d['fayl']} allaqachon chiqish arafasida (1–2 daqiqa)."
     kut[0]["darhol"] = True; json.dump(q, open(Q, "w"), ensure_ascii=False, indent=2)
-    return f"✅ {kut[0]['fayl']} 1–2 daqiqada @osish.nuqtasi sahifasida chiqadi. Qolgan navbat: {len(kut) - 1} ta."
+    return f"✅ {kut[0]['fayl']} 1–2 daqiqada @ekspertgapirsin sahifasida chiqadi. Qolgan navbat: {len(kut) - 1} ta."
 for x in u["result"]:
     st["offset"] = x["update_id"] + 1
     if "callback_query" in x:
@@ -40,5 +40,5 @@ for x in u["result"]:
         if txt.startswith("/chiqar") or txt == "/start chiqar":
             call("sendMessage", chat_id=ega, text=chiqar(), reply_markup=TUGMA)
         elif txt.startswith("/start") or txt.startswith("/panel"):
-            call("sendMessage", chat_id=ega, text="O‘sish Nuqtasi reels navbati. Tugmani bossangiz, navbatdagi reels 1–2 daqiqada chiqadi. Bu xabarni qadab (pin) qo‘ying.", reply_markup=TUGMA)
+            call("sendMessage", chat_id=ega, text="Ekspert gapirsin reels navbati. Tugmani bossangiz, navbatdagi reels 1–2 daqiqada chiqadi. Bu xabarni qadab (pin) qo‘ying.", reply_markup=TUGMA)
 json.dump(st, open(S, "w"), ensure_ascii=False, indent=1)

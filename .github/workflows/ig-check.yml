@@ -2,7 +2,7 @@ name: Instagram ulanishini tekshirish
 on:
   workflow_dispatch:
     inputs:
-      akkaunt: { description: "asosiy (jahongir.olmos) yoki osish (osish.nuqtasi)", default: "asosiy" }
+      akkaunt: { description: "asosiy (jahongir.olmos) yoki osish (@ekspertgapirsin, avval @osish.nuqtasi)", default: "asosiy" }
   push:
     branches: [main]
     paths: [scripts/ig_check.py, .github/workflows/ig-check.yml]

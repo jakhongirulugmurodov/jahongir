@@ -43,7 +43,7 @@ Har kuni yangi post tayyorlash shu vositalar bilan qilinadi.
 - `konveyer.py <papka>` — 10 slaydli karusel panoramasi (10800×1350, doodle uslubi), `render.py` — PNG'ga chizib 10 ta 1080×1350 JPG'ga bo'ladi. Yangi karusel uchun shu faylni nusxalab, slayd matn/rasmlarini almashtiring.
 - Joylash: `content/lenta/<post>-ig.json` + `content/lenta-queue.json` (tur: karusel | kanal). Navbatni `story-queue.yml` har 10 daqiqada bajaradi (`scripts/lenta_queue.py`).
 
-## reels/ (O‘sish Nuqtasi, @osish.nuqtasi)
+## reels/ (Ekspert gapirsin — @ekspertgapirsin, avval @osish.nuqtasi)
 - Tayyor reels Mac'da ~/Osish Nuqtasi Reels papkasiga tashlanadi: video.mp4 + shu nomli video.txt (caption). Navbatga olinganlari Navbatda/ ichiga o'tkaziladi. Partiya: fayllar konteynerga olinadi → `tools/reels/inbox.sh <papka> <izohlar.json>` ularni bo'laklab reels-inbox shoxiga yuboradi, "Reels qabul" ishi (`reels-inbox.yml`) yig'ib Release'ga yuklaydi va `content/reels-queue.json`ga qo'shadi (`yukla.py`). Tayyor bo'lishi bilan navbatga olinadi — kutish chegarasi yo'q.
 - Kunlik soni zaxiraga qarab (navbat + papka): 1–20 → 1 ta (14:00), 21–40 → 2 ta (10:00, 19:00), 41+ → 3 ta (09:00, 14:00, 20:00).
   Son kun boshida qotiriladi; pastga tushish kechikadi: 2→1 zaxira <15 da, 3→2 zaxira <35 da.

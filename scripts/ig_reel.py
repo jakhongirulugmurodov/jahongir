@@ -1,4 +1,4 @@
-# Instagram Reels joylaydi (O'sish Nuqtasi: @osish.nuqtasi). Video ochiq URL orqali (GitHub Release havolasi) beriladi. Foydalanish: python3 scripts/ig_reel.py <ochiq video URL> <caption fayli> [muqova soniyasi ms]
+# Instagram Reels joylaydi (Ekspert gapirsin: @ekspertgapirsin, avval @osish.nuqtasi). Video ochiq URL orqali (GitHub Release havolasi) beriladi. Foydalanish: python3 scripts/ig_reel.py <ochiq video URL> <caption fayli> [muqova soniyasi ms]
 # Token faqat IG_TOKEN muhit o'zgaruvchisidan (workflow'da IG_TOKEN_OSISH), chop etilmaydi.
 import json, os, sys, time, urllib.request, urllib.parse
 T = os.environ.get("IG_TOKEN", "").strip() or sys.exit("IG_TOKEN topilmadi")
