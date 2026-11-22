@@ -24,7 +24,9 @@ nq = L("content/nurbrand-queue.json", {"navbat": []}); ns = L("content/nurbrand-
 def _r(x): return ns.get("reels", {}).get(x.get("media_id") or "-", {})
 nb = [{"fayl": x["fayl"], "nom": (x.get("izoh") or "").strip().split("\n")[0][:80], "vaqt": x.get("natija", {}).get("vaqt") or x.get("vaqt", ""), "holat": x["holat"],
        "media_id": x.get("media_id", ""), "korish": _r(x).get("views", ""), "layk": _r(x).get("likes", ""), "saqlash": _r(x).get("saved", ""), "ulashish": _r(x).get("shares", ""),
-       "obunachi": ns.get("obunachi", "")} for x in nq["navbat"]] or [{"fayl": "—", "nom": "", "vaqt": "", "holat": "bosh", "media_id": "", "korish": "", "layk": "", "saqlash": "", "ulashish": "", "obunachi": ""}]
+       "obunachi": ns.get("obunachi", ""),
+       "kampaniya": "kuz" if x["fayl"].startswith("nb-") else "qish",  # 22-11: kuz (nb-01..11, 10–20-noyabr) — tarix; qish (v*_montaj) — joriy
+       "story": ("chiqdi" if (x.get("story_natija") or {}).get("ok") else "xato" if x.get("story_natija") else "navbatda") if x.get("story") else ""} for x in nq["navbat"]] or [{"fayl": "—", "nom": "", "vaqt": "", "holat": "bosh", "media_id": "", "korish": "", "layk": "", "saqlash": "", "ulashish": "", "obunachi": "", "kampaniya": "", "story": ""}]
 nbt = [{"kun": t["kun"], "obunachi": t.get("obunachi", 0), "korish": t.get("korish", 0)} for t in ns.get("tarix", [])] or [{"kun": "", "obunachi": "", "korish": ""}]
 for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("nurbrand", nb), ("nurbrand_tarix", nbt)]:
     json.dump({"rows": rows}, open(f"{out}/{n}.json", "w"), ensure_ascii=False)
