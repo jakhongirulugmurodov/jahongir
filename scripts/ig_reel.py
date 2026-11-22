@@ -11,6 +11,9 @@ def call(path, method="GET", **p):
     except urllib.error.HTTPError as e: return json.load(e)
 uid = call("me", fields="user_id").get("user_id") or sys.exit("akkaunt topilmadi (token?)")
 extra = {"thumb_offset": sys.argv[3]} if len(sys.argv) > 3 else {}
+# 22-11: muqova rasmi (IG_COVER_URL — ochiq JPEG havolasi). Instagram rad etsa, muqovasiz qayta uriniladi.
+COVER = os.environ.get("IG_COVER_URL", "").strip()
+if COVER: extra["cover_url"] = COVER
 # Instagram Login (graph.instagram.com) faqat ochiq video_url qabul qiladi (resumable yuklash faqat Facebook Login'da).
 # Repo ochiq: Release havolasi -> GitHub vaqtinchalik imzolangan havolaga yo'naltiradi; oxirgi havolani beramiz.
 src = video
@@ -35,6 +38,9 @@ def cont(t, cb):
     if not TRIAL: e["share_to_feed"] = "true"
     return call(f"{uid}/media", "POST", media_type="REELS", video_url=src, caption=cap, **e)
 c = cont(tags, collabs)
+if "id" not in c and COVER:
+    print("cover_url rad etildi, muqovasiz qayta urinamiz:", json.dumps(c.get("error", c), ensure_ascii=False)[:200])
+    extra.pop("cover_url", None); c = cont(tags, collabs)
 if "id" not in c and collabs:
     print("collaborators rad etildi, collab'siz qayta urinamiz:", json.dumps(c.get("error", c), ensure_ascii=False)[:200])
     c = cont(tags, [])

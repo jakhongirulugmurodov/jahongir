@@ -31,6 +31,7 @@ def joyla(x):
     url = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'jakhongirulugmurodov/jahongir')}/releases/download/{x['release']}/{x['fayl']}"
     open("/tmp/haya/cap.txt", "w").write(x.get("izoh", ""))
     env = {**os.environ, "IG_USER_TAGS": "", "IG_COLLABS": ""}
+    if x.get("cover"): env["IG_COVER_URL"] = f"https://raw.githubusercontent.com/{os.environ.get('GITHUB_REPOSITORY', 'jakhongirulugmurodov/jahongir')}/main/{x['cover']}"  # 22-11: Jahongir bergan muqova
     r = subprocess.run(["python3", "scripts/ig_reel.py", url, "/tmp/haya/cap.txt"], capture_output=True, text=True, env=env)
     print(r.stdout.strip(), r.stderr.strip()[-300:])
     x["holat"] = "chiqdi" if r.returncode == 0 else "xato"
