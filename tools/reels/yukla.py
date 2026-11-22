@@ -21,13 +21,16 @@ tag = PREFIX + "-" + datetime.now(TZ).strftime("%Y-%m")
 if subprocess.run(["gh", "release", "view", tag], capture_output=True).returncode:
     subprocess.run(["gh", "release", "create", tag, "-t", f"{PREFIX} {tag[len(PREFIX)+1:]}", "-n", "Instagram uchun tayyor reels (navbat: content/reels-queue.json)"], check=True)
 t = last
+for f in caps.pop("__fayllar__", []):  # 22-11: navbatga qo'shilmaydigan qo'shimcha fayllar (masalan, allaqachon chiqqan reels'ning story videosi)
+    subprocess.run(["gh", "release", "upload", tag, os.path.join(src, f), "--clobber"], check=True)
 for name, cap in caps.items():
     qosh = {}
-    if isinstance(cap, dict): qosh = {k: v for k, v in cap.items() if k in ("teglar", "collab", "trial") and v}; cap = cap.get("izoh", "")
+    if isinstance(cap, dict): qosh = {k: v for k, v in cap.items() if k in ("teglar", "collab", "trial", "story") and v}; cap = cap.get("izoh", "")
     safe = re.sub(r"[^A-Za-z0-9._-]+", "-", name)
     p = os.path.join(src, name)
     if safe != name: os.replace(p, os.path.join(src, safe)); p = os.path.join(src, safe)
     subprocess.run(["gh", "release", "upload", tag, p, "--clobber"], check=True)
+    if qosh.get("story"): subprocess.run(["gh", "release", "upload", tag, os.path.join(src, qosh["story"]), "--clobber"], check=True)  # 22-11: reels'ning tayyor story videosi
     t = nxt(t); it = {"vaqt": t.isoformat(timespec="minutes"), "release": tag, "fayl": safe, "izoh": typo(cap or os.environ.get("REELS_DEFAULT_CAPTION", "")), "holat": "kutmoqda"}
     teg = [u for u in dict.fromkeys(re.findall(r"@([A-Za-z0-9._]+[A-Za-z0-9_])", cap)) if u not in ("osish.nuqtasi", "ekspertgapirsin")]  # caption'dagi @spiker → reels'da belgilanadi
     if teg: it["teglar"] = teg
