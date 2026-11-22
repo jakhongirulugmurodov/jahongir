@@ -11,6 +11,8 @@ q = json.load(open(Q)); now = datetime.now(TZ)
 kut = [x for x in q["navbat"] if x.get("holat") == "kutmoqda"]
 T = lambda s: datetime.fromisoformat(s).astimezone(TZ)
 bugun = [x for x in q["navbat"] if x.get("holat") in ("chiqdi", "xato") and T(x["natija"]["vaqt"]).date() == now.date()]
+from datetime import date
+BOSH = date(2026, 11, 23)  # 22-11: Jahongir — "videolar dushanbadan chiqsin"
 def shom(d):  # Toshkent (41.30N, 69.24E) quyosh botishi (NOAA usuli, refraksiya bilan), mahalliy vaqt
     lat, lon = 41.2995, 69.2401; n = d.timetuple().tm_yday; g = 2 * math.pi / 365 * (n - 1 + (18 - 12) / 24)
     eq = 229.18 * (0.000075 + 0.001868 * math.cos(g) - 0.032077 * math.sin(g) - 0.014615 * math.cos(2 * g) - 0.040849 * math.sin(2 * g))
@@ -38,6 +40,7 @@ def joyla(x):
     if x["holat"] == "chiqdi" and x.get("story"): story(x)
 # Jadval (ko'rinish uchun): kutayotganlar ketma-ket kunlarning shom vaqtiga
 kun = now.date() if not bugun and now < shom(now.date()).replace(hour=23, minute=0) else now.date() + timedelta(days=1)
+kun = max(kun, BOSH)
 for x in kut:
     if not x.get("darhol"): x["vaqt"] = shom(kun).isoformat(timespec="minutes"); kun += timedelta(days=1)
 # Reels'i chiqib, storysi hali chiqmaganlar (masalan 22-11 dagi 4K sinov) — shomdan keyin storysi chiqadi
