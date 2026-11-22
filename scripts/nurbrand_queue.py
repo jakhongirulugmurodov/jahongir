@@ -45,7 +45,7 @@ qarz = next((x for x in q["navbat"] if x.get("holat") == "chiqdi" and x.get("sto
 d = next((x for x in kut if x.get("darhol")), None)
 if d: joyla(d); d.pop("darhol", None)
 elif kut and not bugun and shom(now.date()) <= now and now.hour < 23 and T(kut[0]["vaqt"]).date() <= now.date(): joyla(kut[0])
-elif qarz and shom(now.date()) <= now and now.hour < 23: story(qarz)
+elif qarz and (qarz.get("story_darhol") or (shom(now.date()) <= now and now.hour < 23)): story(qarz); qarz.pop("story_darhol", None)  # "story_darhol": true — storyni hozir
 else:
     open(Q, "w").write(json.dumps(q, ensure_ascii=False, indent=2)); sys.exit(0)
 open(Q, "w").write(json.dumps(q, ensure_ascii=False, indent=2))
