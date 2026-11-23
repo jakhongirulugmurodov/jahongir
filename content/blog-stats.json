@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-11-22T19:34+00:00",
+  "yangilandi": "2026-11-23T03:54+00:00",
   "akkaunt": "jahongir.olmos",
   "obunachi": 13,
   "postlar": {
@@ -227,6 +227,10 @@
     },
     {
       "kun": "2026-11-22",
+      "obunachi": 13
+    },
+    {
+      "kun": "2026-11-23",
       "obunachi": 13
     }
   ]
