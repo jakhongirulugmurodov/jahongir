@@ -1,7 +1,7 @@
 {
-  "yangilandi": "2026-11-23T13:54+00:00",
+  "yangilandi": "2026-11-23T14:53+00:00",
   "akkaunt": "nur_brand_uzb",
-  "obunachi": 18533,
+  "obunachi": 18536,
   "postlar": 737,
   "reels": {
     "18186210172425788": {
@@ -17,7 +17,7 @@
     "18155967613528004": {
       "fayl": "nb-02.mp4",
       "vaqt": "2026-11-11T19:01+05:00",
-      "views": 2069,
+      "views": 2071,
       "reach": 1728,
       "likes": 29,
       "comments": 2,
@@ -27,7 +27,7 @@
     "18090212528298393": {
       "fayl": "nb-03.mp4",
       "vaqt": "2026-11-12T19:01+05:00",
-      "views": 1986,
+      "views": 1989,
       "reach": 1673,
       "likes": 35,
       "comments": 7,
@@ -38,7 +38,7 @@
       "fayl": "nb-04.mp4",
       "vaqt": "2026-11-13T19:00+05:00",
       "views": 700,
-      "reach": 525,
+      "reach": 526,
       "likes": 27,
       "comments": 6,
       "saved": 2,
@@ -77,8 +77,8 @@
     "18094414109216467": {
       "fayl": "nb-08.mp4",
       "vaqt": "2026-11-17T19:01+05:00",
-      "views": 596,
-      "reach": 486,
+      "views": 597,
+      "reach": 488,
       "likes": 19,
       "comments": 2,
       "saved": 0,
@@ -87,8 +87,8 @@
     "18008827470096866": {
       "fayl": "nb-09.mp4",
       "vaqt": "2026-11-18T19:01+05:00",
-      "views": 1964,
-      "reach": 1684,
+      "views": 1966,
+      "reach": 1686,
       "likes": 37,
       "comments": 6,
       "saved": 1,
@@ -98,7 +98,7 @@
       "fayl": "nb-10.mp4",
       "vaqt": "2026-11-19T19:01+05:00",
       "views": 350,
-      "reach": 290,
+      "reach": 291,
       "likes": 14,
       "comments": 0,
       "saved": 0,
@@ -107,8 +107,8 @@
     "18002388696035088": {
       "fayl": "nb-11.mp4",
       "vaqt": "2026-11-20T19:01+05:00",
-      "views": 446,
-      "reach": 353,
+      "views": 447,
+      "reach": 354,
       "likes": 13,
       "comments": 3,
       "saved": 0,
@@ -127,9 +127,9 @@
     "18148697524583011": {
       "fayl": "v2_montaj.mp4",
       "vaqt": "2026-11-23T17:02+05:00",
-      "views": 225,
-      "reach": 180,
-      "likes": 9,
+      "views": 267,
+      "reach": 207,
+      "likes": 12,
       "comments": 4,
       "saved": 0,
       "shares": 0
@@ -203,8 +203,8 @@
     },
     {
       "kun": "2026-11-23",
-      "obunachi": 18533,
-      "korish": 13485
+      "obunachi": 18536,
+      "korish": 13536
     }
   ]
 }
