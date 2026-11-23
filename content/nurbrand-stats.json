@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-11-23T15:54+00:00",
+  "yangilandi": "2026-11-23T16:54+00:00",
   "akkaunt": "nur_brand_uzb",
   "obunachi": 18535,
   "postlar": 737,
@@ -47,8 +47,8 @@
     "18098694434556383": {
       "fayl": "nb-05.mp4",
       "vaqt": "2026-11-14T19:01+05:00",
-      "views": 594,
-      "reach": 461,
+      "views": 595,
+      "reach": 463,
       "likes": 24,
       "comments": 5,
       "saved": 0,
@@ -67,7 +67,7 @@
     "18126427024912198": {
       "fayl": "nb-07.mp4",
       "vaqt": "2026-11-16T19:01+05:00",
-      "views": 674,
+      "views": 675,
       "reach": 547,
       "likes": 6,
       "comments": 2,
@@ -78,7 +78,7 @@
       "fayl": "nb-08.mp4",
       "vaqt": "2026-11-17T19:01+05:00",
       "views": 597,
-      "reach": 488,
+      "reach": 489,
       "likes": 19,
       "comments": 2,
       "saved": 0,
@@ -87,7 +87,7 @@
     "18008827470096866": {
       "fayl": "nb-09.mp4",
       "vaqt": "2026-11-18T19:01+05:00",
-      "views": 1966,
+      "views": 1967,
       "reach": 1691,
       "likes": 37,
       "comments": 6,
@@ -107,8 +107,8 @@
     "18002388696035088": {
       "fayl": "nb-11.mp4",
       "vaqt": "2026-11-20T19:01+05:00",
-      "views": 447,
-      "reach": 354,
+      "views": 448,
+      "reach": 355,
       "likes": 13,
       "comments": 3,
       "saved": 0,
@@ -117,8 +117,8 @@
     "18131816731865368": {
       "fayl": "v1_montaj.mp4",
       "vaqt": "2026-11-22T13:58+05:00",
-      "views": 1433,
-      "reach": 1209,
+      "views": 1434,
+      "reach": 1211,
       "likes": 26,
       "comments": 4,
       "saved": 2,
@@ -127,9 +127,9 @@
     "18148697524583011": {
       "fayl": "v2_montaj.mp4",
       "vaqt": "2026-11-23T17:02+05:00",
-      "views": 301,
-      "reach": 240,
-      "likes": 12,
+      "views": 336,
+      "reach": 279,
+      "likes": 16,
       "comments": 4,
       "saved": 0,
       "shares": 0
@@ -204,7 +204,7 @@
     {
       "kun": "2026-11-23",
       "obunachi": 18535,
-      "korish": 13573
+      "korish": 13613
     }
   ]
 }

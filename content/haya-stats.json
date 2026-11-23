@@ -1,18 +1,18 @@
 {
-  "yangilandi": "2026-11-23T15:54+00:00",
+  "yangilandi": "2026-11-23T16:54+00:00",
   "akkaunt": "haya.perfum",
-  "obunachi": 53,
+  "obunachi": 55,
   "postlar": 1,
   "reels": {
     "18654155899014726": {
       "fayl": "haya1.mp4",
       "vaqt": "2026-11-23T17:04+05:00",
-      "views": 1797,
-      "reach": 1280,
-      "likes": 79,
-      "comments": 17,
+      "views": 1994,
+      "reach": 1454,
+      "likes": 81,
+      "comments": 18,
       "saved": 8,
-      "shares": 59
+      "shares": 63
     }
   },
   "tarix": [
@@ -23,8 +23,8 @@
     },
     {
       "kun": "2026-11-23",
-      "obunachi": 53,
-      "korish": 1797
+      "obunachi": 55,
+      "korish": 1994
     }
   ]
 }
