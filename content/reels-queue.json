@@ -2183,13 +2183,18 @@
       "release": "reels-2026-11",
       "fayl": "v34.mp4",
       "izoh": "O‘g‘lingiz «qush boqaman» dedi. «Kaptarfurushga o‘xshaysanmi?» demang.\n\nQori aka: mehr ko‘rsatish istagi — Alloh bergan qobiliyat. Taqiqlamang, tartibga soling. «Qanaqa qush?» deb so‘rang — o‘ylanib qoladi. Qush bozorga boring.\n\nU yerda oldindan sotuvchi bilan gaplashib qo‘ying: «Mana bu to‘tini maqtab bering.» Bola «o‘zi tanlaydi». Boqisi kelyaptimi — boqsin. Chegaralash mumkin, taqiqlash emas.\n\nBolangizning qaysi istagiga «yo‘q» degansiz?\n\nHasanxon Yahyo Abdulmajid bilan suhbatdan («Alohida mavzu»)\n#farzandtarbiyasi #ota #tanlov #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
       ],
-      "eski_trial": "MANUAL"
+      "eski_trial": "MANUAL",
+      "natija": {
+        "vaqt": "2026-11-23T20:32+05:00",
+        "chiqish": "natija: {\"ok\": true, \"trial\": null, \"id\": \"17894581860455564\", \"xato\": null}"
+      },
+      "media_id": "17894581860455564"
     },
     {
       "vaqt": "2026-11-24T20:30+05:00",
@@ -2448,6 +2453,6 @@
     "kuniga": 1,
     "kun": "2026-11-23",
     "oldingi": 1,
-    "yangilandi": "2026-11-23T20:29+05:00"
+    "yangilandi": "2026-11-23T20:31+05:00"
   }
 }
