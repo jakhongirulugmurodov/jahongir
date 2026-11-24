@@ -1,14 +1,14 @@
 {
-  "yangilandi": "2026-11-24T14:53+00:00",
+  "yangilandi": "2026-11-24T15:53+00:00",
   "akkaunt": "nur_brand_uzb",
-  "obunachi": 18531,
+  "obunachi": 18528,
   "postlar": 738,
   "reels": {
     "18186210172425788": {
       "fayl": "nb-01.mp4",
       "vaqt": "2026-11-10T19:01+05:00",
-      "views": 1904,
-      "reach": 1606,
+      "views": 1905,
+      "reach": 1608,
       "likes": 32,
       "comments": 2,
       "saved": 0,
@@ -58,7 +58,7 @@
       "fayl": "nb-06.mp4",
       "vaqt": "2026-11-15T19:01+05:00",
       "views": 552,
-      "reach": 422,
+      "reach": 423,
       "likes": 21,
       "comments": 6,
       "saved": 0,
@@ -68,7 +68,7 @@
       "fayl": "nb-07.mp4",
       "vaqt": "2026-11-16T19:01+05:00",
       "views": 681,
-      "reach": 555,
+      "reach": 556,
       "likes": 6,
       "comments": 2,
       "saved": 0,
@@ -97,7 +97,7 @@
     "18113005784636969": {
       "fayl": "nb-10.mp4",
       "vaqt": "2026-11-19T19:01+05:00",
-      "views": 361,
+      "views": 362,
       "reach": 299,
       "likes": 14,
       "comments": 0,
@@ -118,7 +118,7 @@
       "fayl": "v1_montaj.mp4",
       "vaqt": "2026-11-22T13:58+05:00",
       "views": 1456,
-      "reach": 1227,
+      "reach": 1229,
       "likes": 27,
       "comments": 4,
       "saved": 2,
@@ -127,8 +127,8 @@
     "18148697524583011": {
       "fayl": "v2_montaj.mp4",
       "vaqt": "2026-11-23T17:02+05:00",
-      "views": 530,
-      "reach": 436,
+      "views": 532,
+      "reach": 439,
       "likes": 17,
       "comments": 4,
       "saved": 0,
@@ -137,9 +137,9 @@
     "18123763840956656": {
       "fayl": "v3_montaj.mp4",
       "vaqt": "2026-11-24T17:01+05:00",
-      "views": 219,
-      "reach": 173,
-      "likes": 7,
+      "views": 254,
+      "reach": 201,
+      "likes": 9,
       "comments": 2,
       "saved": 1,
       "shares": 0
@@ -218,8 +218,8 @@
     },
     {
       "kun": "2026-11-24",
-      "obunachi": 18531,
-      "korish": 14115
+      "obunachi": 18528,
+      "korish": 14154
     }
   ]
 }
