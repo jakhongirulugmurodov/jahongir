@@ -2201,13 +2201,18 @@
       "release": "reels-2026-11",
       "fayl": "v35.mp4",
       "izoh": "Qori aka 5 yoshdan boshlab bolalariga kiyim tanlamaydi.\n\nBir psixologdan eshitgan: bolangizga kiyimni siz tanlamang. Do‘konda «tanla» deydi. Bola yiltiroq yomonini tanlaydi — tajribasi yo‘q. Shunda: «Bu seni terlatadi, sifatliroq tanla — qimmatroq bo‘lsa ham mayli.»\n\nBola biladi: bu taqiq siz uchun emas, uning manfaati uchun. «Qimmatroq bo‘lsa ham mayli» — juda xush yoqadi. Taqiq emas, tartib. Chegaralangan tanlov: «nonushtaga nima yeysan — mana ro‘yxat».\n\nBolangiz kiyimini o‘zi tanlaydimi?\n\nHasanxon Yahyo Abdulmajid bilan suhbatdan («Alohida mavzu»)\n#farzandtarbiyasi #tanlov #otaona #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
       ],
-      "eski_trial": "MANUAL"
+      "eski_trial": "MANUAL",
+      "natija": {
+        "vaqt": "2026-11-24T20:30+05:00",
+        "chiqish": "natija: {\"ok\": true, \"trial\": null, \"id\": \"17958874884339846\", \"xato\": null}"
+      },
+      "media_id": "17958874884339846"
     },
     {
       "vaqt": "2026-11-25T20:30+05:00",
@@ -2453,6 +2458,6 @@
     "kuniga": 1,
     "kun": "2026-11-24",
     "oldingi": 1,
-    "yangilandi": "2026-11-24T20:29+05:00"
+    "yangilandi": "2026-11-24T20:30+05:00"
   }
 }
