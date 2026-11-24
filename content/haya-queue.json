@@ -28,9 +28,20 @@
       "release": "haya-2026-11",
       "fayl": "haya2.mp4",
       "izoh": "Bu atirni o‘zingiz deyarli sezmaysiz. Atrofingizdagilar esa sezadi.\n\nMolecule 02 iforiga yaqin atir — “teri atiri”. Asosida ambroksan: u har odamning terisida boshqacha ochiladi. Shuning uchun sizdagi hid hech kimnikiga o‘xshamaydi.\n\nToza, biroz yog‘ochli, iliq. Baland emas, lekin yaqin masofada juda yoqimli. Siz kelmasingizdan oldin iforingiz yetib keladi.\n\nPoddelka emas: bu ham original mahsulot, faqat ishlab chiqaruvchisi boshqa.\n\nDirektga “Molecule” deb yozing — necha gramm bo‘lishidan qat’i nazar yetkazib beramiz.\n\n#hayaperfum #atir #parfum #molecule02 #teriatiri #ambroksan",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "story": "haya2-story.mp4",
-      "cover": "content/haya-cover/haya2.jpg"
+      "cover": "content/haya-cover/haya2.jpg",
+      "natija": {
+        "vaqt": "2026-11-24T17:02+05:00",
+        "chiqish": "natija: {\"ok\": true, \"trial\": null, \"id\": \"18079877081460676\", \"xato\": null}"
+      },
+      "media_id": "18079877081460676",
+      "story_natija": {
+        "vaqt": "2026-11-24T17:03+05:00",
+        "ok": true,
+        "id": "18113838911607323",
+        "chiqish": "natija: {\"ok\": true, \"id\": \"18113838911607323\", \"xato\": null}"
+      }
     },
     {
       "vaqt": "2026-11-25T17:00+05:00",
