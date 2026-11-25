@@ -2219,13 +2219,18 @@
       "release": "reels-2026-11",
       "fayl": "v36.mp4",
       "izoh": "Qori akaning o‘g‘li: «Maktabga bormayman, repetitor bilan o‘qiyman.» Ota «bor» demadi.\n\nSo‘radi: maktabda faqat ingliz tili o‘tiladimi? Yo‘q — sakkizta fan. Sakkizta repetitor kelib ketadimi oldingga? Keyin tanlov qo‘ydi: uyda 8 odam keladi, yoki 8 markazga borasan, yoki bitta joy — maktab.\n\nUch kundan keyin bola o‘zi: «Maktabga boraman.» Qori aka: «Jinni, bor maktabga» desangiz — bo‘lmaydi.\n\nUyingizda «maktabga bormayman» bahsi bo‘lganmi? Qanday hal qildingiz?\n\nHasanxon Yahyo Abdulmajid bilan suhbatdan («Alohida mavzu»)\n#maktab #farzandtarbiyasi #tanlov #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
       ],
-      "eski_trial": "MANUAL"
+      "eski_trial": "MANUAL",
+      "natija": {
+        "vaqt": "2026-11-25T20:32+05:00",
+        "chiqish": "natija: {\"ok\": true, \"trial\": null, \"id\": \"18016718471763338\", \"xato\": null}"
+      },
+      "media_id": "18016718471763338"
     },
     {
       "vaqt": "2026-11-26T20:30+05:00",
@@ -2458,6 +2463,6 @@
     "kuniga": 1,
     "kun": "2026-11-25",
     "oldingi": 1,
-    "yangilandi": "2026-11-25T20:29+05:00"
+    "yangilandi": "2026-11-25T20:31+05:00"
   }
 }
