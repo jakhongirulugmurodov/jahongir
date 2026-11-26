@@ -32,6 +32,16 @@ def akk(qf, sf, kamp):  # 22-11: Nur Brand va Haya Perfum uchun bir xil jadval
 # 22-11: kuz (nb-01..11, 10–20-noyabr) — tarix; qish (v*_montaj) — joriy
 nb, nbt = akk("content/nurbrand-queue.json", "content/nurbrand-stats.json", lambda x: "kuz" if x["fayl"].startswith("nb-") else "qish")
 hy, hyt = akk("content/haya-queue.json", "content/haya-stats.json", lambda x: "haya")
-for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("nurbrand", nb), ("nurbrand_tarix", nbt), ("haya", hy), ("haya_tarix", hyt)]:
+# 27-11: Ekspert gapirsin YouTube Shorts (content/yt-queue.json, scripts/yt_queue.py)
+_yq = L("content/yt-queue.json", {"chiqdi": {}})
+yt = [{"fayl": f, "sarlavha": (v.get("sarlavha") or "").replace(" #shorts", ""), "vaqt": v.get("vaqt", ""), "ok": "ha" if v.get("ok") else "xato",
+       "manba": v.get("manba") or ("yangi" if f == "v37.mp4" else ""), "holat": v.get("holat", ""), "korish": v.get("korish", ""), "layk": v.get("layk", ""),
+       "url": f"https://www.youtube.com/shorts/{v['id']}" if v.get("id") else ""} for f, v in _yq["chiqdi"].items()]
+yt = sorted(yt, key=lambda r: r["vaqt"], reverse=True) or [{"fayl": "—", "sarlavha": "", "vaqt": "", "ok": "", "manba": "", "holat": "", "korish": "", "layk": "", "url": ""}]
+_nq = L("content/reels-queue.json", {"navbat": []})
+_jami = len({x["fayl"] for x in _nq["navbat"] if x.get("holat") == "chiqdi"})
+yt_xulosa = [{"yuklandi": sum(1 for v in _yq["chiqdi"].values() if v.get("ok")), "jami": _jami,
+              "korish": sum(int(v.get("korish") or 0) for v in _yq["chiqdi"].values()), "stat_vaqt": _yq.get("stat_vaqt", "")}]
+for n, rows in [("navbat", nav), ("statistika", st), ("tarix", tr), ("papka", pa), ("nurbrand", nb), ("nurbrand_tarix", nbt), ("haya", hy), ("haya_tarix", hyt), ("youtube", yt), ("youtube_xulosa", yt_xulosa)]:
     json.dump({"rows": rows}, open(f"{out}/{n}.json", "w"), ensure_ascii=False)
 print({"navbat": len(nav), "statistika": len(st), "tarix": len(tr), "papka": len(pa), "obunachi": s.get("obunachi"), "papka_tekshirildi": p.get("tekshirildi")})
