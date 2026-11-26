@@ -2237,13 +2237,18 @@
       "release": "reels-2026-11",
       "fayl": "v37.mp4",
       "izoh": "Taqiq o‘rniga 5000 so‘m. Maktab rahbarining usuli — Qori aka qo‘shilmadi.\n\nUsul: «O‘yinchoq olib bermayman» demang. Cho‘ntakdagi ortiqcha 5000 ni bering: «Do‘konchini o‘zing ko‘ndir.» Do‘konchi: «Bunga yetmaydi.» Men cheklamadim — hayot chekladi.\n\nQori aka: bo‘ladi, lekin bola tanglik his qiladi. Hayot ham taqiq qo‘ymasin — manfaati taqiq qo‘ysin. «Bu seni terlatadi» — shunda hayotda norozi emas, tushungan odam katta bo‘ladi.\n\nKim haq? Siz qaysi usulni ishlatasiz?\n\nHasanxon Yahyo Abdulmajid bilan suhbatdan («Alohida mavzu»)\n#farzandtarbiyasi #pul #tanlov #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
       ],
-      "eski_trial": "MANUAL"
+      "eski_trial": "MANUAL",
+      "natija": {
+        "vaqt": "2026-11-26T20:31+05:00",
+        "chiqish": "natija: {\"ok\": true, \"trial\": null, \"id\": \"18106562009541331\", \"xato\": null}"
+      },
+      "media_id": "18106562009541331"
     },
     {
       "vaqt": "2026-11-27T20:30+05:00",
@@ -2463,6 +2468,6 @@
     "kuniga": 1,
     "kun": "2026-11-26",
     "oldingi": 1,
-    "yangilandi": "2026-11-26T20:29+05:00"
+    "yangilandi": "2026-11-26T20:30+05:00"
   }
 }
