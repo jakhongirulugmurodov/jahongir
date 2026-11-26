@@ -23,6 +23,9 @@ jobs:
           IG_TOKEN_OSISH: ${{ secrets.IG_TOKEN_OSISH }}
           IG_TOKEN_NURBRAND: ${{ secrets.IG_TOKEN_NURBRAND }}
           IG_TOKEN_HAYA: ${{ secrets.IG_TOKEN_HAYA }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
@@ -36,7 +39,8 @@ jobs:
             IG_TOKEN="$IG_TOKEN_HAYA" python3 scripts/haya_queue.py || true   # @haya.perfum (22-11): kuniga 1 ta, shomda, reels + story
             python3 scripts/tg_buyruq.py || true   # Telegram botdagi "Reels hozir chiqsin" tugmasi
             IG_TOKEN="$IG_TOKEN_OSISH" python3 scripts/reels_queue.py || true
-            git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json content/reels-soatlik.json content/tg-buyruq.json content/nurbrand-queue.json content/haya-queue.json
+            python3 scripts/yt_queue.py || true   # Ekspert gapirsin YouTube Shorts (27-11): Instagram'dagi reels shu kuni YouTube'ga ham
+            git add content/story-queue.json content/story-map.json content/lenta-queue.json content/reels-queue.json content/reels-soatlik.json content/tg-buyruq.json content/nurbrand-queue.json content/haya-queue.json content/yt-queue.json
             if ! git diff --cached --quiet; then
               git commit -qm "navbat: yangi story/post chiqdi"
               # To'qnashuvda soqchining o'z yozuvi (nima chiqqani) ustun turadi; rebase hech qachon yarim qolmasin

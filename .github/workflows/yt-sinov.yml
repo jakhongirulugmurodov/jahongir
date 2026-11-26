@@ -1,0 +1,26 @@
+name: YouTube sinov yuklash
+# Qo'lda: bitta videoni darhol Ekspert gapirsin YouTube kanaliga yuklaydi (token tekshiruvi uchun).
+on:
+  workflow_dispatch:
+    inputs:
+      fayl:
+        description: "reels-queue.json dagi fayl nomi (masalan v36.mp4)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  sinov:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Yuklash
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_SINOV: ${{ inputs.fayl }}
+        run: |
+          [ -n "$YT_REFRESH_TOKEN" ] || { echo "::error::YT_REFRESH_TOKEN topilmadi"; exit 1; }
+          python3 scripts/yt_queue.py
+          git config user.name "story-bot"; git config user.email "story-bot@users.noreply.github.com"
+          git add content/yt-queue.json && git commit -qm "yt: sinov yuklash" && { git pull --rebase -q -X theirs; git push -q; } || true
