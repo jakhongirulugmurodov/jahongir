@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-11-27T17:53+00:00",
+  "yangilandi": "2026-11-27T18:53+00:00",
   "akkaunt": "nur_brand_uzb",
   "obunachi": 18516,
   "postlar": 741,
@@ -87,7 +87,7 @@
     "18008827470096866": {
       "fayl": "nb-09.mp4",
       "vaqt": "2026-11-18T19:01+05:00",
-      "views": 2001,
+      "views": 2002,
       "reach": 1723,
       "likes": 37,
       "comments": 6,
@@ -98,7 +98,7 @@
       "fayl": "nb-10.mp4",
       "vaqt": "2026-11-19T19:01+05:00",
       "views": 384,
-      "reach": 315,
+      "reach": 316,
       "likes": 14,
       "comments": 0,
       "saved": 0,
@@ -127,8 +127,8 @@
     "18148697524583011": {
       "fayl": "v2_montaj.mp4",
       "vaqt": "2026-11-23T17:02+05:00",
-      "views": 580,
-      "reach": 486,
+      "views": 583,
+      "reach": 489,
       "likes": 17,
       "comments": 4,
       "saved": 0,
@@ -137,8 +137,8 @@
     "18123763840956656": {
       "fayl": "v3_montaj.mp4",
       "vaqt": "2026-11-24T17:01+05:00",
-      "views": 478,
-      "reach": 386,
+      "views": 479,
+      "reach": 387,
       "likes": 11,
       "comments": 2,
       "saved": 1,
@@ -147,8 +147,8 @@
     "18140032735644185": {
       "fayl": "v4_montaj.mp4",
       "vaqt": "2026-11-25T17:01+05:00",
-      "views": 382,
-      "reach": 331,
+      "views": 384,
+      "reach": 334,
       "likes": 14,
       "comments": 3,
       "saved": 1,
@@ -157,7 +157,7 @@
     "18123186094948584": {
       "fayl": "v5_montaj.mp4",
       "vaqt": "2026-11-26T17:01+05:00",
-      "views": 369,
+      "views": 370,
       "reach": 271,
       "likes": 12,
       "comments": 6,
@@ -167,9 +167,9 @@
     "18148698643579610": {
       "fayl": "v6_montaj.mp4",
       "vaqt": "2026-11-27T17:00+05:00",
-      "views": 284,
-      "reach": 231,
-      "likes": 16,
+      "views": 303,
+      "reach": 245,
+      "likes": 18,
       "comments": 1,
       "saved": 0,
       "shares": 0
@@ -264,7 +264,7 @@
     {
       "kun": "2026-11-27",
       "obunachi": 18516,
-      "korish": 15666
+      "korish": 15693
     }
   ]
 }
