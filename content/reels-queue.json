@@ -2255,13 +2255,18 @@
       "release": "reels-2026-11",
       "fayl": "v38.mp4",
       "izoh": "Ota bolaga «yaxshilik» aytdi. Bola rad qildi. Ota g‘azablandi. Nimadan?\n\nQori aka: yaxshilik rad etilganidan emas — gap qaytganidan. Bu hukmronlik shahvati: birovga gapini o‘tkazish istagi. Qaynona-kelin mojarosining ortida ham shu. Ota-onada ham bor — bolaga nisbatan.\n\n«Men bu cho‘qqiga chiqa olmadim — bolam chiqsin.» Noto‘g‘ri. U boshqa narsa uchun yaratilgan bo‘lishi mumkin. O‘zining o‘sishiga qo‘yish kerak.\n\nBolangizga bergan oxirgi «maslahat» kimning orzusi edi — unikimi, sizniki?\n\nHasanxon Yahyo Abdulmajid bilan suhbatdan («Alohida mavzu»)\n#otaona #farzandtarbiyasi #hukmronlik #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
       ],
-      "eski_trial": "MANUAL"
+      "eski_trial": "MANUAL",
+      "natija": {
+        "vaqt": "2026-11-27T20:31+05:00",
+        "chiqish": "natija: {\"ok\": true, \"trial\": null, \"id\": \"18436717870147513\", \"xato\": null}"
+      },
+      "media_id": "18436717870147513"
     },
     {
       "vaqt": "2026-11-28T20:30+05:00",
@@ -2468,6 +2473,6 @@
     "kuniga": 1,
     "kun": "2026-11-27",
     "oldingi": 1,
-    "yangilandi": "2026-11-27T20:29+05:00"
+    "yangilandi": "2026-11-27T20:30+05:00"
   }
 }
