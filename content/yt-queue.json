@@ -68,7 +68,7 @@
       "holat": "public",
       "sarlavha": "Ota bolaga «yaxshilik» aytdi. Bola rad qildi. Ota g‘azablandi. Nimadan? #shorts",
       "korish": 7,
-      "layk": 0,
+      "layk": 1,
       "izoh_soni": 0
     },
     "90-video.mp4": {
@@ -80,7 +80,7 @@
       "holat": "public",
       "sarlavha": "Nafs bilan sulh tuzish #shorts",
       "korish": 3,
-      "layk": 0,
+      "layk": 1,
       "izoh_soni": 0
     },
     "88-video.mp4": {
@@ -93,7 +93,7 @@
       "sarlavha": "Har bir qarorni ikkiga bo‘ling: qisqa muddat va uzoq muddat #shorts",
       "korish": 6,
       "layk": 1,
-      "izoh_soni": 4
+      "izoh_soni": 0
     },
     "48-video.mp4": {
       "urinish": 1,
@@ -103,9 +103,9 @@
       "vaqt": "2026-11-28T12:00+05:00",
       "holat": "public",
       "sarlavha": "Ustozning otasi urishishni onasiga topshirardi. Sababi otalarni o‘ylantiradi. #shorts",
-      "korish": 3,
+      "korish": 2,
       "layk": 1,
-      "izoh_soni": 4
+      "izoh_soni": 0
     },
     "v32.mp4": {
       "urinish": 1,
@@ -115,7 +115,7 @@
       "vaqt": "2026-11-28T14:00+05:00",
       "holat": "public",
       "sarlavha": "Bola ayb qildi. Unga gapirmang — yonidagisiga gapiring. #shorts",
-      "korish": 4,
+      "korish": 5,
       "layk": 2,
       "izoh_soni": 6
     },
@@ -127,9 +127,9 @@
       "vaqt": "2026-11-28T16:00+05:00",
       "holat": "public",
       "sarlavha": "Kutganingizdan ko‘p oylik taklif qilishdi. «Ha» demang. #shorts",
-      "korish": 2,
+      "korish": 1,
       "layk": 1,
-      "izoh_soni": 4
+      "izoh_soni": 0
     },
     "v39.mp4": {
       "urinish": 1,
@@ -138,8 +138,11 @@
       "id": "6nv2_aVJDrw",
       "vaqt": "2026-11-28T20:31+05:00",
       "holat": "public",
-      "sarlavha": "Dorixonachining kichik o‘g‘li: «Qo‘shiqchi bo‘laman.» Ota taqiqlamadi. #shorts"
+      "sarlavha": "Dorixonachining kichik o‘g‘li: «Qo‘shiqchi bo‘laman.» Ota taqiqlamadi. #shorts",
+      "korish": 0,
+      "layk": 0,
+      "izoh_soni": 0
     }
   },
-  "stat_vaqt": "2026-11-28T19:40+05:00"
+  "stat_vaqt": "2026-11-28T20:40+05:00"
 }
