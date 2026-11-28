@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-11-28T14:53+00:00",
+  "yangilandi": "2026-11-28T15:53+00:00",
   "akkaunt": "nur_brand_uzb",
   "obunachi": 18510,
   "postlar": 742,
@@ -67,7 +67,7 @@
     "18126427024912198": {
       "fayl": "nb-07.mp4",
       "vaqt": "2026-11-16T19:01+05:00",
-      "views": 712,
+      "views": 713,
       "reach": 584,
       "likes": 6,
       "comments": 2,
@@ -127,7 +127,7 @@
     "18148697524583011": {
       "fayl": "v2_montaj.mp4",
       "vaqt": "2026-11-23T17:02+05:00",
-      "views": 593,
+      "views": 594,
       "reach": 500,
       "likes": 17,
       "comments": 4,
@@ -147,8 +147,8 @@
     "18140032735644185": {
       "fayl": "v4_montaj.mp4",
       "vaqt": "2026-11-25T17:01+05:00",
-      "views": 397,
-      "reach": 343,
+      "views": 399,
+      "reach": 344,
       "likes": 14,
       "comments": 3,
       "saved": 1,
@@ -157,7 +157,7 @@
     "18123186094948584": {
       "fayl": "v5_montaj.mp4",
       "vaqt": "2026-11-26T17:01+05:00",
-      "views": 398,
+      "views": 401,
       "reach": 298,
       "likes": 12,
       "comments": 6,
@@ -177,8 +177,8 @@
     "17991771365921049": {
       "fayl": "v7_montaj.mp4",
       "vaqt": "2026-11-28T16:59+05:00",
-      "views": 219,
-      "reach": 191,
+      "views": 233,
+      "reach": 200,
       "likes": 5,
       "comments": 2,
       "saved": 1,
@@ -279,7 +279,7 @@
     {
       "kun": "2026-11-28",
       "obunachi": 18510,
-      "korish": 16068
+      "korish": 16089
     }
   ]
 }

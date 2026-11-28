@@ -1,14 +1,14 @@
 {
-  "yangilandi": "2026-11-28T14:53+00:00",
+  "yangilandi": "2026-11-28T15:53+00:00",
   "akkaunt": "haya.perfum",
-  "obunachi": 77,
+  "obunachi": 78,
   "postlar": 6,
   "reels": {
     "18654155899014726": {
       "fayl": "haya1.mp4",
       "vaqt": "2026-11-23T17:04+05:00",
-      "views": 2807,
-      "reach": 1964,
+      "views": 2808,
+      "reach": 1967,
       "likes": 103,
       "comments": 25,
       "saved": 10,
@@ -17,8 +17,8 @@
     "18079877081460676": {
       "fayl": "haya2.mp4",
       "vaqt": "2026-11-24T17:02+05:00",
-      "views": 1981,
-      "reach": 1444,
+      "views": 1984,
+      "reach": 1448,
       "likes": 99,
       "comments": 41,
       "saved": 7,
@@ -27,42 +27,42 @@
     "18378681793212157": {
       "fayl": "haya3.mp4",
       "vaqt": "2026-11-25T17:03+05:00",
-      "views": 1547,
+      "views": 1549,
       "reach": 1166,
-      "likes": 74,
-      "comments": 21,
+      "likes": 75,
+      "comments": 23,
       "saved": 7,
       "shares": 59
     },
     "18362689510221847": {
       "fayl": "haya4.mp4",
       "vaqt": "2026-11-26T17:03+05:00",
-      "views": 1666,
+      "views": 1669,
       "reach": 1273,
       "likes": 85,
-      "comments": 73,
+      "comments": 75,
       "saved": 5,
       "shares": 83
     },
     "18119155724039363": {
       "fayl": "haya5.mp4",
       "vaqt": "2026-11-27T17:02+05:00",
-      "views": 1542,
+      "views": 1548,
       "reach": 1198,
-      "likes": 58,
-      "comments": 40,
+      "likes": 59,
+      "comments": 42,
       "saved": 1,
       "shares": 69
     },
     "18133441027868773": {
       "fayl": "haya6.mp4",
       "vaqt": "2026-11-28T17:00+05:00",
-      "views": 467,
-      "reach": 310,
-      "likes": 47,
-      "comments": 52,
-      "saved": 1,
-      "shares": 73
+      "views": 757,
+      "reach": 533,
+      "likes": 52,
+      "comments": 56,
+      "saved": 2,
+      "shares": 75
     }
   },
   "tarix": [
@@ -98,8 +98,8 @@
     },
     {
       "kun": "2026-11-28",
-      "obunachi": 77,
-      "korish": 10010
+      "obunachi": 78,
+      "korish": 10315
     }
   ]
 }
