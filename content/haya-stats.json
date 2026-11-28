@@ -1,5 +1,5 @@
 {
-  "yangilandi": "2026-11-28T16:54+00:00",
+  "yangilandi": "2026-11-28T17:53+00:00",
   "akkaunt": "haya.perfum",
   "obunachi": 79,
   "postlar": 6,
@@ -7,7 +7,7 @@
     "18654155899014726": {
       "fayl": "haya1.mp4",
       "vaqt": "2026-11-23T17:04+05:00",
-      "views": 2811,
+      "views": 2813,
       "reach": 1972,
       "likes": 104,
       "comments": 25,
@@ -17,9 +17,9 @@
     "18079877081460676": {
       "fayl": "haya2.mp4",
       "vaqt": "2026-11-24T17:02+05:00",
-      "views": 1990,
+      "views": 1995,
       "reach": 1450,
-      "likes": 101,
+      "likes": 102,
       "comments": 43,
       "saved": 7,
       "shares": 66
@@ -27,8 +27,8 @@
     "18378681793212157": {
       "fayl": "haya3.mp4",
       "vaqt": "2026-11-25T17:03+05:00",
-      "views": 1554,
-      "reach": 1169,
+      "views": 1555,
+      "reach": 1173,
       "likes": 76,
       "comments": 23,
       "saved": 7,
@@ -37,7 +37,7 @@
     "18362689510221847": {
       "fayl": "haya4.mp4",
       "vaqt": "2026-11-26T17:03+05:00",
-      "views": 1673,
+      "views": 1675,
       "reach": 1277,
       "likes": 86,
       "comments": 75,
@@ -47,8 +47,8 @@
     "18119155724039363": {
       "fayl": "haya5.mp4",
       "vaqt": "2026-11-27T17:02+05:00",
-      "views": 1553,
-      "reach": 1202,
+      "views": 1558,
+      "reach": 1205,
       "likes": 60,
       "comments": 42,
       "saved": 1,
@@ -57,11 +57,11 @@
     "18133441027868773": {
       "fayl": "haya6.mp4",
       "vaqt": "2026-11-28T17:00+05:00",
-      "views": 876,
-      "reach": 613,
-      "likes": 56,
-      "comments": 56,
-      "saved": 3,
+      "views": 958,
+      "reach": 681,
+      "likes": 60,
+      "comments": 62,
+      "saved": 4,
       "shares": 75
     }
   },
@@ -99,7 +99,7 @@
     {
       "kun": "2026-11-28",
       "obunachi": 79,
-      "korish": 10457
+      "korish": 10554
     }
   ]
 }
