@@ -1,35 +1,35 @@
 {
-  "yangilandi": "2026-11-28T15:53+00:00",
+  "yangilandi": "2026-11-28T16:54+00:00",
   "akkaunt": "haya.perfum",
-  "obunachi": 78,
+  "obunachi": 79,
   "postlar": 6,
   "reels": {
     "18654155899014726": {
       "fayl": "haya1.mp4",
       "vaqt": "2026-11-23T17:04+05:00",
-      "views": 2808,
-      "reach": 1967,
-      "likes": 103,
+      "views": 2811,
+      "reach": 1972,
+      "likes": 104,
       "comments": 25,
-      "saved": 10,
+      "saved": 11,
       "shares": 67
     },
     "18079877081460676": {
       "fayl": "haya2.mp4",
       "vaqt": "2026-11-24T17:02+05:00",
-      "views": 1984,
-      "reach": 1448,
-      "likes": 99,
-      "comments": 41,
+      "views": 1990,
+      "reach": 1450,
+      "likes": 101,
+      "comments": 43,
       "saved": 7,
       "shares": 66
     },
     "18378681793212157": {
       "fayl": "haya3.mp4",
       "vaqt": "2026-11-25T17:03+05:00",
-      "views": 1549,
-      "reach": 1166,
-      "likes": 75,
+      "views": 1554,
+      "reach": 1169,
+      "likes": 76,
       "comments": 23,
       "saved": 7,
       "shares": 59
@@ -37,9 +37,9 @@
     "18362689510221847": {
       "fayl": "haya4.mp4",
       "vaqt": "2026-11-26T17:03+05:00",
-      "views": 1669,
-      "reach": 1273,
-      "likes": 85,
+      "views": 1673,
+      "reach": 1277,
+      "likes": 86,
       "comments": 75,
       "saved": 5,
       "shares": 83
@@ -47,9 +47,9 @@
     "18119155724039363": {
       "fayl": "haya5.mp4",
       "vaqt": "2026-11-27T17:02+05:00",
-      "views": 1548,
-      "reach": 1198,
-      "likes": 59,
+      "views": 1553,
+      "reach": 1202,
+      "likes": 60,
       "comments": 42,
       "saved": 1,
       "shares": 69
@@ -57,11 +57,11 @@
     "18133441027868773": {
       "fayl": "haya6.mp4",
       "vaqt": "2026-11-28T17:00+05:00",
-      "views": 757,
-      "reach": 533,
-      "likes": 52,
+      "views": 876,
+      "reach": 613,
+      "likes": 56,
       "comments": 56,
-      "saved": 2,
+      "saved": 3,
       "shares": 75
     }
   },
@@ -98,8 +98,8 @@
     },
     {
       "kun": "2026-11-28",
-      "obunachi": 78,
-      "korish": 10315
+      "obunachi": 79,
+      "korish": 10457
     }
   ]
 }
