@@ -1,15 +1,15 @@
 {
-  "yangilandi": "2026-11-28T12:53+00:00",
+  "yangilandi": "2026-11-28T13:53+00:00",
   "akkaunt": "haya.perfum",
-  "obunachi": 76,
+  "obunachi": 77,
   "postlar": 6,
   "reels": {
     "18654155899014726": {
       "fayl": "haya1.mp4",
       "vaqt": "2026-11-23T17:04+05:00",
-      "views": 2805,
-      "reach": 1961,
-      "likes": 102,
+      "views": 2806,
+      "reach": 1964,
+      "likes": 103,
       "comments": 25,
       "saved": 10,
       "shares": 67
@@ -17,7 +17,7 @@
     "18079877081460676": {
       "fayl": "haya2.mp4",
       "vaqt": "2026-11-24T17:02+05:00",
-      "views": 1977,
+      "views": 1979,
       "reach": 1444,
       "likes": 98,
       "comments": 41,
@@ -27,9 +27,9 @@
     "18378681793212157": {
       "fayl": "haya3.mp4",
       "vaqt": "2026-11-25T17:03+05:00",
-      "views": 1546,
-      "reach": 1164,
-      "likes": 73,
+      "views": 1547,
+      "reach": 1166,
+      "likes": 74,
       "comments": 21,
       "saved": 7,
       "shares": 59
@@ -37,9 +37,9 @@
     "18362689510221847": {
       "fayl": "haya4.mp4",
       "vaqt": "2026-11-26T17:03+05:00",
-      "views": 1663,
-      "reach": 1269,
-      "likes": 84,
+      "views": 1665,
+      "reach": 1271,
+      "likes": 85,
       "comments": 73,
       "saved": 5,
       "shares": 83
@@ -47,9 +47,9 @@
     "18119155724039363": {
       "fayl": "haya5.mp4",
       "vaqt": "2026-11-27T17:02+05:00",
-      "views": 1532,
-      "reach": 1193,
-      "likes": 57,
+      "views": 1540,
+      "reach": 1194,
+      "likes": 58,
       "comments": 40,
       "saved": 1,
       "shares": 69
@@ -57,12 +57,12 @@
     "18133441027868773": {
       "fayl": "haya6.mp4",
       "vaqt": "2026-11-28T17:00+05:00",
-      "views": 238,
-      "reach": 142,
-      "likes": 28,
-      "comments": 24,
-      "saved": 0,
-      "shares": 0
+      "views": 381,
+      "reach": 236,
+      "likes": 42,
+      "comments": 46,
+      "saved": 1,
+      "shares": 72
     }
   },
   "tarix": [
@@ -98,8 +98,8 @@
     },
     {
       "kun": "2026-11-28",
-      "obunachi": 76,
-      "korish": 9761
+      "obunachi": 77,
+      "korish": 9918
     }
   ]
 }
