@@ -2273,13 +2273,18 @@
       "release": "reels-2026-11",
       "fayl": "v39.mp4",
       "izoh": "Dorixonachining kichik o‘g‘li: «Qo‘shiqchi bo‘laman.» Ota taqiqlamadi.\n\nKatta o‘g‘li otasining ishini davom ettirdi — 10–15 ta dorixona. Kichigi qo‘shiqchi bo‘laman deb turib oldi. Ota: bo‘lsin. Repetitor topdi, konservatoriya bilan gaplashdi, homiy bo‘ldi.\n\nOxiri? Bola o‘zi akasiga qarashyapti: «Tayinli narsa turganda betayin narsaga nima qilaman.» Olti yil sabr — va o‘zi tanladi. Qori aka: bolaning irodasiga taqiq qo‘ymang.\n\nSiz olti yil sabr qila olarmidingiz?\n\nHasanxon Yahyo Abdulmajid bilan suhbatdan («Alohida mavzu»)\n#kasbtanlash #ota #farzandtarbiyasi #osishnuqtasi",
-      "holat": "kutmoqda",
+      "holat": "chiqdi",
       "teglar": [
         "alohidamavzu",
         "hasanxondomla",
         "aziz_rakhimov_blog"
       ],
-      "eski_trial": "MANUAL"
+      "eski_trial": "MANUAL",
+      "natija": {
+        "vaqt": "2026-11-28T20:31+05:00",
+        "chiqish": "natija: {\"ok\": true, \"trial\": null, \"id\": \"18387817444234144\", \"xato\": null}"
+      },
+      "media_id": "18387817444234144"
     },
     {
       "release": "reels-2026-10",
@@ -2473,6 +2478,6 @@
     "kuniga": 1,
     "kun": "2026-11-28",
     "oldingi": 1,
-    "yangilandi": "2026-11-28T20:29+05:00"
+    "yangilandi": "2026-11-28T20:30+05:00"
   }
 }
